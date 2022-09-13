@@ -5,34 +5,46 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    private Vector2 movementInput;
+    public Vector2 RawMovementInput { get; private set; }
+    public int NormInputX { get; private set; }
+    public int NormInputY { get; private set; }
+    public bool JumpInput { get; private set; }
 
+    [SerializeField]
+    private float inputHoldTime = 0.2f;
+
+    private float jumpInputStartTime;
+
+    private void Update()
+    {
+        CheckJumpInputHoldTime();
+    }
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        //Debug.Log("Move input");
-        movementInput = context.ReadValue<Vector2>();
-        Debug.Log(movementInput);
+        RawMovementInput = context.ReadValue<Vector2>();
+
+        NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
+        NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Debug.Log("Jump button pushed down now");
+            JumpInput = true;
+            jumpInputStartTime = Time.time;
         }
+    }
 
-        if (context.performed)
+    public void UseJumpInput() => JumpInput = false;
+
+    private void CheckJumpInputHoldTime() // Jump buffer
+    {
+        if(Time.time >= jumpInputStartTime + inputHoldTime)
         {
-            Debug.Log("Jump button being held down now");
+            JumpInput = false;
         }
-
-        if (context.canceled)
-        {
-            Debug.Log("Jump button has been released");
-        }
-
-        //Debug.Log("Jump input");
     }
 
 }
