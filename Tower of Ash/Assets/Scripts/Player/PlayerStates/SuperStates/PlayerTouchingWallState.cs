@@ -54,7 +54,7 @@ public class PlayerTouchingWallState : PlayerState {
             stateMachine.ChangeState(player.WallJumpState);
         }
 
-        if (isGrounded)
+        else if (isGrounded)
         {
             stateMachine.ChangeState(player.IdleState);
         }
