@@ -8,6 +8,7 @@ public class PlayerInAirState : PlayerState {
     private int xInput;
 
     private bool isGrounded;
+    private bool isTouchingWall;
     private bool jumpInput;
     private bool jumpInputStop;
     private bool coyoteTime;
@@ -22,6 +23,7 @@ public class PlayerInAirState : PlayerState {
         base.DoChecks();
 
         isGrounded = player.CheckIfGrounded();
+        isTouchingWall = player.CheckIfTouchingWall();
     }
 
     public override void Enter()
@@ -46,13 +48,17 @@ public class PlayerInAirState : PlayerState {
 
         CheckJumpMultiplier();
 
-        if(isGrounded && player.CurrentVelocity.y < 0.01f)
+        if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.LandState);
         }
-        else if(jumpInput && player.JumpState.CanJump())
+        else if (jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
+        }
+        else if (isTouchingWall && xInput == player.FacingDirection && player.CurrentVelocity.y <= 0)
+        {
+            stateMachine.ChangeState(player.WallSlideState);
         }
         else
         {
