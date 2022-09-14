@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 12
   jumpVelocity: 22
-  amountOfJumps: 1
+  amountOfJumps: 2
   coyoteTime: 0.5
-  variableJumpHeightMultiplier: 2
+  variableJumpHeightMultiplier: 0.5
   groundCheckRadius: 0.1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   wallCheckDistance: 0.515
   wallSlideVelocity: 3
+  wallJumpVelocity: 20
+  wallJumpTime: 0.4
+  wallJumpAngle: {x: 1, y: 2}
