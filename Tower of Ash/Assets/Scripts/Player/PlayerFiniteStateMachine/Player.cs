@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public PlayerWallJumpState WallJumpState { get; private set; }
     public PlayerDashState DashState { get; private set; }
 
+    public PlayerAttackState AttackState { get; private set; }
+
     [SerializeField]
     private PlayerData playerData;
     #endregion
@@ -58,6 +60,8 @@ public class Player : MonoBehaviour
         WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
 
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
+
+        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
     }
 
     private void Start()
@@ -74,7 +78,6 @@ public class Player : MonoBehaviour
     private void Update()
     {
         CurrentVelocity = RB.velocity;
-        Debug.Log(CurrentVelocity);
 
         StateMachine.CurrentState.LogicUpdate();
 

@@ -46,6 +46,8 @@ public class PlayerInAirState : PlayerState {
     public override void Enter()
     {
         base.Enter();
+        player.AttackState.ResetAttackCounter();
+        player.Anim.SetInteger("attackCounter", 0);
     }
 
     public override void Exit()
@@ -65,9 +67,15 @@ public class PlayerInAirState : PlayerState {
         jumpInputStop = player.InputHandler.JumpInputStop;
         dashInput = player.InputHandler.DashInput;
 
+        player.Anim.SetBool("isGrounded", false);
+
         CheckJumpMultiplier();
 
-        if (isGrounded && player.CurrentVelocity.y < 0.01f)
+        if (player.InputHandler.AttackInput)
+        {
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.LandState);
         }
