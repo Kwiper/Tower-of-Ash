@@ -10,6 +10,7 @@ public class PlayerInAirState : PlayerState {
     private bool jumpInput;
     private bool jumpInputStop;
     private bool dashInput;
+    private bool fireballInput;
 
     //Checks
     private bool isGrounded;
@@ -66,12 +67,15 @@ public class PlayerInAirState : PlayerState {
         jumpInput = player.InputHandler.JumpInput;
         jumpInputStop = player.InputHandler.JumpInputStop;
         dashInput = player.InputHandler.DashInput;
-
-        player.Anim.SetBool("isGrounded", false);
+        fireballInput = player.InputHandler.FireballInput;
 
         CheckJumpMultiplier();
 
-        if (player.InputHandler.AttackInput)
+        if (fireballInput)
+        {
+            stateMachine.ChangeState(player.FireballState);
+        }
+        else if (player.InputHandler.AttackInput)
         {
             stateMachine.ChangeState(player.AttackState);
         }
@@ -106,6 +110,8 @@ public class PlayerInAirState : PlayerState {
             player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
             player.Anim.SetFloat("xVelocity", Mathf.Abs(player.CurrentVelocity.x)); 
         }
+
+        player.Anim.SetBool("isGrounded", false);
     }
 
     private void CheckJumpMultiplier()

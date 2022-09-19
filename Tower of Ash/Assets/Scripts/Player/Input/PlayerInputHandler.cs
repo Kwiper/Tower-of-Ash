@@ -12,17 +12,20 @@ public class PlayerInputHandler : MonoBehaviour
     public bool JumpInputStop { get; private set; }
     public bool DashInput { get; private set; }
     public bool AttackInput { get; private set; }
+    public bool FireballInput { get; private set; }
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
     private float jumpInputStartTime;
     private float dashInputStartTime;
+    private float fireballInputStartTime;
 
     private void Update()
     {
         CheckJumpInputHoldTime();
         CheckDashInputHoldTime();
+        CheckFireballInputHoldTime();
     }
 
     public void OnAttackInput(InputAction.CallbackContext context)
@@ -32,6 +35,14 @@ public class PlayerInputHandler : MonoBehaviour
             AttackInput = true;
         }
 
+    }
+    public void OnFireballInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            FireballInput = true;
+            fireballInputStartTime = Time.time;
+        }
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -70,6 +81,7 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseDashInput() => DashInput = false;
 
     public void UseAttackInput() => AttackInput = false;
+    public void UseFireballInput() => FireballInput = false;
 
     private void CheckJumpInputHoldTime() // Jump buffer
     {
@@ -86,5 +98,12 @@ public class PlayerInputHandler : MonoBehaviour
             DashInput = false;
         }
     } 
+    private void CheckFireballInputHoldTime()
+    {
+        if(Time.time >= fireballInputStartTime + inputHoldTime)
+        {
+            FireballInput = false;
+        }
+    }
 
 }

@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     public PlayerWallSlideState WallSlideState { get; private set; }
     public PlayerWallJumpState WallJumpState { get; private set; }
     public PlayerDashState DashState { get; private set; }
-
     public PlayerAttackState AttackState { get; private set; }
+    public PlayerFireballState FireballState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -42,6 +42,9 @@ public class Player : MonoBehaviour
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
     private Vector2 workspace;
+
+    public GameObject Fireball;
+
     #endregion
 
     #region Unity Callback Functions
@@ -62,6 +65,8 @@ public class Player : MonoBehaviour
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
 
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+
+        FireballState = new PlayerFireballState(this, StateMachine, playerData, "fireball");
     }
 
     private void Start()
