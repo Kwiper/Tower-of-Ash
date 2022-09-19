@@ -35,7 +35,7 @@ public class PlayerFireballState : PlayerAbilityState {
         if (!isExitingState)
         {
             player.SetVelocityY(0);
-            player.SetVelocityX(-5);
+            player.SetVelocityX(5 * -player.FacingDirection);
 
             if (Time.time >= startTime + playerData.fireballTime)
             {
