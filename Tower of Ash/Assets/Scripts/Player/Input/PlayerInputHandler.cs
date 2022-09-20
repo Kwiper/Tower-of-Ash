@@ -13,6 +13,9 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DashInput { get; private set; }
     public bool AttackInput { get; private set; }
     public bool FireballInput { get; private set; }
+    public bool ChargeAttackInput { get; private set; }
+    public bool CanChargeAttack { get; private set; }
+
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -20,6 +23,9 @@ public class PlayerInputHandler : MonoBehaviour
     private float jumpInputStartTime;
     private float dashInputStartTime;
     private float fireballInputStartTime;
+
+    [SerializeField]
+    private float holdForChargeStart = 0.8f;
 
     private void Update()
     {
@@ -33,7 +39,23 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.started)
         {
             AttackInput = true;
+            ResetHoldForChargeStart();
         }
+        if (context.performed)
+        {
+            if(holdForChargeStart > 0) holdForChargeStart--;
+            if(holdForChargeStart <= 0)
+            {
+                CanChargeAttack = true;
+                Debug.Log("Attack charged");
+            }
+        }
+        if(context.canceled && CanChargeAttack)
+        {
+            ChargeAttackInput = true;
+            Debug.Log("Charge released!");
+        }
+
 
     }
     public void OnFireballInput(InputAction.CallbackContext context)
@@ -105,5 +127,7 @@ public class PlayerInputHandler : MonoBehaviour
             FireballInput = false;
         }
     }
+
+    public void ResetHoldForChargeStart() => holdForChargeStart = 0.8f;
 
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public PlayerDashState DashState { get; private set; }
     public PlayerAttackState AttackState { get; private set; }
     public PlayerFireballState FireballState { get; private set; }
+    public PlayerChargeAttackState ChargeAttackState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -67,6 +68,8 @@ public class Player : MonoBehaviour
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 
         FireballState = new PlayerFireballState(this, StateMachine, playerData, "fireball");
+
+        ChargeAttackState = new PlayerChargeAttackState(this, StateMachine, playerData, "chargeAttack");
     }
 
     private void Start()
