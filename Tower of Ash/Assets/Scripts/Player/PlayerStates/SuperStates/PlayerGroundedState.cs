@@ -49,7 +49,7 @@ public class PlayerGroundedState : PlayerState {
 
         if (chargeAttackInput)
         {
-            
+            stateMachine.ChangeState(player.ChargeAttackState);
         }
         else if (fireballInput)
         {

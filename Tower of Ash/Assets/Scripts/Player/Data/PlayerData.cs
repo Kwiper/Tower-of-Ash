@@ -44,4 +44,7 @@ public class PlayerData : ScriptableObject
     [Header("Fireball State")]
     public float fireballCooldown = 0.5f;
     public float fireballTime = 0.1f;
+
+    [Header("Charge Attack")]
+    public float chargeVelocity = 15f;
 }
