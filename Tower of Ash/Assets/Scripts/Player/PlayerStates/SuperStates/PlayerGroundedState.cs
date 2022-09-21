@@ -11,7 +11,7 @@ public class PlayerGroundedState : PlayerState {
     private bool isGrounded;
     private bool dashInput;
     private bool fireballInput;
-
+    private bool chargeAttackInput;
     public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -45,8 +45,13 @@ public class PlayerGroundedState : PlayerState {
         JumpInput = player.InputHandler.JumpInput;
         dashInput = player.InputHandler.DashInput;
         fireballInput = player.InputHandler.FireballInput;
+        chargeAttackInput = player.InputHandler.ChargeAttackInput;
 
-        if (fireballInput)
+        if (chargeAttackInput)
+        {
+            
+        }
+        else if (fireballInput)
         {
             stateMachine.ChangeState(player.FireballState);
         }

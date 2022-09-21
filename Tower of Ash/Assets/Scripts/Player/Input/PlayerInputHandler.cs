@@ -14,8 +14,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool AttackInput { get; private set; }
     public bool FireballInput { get; private set; }
     public bool ChargeAttackInput { get; private set; }
-    public bool CanChargeAttack { get; private set; }
 
+    
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -24,8 +24,7 @@ public class PlayerInputHandler : MonoBehaviour
     private float dashInputStartTime;
     private float fireballInputStartTime;
 
-    [SerializeField]
-    private float holdForChargeStart = 0.8f;
+    private bool chargeHeld = false;
 
     private void Update()
     {
@@ -34,29 +33,30 @@ public class PlayerInputHandler : MonoBehaviour
         CheckFireballInputHoldTime();
     }
 
+    public void OnChargeAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Charge Held");
+            chargeHeld = true;
+        }
+        if(context.canceled)
+        {
+            if (chargeHeld)
+            {
+                chargeHeld = false;
+                ChargeAttackInput = true;
+                Debug.Log("Charge attack!");
+            }
+        }
+    }
+
     public void OnAttackInput(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             AttackInput = true;
-            ResetHoldForChargeStart();
         }
-        if (context.performed)
-        {
-            if(holdForChargeStart > 0) holdForChargeStart--;
-            if(holdForChargeStart <= 0)
-            {
-                CanChargeAttack = true;
-                Debug.Log("Attack charged");
-            }
-        }
-        if(context.canceled && CanChargeAttack)
-        {
-            ChargeAttackInput = true;
-            Debug.Log("Charge released!");
-        }
-
-
     }
     public void OnFireballInput(InputAction.CallbackContext context)
     {
@@ -104,6 +104,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void UseAttackInput() => AttackInput = false;
     public void UseFireballInput() => FireballInput = false;
+    public void UseChargeAttackInput() => ChargeAttackInput = false;
 
     private void CheckJumpInputHoldTime() // Jump buffer
     {
@@ -128,6 +129,5 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    public void ResetHoldForChargeStart() => holdForChargeStart = 0.8f;
 
 }
