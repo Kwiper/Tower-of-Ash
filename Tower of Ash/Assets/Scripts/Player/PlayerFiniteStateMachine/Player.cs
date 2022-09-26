@@ -36,7 +36,8 @@ public class Player : MonoBehaviour
     private Transform groundCheck;
     [SerializeField]
     private Transform wallCheck;
-
+    [SerializeField]
+    private LayerMask portalLayer;
     #endregion
 
     #region Other variables
@@ -154,6 +155,12 @@ public class Player : MonoBehaviour
             Flip();
         }
     }
+/*
+    public void OnMoverOver()
+    {
+        Physics2D.OverlapCircle(transform.position - new Vector3(0,offsetY),0.2f, GameLayers.)
+    }
+    */
     #endregion
 
     #region Other Functions
@@ -167,5 +174,11 @@ public class Player : MonoBehaviour
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
+
+    public LayerMask PortalLayer
+    {
+        get => portalLayer;
+    }
+    
     #endregion
 }
