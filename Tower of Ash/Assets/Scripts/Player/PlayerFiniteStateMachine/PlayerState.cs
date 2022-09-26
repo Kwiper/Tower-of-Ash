@@ -12,6 +12,8 @@ public class PlayerState
     protected bool isAnimationFinished;
     protected bool isExitingState;
 
+
+
     protected float startTime;
 
     private string animBoolName;
@@ -30,8 +32,9 @@ public class PlayerState
         player.Anim.SetBool(animBoolName, true);
 
         startTime = Time.time;
-
-        Debug.Log(animBoolName);
+        if(player.stateDebug == true){
+            Debug.Log(animBoolName);
+        }
 
         isAnimationFinished = false;
 

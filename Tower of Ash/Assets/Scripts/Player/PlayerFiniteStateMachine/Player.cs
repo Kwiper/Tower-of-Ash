@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
     private Transform wallCheck;
     [SerializeField]
     private LayerMask portalLayer;
+    [SerializeField]
+    public bool stateDebug;
     #endregion
 
     #region Other variables
@@ -155,12 +157,17 @@ public class Player : MonoBehaviour
             Flip();
         }
     }
-/*
+
     public void OnMoverOver()
     {
-        Physics2D.OverlapCircle(transform.position - new Vector3(0,offsetY),0.2f, GameLayers.)
+       var collider = Physics2D.OverlapCircle(transform.position - new Vector3(0,0),0.2f, portalLayer);
+       var triggerable = collider.GetComponent<IplayerTriggerable>();
+       if(triggerable != null)
+       {
+            triggerable.OnPlayerTriggered(this);
+       }
     }
-    */
+    
     #endregion
 
     #region Other Functions
