@@ -15,7 +15,6 @@ public class PlayerFireballState : PlayerAbilityState {
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Fireball!");
 
         CanFireball = false;
         player.InputHandler.UseFireballInput();

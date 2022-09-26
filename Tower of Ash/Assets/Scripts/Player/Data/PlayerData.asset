@@ -15,7 +15,7 @@ MonoBehaviour:
   movementVelocity: 10
   jumpVelocity: 22
   amountOfJumps: 2
-  coyoteTime: 0.5
+  coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
   groundCheckRadius: 0.3
   whatIsGround:
@@ -32,3 +32,7 @@ MonoBehaviour:
   drag: 10
   dashEndYMultiplier: 0.2
   distBetweenAfterImages: 0.5
+  attackCooldown: 0.3
+  fireballCooldown: 0.5
+  fireballTime: 0.1
+  chargeVelocity: 10

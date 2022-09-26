@@ -29,11 +29,10 @@ public class PlayerAttackState : PlayerAbilityState {
     public override void Enter()
     {
         base.Enter();
-        Debug.Log(attackCounter);
         player.InputHandler.UseAttackInput();
 
         yInput = player.InputHandler.NormInputY;
-        player.Anim.SetInteger("yInput", yInput);
+        player.Anim.SetInteger("yInput", yInput); 
 
         if (yInput == 0) attackCounter++;
         

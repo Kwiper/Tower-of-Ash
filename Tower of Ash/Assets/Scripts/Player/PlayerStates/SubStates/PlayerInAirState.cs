@@ -77,7 +77,7 @@ public class PlayerInAirState : PlayerState {
         {
             stateMachine.ChangeState(player.ChargeAttackState);
         }
-        else if (fireballInput)
+        else if (fireballInput && player.FireballState.CheckIfCanFireball())
         {
             stateMachine.ChangeState(player.FireballState);
         }

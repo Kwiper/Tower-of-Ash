@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hitbox
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Ground
   - 
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -43,6 +45,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2579751463
+    locked: 0
+  - name: Enemy
+    uniqueID: 1632714011
     locked: 0
   - name: Player
     uniqueID: 4214035287
