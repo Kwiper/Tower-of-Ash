@@ -50,6 +50,7 @@ public class PlayerInAirState : PlayerState {
         base.Enter();
         player.AttackState.ResetAttackCounter();
         player.Anim.SetInteger("attackCounter", 0);
+        player.FireballState.ResetCanFireball();
     }
 
     public override void Exit()

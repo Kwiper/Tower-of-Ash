@@ -28,6 +28,7 @@ public class PlayerGroundedState : PlayerState {
 
         player.JumpState.ResetAmountOfJumpsLeft();
         player.DashState.ResetCanDash();
+        player.FireballState.ResetCanFireball();
     }
 
     public override void Exit()
