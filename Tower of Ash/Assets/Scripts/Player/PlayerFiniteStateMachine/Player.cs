@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerData playerData;
+    [SerializeField]
+    private CombatData combatData;
     #endregion
 
     #region Components

@@ -862,6 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82108e2fe6406cf4f8a3acd5a0378115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  combatData: {fileID: 0}
 --- !u!1 &1906059407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,6 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
+  combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
   groundCheck: {fileID: 2087444369}
   wallCheck: {fileID: 1906059408}
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}

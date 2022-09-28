@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "newAttackData", menuName = "Data/Attack Data")]
+[CreateAssetMenu(fileName = "newCombatData", menuName = "Data/Combat Data")]
 
-public class AttackData : ScriptableObject
+public class CombatData : ScriptableObject
 {
     [Header("Melee Values")]
     public int damage = 5;
@@ -12,4 +12,7 @@ public class AttackData : ScriptableObject
 
     [Header("Projectile Values")]
     public int projectileDamage = 15;
+
+    [Header("Health")]
+    public int health = 100;
 }
