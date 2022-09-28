@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     #region Data
     [SerializeField]
-    private CombatData combatData;
+    protected CombatData combatData;
 
     #endregion
 
@@ -22,19 +22,19 @@ public class Enemy : MonoBehaviour
     #region Other variables
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
-    private Vector2 workspace;
+    protected Vector2 workspace;
 
     #endregion
 
     #region Unity Callback Functions
 
-    private void Awake()
+    protected virtual void Awake()
     {
         StateMachine = new EnemyStateMachine();
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
@@ -43,14 +43,14 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         CurrentVelocity = RB.velocity;
 
         StateMachine.CurrentState.LogicUpdate();
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
     }
@@ -90,11 +90,11 @@ public class Enemy : MonoBehaviour
 
     #region Other Functions
 
-    private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
+    protected virtual void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
 
-    private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
+    protected virtual void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 
-    private void Flip()
+    protected virtual void Flip()
     {
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
