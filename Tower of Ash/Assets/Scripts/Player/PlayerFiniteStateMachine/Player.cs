@@ -161,11 +161,10 @@ public class Player : MonoBehaviour
 
     public void OnMoveOver()
     {
-        //Debug.Log(portalLayer);
+
        var collider = Physics2D.OverlapCircle(transform.position - new Vector3(0,0),0.2f, portalLayer);
        var triggerable = collider.GetComponent<IplayerTriggerable>();
-       //Debug.Log(portalLayer);
-       //Debug.Log(Physics2D.OverlapCircle(transform.position - new Vector3(0,0),0.2f, portalLayer));
+
        
        if(triggerable != null)
        {
