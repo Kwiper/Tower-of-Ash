@@ -38,11 +38,12 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         var playTransform = play.GetComponent<Transform>();
 
         playTransform.position = destPortal.spawnPoint.position;
+       
+        var essentialClean =  GameObject.FindGameObjectsWithTag("EssentialObjects");
 
-        var essentialClean = FindObjectsOfType<EssentialObjects>();
-
-        if(essentialClean.Length > 2){
+        if(essentialClean.Length > 1){
             Destroy(essentialClean[1]);
+                    Debug.Log("I happen2");
         }
 
         Destroy(gameObject);
