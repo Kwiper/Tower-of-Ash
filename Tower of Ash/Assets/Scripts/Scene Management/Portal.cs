@@ -31,7 +31,7 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         for (int i = 0; i < roomPortals.Length; i++) 
         {
             if (roomPortals[i] != this){
-            destPortal = this;
+            destPortal = roomPortals[i];
             break;
             }
         }
