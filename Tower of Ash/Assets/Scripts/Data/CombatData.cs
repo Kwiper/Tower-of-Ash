@@ -13,6 +13,4 @@ public class CombatData : ScriptableObject
     [Header("Projectile Values")]
     public int projectileDamage = 15;
 
-    [Header("Health")]
-    public int health = 100;
 }

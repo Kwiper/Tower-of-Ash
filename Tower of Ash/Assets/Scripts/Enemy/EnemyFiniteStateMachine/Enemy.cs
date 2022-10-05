@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
 
     public EnemyStateMachine StateMachine { get; private set; }
 
@@ -17,6 +16,7 @@ public class Enemy : MonoBehaviour
     #region Components
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
+    public Entity EnemyEntity;
     #endregion
 
     #region Other variables
@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        EnemyEntity = GetComponent<Entity>();
         FacingDirection = 1;
 
     }
@@ -47,12 +48,16 @@ public class Enemy : MonoBehaviour
     {
         CurrentVelocity = RB.velocity;
 
-        StateMachine.CurrentState.LogicUpdate();
+        //StateMachine.CurrentState.LogicUpdate(); //Re-add this when states are added to this enemy
+        if(EnemyEntity.Health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     protected virtual void FixedUpdate()
     {
-        StateMachine.CurrentState.PhysicsUpdate();
+        //StateMachine.CurrentState.PhysicsUpdate(); // Re-add this when states are added to test enemy
     }
 
     #endregion
@@ -86,6 +91,7 @@ public class Enemy : MonoBehaviour
         RB.velocity = workspace;
         CurrentVelocity = workspace;
     }
+
     #endregion
 
     #region Other Functions

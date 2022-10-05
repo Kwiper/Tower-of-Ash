@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 26622055}
   - component: {fileID: 26622057}
   - component: {fileID: 26622056}
+  - component: {fileID: 26622058}
   m_Layer: 8
   m_Name: HitBox
   m_TagString: Hitbox
@@ -149,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26622054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.97, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -221,7 +222,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0016313791, y: -0.001866445}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -232,8 +233,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9967369, y: 0.9942392}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &26622058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26622054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dc98465135bde42af0553e79a3ecb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +744,7 @@ GameObject:
   - component: {fileID: 1824188798}
   - component: {fileID: 1824188799}
   - component: {fileID: 1824188800}
+  - component: {fileID: 1824188801}
   m_Layer: 9
   m_Name: TestEnemy
   m_TagString: Enemy
@@ -884,6 +899,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1824188801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824188794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
 --- !u!1 &1906059407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1181,7 @@ GameObject:
   - component: {fileID: 2009876458}
   - component: {fileID: 2009876460}
   - component: {fileID: 2009876459}
+  - component: {fileID: 2009876461}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1454,6 +1483,19 @@ MonoBehaviour:
   groundCheck: {fileID: 2087444369}
   wallCheck: {fileID: 1906059408}
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
+--- !u!114 &2009876461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009876452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &2087444368
 GameObject:
   m_ObjectHideFlags: 0
