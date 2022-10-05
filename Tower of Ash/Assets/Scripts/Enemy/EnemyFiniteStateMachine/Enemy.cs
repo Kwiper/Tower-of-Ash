@@ -50,7 +50,6 @@ public class Enemy : MonoBehaviour {
 
         if (EnemyEntity.InKnockback) 
         {
-            Debug.Log("In Knockback");
             SetVelocityX(EnemyEntity.Knockback);
         }
 

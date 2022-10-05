@@ -13,10 +13,13 @@ public class Hitbox : MonoBehaviour
     private string tagName;
 
     private Entity target;
+
+    public bool HitObject { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        HitObject = false;
     }
 
     // Update is called once per frame
@@ -44,9 +47,15 @@ public class Hitbox : MonoBehaviour
             }
 
             target.SetKnockback(dir);
+            HitObject = true;
 
         }
         
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        HitObject = false;
     }
 
 }

@@ -47,4 +47,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Charge Attack")]
     public float chargeVelocity = 15f;
+
+    [Header("Pogo")]
+    public float pogoVelocity = 25f;
 }

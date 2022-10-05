@@ -10,6 +10,7 @@ public class PlayerAttackState : PlayerAbilityState {
 
     private int yInput;
 
+    private Hitbox hitbox;
 
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -29,6 +30,8 @@ public class PlayerAttackState : PlayerAbilityState {
     public override void Enter()
     {
         base.Enter();
+        hitbox = player.gameObject.GetComponentInChildren<Hitbox>(true);
+
         player.InputHandler.UseAttackInput();
 
         yInput = player.InputHandler.NormInputY;
@@ -53,6 +56,14 @@ public class PlayerAttackState : PlayerAbilityState {
     {
         base.LogicUpdate();
         player.Anim.SetInteger("attackCounter", attackCounter);
+
+        if(yInput < 0 && player.CurrentVelocity.y < 0)
+        {
+            if (hitbox.HitObject)
+            {
+                player.SetVelocityY(playerData.pogoVelocity);
+            }
+        }
 
     }
 
