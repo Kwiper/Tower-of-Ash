@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour, IplayerTriggerable
 {
     [SerializeField] int sceneToLoad = -1;
+    [SerializeField] DestinationIdentifier destinationPortal;
     [SerializeField] Transform spawnPoint;
 
     GameObject play;
@@ -30,7 +31,7 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         var roomPortals = FindObjectsOfType<Portal>();
         for (int i = 0; i < roomPortals.Length; i++) 
         {
-            if (roomPortals[i] != this){
+            if (roomPortals[i] != this && roomPortals[i].destinationPortal == this.destinationPortal){
             destPortal = roomPortals[i];
             break;
             }
@@ -49,6 +50,7 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         Destroy(gameObject);
     }
 
+    public enum DestinationIdentifier{A,B,C,D,E}
 
     public Transform SpawnPoint => spawnPoint;
 }
