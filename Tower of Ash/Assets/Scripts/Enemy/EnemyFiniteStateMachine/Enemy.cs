@@ -48,6 +48,12 @@ public class Enemy : MonoBehaviour {
     {
         CurrentVelocity = RB.velocity;
 
+        if (EnemyEntity.InKnockback) 
+        {
+            Debug.Log("In Knockback");
+            SetVelocityX(EnemyEntity.Knockback);
+        }
+
         //StateMachine.CurrentState.LogicUpdate(); //Re-add this when states are added to this enemy
         if(EnemyEntity.Health <= 0)
         {

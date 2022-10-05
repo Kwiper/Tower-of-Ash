@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
+  tagName: Enemy
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatData: {fileID: 11400000, guid: dd06b9cbb11a6e94b98d50cafecb884c, type: 2}
+  EnemyEntity: {fileID: 0}
 --- !u!95 &1824188800
 Animator:
   serializedVersion: 4
@@ -911,7 +913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 100
+  knockbackForce: 10
 --- !u!1 &1906059407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  knockbackForce: 0
 --- !u!1 &2087444368
 GameObject:
   m_ObjectHideFlags: 0

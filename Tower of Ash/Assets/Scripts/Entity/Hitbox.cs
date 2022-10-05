@@ -9,6 +9,9 @@ public class Hitbox : MonoBehaviour
     [SerializeField]
     private CombatData combatData;
 
+    [SerializeField]
+    private string tagName;
+
     private Entity target;
     // Start is called before the first frame update
     void Start()
@@ -25,11 +28,23 @@ public class Hitbox : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if(collision.CompareTag("Enemy"))
+        if(collision.CompareTag(tagName))
         {
-            Debug.Log("Entered layer");
             target = collision.gameObject.GetComponent<Entity>();
             target.SetDamage(combatData.damage);
+
+            int dir = (int)(collision.gameObject.transform.position.x - this.transform.parent.position.x);
+            if (dir >= 0)
+            {
+                dir = 1;
+            }
+            else if (dir < 0)
+            {
+                dir = -1;
+            }
+
+            target.SetKnockback(dir);
+
         }
         
     }
