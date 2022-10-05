@@ -41,13 +41,12 @@ public class Portal : MonoBehaviour, IplayerTriggerable
        
         var essentialClean =  GameObject.FindGameObjectsWithTag("EssentialObjects");
 
+        //Prevents players from duping themselves in the spawn room
         if(essentialClean.Length > 1){
             Destroy(essentialClean[1]);
-                    Debug.Log("I happen2");
         }
 
         Destroy(gameObject);
-        Debug.Log("I happen");
     }
 
 
