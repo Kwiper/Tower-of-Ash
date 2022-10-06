@@ -913,8 +913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  knockbackForce: 0
+  maxHealth: 20
+  knockbackForce: 5
 --- !u!1 &1906059407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1485,7 @@ MonoBehaviour:
   combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
   groundCheck: {fileID: 2087444369}
   wallCheck: {fileID: 1906059408}
+  firePoint: {fileID: 1240424264}
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
 --- !u!114 &2009876461
 MonoBehaviour:

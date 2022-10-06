@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
     private Transform groundCheck;
     [SerializeField]
     private Transform wallCheck;
+    [SerializeField]
+    private Transform firePoint;
 
     #endregion
 
@@ -170,5 +172,13 @@ public class Player : MonoBehaviour
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
+
+    public void CastFireball()
+    {
+        Debug.Log("Fireball!");
+        Instantiate(Fireball,firePoint.transform.position,firePoint.transform.rotation);
+    }
+
+
     #endregion
 }

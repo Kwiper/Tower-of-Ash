@@ -12,5 +12,6 @@ public class CombatData : ScriptableObject
 
     [Header("Projectile Values")]
     public int projectileDamage = 15;
+    public int projectileSpeed = 20;
 
 }

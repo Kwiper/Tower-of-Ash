@@ -52,15 +52,10 @@ public class PlayerFireballState : PlayerAbilityState {
 
     public void ResetCanFireball() => CanFireball = true;
 
-
-    public void CastFireball()
-    {
-        Debug.Log("Fireball!");
-    }
-
     public override void AnimationTrigger()
     {
         base.AnimationTrigger();
-        CastFireball();
+        Debug.Log("Animation triggered");
+        player.CastFireball();
     }
 }
