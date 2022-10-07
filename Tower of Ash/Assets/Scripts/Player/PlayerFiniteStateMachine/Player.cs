@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     private Transform wallCheck;
     [SerializeField]
     private Transform firePoint;
-
+    [SerializeField]
     private LayerMask portalLayer;
     [SerializeField]
     public bool stateDebug;
@@ -168,14 +168,15 @@ public class Player : MonoBehaviour
     {
 
        var collider = Physics2D.OverlapCircle(transform.position - new Vector3(0,0),0.2f, portalLayer);
-       var triggerable = collider.GetComponent<IplayerTriggerable>();
+       if(collider != null){
+            var triggerable = collider.GetComponent<IplayerTriggerable>();
 
        
-       if(triggerable != null)
-       {
-            triggerable.OnPlayerTriggered(this);
+            if(triggerable != null)
+            {
+                triggerable.OnPlayerTriggered(this);
+            }
        }
-       
     }
     
     #endregion

@@ -529,8 +529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
+  combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
   groundCheck: {fileID: 6238124248483436294}
   wallCheck: {fileID: 6238124248530739207}
+  firePoint: {fileID: 6238124247586150367}
   portalLayer:
     serializedVersion: 2
     m_Bits: 0
