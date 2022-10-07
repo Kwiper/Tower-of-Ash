@@ -41,6 +41,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform firePoint;
 
+    private LayerMask portalLayer;
+    [SerializeField]
+    public bool stateDebug;
     #endregion
 
     #region Other variables
@@ -99,6 +102,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
+        OnMoveOver();
     }
     #endregion
 
@@ -159,6 +163,21 @@ public class Player : MonoBehaviour
             Flip();
         }
     }
+
+    public void OnMoveOver()
+    {
+
+       var collider = Physics2D.OverlapCircle(transform.position - new Vector3(0,0),0.2f, portalLayer);
+       var triggerable = collider.GetComponent<IplayerTriggerable>();
+
+       
+       if(triggerable != null)
+       {
+            triggerable.OnPlayerTriggered(this);
+       }
+       
+    }
+    
     #endregion
 
     #region Other Functions
@@ -180,5 +199,10 @@ public class Player : MonoBehaviour
     }
 
 
+    public LayerMask PortalLayer
+    {
+        get => portalLayer;
+    }
+    
     #endregion
 }
