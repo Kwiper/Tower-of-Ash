@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 6238124246651302128}
   - component: {fileID: 6238124246651302142}
   - component: {fileID: 6238124246651302143}
+  - component: {fileID: 5887979476739105947}
   m_Layer: 8
   m_Name: HitBox
   m_TagString: Hitbox
@@ -142,6 +143,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5887979476739105947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238124246651302129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dc98465135bde42af0553e79a3ecb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
+  tagName: Enemy
 --- !u!1 &6238124247586150352
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +266,7 @@ GameObject:
   - component: {fileID: 6238124248561127293}
   - component: {fileID: 6238124248561127291}
   - component: {fileID: 6238124248561127292}
+  - component: {fileID: 7049924517694585119}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -558,3 +574,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7049924517694585119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238124248561127283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  knockbackForce: 0

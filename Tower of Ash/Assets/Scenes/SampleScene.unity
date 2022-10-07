@@ -193,6 +193,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33e6005b41cb7cc428fb27ac59947604, type: 3}
+--- !u!1 &382430706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6238124246651302129, guid: 469ed4aecab3bd14c91512c19a7478cc, type: 3}
+  m_PrefabInstance: {fileID: 1249436304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &382430710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382430706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dc98465135bde42af0553e79a3ecb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
+  tagName: Enemy
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2144721682}
     m_Modifications:
+    - target: {fileID: 6238124246651302129, guid: 469ed4aecab3bd14c91512c19a7478cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6238124248561127283, guid: 469ed4aecab3bd14c91512c19a7478cc, type: 3}
       propertyPath: m_Name
       value: Player
@@ -796,11 +819,30 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 558802554}
+--- !u!1 &1536290735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6238124248561127283, guid: 469ed4aecab3bd14c91512c19a7478cc, type: 3}
+  m_PrefabInstance: {fileID: 1249436304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1536290743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6238124248561127295, guid: 469ed4aecab3bd14c91512c19a7478cc, type: 3}
   m_PrefabInstance: {fileID: 1249436304}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1536290744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536290735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  knockbackForce: 0
 --- !u!4 &1592045769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8026415208217373921, guid: 469ed4aecab3bd14c91512c19a7478cc, type: 3}
@@ -1066,7 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatData: {fileID: 11400000, guid: dd06b9cbb11a6e94b98d50cafecb884c, type: 2}
-  EnemyEntity: {fileID: 0}
+  EnemyEntity: {fileID: 1824188801}
 --- !u!95 &1824188800
 Animator:
   serializedVersion: 4
