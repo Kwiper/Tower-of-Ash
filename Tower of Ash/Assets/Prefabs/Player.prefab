@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 6238124248561127293}
   - component: {fileID: 6238124248561127291}
   - component: {fileID: 6238124248561127292}
-  - component: {fileID: 7049924517694585119}
+  - component: {fileID: 8397560884129036871}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -551,7 +551,7 @@ MonoBehaviour:
   firePoint: {fileID: 6238124247586150367}
   portalLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   stateDebug: 0
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
 --- !u!95 &6238124248561127292
@@ -574,7 +574,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7049924517694585119
+--- !u!114 &8397560884129036871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
