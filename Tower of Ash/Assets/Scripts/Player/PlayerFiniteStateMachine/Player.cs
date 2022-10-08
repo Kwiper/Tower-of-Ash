@@ -195,7 +195,6 @@ public class Player : MonoBehaviour
 
     public void CastFireball()
     {
-        Debug.Log("Fireball!");
         Instantiate(Fireball,firePoint.transform.position,firePoint.transform.rotation);
     }
 

@@ -36,11 +36,13 @@ public class PlayerFireballState : PlayerAbilityState {
             player.SetVelocityY(0);
             player.SetVelocityX(5 * -player.FacingDirection);
 
+            /*
             if (Time.time >= startTime + playerData.fireballTime)
             {
                 isAbilityDone = true;
                 lastFireballTime = Time.time;
             }
+            */
         }
 
     }
@@ -55,7 +57,13 @@ public class PlayerFireballState : PlayerAbilityState {
     public override void AnimationTrigger()
     {
         base.AnimationTrigger();
-        Debug.Log("Animation triggered");
         player.CastFireball();
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+        isAbilityDone = true;
+        lastFireballTime = Time.time;
     }
 }
