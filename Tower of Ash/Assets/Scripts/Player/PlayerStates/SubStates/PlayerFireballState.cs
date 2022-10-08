@@ -8,6 +8,8 @@ public class PlayerFireballState : PlayerAbilityState {
 
     private float lastFireballTime;
 
+    private bool recoil = false;
+
     public PlayerFireballState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -18,7 +20,7 @@ public class PlayerFireballState : PlayerAbilityState {
 
         CanFireball = false;
         player.InputHandler.UseFireballInput();
-       
+        recoil = false;
         startTime = Time.time;
     }
 
@@ -34,7 +36,8 @@ public class PlayerFireballState : PlayerAbilityState {
         if (!isExitingState)
         {
             player.SetVelocityY(0);
-            player.SetVelocityX(5 * -player.FacingDirection);
+
+            if(recoil) player.SetVelocityX(5 * -player.FacingDirection);
 
             /*
             if (Time.time >= startTime + playerData.fireballTime)
@@ -57,6 +60,7 @@ public class PlayerFireballState : PlayerAbilityState {
     public override void AnimationTrigger()
     {
         base.AnimationTrigger();
+        recoil = true;
         player.CastFireball();
     }
 

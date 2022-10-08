@@ -41,17 +41,7 @@ public class Fireball : MonoBehaviour
             target = collision.gameObject.GetComponent<Entity>();
             target.SetDamage(combatData.projectileDamage);
 
-            int dir = (int)(collision.gameObject.transform.position.x - this.gameObject.transform.position.x);
-            if (dir >= 0)
-            {
-                dir = 1;
-            }
-            else if (dir < 0)
-            {
-                dir = -1;
-            }
-
-            target.SetKnockback(dir);
+            target.SetKnockback(direction);
 
 
             Destroy(gameObject);

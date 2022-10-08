@@ -12,6 +12,8 @@ public class PlayerAttackState : PlayerAbilityState {
 
     private Hitbox hitbox;
 
+    private bool stepForward;
+
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -20,6 +22,12 @@ public class PlayerAttackState : PlayerAbilityState {
     {
         base.AnimationFinishTrigger();
         isAbilityDone = true;
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        stepForward = !stepForward;
     }
 
     public override void DoChecks()
@@ -34,10 +42,12 @@ public class PlayerAttackState : PlayerAbilityState {
 
         player.InputHandler.UseAttackInput();
 
+        stepForward = false;
+
         yInput = player.InputHandler.NormInputY;
         player.Anim.SetInteger("yInput", yInput); 
 
-        if (yInput == 0) attackCounter++;
+        if (yInput == 0 && isGrounded) attackCounter++;
         
         if (attackCounter > 2)
         {
@@ -56,6 +66,15 @@ public class PlayerAttackState : PlayerAbilityState {
     {
         base.LogicUpdate();
         player.Anim.SetInteger("attackCounter", attackCounter);
+
+        if (stepForward)
+        {
+            player.SetVelocityX(4 * player.FacingDirection);
+        }
+        else
+        {
+            player.SetVelocityX(0);
+        }
 
         if(yInput < 0 && player.CurrentVelocity.y < 0)
         {

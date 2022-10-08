@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94d71bdef2cb2c74fa47343048b843fc
+guid: 5bf240230c7dbfc49aa2bfcc2067432d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,137 +117,263 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: K_Fireball_0
+      name: Kindling_fireball_air_0
       rect:
         serializedVersion: 2
         x: 21
-        y: 64
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 044734f6905fd9844bf7107bd1c43f96
-      internalID: -830558192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_1
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 64
+        y: 80
         width: 19
         height: 32
       alignment: 9
-      pivot: {x: 0.5263158, y: 0.5}
+      pivot: {x: 0.47368422, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026a2af2b7fca294dade8f2bf0ab6b4f
-      internalID: 1126185349
+      spriteID: e8db62d1701f7554d81c04c1a8a48c37
+      internalID: 1875974458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_2
+      name: Kindling_fireball_air_1
       rect:
         serializedVersion: 2
-        x: 147
-        y: 64
-        width: 19
-        height: 32
+        x: 81
+        y: 80
+        width: 25
+        height: 35
       alignment: 9
-      pivot: {x: 0.5263158, y: 0.5}
+      pivot: {x: 0.52, y: 0.45714286}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 275d907b797ff27408b15058e61421a1
-      internalID: -546836853
+      spriteID: cbd7dfe74ad9ff64dab324e772541e0e
+      internalID: 2009664198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_3
+      name: Kindling_fireball_air_2
       rect:
         serializedVersion: 2
-        x: 211
-        y: 64
-        width: 24
-        height: 32
+        x: 145
+        y: 80
+        width: 25
+        height: 33
       alignment: 9
-      pivot: {x: 0.41666666, y: 0.5}
+      pivot: {x: 0.52, y: 0.4848485}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7858240587455754898855b53e5fcaed
-      internalID: 256688176
+      spriteID: 6bbe0accd6244b34cae4096590291d30
+      internalID: 1956652246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_4
+      name: Kindling_fireball_air_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 79
+        width: 26
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47058824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90088493a3faafe488dc2409a9a8342c
+      internalID: -1949294827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_fireball_air_4
       rect:
         serializedVersion: 2
         x: 273
-        y: 64
+        y: 79
         width: 26
-        height: 32
+        height: 36
       alignment: 9
-      pivot: {x: 0.46153846, y: 0.5}
+      pivot: {x: 0.5, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bda820ab684df9418880f6b41e45e57
-      internalID: -1197070113
+      spriteID: 7c8c75abb32880d4baa3bd971306c805
+      internalID: -1934922818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_5
+      name: Kindling_fireball_air_5
       rect:
         serializedVersion: 2
-        x: 335
-        y: 64
-        width: 30
-        height: 32
+        x: 337
+        y: 79
+        width: 28
+        height: 36
       alignment: 9
-      pivot: {x: 0.46666667, y: 0.5}
+      pivot: {x: 0.4642857, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7692f9446e468fc4793f2013abb7c3ab
-      internalID: -97861780
+      spriteID: 244ba84bbadbd884b8cd30ec14cc25b6
+      internalID: 836924415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_6
+      name: Kindling_fireball_air_6
       rect:
         serializedVersion: 2
-        x: 398
-        y: 64
+        x: 401
+        y: 79
+        width: 24
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47058824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3247b80cee600a74eb535a92b9206e9c
+      internalID: -219470156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_fireball_air_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 79
+        width: 24
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35398a2a29a5c834697993be93477997
+      internalID: -1427315662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_fireball_air_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 15
+        width: 36
+        height: 36
+      alignment: 9
+      pivot: {x: 0.3611111, y: 0.44444445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32df153d3c15ae64e913b55fe7940ad7
+      internalID: 464634204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_fireball_air_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 15
+        width: 42
+        height: 33
+      alignment: 9
+      pivot: {x: 0.30952382, y: 0.4848485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3617e26706169a94db18e9c475f399d1
+      internalID: -1800044391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_fireball_air_10
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 15
+        width: 43
+        height: 33
+      alignment: 9
+      pivot: {x: 0.3255814, y: 0.4848485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8c53ea2139a9f49af88f9a766bd650
+      internalID: 1831577606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_fireball_air_11
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 15
+        width: 43
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3255814, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06a9cea352a10841bd61bb8b3f50c40
+      internalID: -2131226174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_fireball_air_12
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 15
         width: 27
         height: 32
       alignment: 9
@@ -257,134 +383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd018ce01ca408546b3609005f0c57d2
-      internalID: -454775227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_7
-      rect:
-        serializedVersion: 2
-        x: 461
-        y: 64
-        width: 28
-        height: 32
-      alignment: 9
-      pivot: {x: 0.53571427, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac6e8245e0375eb4c9a787ee980bf0ae
-      internalID: 1081293513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_8
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 0
-        width: 39
-        height: 32
-      alignment: 9
-      pivot: {x: 0.46153846, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d660e2d42e1a76448506c3fc20eeb4c
-      internalID: 92442107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_9
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 0
-        width: 47
-        height: 32
-      alignment: 9
-      pivot: {x: 0.38297874, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 683a2e63fa712dc449a7de417b382a9f
-      internalID: 644121746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_10
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 0
-        width: 41
-        height: 32
-      alignment: 9
-      pivot: {x: 0.29268292, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fb13e71334ff4a458a90bdf443c0abf
-      internalID: -1699970861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_11
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 0
-        width: 39
-        height: 32
-      alignment: 9
-      pivot: {x: 0.25641027, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5e78636cb6b018449324f009c34d821
-      internalID: 1436504216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_12
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 0
-        width: 23
-        height: 32
-      alignment: 9
-      pivot: {x: 0.4347826, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bd6e3120e12ba64fb2ee8a4c5fcca8e
-      internalID: -332302489
+      spriteID: a5e63922352517b49956d35cc0615270
+      internalID: -2131257912
       vertices: []
       indices: 
       edges: []
@@ -400,19 +400,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      K_Fireball_4: -1197070113
-      K_Fireball_6: -454775227
-      K_Fireball_2: -546836853
-      K_Fireball_12: -332302489
-      K_Fireball_11: 1436504216
-      K_Fireball_1: 1126185349
-      K_Fireball_3: 256688176
-      K_Fireball_10: -1699970861
-      K_Fireball_5: -97861780
-      K_Fireball_0: -830558192
-      K_Fireball_9: 644121746
-      K_Fireball_7: 1081293513
-      K_Fireball_8: 92442107
+      Kindling_fireball_air_1: 2009664198
+      Kindling_fireball_air_6: -219470156
+      Kindling_fireball_air_2: 1956652246
+      Kindling_fireball_air_8: 464634204
+      Kindling_fireball_air_10: 1831577606
+      Kindling_fireball_air_12: -2131257912
+      Kindling_fireball_air_3: -1949294827
+      Kindling_fireball_air_7: -1427315662
+      Kindling_fireball_air_5: 836924415
+      Kindling_fireball_air_4: -1934922818
+      Kindling_fireball_air_0: 1875974458
+      Kindling_fireball_air_9: -1800044391
+      Kindling_fireball_air_11: -2131226174
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

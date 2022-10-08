@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94d71bdef2cb2c74fa47343048b843fc
+guid: f50dbcdf85122c54b9e381ffec658e8e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,11 +117,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: K_Fireball_0
+      name: K_UpAttack_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 64
+        x: 17
+        y: 0
         width: 16
         height: 32
       alignment: 0
@@ -131,260 +131,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 044734f6905fd9844bf7107bd1c43f96
-      internalID: -830558192
+      spriteID: 15625bfc78c8f6341a910f7443921815
+      internalID: 940999651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_1
+      name: K_UpAttack_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 64
-        width: 19
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5263158, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 026a2af2b7fca294dade8f2bf0ab6b4f
-      internalID: 1126185349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_2
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 64
-        width: 19
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5263158, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 275d907b797ff27408b15058e61421a1
-      internalID: -546836853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_3
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 64
-        width: 24
-        height: 32
-      alignment: 9
-      pivot: {x: 0.41666666, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7858240587455754898855b53e5fcaed
-      internalID: 256688176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_4
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 64
-        width: 26
-        height: 32
-      alignment: 9
-      pivot: {x: 0.46153846, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bda820ab684df9418880f6b41e45e57
-      internalID: -1197070113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_5
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 64
-        width: 30
-        height: 32
-      alignment: 9
-      pivot: {x: 0.46666667, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7692f9446e468fc4793f2013abb7c3ab
-      internalID: -97861780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_6
-      rect:
-        serializedVersion: 2
-        x: 398
-        y: 64
-        width: 27
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5185185, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd018ce01ca408546b3609005f0c57d2
-      internalID: -454775227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_7
-      rect:
-        serializedVersion: 2
-        x: 461
-        y: 64
-        width: 28
-        height: 32
-      alignment: 9
-      pivot: {x: 0.53571427, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac6e8245e0375eb4c9a787ee980bf0ae
-      internalID: 1081293513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_Fireball_8
-      rect:
-        serializedVersion: 2
-        x: 11
+        x: 80
         y: 0
-        width: 39
+        width: 31
         height: 32
       alignment: 9
-      pivot: {x: 0.46153846, y: 0.5}
+      pivot: {x: 0.38709676, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d660e2d42e1a76448506c3fc20eeb4c
-      internalID: 92442107
+      spriteID: a979ea000fb0a064386067b7c3780a06
+      internalID: 1480464217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_9
+      name: K_UpAttack_2
       rect:
         serializedVersion: 2
-        x: 77
+        x: 142
         y: 0
-        width: 47
+        width: 33
         height: 32
       alignment: 9
-      pivot: {x: 0.38297874, y: 0.5}
+      pivot: {x: 0.42424244, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 683a2e63fa712dc449a7de417b382a9f
-      internalID: 644121746
+      spriteID: fe5c0896202ab1b4d82bd1137cc141ac
+      internalID: -696641177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_10
+      name: K_UpAttack_3
       rect:
         serializedVersion: 2
-        x: 147
+        x: 193
         y: 0
-        width: 41
-        height: 32
+        width: 48
+        height: 42
       alignment: 9
-      pivot: {x: 0.29268292, y: 0.5}
+      pivot: {x: 0.5208333, y: 0.3809524}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fb13e71334ff4a458a90bdf443c0abf
-      internalID: -1699970861
+      spriteID: caf0324108308e84baf2c709a665880f
+      internalID: -1525606255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_11
+      name: K_UpAttack_4
       rect:
         serializedVersion: 2
-        x: 213
+        x: 257
         y: 0
-        width: 39
-        height: 32
+        width: 42
+        height: 42
       alignment: 9
-      pivot: {x: 0.25641027, y: 0.5}
+      pivot: {x: 0.5714286, y: 0.3809524}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5e78636cb6b018449324f009c34d821
-      internalID: 1436504216
+      spriteID: 70a967452230dcc4dae1b84f824941f6
+      internalID: 2064168384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_Fireball_12
+      name: K_UpAttack_7
       rect:
         serializedVersion: 2
-        x: 213
-        y: 0
-        width: 23
-        height: 32
-      alignment: 9
-      pivot: {x: 0.4347826, y: 0.5}
+        x: 346
+        y: 35
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bd6e3120e12ba64fb2ee8a4c5fcca8e
-      internalID: -332302489
+      spriteID: 6cf68946498696a488f09f0603be1aa9
+      internalID: -1325432414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_UpAttack_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 0
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: 0.6857143, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544d37a23858f644e92f230e72536bb8
+      internalID: 1206156819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_UpAttack_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b2311deee26d144b6e295440bf2d7a
+      internalID: 468356295
       vertices: []
       indices: 
       edges: []
@@ -400,19 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      K_Fireball_4: -1197070113
-      K_Fireball_6: -454775227
-      K_Fireball_2: -546836853
-      K_Fireball_12: -332302489
-      K_Fireball_11: 1436504216
-      K_Fireball_1: 1126185349
-      K_Fireball_3: 256688176
-      K_Fireball_10: -1699970861
-      K_Fireball_5: -97861780
-      K_Fireball_0: -830558192
-      K_Fireball_9: 644121746
-      K_Fireball_7: 1081293513
-      K_Fireball_8: 92442107
+      K_UpAttack_7: -1325432414
+      K_UpAttack_0: 940999651
+      K_UpAttack_5: 1206156819
+      K_UpAttack_6: 468356295
+      K_UpAttack_1: 1480464217
+      K_UpAttack_4: 2064168384
+      K_UpAttack_3: -1525606255
+      K_UpAttack_2: -696641177
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

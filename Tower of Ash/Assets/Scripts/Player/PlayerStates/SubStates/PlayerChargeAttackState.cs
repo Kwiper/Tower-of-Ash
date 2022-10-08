@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerChargeAttackState : PlayerAbilityState
 {
 
+    private bool launch;
+
     public PlayerChargeAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -13,6 +15,12 @@ public class PlayerChargeAttackState : PlayerAbilityState
     {
         base.AnimationFinishTrigger();
         isAbilityDone = true;
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        launch = !launch;
     }
 
     public override void DoChecks()
@@ -24,7 +32,7 @@ public class PlayerChargeAttackState : PlayerAbilityState
     {
         base.Enter();
         player.InputHandler.UseChargeAttackInput();
-
+        launch = false;
     }
 
     public override void Exit()
@@ -35,10 +43,14 @@ public class PlayerChargeAttackState : PlayerAbilityState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
         if (!isGrounded)
         {
-            player.SetVelocityY(playerData.chargeVelocity);
-            player.SetVelocityX(playerData.chargeVelocity * player.InputHandler.NormInputX);
+            if (launch)
+            {
+                player.SetVelocityY(playerData.chargeVelocity);
+                player.SetVelocityX(playerData.chargeVelocity * player.InputHandler.NormInputX);
+            }
         }
     }
 
