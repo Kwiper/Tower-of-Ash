@@ -29,7 +29,7 @@ public class PassThrough : MonoBehaviour
     }
 
     private IEnumerator EnableCollider(){
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>(), false);
     }
     //Determines if player is standing on correct platform
