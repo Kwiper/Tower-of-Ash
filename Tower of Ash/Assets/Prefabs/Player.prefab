@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5391224623849368330}
   m_Layer: 10
   m_Name: HurtBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 6238124248561127291}
   - component: {fileID: 6238124248561127292}
   - component: {fileID: 8397560884129036871}
+  - component: {fileID: 1562662608}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -614,6 +615,7 @@ MonoBehaviour:
   stateDebug: 0
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
   healthCanCountdown: 1
+  isHit: 0
 --- !u!95 &6238124248561127292
 Animator:
   serializedVersion: 4
@@ -648,4 +650,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   Health: 0
-  knockbackForce: 0
+  knockbackForce: 15
+--- !u!114 &1562662608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238124248561127283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc5be3a542622541b249ffa6ea28912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
