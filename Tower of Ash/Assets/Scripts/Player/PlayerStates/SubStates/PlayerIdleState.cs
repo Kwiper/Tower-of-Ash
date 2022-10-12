@@ -27,6 +27,7 @@ public class PlayerIdleState : PlayerGroundedState {
     {
         base.LogicUpdate();
 
+
         if(xInput != 0 && !isExitingState)
         {
             stateMachine.ChangeState(player.MoveState);

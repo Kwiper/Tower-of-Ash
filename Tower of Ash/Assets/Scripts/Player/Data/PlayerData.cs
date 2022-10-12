@@ -50,4 +50,8 @@ public class PlayerData : ScriptableObject
 
     [Header("Pogo")]
     public float pogoVelocity = 25f;
+
+    [Header("Timer")]
+    public float timeReduction = 1/60f;
+
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
 
-    public int maxHealth;
-    public int Health { get; private set; }
+    public float maxHealth;
+    public float Health;
 
     public int knockbackForce;
 

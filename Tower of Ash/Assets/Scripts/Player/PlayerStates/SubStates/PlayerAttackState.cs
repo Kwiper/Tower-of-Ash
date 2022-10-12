@@ -69,7 +69,7 @@ public class PlayerAttackState : PlayerAbilityState {
 
         if (stepForward)
         {
-            player.SetVelocityX(4 * player.FacingDirection);
+            player.SetVelocityX(5 * player.FacingDirection);
         }
         else
         {

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public PlayerAttackState AttackState { get; private set; }
     public PlayerFireballState FireballState { get; private set; }
     public PlayerChargeAttackState ChargeAttackState { get; private set; }
+    public PlayerHitState HitState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -53,6 +54,10 @@ public class Player : MonoBehaviour
 
     public GameObject Fireball;
 
+    public bool healthCanCountdown = true;
+
+    public bool isHit = false;
+
     #endregion
 
     #region Unity Callback Functions
@@ -77,6 +82,8 @@ public class Player : MonoBehaviour
         FireballState = new PlayerFireballState(this, StateMachine, playerData, "fireball");
 
         ChargeAttackState = new PlayerChargeAttackState(this, StateMachine, playerData, "chargeAttack");
+
+        HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
     }
 
     private void Start()
@@ -96,6 +103,18 @@ public class Player : MonoBehaviour
         CurrentVelocity = RB.velocity;
 
         StateMachine.CurrentState.LogicUpdate();
+
+        HealthTimer();
+
+        if (PlayerEntity.InKnockback)
+        {
+            SetVelocityX(PlayerEntity.Knockback);
+        }
+
+        if (isHit)
+        {
+            StateMachine.ChangeState(HitState);
+        }
 
     }
 
@@ -196,6 +215,14 @@ public class Player : MonoBehaviour
     public void CastFireball()
     {
         Instantiate(Fireball,firePoint.transform.position,firePoint.transform.rotation);
+    }
+
+    private void HealthTimer()
+    {
+        if (healthCanCountdown)
+        {
+            PlayerEntity.Health -= (Time.deltaTime * playerData.timeReduction);
+        }
     }
 
 
