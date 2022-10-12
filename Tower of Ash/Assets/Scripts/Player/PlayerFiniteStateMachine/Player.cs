@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D RB { get; private set; }
     public Entity PlayerEntity { get; private set; }
+    public SpriteRenderer SpriteRenderer;
     #endregion
 
     #region Check Transforms
@@ -57,6 +58,8 @@ public class Player : MonoBehaviour
     public bool healthCanCountdown = true;
 
     public bool isHit = false;
+
+    public bool invincible = false;
 
     #endregion
 
@@ -92,6 +95,7 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         PlayerEntity = GetComponent<Entity>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
 
         FacingDirection = 1;
 
@@ -114,6 +118,19 @@ public class Player : MonoBehaviour
         if (isHit)
         {
             StateMachine.ChangeState(HitState);
+            invincible = true;
+            StartCoroutine(Invincibility());
+        }
+
+        Debug.Log(invincible);
+
+        if (invincible)
+        {
+            StartCoroutine(SpriteFlicker());
+        }
+        else
+        {
+            SpriteRenderer.enabled = true;
         }
 
     }
@@ -225,6 +242,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    IEnumerator Invincibility()
+    {
+        yield return new WaitForSeconds(playerData.iFrameTime);
+        invincible = false;
+    }
+
+    IEnumerator SpriteFlicker()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SpriteRenderer.enabled = !SpriteRenderer.enabled;
+    }
 
     public LayerMask PortalLayer
     {

@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 6238124246651302142}
   - component: {fileID: 6238124246651302143}
   - component: {fileID: 5887979476739105947}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: HitBox
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
@@ -606,6 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
   combatData: {fileID: 11400000, guid: 2fc5ceec884b1ba4dac899b6574885c7, type: 2}
+  SpriteRenderer: {fileID: 0}
   groundCheck: {fileID: 6238124248483436294}
   wallCheck: {fileID: 6238124248530739207}
   firePoint: {fileID: 6238124247586150367}
@@ -616,6 +617,7 @@ MonoBehaviour:
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
   healthCanCountdown: 1
   isHit: 0
+  invincible: 0
 --- !u!95 &6238124248561127292
 Animator:
   serializedVersion: 4

@@ -70,10 +70,13 @@ public class Enemy : MonoBehaviour {
     {
         if(collider.gameObject.tag == "Player")
         {
-            collider.gameObject.GetComponentInParent<Entity>().SetDamage(10);
-            collider.gameObject.GetComponentInParent<Entity>().SetKnockback(-collider.gameObject.GetComponentInParent<Player>().FacingDirection);
-            collider.gameObject.GetComponentInParent<Player>().isHit = true; ;
-            collider.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
+            if (!collider.gameObject.GetComponentInParent<Player>().invincible)
+            {
+                collider.gameObject.GetComponentInParent<Entity>().SetDamage(10);
+                collider.gameObject.GetComponentInParent<Entity>().SetKnockback(-collider.gameObject.GetComponentInParent<Player>().FacingDirection);
+                collider.gameObject.GetComponentInParent<Player>().isHit = true; ;
+                collider.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
+            }
         }
     }
 

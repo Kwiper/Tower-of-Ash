@@ -54,4 +54,6 @@ public class PlayerData : ScriptableObject
     [Header("Timer")]
     public float timeReduction = 1/60f;
 
+    [Header("Invincibility")]
+    public float iFrameTime = 0.5f;
 }
