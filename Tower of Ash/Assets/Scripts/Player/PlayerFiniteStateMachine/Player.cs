@@ -1,6 +1,7 @@
     using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -122,8 +123,6 @@ public class Player : MonoBehaviour
             StartCoroutine(Invincibility());
         }
 
-        Debug.Log(invincible);
-
         if (invincible)
         {
             StartCoroutine(SpriteFlicker());
@@ -131,6 +130,13 @@ public class Player : MonoBehaviour
         else
         {
             SpriteRenderer.enabled = true;
+        }
+
+
+        // When HP reaches 0, load upgrade scene
+        if (PlayerEntity.Health <= 0)
+        {
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
         }
 
     }

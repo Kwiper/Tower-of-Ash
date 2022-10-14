@@ -56,4 +56,5 @@ public class PlayerData : ScriptableObject
 
     [Header("Invincibility")]
     public float iFrameTime = 0.5f;
+
 }
