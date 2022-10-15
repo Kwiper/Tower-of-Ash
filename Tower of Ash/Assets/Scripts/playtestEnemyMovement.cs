@@ -12,12 +12,12 @@ public class playtestEnemyMovement : Enemy
     protected float timer = 0;
 
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
     }
 
     // Update is called once per frame
-    void Update()
+    new void Update()
     {
         testEnemy.SetVelocityX(xVelocity);
         timer += Time.deltaTime;
