@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Menus/Upgrade.unity
+    guid: b36c70c22da520746bbf75659b8fafb2
+  - enabled: 1
+    path: Assets/Scenes/Gameplay.unity
+    guid: fef41fe0826edf94b82e25056feb39da
+  - enabled: 1
     path: Assets/Scenes/Base Tower Scenes/Spawn Room.unity
     guid: 8a180d47160e7224a94fd2068c919e1c
   - enabled: 1
@@ -83,4 +89,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Base Tower Scenes/Tower Room 24.unity
     guid: 08d4e4f7a79039144a53ea93d3171d6e
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 31da9119107cf6a42a440314a710b61f, type: 2}

@@ -142,7 +142,7 @@ public class Player : MonoBehaviour
         // When HP reaches 0, load upgrade scene
         if (PlayerEntity.Health <= 0)
         {
-            SceneManager.LoadScene(4, LoadSceneMode.Single);
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
 
     }
