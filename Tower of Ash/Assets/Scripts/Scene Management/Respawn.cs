@@ -9,7 +9,7 @@ public class Respawn : MonoBehaviour
 
     public void RespawnScene()
     {
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
 }
