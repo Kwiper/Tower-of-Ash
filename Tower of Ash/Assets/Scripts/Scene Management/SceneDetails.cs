@@ -13,7 +13,7 @@ public class SceneDetails : MonoBehaviour
     
     Player Player;
     GameObject Play;
-    private void Awake()
+    private void Start()
     {
         Play =  GameObject.FindGameObjectsWithTag("Player")[0];
         Player = Play.GetComponent<Player>();

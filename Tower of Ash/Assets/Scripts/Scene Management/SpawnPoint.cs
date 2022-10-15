@@ -12,9 +12,9 @@ public class SpawnPoint : MonoBehaviour
 
     private void Awake()
     {
-        //play = GameObject.FindGameObjectsWithTag("Player")[0];
-       // play.SetActive(true);
-        //playerPos = play.GetComponent<Transform>();
-        //gameObject.transform.position = playerPos.position;
+        play = GameObject.FindGameObjectsWithTag("EssentialObjects")[0];
+        //play.SetActive(true);
+        playerPos = play.GetComponent<Transform>();
+        playerPos.position = spawnPoint.position;
     }
 }

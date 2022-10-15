@@ -142,6 +142,8 @@ public class Player : MonoBehaviour
         // When HP reaches 0, load upgrade scene
         if (PlayerEntity.Health <= 0)
         {
+            PlayerEntity.Health = PlayerEntity.maxHealth;
+            invincible = false;
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
 

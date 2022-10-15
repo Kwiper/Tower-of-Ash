@@ -13,14 +13,21 @@ public class EssentialObjects : MonoBehaviour
 
     }
     
-
+/*
     void Update(){
         if(SceneManager.GetActiveScene().name == "Upgrade"){
             //gameObject.SetActive(false);
-            Destroy(gameObject);  
+
+            foreach (Transform child in transform){
+                child.gameObject.SetActive(false);
+            }
+            //Destroy(gameObject);  
         }
-       // else{
-        //    gameObject.SetActive(true);  
-       // }
+        else{
+            foreach (Transform child in transform){
+                child.gameObject.SetActive(true);
+            }
+       }
     }
+    */
 }
