@@ -16,5 +16,12 @@ public class SpawnPoint : MonoBehaviour
         //play.SetActive(true);
         playerPos = play.GetComponent<Transform>();
         playerPos.position = spawnPoint.position;
+
+        var essentialClean =  GameObject.FindGameObjectsWithTag("EssentialObjects");
+
+        //Prevents players from duping themselves in the spawn room
+        if(essentialClean.Length > 1){
+            Destroy(essentialClean[0]);
+        }
     }
 }
