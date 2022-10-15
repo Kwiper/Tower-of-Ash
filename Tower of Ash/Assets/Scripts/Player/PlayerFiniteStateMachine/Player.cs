@@ -55,6 +55,12 @@ public class Player : MonoBehaviour
 
     #endregion
 
+    #region Scene Detail Variables
+    public SceneDetails CurrentScene { get; private set;}
+    public SceneDetails PrevScene { get; private set;}
+    #endregion
+
+
     #region Unity Callback Functions
     private void Awake()
     {
@@ -202,6 +208,12 @@ public class Player : MonoBehaviour
     public LayerMask PortalLayer
     {
         get => portalLayer;
+    }
+
+    public void SetCurrentScene(SceneDetails currScene)
+    {
+        PrevScene = CurrentScene;
+        CurrentScene = currScene;
     }
     
     #endregion
