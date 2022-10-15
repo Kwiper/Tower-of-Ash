@@ -14,4 +14,12 @@ public class CombatData : ScriptableObject
     public int projectileDamage = 15;
     public int projectileSpeed = 20;
 
+
+
+    public void IncreaseDamageMultiplier()
+    {
+        damageMultiplier *= 1.25f;
+    }
+
+
 }

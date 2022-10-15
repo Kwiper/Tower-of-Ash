@@ -1,6 +1,7 @@
     using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     public PlayerAttackState AttackState { get; private set; }
     public PlayerFireballState FireballState { get; private set; }
     public PlayerChargeAttackState ChargeAttackState { get; private set; }
+    public PlayerHitState HitState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D RB { get; private set; }
     public Entity PlayerEntity { get; private set; }
+    public SpriteRenderer SpriteRenderer;
     #endregion
 
     #region Check Transforms
@@ -52,6 +55,12 @@ public class Player : MonoBehaviour
     private Vector2 workspace;
 
     public GameObject Fireball;
+
+    public bool healthCanCountdown = true;
+
+    public bool isHit = false;
+
+    public bool invincible = false;
 
     #endregion
 
@@ -83,6 +92,8 @@ public class Player : MonoBehaviour
         FireballState = new PlayerFireballState(this, StateMachine, playerData, "fireball");
 
         ChargeAttackState = new PlayerChargeAttackState(this, StateMachine, playerData, "chargeAttack");
+
+        HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
     }
 
     private void Start()
@@ -91,6 +102,7 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         PlayerEntity = GetComponent<Entity>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
 
         FacingDirection = 1;
 
@@ -102,6 +114,36 @@ public class Player : MonoBehaviour
         CurrentVelocity = RB.velocity;
 
         StateMachine.CurrentState.LogicUpdate();
+
+        HealthTimer();
+
+        if (PlayerEntity.InKnockback)
+        {
+            SetVelocityX(PlayerEntity.Knockback);
+        }
+
+        if (isHit)
+        {
+            StateMachine.ChangeState(HitState);
+            invincible = true;
+            StartCoroutine(Invincibility());
+        }
+
+        if (invincible)
+        {
+            StartCoroutine(SpriteFlicker());
+        }
+        else
+        {
+            SpriteRenderer.enabled = true;
+        }
+
+
+        // When HP reaches 0, load upgrade scene
+        if (PlayerEntity.Health <= 0)
+        {
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
+        }
 
     }
 
@@ -204,6 +246,25 @@ public class Player : MonoBehaviour
         Instantiate(Fireball,firePoint.transform.position,firePoint.transform.rotation);
     }
 
+    private void HealthTimer()
+    {
+        if (healthCanCountdown)
+        {
+            PlayerEntity.Health -= (Time.deltaTime * playerData.timeReduction);
+        }
+    }
+
+    IEnumerator Invincibility()
+    {
+        yield return new WaitForSeconds(playerData.iFrameTime);
+        invincible = false;
+    }
+
+    IEnumerator SpriteFlicker()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SpriteRenderer.enabled = !SpriteRenderer.enabled;
+    }
 
     public LayerMask PortalLayer
     {

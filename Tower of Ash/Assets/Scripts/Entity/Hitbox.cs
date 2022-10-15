@@ -34,7 +34,7 @@ public class Hitbox : MonoBehaviour
         if(collision.CompareTag(tagName))
         {
             target = collision.gameObject.GetComponent<Entity>();
-            target.SetDamage(combatData.damage);
+            target.SetDamage((int)(combatData.damage * combatData.damageMultiplier));
 
             int dir = (int)(collision.gameObject.transform.position.x - this.transform.parent.position.x);
             if (dir >= 0)

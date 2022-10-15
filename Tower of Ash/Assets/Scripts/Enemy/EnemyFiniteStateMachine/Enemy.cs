@@ -65,6 +65,21 @@ public class Enemy : MonoBehaviour {
         //StateMachine.CurrentState.PhysicsUpdate(); // Re-add this when states are added to test enemy
     }
 
+    // Hit stop on player
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "Player")
+        {
+            if (!collider.gameObject.GetComponentInParent<Player>().invincible)
+            {
+                collider.gameObject.GetComponentInParent<Entity>().SetDamage(10);
+                collider.gameObject.GetComponentInParent<Entity>().SetKnockback(-collider.gameObject.GetComponentInParent<Player>().FacingDirection);
+                collider.gameObject.GetComponentInParent<Player>().isHit = true; ;
+                collider.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
+            }
+        }
+    }
+
     #endregion
 
     #region Set Functions
