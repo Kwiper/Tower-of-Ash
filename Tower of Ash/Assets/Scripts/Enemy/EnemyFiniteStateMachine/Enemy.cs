@@ -54,10 +54,12 @@ public class Enemy : MonoBehaviour {
         }
 
         //StateMachine.CurrentState.LogicUpdate(); //Re-add this when states are added to this enemy
+
         if(EnemyEntity.Health <= 0)
         {
             Destroy(gameObject);
         }
+
     }
 
     protected virtual void FixedUpdate()

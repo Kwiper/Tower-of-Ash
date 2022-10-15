@@ -113,6 +113,8 @@ public class Player : MonoBehaviour
     {
         CurrentVelocity = RB.velocity;
 
+        Debug.Log(CheckIfGrounded());
+
         StateMachine.CurrentState.LogicUpdate();
 
         HealthTimer();
@@ -192,7 +194,8 @@ public class Player : MonoBehaviour
     #region Check Functions
     public bool CheckIfGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround)||Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsPlatform);
+        return (Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround)) || (Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsPlatform));
+        
     }
 
     public bool CheckIfTouchingWall()
@@ -278,6 +281,7 @@ public class Player : MonoBehaviour
         PrevScene = CurrentScene;
         CurrentScene = currScene;
     }
-    
+
+
     #endregion
 }
