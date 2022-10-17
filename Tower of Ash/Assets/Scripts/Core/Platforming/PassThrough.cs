@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PassThrough : MonoBehaviour
 {
-    private new Collider2D collider;
+    private new CompositeCollider2D collider;
     private bool playerOnPlatform;
     private GameObject player;
 
     private void Start(){
         //Finds collider for platform and finds player script on player gameobject
-        collider = GetComponent<Collider2D>();
+        collider = GetComponent<CompositeCollider2D>();
         var playerPossibles = GameObject.FindGameObjectsWithTag("Player");
         player = playerPossibles[0];
 
@@ -23,14 +23,14 @@ public class PassThrough : MonoBehaviour
 
         if (playerOnPlatform && playerControl.InputHandler.NormInputY < 0){
             //Only ignores collisions between player and platform so that other enemies don't fall through
-            Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
+            Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<CompositeCollider2D>(), true);
             StartCoroutine(EnableCollider());
         }
     }
 
     private IEnumerator EnableCollider(){
         yield return new WaitForSeconds(0.3f);
-        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>(), false);
+        Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<CompositeCollider2D>(), false);
     }
     //Determines if player is standing on correct platform
     private void SetPlayerOnPlatform(Collision2D other, bool value){
