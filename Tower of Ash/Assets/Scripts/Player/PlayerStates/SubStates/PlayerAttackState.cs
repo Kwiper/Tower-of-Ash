@@ -9,6 +9,7 @@ public class PlayerAttackState : PlayerAbilityState {
     private int attackCounter = 0;
 
     private int yInput;
+    private int xInput;
 
     private Hitbox hitbox;
 
@@ -65,18 +66,13 @@ public class PlayerAttackState : PlayerAbilityState {
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        xInput = player.InputHandler.NormInputX;
+
         player.Anim.SetInteger("attackCounter", attackCounter);
 
-        if (stepForward)
-        {
-            player.SetVelocityX(5 * player.FacingDirection);
-        }
-        else
-        {
-            player.SetVelocityX(0);
-        }
+        player.SetVelocityX(playerData.movementVelocity * xInput);
 
-        if(yInput < 0 && player.CurrentVelocity.y < 0)
+        if (yInput < 0 && player.CurrentVelocity.y < 0)
         {
             if (hitbox.HitObject)
             {

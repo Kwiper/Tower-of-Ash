@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9090ea2acb466204d8fbe63ad85704fa
+guid: a2e236faf2be17e4db053ca7e6925242
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,8 +120,8 @@ TextureImporter:
       name: K_DownAir_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 16
+        x: 37
+        y: 32
         width: 19
         height: 34
       alignment: 0
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79533548d7e76084c9bef674787add7c
-      internalID: 1916842589
+      spriteID: 50dd5a0dda7d87a4bb5133da6ca7eaee
+      internalID: -413321891
       vertices: []
       indices: 
       edges: []
@@ -141,19 +141,19 @@ TextureImporter:
       name: K_DownAir_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 16
+        x: 133
+        y: 32
         width: 19
         height: 40
-      alignment: 9
-      pivot: {x: 0.5263158, y: 0.4}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b2ced1e3ea8e4f4bbca278a926cbaed
-      internalID: -396432006
+      spriteID: 790936d073def12458600db5b405508d
+      internalID: -929765090
       vertices: []
       indices: 
       edges: []
@@ -162,19 +162,19 @@ TextureImporter:
       name: K_DownAir_2
       rect:
         serializedVersion: 2
-        x: 150
-        y: 17
+        x: 230
+        y: 32
         width: 19
         height: 42
       alignment: 9
-      pivot: {x: 0.47368422, y: 0.3809524}
+      pivot: {x: 0.5263158, y: 0.3809524}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a799cdc2e6b1f943bf712a2b485216d
-      internalID: -1008345886
+      spriteID: 8a3072f5fb694224192fe21373a5c3db
+      internalID: 1831134245
       vertices: []
       indices: 
       edges: []
@@ -183,19 +183,19 @@ TextureImporter:
       name: K_DownAir_3
       rect:
         serializedVersion: 2
-        x: 213
-        y: 0
+        x: 325
+        y: 1
         width: 28
-        height: 62
+        height: 78
       alignment: 9
-      pivot: {x: 0.32142857, y: 0.46774194}
+      pivot: {x: 0.35714287, y: 0.5641026}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24d960ae9c763c44eaf7c6167633a818
-      internalID: -509096606
+      spriteID: 7efd925b3b5f1f84fa518500a1fccb98
+      internalID: -1804000767
       vertices: []
       indices: 
       edges: []
@@ -204,19 +204,19 @@ TextureImporter:
       name: K_DownAir_4
       rect:
         serializedVersion: 2
-        x: 277
-        y: 4
+        x: 421
+        y: 6
         width: 27
-        height: 46
+        height: 60
       alignment: 9
-      pivot: {x: 0.33333334, y: 0.5652174}
+      pivot: {x: 0.37037036, y: 0.6666667}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58a3c97925ae92747bb37e453ca2bee5
-      internalID: 1942320899
+      spriteID: 4d07b11c67b44de4daa29af91598e1cd
+      internalID: -338852182
       vertices: []
       indices: 
       edges: []
@@ -225,19 +225,19 @@ TextureImporter:
       name: K_DownAir_5
       rect:
         serializedVersion: 2
-        x: 341
-        y: 3
-        width: 23
-        height: 47
+        x: 517
+        y: 11
+        width: 26
+        height: 55
       alignment: 9
-      pivot: {x: 0.4347826, y: 0.59574467}
+      pivot: {x: 0.3846154, y: 0.6727273}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f537edbf136a0840bb0fc9c815b7523
-      internalID: 1549985084
+      spriteID: dca597ecde2c21d40828bbb1af8b9e25
+      internalID: -1266362146
       vertices: []
       indices: 
       edges: []
@@ -246,31 +246,10 @@ TextureImporter:
       name: K_DownAir_6
       rect:
         serializedVersion: 2
-        x: 404
-        y: 17
+        x: 612
+        y: 32
         width: 19
         height: 32
-      alignment: 9
-      pivot: {x: 0.57894737, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e8094d0a9f0e5a41a1896fa71b51b6e
-      internalID: 331876028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_DownAir_7
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 6
-        width: 7
-        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd94abd2fe63ed44894170672cfff51e
-      internalID: 967550666
+      spriteID: 5d204643c3b922748ae1b69ee5a5304e
+      internalID: 378948083
       vertices: []
       indices: 
       edges: []
@@ -295,14 +274,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      K_DownAir_4: 1942320899
-      K_DownAir_3: -509096606
-      K_DownAir_7: 967550666
-      K_DownAir_2: -1008345886
-      K_DownAir_0: 1916842589
-      K_DownAir_6: 331876028
-      K_DownAir_1: -396432006
-      K_DownAir_5: 1549985084
+      K_DownAir_4: -338852182
+      K_DownAir_3: -1804000767
+      K_DownAir_7: -1821741104
+      K_DownAir_2: 1831134245
+      K_DownAir_0: -413321891
+      K_DownAir_6: 378948083
+      K_DownAir_1: -929765090
+      K_DownAir_5: -1266362146
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

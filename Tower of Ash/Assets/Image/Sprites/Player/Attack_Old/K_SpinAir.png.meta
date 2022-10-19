@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ba4142acd3452d4e8ddc2bd5d2b651f
+guid: 8f21f0fd020013b4396f8c2113115b8d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: K_UpAttack_0
+      name: K_SpinAir_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 16
+        x: 18
+        y: 80
+        width: 19
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -131,125 +131,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d836822da14c41498b593da096919ec
-      internalID: 1271768719
+      spriteID: a18fad206959ac34fac12dfd3efd1e7b
+      internalID: 1643063036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_1
+      name: K_SpinAir_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 31
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 68
+        y: 80
+        width: 35
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6, y: 0.516129}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38049519b599f8741a154d326038ee56
-      internalID: 1009757583
+      spriteID: 4cd61be068ea4d14c955443db8c80fb1
+      internalID: -852563755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_2
+      name: K_SpinAir_2
       rect:
         serializedVersion: 2
-        x: 222
-        y: 0
-        width: 33
+        x: 144
+        y: 80
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4, y: 0.516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c237517cbfead43823f60bee9c635b
+      internalID: 145313501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_SpinAir_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 81
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cf66a6bafbc754fbe67cc8a137690a
+      internalID: 787180431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_SpinAir_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 80
+        width: 45
         height: 32
       alignment: 9
-      pivot: {x: 0.36363637, y: 0.5}
+      pivot: {x: 0.4888889, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a276a6f8ddf2f7742bcc059f528526b3
-      internalID: 1956559208
+      spriteID: 39ffe6cdef2c121408d215eb5a73fa6c
+      internalID: 2104653524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_3
+      name: K_SpinAir_5
       rect:
         serializedVersion: 2
-        x: 292
-        y: 1
-        width: 72
-        height: 56
+        x: 323
+        y: 80
+        width: 59
+        height: 25
       alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
+      pivot: {x: 0.45762712, y: 0.64}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00426369903399a4eb2b0b13fe014a35
-      internalID: 1292514976
+      spriteID: 0e6b637b621d5db43b1f24d50b1455ed
+      internalID: 571227689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_5
+      name: K_SpinAir_6
       rect:
         serializedVersion: 2
         x: 388
-        y: 0
-        width: 63
-        height: 57
+        y: 80
+        width: 58
+        height: 27
       alignment: 9
-      pivot: {x: 0.5873016, y: 0.28070176}
+      pivot: {x: 0.43103448, y: 0.5925926}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722d25ae878ef5842bcfedfdeaa6f3c4
-      internalID: 1756677183
+      spriteID: aa44182e50a4b8142badc5d65977d58b
+      internalID: -386882144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_6
+      name: K_SpinAir_7
       rect:
         serializedVersion: 2
-        x: 487
-        y: 1
-        width: 45
-        height: 38
-      alignment: 9
-      pivot: {x: 0.75555557, y: 0.42105263}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a441e79fee0d0ac458aa463b01745c61
-      internalID: -1263463947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAttack_7
-      rect:
-        serializedVersion: 2
-        x: 609
-        y: 0
-        width: 16
-        height: 32
+        x: 423
+        y: 117
+        width: 8
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,8 +278,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d31199460344f6e4280a4307092c0b69
-      internalID: 1271508411
+      spriteID: 92e3d3853dc80a446a18f000fafda73d
+      internalID: 1420468647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_SpinAir_8
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 113
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7458745137c7443468c9a26c8f3d765f
+      internalID: -2034540402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_SpinAir_9
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 79
+        width: 42
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.55172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86616cf9afaa0ec4dafef4f3dadeacca
+      internalID: -443340458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_SpinAir_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 18
+        width: 34
+        height: 31
+      alignment: 9
+      pivot: {x: 0.64705884, y: 0.516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed997b558122ef49a3f6432c5113098
+      internalID: 898331410
       vertices: []
       indices: 
       edges: []
@@ -274,14 +358,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      K_UpAttack_7: 1271508411
-      K_UpAttack_0: 1271768719
-      K_UpAttack_5: 1756677183
-      K_UpAttack_6: -1263463947
-      K_UpAttack_1: 1009757583
-      K_UpAttack_4: -965820539
-      K_UpAttack_3: 1292514976
-      K_UpAttack_2: 1956559208
+      K_SpinAir_9: -443340458
+      K_SpinAir_2: 145313501
+      K_SpinAir_5: 571227689
+      K_SpinAir_1: -852563755
+      K_SpinAir_3: 787180431
+      K_SpinAir_4: 2104653524
+      K_SpinAir_6: -386882144
+      K_SpinAir_10: 898331410
+      K_SpinAir_7: 1420468647
+      K_SpinAir_8: -2034540402
+      K_SpinAir_0: 1643063036
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

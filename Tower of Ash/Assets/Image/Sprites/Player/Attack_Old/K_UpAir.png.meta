@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ba4142acd3452d4e8ddc2bd5d2b651f
+guid: af350a00743220e47a75325a78bb3ca3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: K_UpAttack_0
+      name: K_UpAir_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 16
+        x: 20
+        y: 17
+        width: 18
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -131,134 +131,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d836822da14c41498b593da096919ec
-      internalID: 1271768719
+      spriteID: 480156a18225d17498b916a132729637
+      internalID: 1198542722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_1
+      name: K_UpAir_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 83
+        y: 17
         width: 31
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.38709676, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38049519b599f8741a154d326038ee56
-      internalID: 1009757583
+      spriteID: d731710750cff9146b47b8da3082a51f
+      internalID: -825643055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_2
+      name: K_UpAir_2
       rect:
         serializedVersion: 2
-        x: 222
-        y: 0
-        width: 33
+        x: 148
+        y: 17
+        width: 30
         height: 32
       alignment: 9
-      pivot: {x: 0.36363637, y: 0.5}
+      pivot: {x: 0.36666667, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a276a6f8ddf2f7742bcc059f528526b3
-      internalID: 1956559208
+      spriteID: 94da8db267e3a4549b79f1af21fe6e11
+      internalID: -1562164524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_3
+      name: K_UpAir_3
       rect:
         serializedVersion: 2
-        x: 292
-        y: 1
-        width: 72
-        height: 56
+        x: 197
+        y: 15
+        width: 48
+        height: 44
       alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
+      pivot: {x: 0.5416667, y: 0.4090909}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00426369903399a4eb2b0b13fe014a35
-      internalID: 1292514976
+      spriteID: f26cf290fa9f4754ea313595d4c33742
+      internalID: -759282809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_5
+      name: K_UpAir_4
       rect:
         serializedVersion: 2
-        x: 388
-        y: 0
-        width: 63
-        height: 57
+        x: 261
+        y: 16
+        width: 42
+        height: 43
       alignment: 9
-      pivot: {x: 0.5873016, y: 0.28070176}
+      pivot: {x: 0.61904764, y: 0.41860464}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722d25ae878ef5842bcfedfdeaa6f3c4
-      internalID: 1756677183
+      spriteID: cebddcc83d1381747b261a959b5e8863
+      internalID: 1625050365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_6
+      name: K_UpAir_5
       rect:
         serializedVersion: 2
-        x: 487
-        y: 1
-        width: 45
-        height: 38
-      alignment: 9
-      pivot: {x: 0.75555557, y: 0.42105263}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a441e79fee0d0ac458aa463b01745c61
-      internalID: -1263463947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAttack_7
-      rect:
-        serializedVersion: 2
-        x: 609
-        y: 0
-        width: 16
+        x: 325
+        y: 17
+        width: 40
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d31199460344f6e4280a4307092c0b69
-      internalID: 1271508411
+      spriteID: 6560a15837d42ff47bbde5203bab6239
+      internalID: 486713813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_UpAir_6
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 16
+        width: 19
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5263158, y: 0.53125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decf85be5d6b48c428557010e554ac83
+      internalID: -28703736
       vertices: []
       indices: 
       edges: []
@@ -274,14 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      K_UpAttack_7: 1271508411
-      K_UpAttack_0: 1271768719
-      K_UpAttack_5: 1756677183
-      K_UpAttack_6: -1263463947
-      K_UpAttack_1: 1009757583
-      K_UpAttack_4: -965820539
-      K_UpAttack_3: 1292514976
-      K_UpAttack_2: 1956559208
+      K_UpAir_4: 1625050365
+      K_UpAir_6: -28703736
+      K_UpAir_2: -1562164524
+      K_UpAir_5: 486713813
+      K_UpAir_3: -759282809
+      K_UpAir_1: -825643055
+      K_UpAir_0: 1198542722
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

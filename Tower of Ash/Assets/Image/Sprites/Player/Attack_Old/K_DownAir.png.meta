@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ba4142acd3452d4e8ddc2bd5d2b651f
+guid: 9090ea2acb466204d8fbe63ad85704fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: K_UpAttack_0
+      name: K_DownAir_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 16
-        height: 32
+        x: 21
+        y: 16
+        width: 19
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d836822da14c41498b593da096919ec
-      internalID: 1271768719
+      spriteID: 79533548d7e76084c9bef674787add7c
+      internalID: 1916842589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: K_UpAttack_1
+      name: K_DownAir_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 85
+        y: 16
+        width: 19
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5263158, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2ced1e3ea8e4f4bbca278a926cbaed
+      internalID: -396432006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_DownAir_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 17
+        width: 19
+        height: 42
+      alignment: 9
+      pivot: {x: 0.47368422, y: 0.3809524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a799cdc2e6b1f943bf712a2b485216d
+      internalID: -1008345886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_DownAir_3
+      rect:
+        serializedVersion: 2
+        x: 213
         y: 0
-        width: 31
+        width: 28
+        height: 62
+      alignment: 9
+      pivot: {x: 0.32142857, y: 0.46774194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d960ae9c763c44eaf7c6167633a818
+      internalID: -509096606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_DownAir_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 4
+        width: 27
+        height: 46
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5652174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a3c97925ae92747bb37e453ca2bee5
+      internalID: 1942320899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_DownAir_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 3
+        width: 23
+        height: 47
+      alignment: 9
+      pivot: {x: 0.4347826, y: 0.59574467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f537edbf136a0840bb0fc9c815b7523
+      internalID: 1549985084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_DownAir_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 17
+        width: 19
         height: 32
+      alignment: 9
+      pivot: {x: 0.57894737, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8094d0a9f0e5a41a1896fa71b51b6e
+      internalID: 331876028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_DownAir_7
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 6
+        width: 7
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,113 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38049519b599f8741a154d326038ee56
-      internalID: 1009757583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAttack_2
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 0
-        width: 33
-        height: 32
-      alignment: 9
-      pivot: {x: 0.36363637, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a276a6f8ddf2f7742bcc059f528526b3
-      internalID: 1956559208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAttack_3
-      rect:
-        serializedVersion: 2
-        x: 292
-        y: 1
-        width: 72
-        height: 56
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2857143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00426369903399a4eb2b0b13fe014a35
-      internalID: 1292514976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAttack_5
-      rect:
-        serializedVersion: 2
-        x: 388
-        y: 0
-        width: 63
-        height: 57
-      alignment: 9
-      pivot: {x: 0.5873016, y: 0.28070176}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 722d25ae878ef5842bcfedfdeaa6f3c4
-      internalID: 1756677183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAttack_6
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 1
-        width: 45
-        height: 38
-      alignment: 9
-      pivot: {x: 0.75555557, y: 0.42105263}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a441e79fee0d0ac458aa463b01745c61
-      internalID: -1263463947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAttack_7
-      rect:
-        serializedVersion: 2
-        x: 609
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d31199460344f6e4280a4307092c0b69
-      internalID: 1271508411
+      spriteID: bd94abd2fe63ed44894170672cfff51e
+      internalID: 967550666
       vertices: []
       indices: 
       edges: []
@@ -274,14 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      K_UpAttack_7: 1271508411
-      K_UpAttack_0: 1271768719
-      K_UpAttack_5: 1756677183
-      K_UpAttack_6: -1263463947
-      K_UpAttack_1: 1009757583
-      K_UpAttack_4: -965820539
-      K_UpAttack_3: 1292514976
-      K_UpAttack_2: 1956559208
+      K_DownAir_4: 1942320899
+      K_DownAir_3: -509096606
+      K_DownAir_7: 967550666
+      K_DownAir_2: -1008345886
+      K_DownAir_0: 1916842589
+      K_DownAir_6: 331876028
+      K_DownAir_1: -396432006
+      K_DownAir_5: 1549985084
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

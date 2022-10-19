@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af350a00743220e47a75325a78bb3ca3
+guid: 8612d970f371a0a4894a2f2aac3123a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,7 +120,7 @@ TextureImporter:
       name: K_UpAir_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 36
         y: 17
         width: 18
         height: 32
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 480156a18225d17498b916a132729637
-      internalID: 1198542722
+      spriteID: 3a05fe52e9357c34a987180e3d248b09
+      internalID: 674993472
       vertices: []
       indices: 
       edges: []
@@ -141,19 +141,19 @@ TextureImporter:
       name: K_UpAir_1
       rect:
         serializedVersion: 2
-        x: 83
+        x: 131
         y: 17
         width: 31
         height: 32
-      alignment: 9
-      pivot: {x: 0.38709676, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d731710750cff9146b47b8da3082a51f
-      internalID: -825643055
+      spriteID: c9ef23273297fee4b81158ace6b0b25d
+      internalID: -319673466
       vertices: []
       indices: 
       edges: []
@@ -162,19 +162,19 @@ TextureImporter:
       name: K_UpAir_2
       rect:
         serializedVersion: 2
-        x: 148
-        y: 17
+        x: 228
+        y: 18
         width: 30
         height: 32
       alignment: 9
-      pivot: {x: 0.36666667, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94da8db267e3a4549b79f1af21fe6e11
-      internalID: -1562164524
+      spriteID: 003ab2cd35a37364181e82d1f4ef5bc6
+      internalID: -860432911
       vertices: []
       indices: 
       edges: []
@@ -183,40 +183,19 @@ TextureImporter:
       name: K_UpAir_3
       rect:
         serializedVersion: 2
-        x: 197
+        x: 296
         y: 15
-        width: 48
-        height: 44
+        width: 72
+        height: 58
       alignment: 9
-      pivot: {x: 0.5416667, y: 0.4090909}
+      pivot: {x: 0.5138889, y: 0.27586207}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26cf290fa9f4754ea313595d4c33742
-      internalID: -759282809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: K_UpAir_4
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 16
-        width: 42
-        height: 43
-      alignment: 9
-      pivot: {x: 0.61904764, y: 0.41860464}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cebddcc83d1381747b261a959b5e8863
-      internalID: 1625050365
+      spriteID: f3e5e86e959ab53479b924309d6c93d6
+      internalID: -675024216
       vertices: []
       indices: 
       edges: []
@@ -225,19 +204,19 @@ TextureImporter:
       name: K_UpAir_5
       rect:
         serializedVersion: 2
-        x: 325
-        y: 17
-        width: 40
-        height: 32
+        x: 392
+        y: 16
+        width: 63
+        height: 57
       alignment: 9
-      pivot: {x: 0.65, y: 0.5}
+      pivot: {x: 0.5873016, y: 0.28070176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6560a15837d42ff47bbde5203bab6239
-      internalID: 486713813
+      spriteID: ad33471ea37fe3444b8d9a47ce0a6676
+      internalID: 1029680992
       vertices: []
       indices: 
       edges: []
@@ -246,19 +225,40 @@ TextureImporter:
       name: K_UpAir_6
       rect:
         serializedVersion: 2
-        x: 405
-        y: 16
-        width: 19
-        height: 32
+        x: 490
+        y: 17
+        width: 51
+        height: 36
       alignment: 9
-      pivot: {x: 0.5263158, y: 0.53125}
+      pivot: {x: 0.6862745, y: 0.44444445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: decf85be5d6b48c428557010e554ac83
-      internalID: -28703736
+      spriteID: f5b49d835cc94764b90c592e80c994a8
+      internalID: -230841911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: K_UpAir_7
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 17
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456120f53d05bc44693814007a23433c
+      internalID: 1292851390
       vertices: []
       indices: 
       edges: []
@@ -274,13 +274,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      K_UpAir_4: 1625050365
-      K_UpAir_6: -28703736
-      K_UpAir_2: -1562164524
-      K_UpAir_5: 486713813
-      K_UpAir_3: -759282809
-      K_UpAir_1: -825643055
-      K_UpAir_0: 1198542722
+      K_UpAir_4: -1329429833
+      K_UpAir_6: -230841911
+      K_UpAir_7: 1292851390
+      K_UpAir_2: -860432911
+      K_UpAir_5: 1029680992
+      K_UpAir_3: -675024216
+      K_UpAir_1: -319673466
+      K_UpAir_0: 674993472
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
