@@ -5,36 +5,40 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    public EnemyStateMachine StateMachine { get; private set; }
+    public EnemyStateMachine StateMachine { get; protected set; }
 
     #region Data
     [SerializeField]
     protected CombatData combatData;
 
+    protected GameObject player;
+
     #endregion
 
     #region Components
-    public Rigidbody2D RB { get; private set; }
-    public Animator Anim { get; private set; }
+    public Rigidbody2D RB { get; protected set; }
+    public Animator Anim { get; protected set; }
     public Entity EnemyEntity;
     #endregion
 
     #region Other variables
-    public Vector2 CurrentVelocity { get; private set; }
-    public int FacingDirection { get; private set; }
+    public Vector2 CurrentVelocity { get; protected set; }
+    public int FacingDirection { get; protected set; }
     protected Vector2 workspace;
 
     #endregion
 
     #region Unity Callback Functions
 
-    protected virtual void Awake()
+    public virtual void Awake()
     {
         StateMachine = new EnemyStateMachine();
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Start is called before the first frame update
-    protected void Start()
+    public virtual void Start()
     {
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
@@ -44,7 +48,7 @@ public class Enemy : MonoBehaviour {
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    public virtual void Update()
     {
         CurrentVelocity = RB.velocity;
 
@@ -62,7 +66,7 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    protected virtual void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         //StateMachine.CurrentState.PhysicsUpdate(); // Re-add this when states are added to test enemy
     }
@@ -117,6 +121,19 @@ public class Enemy : MonoBehaviour {
     #endregion
 
     #region Other Functions
+    public void CheckIfShouldFlip()
+    {
+        int dir = 1;
+
+        if (player.gameObject.transform.position.x <= gameObject.transform.position.x)
+            dir = -1;
+        else
+            dir = 1;
+
+        if (FacingDirection != dir)
+            Flip();
+
+    }
 
     protected virtual void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
 

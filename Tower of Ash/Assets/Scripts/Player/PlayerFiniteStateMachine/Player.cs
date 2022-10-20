@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
     {
         CurrentVelocity = RB.velocity;
 
-        Debug.Log(CheckIfGrounded());
+        //Debug.Log(CheckIfGrounded());
 
         StateMachine.CurrentState.LogicUpdate();
 
