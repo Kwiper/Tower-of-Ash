@@ -71,8 +71,8 @@ public class PlayerInputHandler : MonoBehaviour
     {
         RawMovementInput = context.ReadValue<Vector2>();
 
-        NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
-        NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
+        NormInputX = Mathf.RoundToInt(RawMovementInput.x);
+        NormInputY = Mathf.RoundToInt(RawMovementInput.y);
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
