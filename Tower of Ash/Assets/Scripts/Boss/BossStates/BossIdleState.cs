@@ -41,19 +41,32 @@ public class BossIdleState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        boss.SetVelocityX(0);
+        boss.SetVelocityY(0);
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        enemy.CheckIfShouldFlip();
+        boss.CheckIfShouldFlip();
         timer -= Time.deltaTime;
 
-        Debug.Log(stateMachine);
+        Debug.Log(timer);
 
         if(timer <= 0)
         {
+            if (!boss.CheckIfPlayerInAggroRange() && boss.CheckIfPlayerInProjectileRadius())
+            {
+                boss.StateMachine.ChangeState(boss.WalkState);
+            }
+            else if(boss.CheckIfPlayerInAggroRange())
+            {
 
+            }
+            else if (!boss.CheckIfPlayerInProjectileRadius())
+            {
+
+            }
         }
 
     }

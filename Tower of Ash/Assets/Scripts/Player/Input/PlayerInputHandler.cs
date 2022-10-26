@@ -85,6 +85,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         if (context.canceled)
         {
+            //Debug.Log("Jump input cancelled");
             JumpInputStop = true;
         }
     }

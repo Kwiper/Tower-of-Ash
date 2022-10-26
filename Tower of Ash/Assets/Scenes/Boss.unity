@@ -1009,7 +1009,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9ea0d36edfe1ed4dbc704f99b7b72ae, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.5144286, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1048,5 +1048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8464e086bf881e345a9020fc0001bc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combatData: {fileID: 0}
-  EnemyEntity: {fileID: 0}
+  combatData: {fileID: 11400000, guid: 886aee03b8c894544bda91c352b9f92b, type: 2}
+  EnemyEntity: {fileID: 2099904393}
+  AggroPoint: {fileID: 1885970499}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  AggroRadius: 5
+  ProjectileRadius: 10

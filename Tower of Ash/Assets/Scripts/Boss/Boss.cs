@@ -6,6 +6,7 @@ public class Boss : Enemy
 {
 
     public BossIdleState IdleState { get; private set; }
+    public BossAttackState AttackState { get; private set; }
     public BossWalkState WalkState { get; private set; }
     public BossPillarState PillarState { get; private set; }
     public BossLungeState LungeState { get; private set; }
@@ -14,10 +15,21 @@ public class Boss : Enemy
     public BossBulletHellState BulletHellState { get; private set; }
     public BossFallState FallState { get; private set; }
 
+    [SerializeField]
+    private Transform AggroPoint;
+    public LayerMask playerLayer;
+
+    [SerializeField]
+    private float AggroRadius;
+
+    [SerializeField]
+    private float ProjectileRadius;
+
     public override void Awake()
     {
         base.Awake();
         IdleState = new BossIdleState(this, StateMachine, "idle");
+        AttackState = new BossAttackState(this, StateMachine, "attack");
         WalkState = new BossWalkState(this, StateMachine, "walk");
         PillarState = new BossPillarState(this, StateMachine, "pillar");
         LungeState = new BossLungeState(this, StateMachine, "lunge");
@@ -47,7 +59,26 @@ public class Boss : Enemy
         base.Update();
         StateMachine.CurrentState.LogicUpdate();
 
-        
+        Debug.Log(Anim.GetBool("walk"));
+    }
+
+    public bool CheckIfPlayerInAggroRange()
+    {
+        return Physics2D.OverlapCircle(AggroPoint.position, AggroRadius, playerLayer);
+    }
+
+    public bool CheckIfPlayerInProjectileRadius()
+    {
+        return Physics2D.OverlapCircle(AggroPoint.position, ProjectileRadius, playerLayer);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(AggroPoint.position, AggroRadius);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(AggroPoint.position, ProjectileRadius);
     }
 
 }
