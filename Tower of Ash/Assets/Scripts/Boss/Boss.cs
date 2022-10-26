@@ -20,6 +20,10 @@ public class Boss : Enemy
     public LayerMask playerLayer;
 
     [SerializeField]
+    private Transform BoundaryPoint;
+    public LayerMask groundLayer;
+
+    [SerializeField]
     private float AggroRadius;
 
     [SerializeField]
@@ -59,7 +63,6 @@ public class Boss : Enemy
         base.Update();
         StateMachine.CurrentState.LogicUpdate();
 
-        Debug.Log(Anim.GetBool("walk"));
     }
 
     public bool CheckIfPlayerInAggroRange()
@@ -72,6 +75,11 @@ public class Boss : Enemy
         return Physics2D.OverlapCircle(AggroPoint.position, ProjectileRadius, playerLayer);
     }
 
+    public bool CheckIfBoundaryDetected()
+    {
+        return Physics2D.OverlapCircle(BoundaryPoint.position, 0.5f, groundLayer);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -79,6 +87,9 @@ public class Boss : Enemy
 
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(AggroPoint.position, ProjectileRadius);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(BoundaryPoint.position, 0.5f);
     }
 
 }

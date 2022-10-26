@@ -51,7 +51,6 @@ public class BossIdleState : EnemyState
         boss.CheckIfShouldFlip();
         timer -= Time.deltaTime;
 
-        Debug.Log(timer);
 
         if(timer <= 0)
         {
@@ -65,7 +64,7 @@ public class BossIdleState : EnemyState
             }
             else if (!boss.CheckIfPlayerInProjectileRadius())
             {
-
+                boss.StateMachine.ChangeState(boss.LungeState);
             }
         }
 
