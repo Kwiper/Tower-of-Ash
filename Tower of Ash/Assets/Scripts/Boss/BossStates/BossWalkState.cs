@@ -16,7 +16,6 @@ public class BossWalkState : EnemyState {
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Entered walk state");
 
         walkTime = maxWalkTime;
     }
