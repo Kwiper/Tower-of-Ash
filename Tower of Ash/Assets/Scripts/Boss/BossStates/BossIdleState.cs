@@ -60,7 +60,7 @@ public class BossIdleState : EnemyState
             }
             else if(boss.CheckIfPlayerInAggroRange())
             {
-
+                boss.StateMachine.ChangeState(boss.AttackState);
             }
             else if (!boss.CheckIfPlayerInProjectileRadius())
             {
