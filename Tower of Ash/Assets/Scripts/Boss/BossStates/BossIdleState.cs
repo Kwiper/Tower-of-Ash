@@ -10,6 +10,8 @@ public class BossIdleState : EnemyState
     private Boss boss;
     private string animBoolName;
 
+    private GameObject player;
+
     public BossIdleState(Boss enemy, EnemyStateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
         this.boss = enemy;
@@ -35,6 +37,8 @@ public class BossIdleState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        player = FindObjectOfType<Player>().gameObject;
+
         timer = maxTimer;
     }
 
@@ -54,7 +58,7 @@ public class BossIdleState : EnemyState
 
         if(timer <= 0)
         {
-            /*
+            
             if (!boss.CheckIfPlayerInAggroRange() && boss.CheckIfPlayerInProjectileRadius())
             {
                 boss.StateMachine.ChangeState(boss.WalkState);
@@ -67,8 +71,8 @@ public class BossIdleState : EnemyState
             {
                 boss.StateMachine.ChangeState(boss.LungeState);
             }
-            */
-            boss.StateMachine.ChangeState(boss.JumpAttackState);
+            
+
         }
 
     }
