@@ -24,6 +24,9 @@ public class Boss : Enemy
     public LayerMask groundLayer;
 
     [SerializeField]
+    private Transform groundCheck;
+
+    [SerializeField]
     private float AggroRadius;
 
     [SerializeField]
@@ -65,6 +68,11 @@ public class Boss : Enemy
 
     }
 
+    public bool CheckIfTouchingGround()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+    }
+
     public bool CheckIfPlayerInAggroRange()
     {
         return Physics2D.OverlapCircle(AggroPoint.position, AggroRadius, playerLayer);
@@ -90,6 +98,10 @@ public class Boss : Enemy
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(BoundaryPoint.position, 0.5f);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(groundCheck.position, 0.1f);
+
     }
 
 }

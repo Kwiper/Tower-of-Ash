@@ -54,6 +54,7 @@ public class BossIdleState : EnemyState
 
         if(timer <= 0)
         {
+            /*
             if (!boss.CheckIfPlayerInAggroRange() && boss.CheckIfPlayerInProjectileRadius())
             {
                 boss.StateMachine.ChangeState(boss.WalkState);
@@ -66,6 +67,8 @@ public class BossIdleState : EnemyState
             {
                 boss.StateMachine.ChangeState(boss.LungeState);
             }
+            */
+            boss.StateMachine.ChangeState(boss.JumpAttackState);
         }
 
     }
