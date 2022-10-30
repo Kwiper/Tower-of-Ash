@@ -72,7 +72,7 @@ public class BossIdleState : EnemyState
                 boss.StateMachine.ChangeState(boss.LungeState);
             }
             */
-            boss.StateMachine.ChangeState(boss.FireballState);
+            boss.StateMachine.ChangeState(boss.BulletHellCharge);
             
 
         }

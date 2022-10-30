@@ -41,6 +41,7 @@ public class BossBulletHellState : EnemyState
         base.LogicUpdate();
         boss.SetVelocityX(0);
         boss.SetVelocityY(0);
+        boss.transform.position = Vector3.MoveTowards(boss.transform.position, boss.bulletHellPoint.position, Time.deltaTime * 30);
 
         bulletHellTimer -= Time.deltaTime;
         if (bulletHellTimer <= 0)
