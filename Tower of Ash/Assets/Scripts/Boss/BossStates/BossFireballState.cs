@@ -21,7 +21,8 @@ public class BossFireballState : EnemyState {
         base.AnimationTrigger();
 
         // Shoot fireball
-        Debug.Log("Fireball!");
+        //Debug.Log("Fireball!");
+        boss.CastFireball();
     }
 
     public override void Enter()
