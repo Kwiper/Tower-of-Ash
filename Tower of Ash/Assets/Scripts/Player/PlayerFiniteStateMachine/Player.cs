@@ -53,9 +53,7 @@ public class Player : MonoBehaviour
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
     private Vector2 workspace;
-    [SerializeField]
-    private float swingPlatMultiplier = 40f;
-    public Platform playersSwing;
+
 
     public GameObject Fireball;
 
@@ -285,9 +283,6 @@ public class Player : MonoBehaviour
         CurrentScene = currScene;
     }
 
-    public float getSwingPlatMultiplier(){
-        return swingPlatMultiplier;
-    }    
 
 
 

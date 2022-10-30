@@ -20,28 +20,23 @@ public class Platform : MonoBehaviour
     public bool PlayerOnSwing = false;
     private void Start(){
         //Finds collider for platform and finds player script on player gameobject
-        //collider = GetComponent<CompositeCollider2D>();
         var EssentialObjectPossibles = GameObject.FindGameObjectsWithTag("EssentialObjects");
         essentials = EssentialObjectPossibles[0];
 
-        //starterPosY=  transformPlat.position.y
-
     }
 
-    void Update(){
+    void FixedUpdate(){
         if (rotationCenter != null){
             posXPrev = posX;
             posX = rotationCenter.position.x + Mathf.Cos(angleRad)*rotationRadius;
-            posY = rotationCenter.position.y + Mathf.Sin(angleRad)*rotationRadius;
+            posY = rotationCenter.position.y + Mathf.Sin(angleRad)*rotationRadius/1.5f;
             transformPlat.position = new Vector2(posX,posY);
             angleRad = angleRad + Time.deltaTime*angularSpeed;
             //This is for resuability's sake as doing things in rad's sucks
             angleDeg = angleRad*(180/Mathf.PI);
             posXDif = posX-posXPrev;
-            //Debug.Log(angle);
+
             if (angleDeg >= startAngle || angleDeg <= endAngle){
-                //Debug.Log("angle has surpased required value");
-                //angle = 0f;
                 angularSpeed = angularSpeed*-1;
             }
         }
