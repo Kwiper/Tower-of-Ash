@@ -599,6 +599,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.125
       objectReference: {fileID: 0}
+    - target: {fileID: 3009510716126094113, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: Health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3009510716126094113, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6722131709722287501, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_TrackedObjectOffset.y
       value: 3
@@ -1116,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 100
   Health: 0
   knockbackForce: 0
 --- !u!95 &2099904394
@@ -1286,3 +1294,4 @@ MonoBehaviour:
   bulletHellPoint: {fileID: 640779443}
   fireballPoint: {fileID: 719813215}
   Fireball: {fileID: 8501841074460721272, guid: 5576bd2234c81c34d8ff60e9a31aa0a2, type: 3}
+  canBulletHell: 0

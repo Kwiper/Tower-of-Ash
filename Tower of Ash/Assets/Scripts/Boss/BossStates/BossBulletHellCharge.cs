@@ -22,6 +22,8 @@ public class BossBulletHellCharge : EnemyState
 
         chargeTimer = chargeMaxTimer;
         canMove = false;
+
+        boss.canBulletHell = false;
     }
 
     public override void Exit()
