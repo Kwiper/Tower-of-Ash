@@ -53,6 +53,9 @@ public class Player : MonoBehaviour
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
     private Vector2 workspace;
+    [SerializeField]
+    private float swingPlatMultiplier = 40f;
+    public Platform playersSwing;
 
     public GameObject Fireball;
 
@@ -177,9 +180,9 @@ public class Player : MonoBehaviour
 
     public void SetVelocityX(float velocity)
     {
-        workspace.Set(velocity, CurrentVelocity.y);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
+            workspace.Set(velocity, CurrentVelocity.y);
+            RB.velocity = workspace;
+            CurrentVelocity = workspace;
     }
 
     public void SetVelocityY(float velocity)
@@ -281,6 +284,11 @@ public class Player : MonoBehaviour
         PrevScene = CurrentScene;
         CurrentScene = currScene;
     }
+
+    public float getSwingPlatMultiplier(){
+        return swingPlatMultiplier;
+    }    
+
 
 
     #endregion
