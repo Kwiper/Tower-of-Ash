@@ -189,12 +189,13 @@ public class BossIdleState : EnemyState
             else if(boss.EnemyEntity.Health <= (boss.EnemyEntity.maxHealth * 0.25))
             {
                 maxTimer = 1f;
+                Debug.Log(boss.canBulletHell);
 
                 if (boss.canBulletHell)
                 {
                     boss.StateMachine.ChangeState(boss.BulletHellCharge);
                 }
-                else
+                else if (!boss.canBulletHell)
                 {
                     if (!boss.CheckIfPlayerInAggroRange() && boss.CheckIfPlayerInProjectileRadius()) // If player is outside aggro range, inside projectile radius
                     {

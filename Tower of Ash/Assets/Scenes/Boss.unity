@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6722131709722287501, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_TrackedObjectOffset.y
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6722131709953429418, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_Lens.OrthographicSize
@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6722131709953429421, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6722131710705246436, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_RootOrder
@@ -926,7 +926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808370832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -10}
+  m_LocalPosition: {x: 0, y: -1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1000
   Health: 0
   knockbackForce: 0
 --- !u!95 &2099904394
@@ -1294,4 +1294,4 @@ MonoBehaviour:
   bulletHellPoint: {fileID: 640779443}
   fireballPoint: {fileID: 719813215}
   Fireball: {fileID: 8501841074460721272, guid: 5576bd2234c81c34d8ff60e9a31aa0a2, type: 3}
-  canBulletHell: 0
+  canBulletHell: 1

@@ -37,7 +37,7 @@ public class Boss : Enemy
     public Transform fireballPoint;
     public GameObject Fireball;
 
-    public bool canBulletHell = false;
+    public bool canBulletHell = true;
 
     public override void Awake()
     {
