@@ -2,37 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossFireball : MonoBehaviour
+public class Rock : MonoBehaviour
 {
     [SerializeField]
     private string tagName;
+
+    [SerializeField]
+    private CombatData combatData;
 
     private Entity target;
 
     private Player player;
 
-    [SerializeField]
-    private CombatData combatData;
+    public Vector2 angle;
 
-    private Rigidbody2D rb;
+    Rigidbody2D rb;
 
     int direction;
-
-    GameObject boss;
 
     // Start is called before the first frame update
     void Start()
     {
-        boss = FindObjectOfType<Boss>().gameObject;
         rb = GetComponent<Rigidbody2D>();
 
-        direction = boss.GetComponent<Boss>().FacingDirection;
-        rb.velocity = new Vector2(direction * combatData.projectileSpeed, 0);
-    }
+        rb.velocity = combatData.projectileSpeed * angle;
 
-    // Update is called once per frame
-    void Update()
-    {
+        if (rb.velocity.x > 0)
+            direction = 1;
+        else
+            direction = -1;
 
     }
 
@@ -40,7 +38,8 @@ public class BossFireball : MonoBehaviour
     {
         if (collision.CompareTag(tagName))
         {
-            target = collision.gameObject.GetComponentInParent<Entity>();
+            target = collision.gameObject.GetComponent<Entity>();
+
             target.SetDamage(combatData.projectileDamage);
 
             target.SetKnockback(direction);
@@ -52,13 +51,18 @@ public class BossFireball : MonoBehaviour
             collision.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
 
             Destroy(gameObject);
-
         }
+
+        if(collision.gameObject.layer == 6 || collision.gameObject.layer == 10)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
-    private void OnBecameInvisible()
+    // Update is called once per frame
+    void Update()
     {
-        Destroy(gameObject);
+        
     }
-
 }

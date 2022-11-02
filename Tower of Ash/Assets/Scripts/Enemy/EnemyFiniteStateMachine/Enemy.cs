@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour {
             {
                 collider.gameObject.GetComponentInParent<Entity>().SetDamage(10);
                 collider.gameObject.GetComponentInParent<Entity>().SetKnockback(-collider.gameObject.GetComponentInParent<Player>().FacingDirection);
-                collider.gameObject.GetComponentInParent<Player>().isHit = true; ;
+                collider.gameObject.GetComponentInParent<Player>().isHit = true;
                 collider.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
             }
         }

@@ -47,7 +47,7 @@ public class HogashWalkState : EnemyState {
             hog.SetVelocityX(hog.EnemyEntity.Knockback);
         }
 
-        if (hog.CheckIfPlayerInAggro() && player.transform.position.y >= hog.gameObject.transform.position.y)
+        if (hog.CheckIfPlayerInAggro())
         {
             hog.StateMachine.ChangeState(hog.ChargeState);
         }
