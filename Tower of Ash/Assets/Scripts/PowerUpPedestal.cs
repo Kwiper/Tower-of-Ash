@@ -38,7 +38,7 @@ public class PowerUpPedestal : MonoBehaviour
                 break;
 
                 case DoubleJump:
-                playerData.unlockedDoubleJump = true;
+                playerData.amountOfJumps = 2;
                 break;
 
                 default:

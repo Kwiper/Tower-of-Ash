@@ -96,7 +96,7 @@ public class PlayerInAirState : PlayerState {
             player.WallJumpState.DetermineWallJumpDetection(isTouchingWall);
             stateMachine.ChangeState(player.WallJumpState);
         }
-        else if (jumpInput && playerData.unlockedDoubleJump == true && player.JumpState.CanJump())
+        else if (jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
         }
