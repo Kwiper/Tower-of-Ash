@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
-
     public BossIdleState IdleState { get; private set; }
     public BossAttackState AttackState { get; private set; }
     public BossWalkState WalkState { get; private set; }
