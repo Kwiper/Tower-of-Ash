@@ -52,10 +52,11 @@ public class Enemy : MonoBehaviour {
     {
         CurrentVelocity = RB.velocity;
 
-        if (EnemyEntity.InKnockback) 
+        /*if (EnemyEntity.InKnockback) 
         {
             SetVelocityX(EnemyEntity.Knockback);
         }
+        */
 
         //StateMachine.CurrentState.LogicUpdate(); //Re-add this when states are added to this enemy
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
-
     public BossIdleState IdleState { get; private set; }
     public BossAttackState AttackState { get; private set; }
     public BossWalkState WalkState { get; private set; }
@@ -13,6 +12,7 @@ public class Boss : Enemy
     public BossJumpAttackState JumpAttackState { get; private set; }
     public BossFireballState FireballState { get; private set; }
     public BossBulletHellState BulletHellState { get; private set; }
+    public BossBulletHellCharge BulletHellCharge { get; private set; }
     public BossFallState FallState { get; private set; }
 
     [SerializeField]
@@ -32,6 +32,12 @@ public class Boss : Enemy
     [SerializeField]
     private float ProjectileRadius;
 
+    public Transform bulletHellPoint;
+    public Transform fireballPoint;
+    public GameObject Fireball;
+
+    public bool canBulletHell = true;
+
     public override void Awake()
     {
         base.Awake();
@@ -44,6 +50,7 @@ public class Boss : Enemy
         FireballState = new BossFireballState(this, StateMachine, "fireball");
         BulletHellState = new BossBulletHellState(this, StateMachine, "bulletHell");
         FallState = new BossFallState(this, StateMachine, "fall");
+        BulletHellCharge = new BossBulletHellCharge(this, StateMachine, "bulletHellCharge");
 
     }
 
@@ -86,6 +93,11 @@ public class Boss : Enemy
     public bool CheckIfBoundaryDetected()
     {
         return Physics2D.OverlapCircle(BoundaryPoint.position, 0.5f, groundLayer);
+    }
+
+    public void CastFireball()
+    {
+        Instantiate(Fireball, fireballPoint.transform.position, fireballPoint.transform.rotation);
     }
 
     private void OnDrawGizmos()
