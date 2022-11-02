@@ -140,7 +140,7 @@ public class Enemy : MonoBehaviour {
 
     protected virtual void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 
-    protected virtual void Flip()
+    public void Flip()
     {
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);

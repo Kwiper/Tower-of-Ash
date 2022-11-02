@@ -34,7 +34,7 @@ public class FireBat : Enemy {
     public override void Start()
     {
         base.Start();
-        FacingDirection = -1;
+        FacingDirection = 1;
 
         StateMachine.Initialize(IdleState);
     }
