@@ -30,9 +30,12 @@ public class PlayerChargeAttackState : PlayerAbilityState
 
     public override void Enter()
     {
-        base.Enter();
+        
+        base.Enter();       
         player.InputHandler.UseChargeAttackInput();
         launch = false;
+        
+
     }
 
     public override void Exit()

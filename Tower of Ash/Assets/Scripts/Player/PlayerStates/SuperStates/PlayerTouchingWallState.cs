@@ -50,7 +50,7 @@ public class PlayerTouchingWallState : PlayerState {
         xInput = player.InputHandler.NormInputX;
         jumpInput = player.InputHandler.JumpInput;
 
-        if (jumpInput)
+        if (jumpInput && playerData.unlockedWallJump == true)
         {
             player.WallJumpState.DetermineWallJumpDetection(isTouchingWall);
             stateMachine.ChangeState(player.WallJumpState);

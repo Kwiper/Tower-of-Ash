@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoveState : PlayerGroundedState {
+
+
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -27,9 +29,9 @@ public class PlayerMoveState : PlayerGroundedState {
         base.LogicUpdate();
 
         player.CheckIfShouldFlip(xInput);
-
-        player.SetVelocityX(playerData.movementVelocity * xInput);
-
+        
+        player.SetVelocityX((playerData.movementVelocity) * xInput);
+        
         if(xInput == 0 && !isExitingState)
         {
             stateMachine.ChangeState(player.IdleState);
