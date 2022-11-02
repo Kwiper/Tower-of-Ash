@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   movementVelocity: 10
-  unlockedDoubleJump: 0
+  unlockedDoubleJump: 1
   jumpVelocity: 22
   amountOfJumps: 2
   coyoteTime: 0.2
@@ -45,5 +45,5 @@ MonoBehaviour:
   unlockedChargeAttack: 0
   chargeVelocity: 15
   pogoVelocity: 17.5
-  timeReduction: 0.016666668
+  timeReduction: 0.8333333
   iFrameTime: 0.75
