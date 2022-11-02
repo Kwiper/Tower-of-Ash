@@ -9,7 +9,11 @@ public class HealthTimer : MonoBehaviour
     [SerializeField]
     private Entity playerEntity;
 
-    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField]
+    private Image healthBar;
+
+    [SerializeField]
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,8 @@ public class HealthTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timerText.text = ((int)playerEntity.Health).ToString();
+        healthBar.fillAmount = playerEntity.Health / 100;
+
+        anim.SetFloat("health", playerEntity.Health);
     }
 }
