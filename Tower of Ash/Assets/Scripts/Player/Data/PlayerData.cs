@@ -10,6 +10,7 @@ public class PlayerData : ScriptableObject
     public float movementVelocity = 10f;
 
     [Header("Jump State")]
+    public bool unlockedDoubleJump = false;
     public float jumpVelocity = 21f;
     public int amountOfJumps = 1;
 
@@ -27,11 +28,13 @@ public class PlayerData : ScriptableObject
     public float wallSlideVelocity = 3f;
 
     [Header("Wall Jump State")]
+    public bool unlockedWallJump = false;   
     public float wallJumpVelocity = 20f;
     public float wallJumpTime = 0.4f;
     public Vector2 wallJumpAngle = new Vector2(1,2);
 
     [Header("Dash State")]
+    public bool unlockedDash = false;
     public float dashCooldown = 0.5f;
     public float dashTime = 0.2f;
     public float dashVelocity = 30f;
@@ -43,10 +46,12 @@ public class PlayerData : ScriptableObject
     public float attackCooldown = 0.3f;
 
     [Header("Fireball State")]
+    public bool unlockedFireball = false;
     public float fireballCooldown = 0.5f;
     public float fireballTime = 0.1f;
 
     [Header("Charge Attack")]
+    public bool unlockedChargeAttack = false;
     public float chargeVelocity = 15f;
 
     [Header("Pogo")]

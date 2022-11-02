@@ -73,11 +73,11 @@ public class PlayerInAirState : PlayerState {
 
         CheckJumpMultiplier();
 
-        if (chargeAttackInput)
+        if (chargeAttackInput && playerData.unlockedChargeAttack == true)
         {
             stateMachine.ChangeState(player.ChargeAttackState);
         }
-        else if (fireballInput && player.FireballState.CheckIfCanFireball())
+        else if (fireballInput && playerData.unlockedFireball && player.FireballState.CheckIfCanFireball())
         {
             stateMachine.ChangeState(player.FireballState);
         }
@@ -96,7 +96,7 @@ public class PlayerInAirState : PlayerState {
             player.WallJumpState.DetermineWallJumpDetection(isTouchingWall);
             stateMachine.ChangeState(player.WallJumpState);
         }
-        else if (jumpInput && player.JumpState.CanJump())
+        else if (jumpInput && playerData.unlockedDoubleJump == true && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
         }
@@ -104,7 +104,7 @@ public class PlayerInAirState : PlayerState {
         {
             stateMachine.ChangeState(player.WallSlideState);
         }
-        else if (dashInput && player.DashState.CheckIfCanDash())
+        else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
         {
             stateMachine.ChangeState(player.DashState);
         }

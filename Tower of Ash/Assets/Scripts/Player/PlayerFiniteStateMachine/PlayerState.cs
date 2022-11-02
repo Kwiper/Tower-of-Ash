@@ -67,4 +67,8 @@ public class PlayerState
 
     public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
 
+    public string getAnimBoolName(){
+        return animBoolName;
+    }
+
 }

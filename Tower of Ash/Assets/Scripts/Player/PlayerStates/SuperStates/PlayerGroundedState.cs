@@ -48,11 +48,11 @@ public class PlayerGroundedState : PlayerState {
         fireballInput = player.InputHandler.FireballInput;
         chargeAttackInput = player.InputHandler.ChargeAttackInput;
 
-        if (chargeAttackInput)
+        if (chargeAttackInput && playerData.unlockedChargeAttack == true)
         {
             stateMachine.ChangeState(player.ChargeAttackState);
         }
-        else if (fireballInput && player.FireballState.CheckIfCanFireball())
+        else if (fireballInput && playerData.unlockedFireball == true && player.FireballState.CheckIfCanFireball())
         {
             stateMachine.ChangeState(player.FireballState);
         }
@@ -69,7 +69,7 @@ public class PlayerGroundedState : PlayerState {
             player.InAirState.StartCoyoteTime();
             stateMachine.ChangeState(player.InAirState);
         }
-        else if (dashInput && player.DashState.CheckIfCanDash())
+        else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
         {
             stateMachine.ChangeState(player.DashState);
         }
