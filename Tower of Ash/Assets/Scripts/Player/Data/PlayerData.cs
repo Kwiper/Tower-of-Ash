@@ -63,4 +63,12 @@ public class PlayerData : ScriptableObject
     [Header("Invincibility")]
     public float iFrameTime = 0.5f;
 
+    [Header("Heal State")]
+    public float healAmount = 25f;
+    public int healCharges = 3;
+    public int maxHealCharges = 3;
+
+    [Header("Tinder")]
+    public int tinder = 0;
+
 }

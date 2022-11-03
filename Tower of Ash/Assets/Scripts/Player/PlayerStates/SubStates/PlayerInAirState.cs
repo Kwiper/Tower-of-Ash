@@ -11,6 +11,7 @@ public class PlayerInAirState : PlayerState {
     private bool dashInput;
     private bool fireballInput;
     private bool chargeAttackInput;
+    private bool healInput;
 
     //Checks
     private bool isGrounded;
@@ -70,6 +71,7 @@ public class PlayerInAirState : PlayerState {
         dashInput = player.InputHandler.DashInput;
         fireballInput = player.InputHandler.FireballInput;
         chargeAttackInput = player.InputHandler.ChargeAttackInput;
+        healInput = player.InputHandler.HealInput;
 
         CheckJumpMultiplier();
 
@@ -107,6 +109,10 @@ public class PlayerInAirState : PlayerState {
         else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
         {
             stateMachine.ChangeState(player.DashState);
+        }
+        else if(healInput && playerData.healCharges > 0)
+        {
+            stateMachine.ChangeState(player.HealState);
         }
         else
         {

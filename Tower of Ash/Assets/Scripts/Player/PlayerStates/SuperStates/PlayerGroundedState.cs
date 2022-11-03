@@ -12,6 +12,8 @@ public class PlayerGroundedState : PlayerState {
     private bool dashInput;
     private bool fireballInput;
     private bool chargeAttackInput;
+    private bool healInput;
+
     public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -47,6 +49,7 @@ public class PlayerGroundedState : PlayerState {
         dashInput = player.InputHandler.DashInput;
         fireballInput = player.InputHandler.FireballInput;
         chargeAttackInput = player.InputHandler.ChargeAttackInput;
+        healInput = player.InputHandler.HealInput;
 
         if (chargeAttackInput && playerData.unlockedChargeAttack == true)
         {
@@ -72,6 +75,10 @@ public class PlayerGroundedState : PlayerState {
         else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
         {
             stateMachine.ChangeState(player.DashState);
+        }
+        else if (healInput && playerData.healCharges > 0)
+        {
+            stateMachine.ChangeState(player.HealState);
         }
     }
 
