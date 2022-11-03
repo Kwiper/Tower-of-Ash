@@ -13,6 +13,13 @@ public class PassThrough : MonoBehaviour
         collider = GetComponent<CompositeCollider2D>();
         var playerPossibles = GameObject.FindGameObjectsWithTag("Player");
         player = playerPossibles[0];
+        
+        var batsToAdd = GameObject.FindObjectsOfType<FireBat>();
+ 
+        for (int i = 0; i < batsToAdd.Length; i++) 
+        {
+            Physics2D.IgnoreCollision(batsToAdd[i].GetComponent<BoxCollider2D>(), GetComponent<CompositeCollider2D>(), true);
+        }
 
     }
 

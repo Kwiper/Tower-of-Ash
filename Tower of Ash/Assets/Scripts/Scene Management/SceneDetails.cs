@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneDetails : MonoBehaviour
 {
     [SerializeField] List<SceneDetails> connectedScenes;
+    [SerializeField] List<EnemySpawner> enemySpawners;
     public bool IsLoaded = false;
 
 
@@ -25,12 +26,31 @@ public class SceneDetails : MonoBehaviour
 
             Debug.Log($"Entered {gameObject.name}");
             LoadScene();
+                foreach (var enemy in enemySpawners) 
+                {
+                    if (enemy.isDead != true && enemy.isSpawned != true)
+                    {
+                        enemy.SpawnEnemy();
+                        enemy.isSpawned = true;
+                    }
+                }            
             Player.SetCurrentScene(this);
 
             //Load all connected scenes
             foreach (var scene in connectedScenes)
             {
                 scene.LoadScene();
+                if(scene.enemySpawners.Count != 0)
+                {
+                    foreach (var enemy in scene.enemySpawners) 
+                    {
+                        if (enemy.isDead != true && enemy.isSpawned != true)
+                        {
+                            enemy.SpawnEnemy();
+                            enemy.isSpawned = true;
+                        }
+                    }
+                }       
             }
             
             //Unload the scenes that are no longer connected
@@ -40,6 +60,16 @@ public class SceneDetails : MonoBehaviour
                 foreach (var scene in previouslyLoadedScenes)
                 {
                     if(!connectedScenes.Contains(scene) && scene != this){
+
+                        foreach (var enemy in scene.enemySpawners) 
+                        {
+
+                            enemy.DespawnEnemy();
+                            enemy.isSpawned = false;
+
+                        }
+
+
                         scene.UnloadScene();
                     }
                 }
