@@ -14,6 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool AttackInput { get; private set; }
     public bool FireballInput { get; private set; }
     public bool ChargeAttackInput { get; private set; }
+    public bool HealInput { get; private set; }
 
     
 
@@ -31,6 +32,14 @@ public class PlayerInputHandler : MonoBehaviour
         CheckJumpInputHoldTime();
         CheckDashInputHoldTime();
         CheckFireballInputHoldTime();
+    }
+
+    public void OnHealInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            HealInput = true;
+        }
     }
 
     public void OnChargeAttackInput(InputAction.CallbackContext context)
@@ -106,6 +115,8 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseAttackInput() => AttackInput = false;
     public void UseFireballInput() => FireballInput = false;
     public void UseChargeAttackInput() => ChargeAttackInput = false;
+
+    public void UseHealInput() => HealInput = false;
 
     private void CheckJumpInputHoldTime() // Jump buffer
     {

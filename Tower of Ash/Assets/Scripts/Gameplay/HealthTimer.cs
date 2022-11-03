@@ -15,6 +15,15 @@ public class HealthTimer : MonoBehaviour
     [SerializeField]
     private Animator anim;
 
+    [SerializeField]
+    TextMeshProUGUI tinderText;
+
+    [SerializeField]
+    TextMeshProUGUI flaskText;
+
+    [SerializeField]
+    PlayerData playerData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +36,8 @@ public class HealthTimer : MonoBehaviour
         healthBar.fillAmount = playerEntity.Health / 100;
 
         anim.SetFloat("health", playerEntity.Health);
+
+        tinderText.text = "x " + playerData.tinder;
+        flaskText.text = "x " + playerData.healCharges;
     }
 }

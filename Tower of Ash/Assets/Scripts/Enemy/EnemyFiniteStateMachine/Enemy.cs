@@ -26,6 +26,9 @@ public class Enemy : MonoBehaviour {
     public int FacingDirection { get; protected set; }
     protected Vector2 workspace;
 
+    public PlayerData playerData;
+    public int tinderReward;
+
     #endregion
 
     #region Unity Callback Functions
@@ -62,6 +65,7 @@ public class Enemy : MonoBehaviour {
 
         if(EnemyEntity.Health <= 0)
         {
+            playerData.tinder += tinderReward;
             Destroy(gameObject);
         }
 

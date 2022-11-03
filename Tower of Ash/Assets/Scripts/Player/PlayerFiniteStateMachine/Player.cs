@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public PlayerFireballState FireballState { get; private set; }
     public PlayerChargeAttackState ChargeAttackState { get; private set; }
     public PlayerHitState HitState { get; private set; }
+    public PlayerHealState HealState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -95,6 +96,8 @@ public class Player : MonoBehaviour
         ChargeAttackState = new PlayerChargeAttackState(this, StateMachine, playerData, "chargeAttack");
 
         HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
+
+        HealState = new PlayerHealState(this, StateMachine, playerData, "heal");
     }
 
     private void Start()
@@ -106,6 +109,8 @@ public class Player : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
 
         FacingDirection = 1;
+
+        ResetHealCharges();
 
         StateMachine.Initialize(IdleState);
     }
@@ -260,6 +265,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Heal()
+    {
+        playerData.healCharges -= 1;
+
+        PlayerEntity.Health += playerData.healAmount;
+        if(PlayerEntity.Health > PlayerEntity.maxHealth)
+        {
+            PlayerEntity.Health = PlayerEntity.maxHealth;
+        }
+    }
+
+    public void ResetHealCharges()
+    {
+        playerData.healCharges = playerData.maxHealCharges;
+    }
+
     IEnumerator Invincibility()
     {
         yield return new WaitForSeconds(playerData.iFrameTime);
@@ -282,9 +303,6 @@ public class Player : MonoBehaviour
         PrevScene = CurrentScene;
         CurrentScene = currScene;
     }
-
-
-
 
     #endregion
 }
