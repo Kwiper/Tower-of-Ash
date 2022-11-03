@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   movementVelocity: 10
-  unlockedDoubleJump: 1
+  unlockedDoubleJump: 0
   jumpVelocity: 22
   amountOfJumps: 1
   coyoteTime: 0.2
@@ -31,7 +31,7 @@ MonoBehaviour:
   wallJumpVelocity: 22
   wallJumpTime: 0.2
   wallJumpAngle: {x: 1, y: 2}
-  unlockedDash: 1
+  unlockedDash: 0
   dashCooldown: 0.3
   dashTime: 0.15
   dashVelocity: 25
@@ -48,6 +48,6 @@ MonoBehaviour:
   timeReduction: 0.8333333
   iFrameTime: 0.75
   healAmount: 25
-  healCharges: 3
-  maxHealCharges: 3
+  healCharges: 1
+  maxHealCharges: 1
   tinder: 0
