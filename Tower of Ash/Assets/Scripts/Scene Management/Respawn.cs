@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class Respawn : MonoBehaviour
 {
 
+    PlayerData playerData;
 
     public void RespawnScene()
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
+
+        playerData.healCharges = playerData.maxHealCharges;
     }
 
 }
