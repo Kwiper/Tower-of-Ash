@@ -58,7 +58,7 @@ public class PlayerData : ScriptableObject
     public float pogoVelocity = 25f;
 
     [Header("Timer")]
-    public float timeReduction = 100/120f;
+    public float timeReduction = 0.833333337f;
 
     [Header("Invincibility")]
     public float iFrameTime = 0.5f;

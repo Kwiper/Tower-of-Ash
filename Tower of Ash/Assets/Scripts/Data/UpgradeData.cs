@@ -17,7 +17,7 @@ public class UpgradeData : ScriptableObject
     public int flameUpgradeCount = 0;
     public int flameMaxUpgrades = 5;
 
-    public float flameTimeMultiplier = 2/3;
+    public float flameTimeMultiplier = 2f;
 
     public int[] flameTinderCosts = new int[] {20,40,65,100,150};
 
