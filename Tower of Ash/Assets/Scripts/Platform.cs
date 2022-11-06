@@ -19,7 +19,9 @@ public class Platform : MonoBehaviour
     private float posX,posY,posXPrev,posXDif, angleDeg, angleRad = 0f;
     [SerializeField]
     private float arcSize = 1.5f;
+    private float gizmoPointSize = 0.25f;
     //private float starterPosY;
+    //private Vector2 midPointPosition;
     private GameObject essentials;
     public bool PlayerOnSwing = false;
     private bool swingAccelerating;
@@ -32,16 +34,16 @@ public class Platform : MonoBehaviour
     {
         angleRad = startAngle*(Mathf.PI/180);
         midPoint = (endAngle+startAngle)/2;
+        
+        
     }
 
     private void Start(){
         //Finds collider for platform and finds player script on player gameobject
         var EssentialObjectPossibles = GameObject.FindGameObjectsWithTag("EssentialObjects");
         essentials = EssentialObjectPossibles[0];
-
+                
     }
-
-
 
     void FixedUpdate(){
         if (rotationCenter != null){
@@ -66,14 +68,14 @@ public class Platform : MonoBehaviour
             }
             // Swing is moving left and accelerating
             if(angleDeg > midPoint && swingAccelerating == true && swingState == 0){
-                Debug.Log("Swing is moving left and accelerating");
+                //Debug.Log("Swing is moving left and accelerating");
                 if(angularSpeed > maxAngularSpeed){
                     angularSpeed = angularSpeed+(maxAngularSpeed/150);
                 }
             }
             // Swing is moving left and is decelerating
             else if(angleDeg <= midPoint && swingState == 0){
-                Debug.Log("Swing is moving left and is decelerating");
+                //Debug.Log("Swing is moving left and is decelerating");
                 if(angularSpeed < minAngularSpeed){
                     angularSpeed = angularSpeed-(maxAngularSpeed/150);
                     swingAccelerating = false;
@@ -81,14 +83,14 @@ public class Platform : MonoBehaviour
             }
             // Swing is moving right and accelerating
             else if(angleDeg < midPoint && swingAccelerating == true && swingState == 1){
-                Debug.Log("Swing is moving right and accelerating");
+                //Debug.Log("Swing is moving right and accelerating");
                 if(angularSpeed < (maxAngularSpeed*-1)){
                     angularSpeed = angularSpeed+((maxAngularSpeed/150)*-1);
                 }
             }
             // Swing is moving right and is decelerating
             else if(angleDeg >= midPoint && swingState == 1){
-                Debug.Log("Swing is moving right and is decelerating");
+                //Debug.Log("Swing is moving right and is decelerating");
                 if(angularSpeed > (minAngularSpeed*-1)){
                     angularSpeed = angularSpeed-((maxAngularSpeed/150)*-1);
                     swingAccelerating = false;
@@ -120,5 +122,21 @@ public class Platform : MonoBehaviour
     }
     public float getPosXDif(){
         return posXDif;
+    }
+
+    private void OnDrawGizmos()
+    {
+
+
+        //Start Point
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(startAngle*(Mathf.PI/180))*rotationRadius,rotationCenter.position.y + Mathf.Sin(startAngle*(Mathf.PI/180))*rotationRadius/arcSize), gizmoPointSize);
+
+        //End Point
+        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(endAngle*(Mathf.PI/180))*rotationRadius, rotationCenter.position.y + Mathf.Sin(endAngle*(Mathf.PI/180))*rotationRadius/arcSize), gizmoPointSize);
+
+        //Mid point
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius, rotationCenter.position.y + Mathf.Sin(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius/arcSize), gizmoPointSize);
     }    
 }
