@@ -28,6 +28,7 @@ public class SceneDetails : MonoBehaviour
             LoadScene();
                 foreach (var enemy in enemySpawners) 
                 {
+                    //Prevents double spawnning or enemy respawning
                     if (enemy.isDead != true && enemy.isSpawned != true)
                     {
                         enemy.SpawnEnemy();
@@ -43,7 +44,8 @@ public class SceneDetails : MonoBehaviour
                 if(scene.enemySpawners.Count != 0)
                 {
                     foreach (var enemy in scene.enemySpawners) 
-                    {
+                    {   
+                        //Prevents double spawnning or enemy respawning
                         if (enemy.isDead != true && enemy.isSpawned != true)
                         {
                             enemy.SpawnEnemy();
@@ -60,13 +62,11 @@ public class SceneDetails : MonoBehaviour
                 foreach (var scene in previouslyLoadedScenes)
                 {
                     if(!connectedScenes.Contains(scene) && scene != this){
-
+                        //Unloads still alive enemies
                         foreach (var enemy in scene.enemySpawners) 
                         {
-
                             enemy.DespawnEnemy();
                             enemy.isSpawned = false;
-
                         }
 
 
