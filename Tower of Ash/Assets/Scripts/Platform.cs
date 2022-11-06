@@ -18,8 +18,12 @@ public class Platform : MonoBehaviour
     private float endAngle;
     private float posX,posY,posXPrev,posXDif, angleDeg, angleRad = 0f;
     [SerializeField]
-    private float arcSize = 1.5f;
-    private float gizmoPointSize = 0.25f;
+    private float arcSizeY = 1.5f;
+    [SerializeField]
+    private float arcSizeX = 1f;
+    [SerializeField]
+    private float acceleration = 150f;
+    private float gizmoPointSize = 1f;
     //private float starterPosY;
     //private Vector2 midPointPosition;
     private GameObject essentials;
@@ -48,8 +52,8 @@ public class Platform : MonoBehaviour
     void FixedUpdate(){
         if (rotationCenter != null){
             posXPrev = posX;
-            posX = rotationCenter.position.x + Mathf.Cos(angleRad)*rotationRadius;
-            posY = rotationCenter.position.y + Mathf.Sin(angleRad)*rotationRadius/arcSize;
+            posX = rotationCenter.position.x + Mathf.Cos(angleRad)*rotationRadius*arcSizeX;
+            posY = rotationCenter.position.y + Mathf.Sin(angleRad)*rotationRadius/arcSizeY;
             transformPlat.position = new Vector2(posX,posY);
             angleRad = angleRad + Time.deltaTime*angularSpeed;
             //This is for resuability's sake as doing things in rad's sucks
@@ -70,14 +74,14 @@ public class Platform : MonoBehaviour
             if(angleDeg > midPoint && swingAccelerating == true && swingState == 0){
                 //Debug.Log("Swing is moving left and accelerating");
                 if(angularSpeed > maxAngularSpeed){
-                    angularSpeed = angularSpeed+(maxAngularSpeed/150);
+                    angularSpeed = angularSpeed+(maxAngularSpeed/Mathf.Abs(acceleration));
                 }
             }
             // Swing is moving left and is decelerating
             else if(angleDeg <= midPoint && swingState == 0){
                 //Debug.Log("Swing is moving left and is decelerating");
                 if(angularSpeed < minAngularSpeed){
-                    angularSpeed = angularSpeed-(maxAngularSpeed/150);
+                    angularSpeed = angularSpeed-(maxAngularSpeed/Mathf.Abs(acceleration));
                     swingAccelerating = false;
                 }
             }
@@ -85,14 +89,14 @@ public class Platform : MonoBehaviour
             else if(angleDeg < midPoint && swingAccelerating == true && swingState == 1){
                 //Debug.Log("Swing is moving right and accelerating");
                 if(angularSpeed < (maxAngularSpeed*-1)){
-                    angularSpeed = angularSpeed+((maxAngularSpeed/150)*-1);
+                    angularSpeed = angularSpeed+((maxAngularSpeed/Mathf.Abs(acceleration))*-1);
                 }
             }
             // Swing is moving right and is decelerating
             else if(angleDeg >= midPoint && swingState == 1){
                 //Debug.Log("Swing is moving right and is decelerating");
                 if(angularSpeed > (minAngularSpeed*-1)){
-                    angularSpeed = angularSpeed-((maxAngularSpeed/150)*-1);
+                    angularSpeed = angularSpeed-((maxAngularSpeed/Mathf.Abs(acceleration))*-1);
                     swingAccelerating = false;
                 }
             }
@@ -130,13 +134,13 @@ public class Platform : MonoBehaviour
 
         //Start Point
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(startAngle*(Mathf.PI/180))*rotationRadius,rotationCenter.position.y + Mathf.Sin(startAngle*(Mathf.PI/180))*rotationRadius/arcSize), gizmoPointSize);
+        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(startAngle*(Mathf.PI/180))*rotationRadius*arcSizeX,rotationCenter.position.y + Mathf.Sin(startAngle*(Mathf.PI/180))*rotationRadius/arcSizeY), gizmoPointSize);
 
         //End Point
-        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(endAngle*(Mathf.PI/180))*rotationRadius, rotationCenter.position.y + Mathf.Sin(endAngle*(Mathf.PI/180))*rotationRadius/arcSize), gizmoPointSize);
+        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(endAngle*(Mathf.PI/180))*rotationRadius*arcSizeX, rotationCenter.position.y + Mathf.Sin(endAngle*(Mathf.PI/180))*rotationRadius/arcSizeY), gizmoPointSize);
 
         //Mid point
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius, rotationCenter.position.y + Mathf.Sin(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius/arcSize), gizmoPointSize);
+        Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius*arcSizeX, rotationCenter.position.y + Mathf.Sin(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius/arcSizeY), gizmoPointSize);
     }    
 }
