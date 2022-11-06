@@ -22,8 +22,10 @@ public class EnemySpawner: MonoBehaviour
 
     private void Update()
     {
-        if(enemy.GetComponent<Entity>().Health <= 0){
-            isDead = true;
+        if(isSpawned == true && enemy == null){
+                isDead = true;
+                isSpawned = true;
+        
         }
     }
 
