@@ -23,6 +23,8 @@ public class Platform : MonoBehaviour
     private float arcSizeX = 1f;
     [SerializeField]
     private float acceleration = 150f;
+    [SerializeField]
+    private bool swingRightFirst = false;
     private float gizmoPointSize = 1f;
     //private float starterPosY;
     //private Vector2 midPointPosition;
@@ -36,7 +38,16 @@ public class Platform : MonoBehaviour
 
     private void Awake()
     {
-        angleRad = startAngle*(Mathf.PI/180);
+        //Sets it to travel in the right direction if boolean is true else it swings left
+        if(swingRightFirst){
+            swingState = 1;
+            angleRad = endAngle*(Mathf.PI/180);
+            angularSpeed = angularSpeed*-1;
+        }
+        else{
+            angleRad = startAngle*(Mathf.PI/180);
+        }
+
         midPoint = (endAngle+startAngle)/2;
         
         
@@ -46,6 +57,8 @@ public class Platform : MonoBehaviour
         //Finds collider for platform and finds player script on player gameobject
         var EssentialObjectPossibles = GameObject.FindGameObjectsWithTag("EssentialObjects");
         essentials = EssentialObjectPossibles[0];
+
+
                 
     }
 
