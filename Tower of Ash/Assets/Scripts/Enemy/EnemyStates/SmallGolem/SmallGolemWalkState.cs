@@ -39,7 +39,21 @@ public class SmallGolemWalkState : EnemyState {
             golem.Flip();
         }
 
-        if (!golem.CheckIfTouchingLedge())
+        if(golem.CheckIfPlayerInAggroRange() && !golem.CheckIfTouchingLedge())
+        {
+            if(golemTimer <= 0){
+                golem.StateMachine.ChangeState(golem.ThrowState);
+            }
+            else{
+                golem.Flip();
+            } 
+        }
+        else if(golem.CheckIfPlayerInAggroRange() && player.transform.position.y >= golem.transform.position.y)
+        {
+            if(golemTimer <= 0)
+                golem.StateMachine.ChangeState(golem.ThrowState);
+        }
+        else if (!golem.CheckIfTouchingLedge())
         {
             golem.Flip();
         }
@@ -53,11 +67,6 @@ public class SmallGolemWalkState : EnemyState {
             golem.SetVelocityX(golem.EnemyEntity.Knockback);
         }
 
-        if(golem.CheckIfPlayerInAggroRange() && player.transform.position.y >= golem.transform.position.y)
-        {
-            if(golemTimer <= 0)
-                golem.StateMachine.ChangeState(golem.ThrowState);
-        }
 
     }
 }
