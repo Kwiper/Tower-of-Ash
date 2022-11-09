@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class BurntVineSwipeState : EnemyState
 {
-    public BurntVineSwipeState(Enemy enemy, EnemyStateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
+    BurntVine vine;
+
+    public BurntVineSwipeState(BurntVine enemy, EnemyStateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
+        this.vine = enemy;
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+
+        vine.StateMachine.ChangeState(vine.IdleState);
     }
 }
