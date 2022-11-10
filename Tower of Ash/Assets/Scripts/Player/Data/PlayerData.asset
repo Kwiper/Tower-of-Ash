@@ -27,11 +27,11 @@ MonoBehaviour:
     m_Bits: 1024
   wallCheckDistance: 0.6
   wallSlideVelocity: 3
-  unlockedWallJump: 0
+  unlockedWallJump: 1
   wallJumpVelocity: 22
   wallJumpTime: 0.2
   wallJumpAngle: {x: 1, y: 2}
-  unlockedDash: 0
+  unlockedDash: 1
   dashCooldown: 0.3
   dashTime: 0.15
   dashVelocity: 30
@@ -42,7 +42,7 @@ MonoBehaviour:
   unlockedFireball: 0
   fireballCooldown: 0.5
   fireballTime: 0.1
-  unlockedChargeAttack: 0
+  unlockedChargeAttack: 1
   chargeVelocity: 15
   pogoVelocity: 17.5
   timeReduction: 0.8333333
@@ -50,4 +50,4 @@ MonoBehaviour:
   healAmount: 25
   healCharges: 3
   maxHealCharges: 3
-  tinder: 10
+  tinder: 220
