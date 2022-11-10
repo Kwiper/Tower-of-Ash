@@ -33,6 +33,10 @@ public class Platform : MonoBehaviour
     private bool swingAccelerating;
     private float midPoint;
     private int swingState = 0;
+    [SerializeField]
+    private bool delayStart = false;
+    [SerializeField]
+    private float delaySeconds = 0;   
     // 0 = swinging to the left
     // 1 = swinging to the right
 
@@ -58,12 +62,12 @@ public class Platform : MonoBehaviour
         var EssentialObjectPossibles = GameObject.FindGameObjectsWithTag("EssentialObjects");
         essentials = EssentialObjectPossibles[0];
 
-
+        if(delayStart == true) StartCoroutine(waiter());
                 
     }
 
     void FixedUpdate(){
-        if (rotationCenter != null){
+        if (rotationCenter != null && delayStart == false){
             posXPrev = posX;
             posX = rotationCenter.position.x + Mathf.Cos(angleRad)*rotationRadius*arcSizeX;
             posY = rotationCenter.position.y + Mathf.Sin(angleRad)*rotationRadius/arcSizeY;
@@ -159,5 +163,13 @@ public class Platform : MonoBehaviour
         //Mid point
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(new Vector2(rotationCenter.position.x + Mathf.Cos(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius*arcSizeX, rotationCenter.position.y + Mathf.Sin(((endAngle+startAngle)/2)*(Mathf.PI/180))*rotationRadius/arcSizeY), gizmoPointSize);
-    }    
+    }
+
+    IEnumerator waiter()
+    {
+
+        yield return new WaitForSecondsRealtime(delaySeconds);
+        delayStart = false;
+
+    }
 }
