@@ -89,6 +89,7 @@ public class Platform : MonoBehaviour
                 if(angularSpeed > maxAngularSpeed){
                     angularSpeed = angularSpeed+(maxAngularSpeed/Mathf.Abs(acceleration));
                 }
+                //if(angularSpeed < maxAngularSpeed) angularSpeed = maxAngularSpeed;
             }
             // Swing is moving left and is decelerating
             else if(angleDeg <= midPoint && swingState == 0){
@@ -97,6 +98,7 @@ public class Platform : MonoBehaviour
                     angularSpeed = angularSpeed-(maxAngularSpeed/Mathf.Abs(acceleration));
                     swingAccelerating = false;
                 }
+                //if(angularSpeed > minAngularSpeed) angularSpeed = minAngularSpeed;
             }
             // Swing is moving right and accelerating
             else if(angleDeg < midPoint && swingAccelerating == true && swingState == 1){
@@ -104,6 +106,7 @@ public class Platform : MonoBehaviour
                 if(angularSpeed < (maxAngularSpeed*-1)){
                     angularSpeed = angularSpeed+((maxAngularSpeed/Mathf.Abs(acceleration))*-1);
                 }
+                //if(angularSpeed > (maxAngularSpeed*-1))angularSpeed = maxAngularSpeed;
             }
             // Swing is moving right and is decelerating
             else if(angleDeg >= midPoint && swingState == 1){
@@ -112,6 +115,7 @@ public class Platform : MonoBehaviour
                     angularSpeed = angularSpeed-((maxAngularSpeed/Mathf.Abs(acceleration))*-1);
                     swingAccelerating = false;
                 }
+                //if(angularSpeed < (minAngularSpeed*-1))angularSpeed = minAngularSpeed;
             }
         }
         
