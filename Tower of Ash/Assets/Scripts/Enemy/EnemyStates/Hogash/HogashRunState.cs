@@ -27,7 +27,7 @@ public class HogashRunState : EnemyState {
 
         if (!hog.EnemyEntity.InKnockback)
         {
-            hog.SetVelocityX(6 * hog.FacingDirection);
+            hog.SetVelocityX(8 * hog.FacingDirection);
         }
         else
         {

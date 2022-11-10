@@ -22,10 +22,8 @@ public class EnemySpawner: MonoBehaviour
 
     private void Update()
     {
-        if(isSpawned == true && enemy == null){
-                isDead = true;
-                isSpawned = true;
-        
+        if(isSpawned && enemy == null){
+            isDead = true;
         }
     }
 

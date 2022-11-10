@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3f520f6b8b1c041923b1a1069548b8, type: 3}
   m_Name: PlayerUpgradeData
   m_EditorClassIdentifier: 
-  swordUpgradeCount: 0
+  swordUpgradeCount: 1
   swordMaxUpgrades: 5
   swordUpgradeMultiplier: 1.25
   swordTinderCosts: 0a00000019000000320000004b00000078000000
   flameUpgradeCount: 0
   flameMaxUpgrades: 5
-  flameTimeMultiplier: 0
+  flameTimeMultiplier: 0.6666667
   flameTinderCosts: 1400000028000000410000006400000096000000
-  flaskUpgradeCount: 0
+  flaskUpgradeCount: 1
   flaskMaxUpgrades: 5
   flaskTinderCosts: 3200000064000000af000000fa000000f4010000
