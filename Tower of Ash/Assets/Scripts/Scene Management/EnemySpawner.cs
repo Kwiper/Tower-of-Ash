@@ -13,7 +13,9 @@ public class EnemySpawner: MonoBehaviour
 
     public void SpawnEnemy(){
         pos = GetComponent<Transform>();
+        pos.position = new Vector3(pos.position.x, pos.position.y, -1);
         enemy = Instantiate(enemyPrefab, pos.position, Quaternion.identity);
+        
     }
 
     public void DespawnEnemy(){
