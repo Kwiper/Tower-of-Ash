@@ -28,6 +28,11 @@ public class HellSkipper : Enemy
     [SerializeField]
     private float aggroRange;
 
+    [SerializeField]
+    GameObject SkipperProjectile;
+
+    [SerializeField]
+    Transform firePoint;
 
     public override void Awake()
     {
@@ -74,6 +79,11 @@ public class HellSkipper : Enemy
     public bool CheckIfPlayerInAggro()
     {
         return Physics2D.OverlapCircle(aggroPoint.position, aggroRange, playerLayer);
+    }
+
+    public void CastFireball()
+    {
+        GameObject instance = Instantiate(SkipperProjectile, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
     }
 
     private void OnDrawGizmos()
