@@ -1,0 +1,817 @@
+fileFormatVersion: 2
+guid: 5af8945f6a25c3e4fa30e2e89d12fe62
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: black-marble-golem_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 42
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d3a9c02aacd564baad137b9d0b875d
+      internalID: -1923726097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 192
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5cbd250566608488a76daced920578
+      internalID: 769807557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 192
+        width: 42
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4871795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcd1d14eefef7c4f9f95a612a7db27a
+      internalID: -1155363824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 192
+        width: 41
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.4871795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4b75aa918d52f4dbbaffad3949977e
+      internalID: 588929529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 192
+        width: 41
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fccda619ae06b409fa289c411ea5ae
+      internalID: -1619625922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 192
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c849e09d4aafc6240b7b8c6d11e6a43e
+      internalID: 546743513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 192
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769f2dfe3985afd4ab71ef7e7838f504
+      internalID: 669658765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 192
+        width: 42
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2702e3850d290440a5f5db8b9d4f770
+      internalID: -1408525481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 128
+        width: 43
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4883721, y: 0.5135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878d0b740b3dd2045903007ed439dcdf
+      internalID: 1606183604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 128
+        width: 44
+        height: 38
+      alignment: 9
+      pivot: {x: 0.47727272, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fef0bb2451a6d4a8429248f465953c
+      internalID: 1223483888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 128
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f34df63945f9524488ae8f5ed48a0ae
+      internalID: -1687368296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_11
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 128
+        width: 42
+        height: 38
+      alignment: 9
+      pivot: {x: 0.42857143, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3d53250e3916d4c85f415e2e3d69c7
+      internalID: -1541355973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_12
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 128
+        width: 42
+        height: 38
+      alignment: 9
+      pivot: {x: 0.30952382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b3aa38b266f3e42bf5cc9f9e6e5418
+      internalID: -928346974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_13
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 128
+        width: 42
+        height: 60
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.31666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e11e82c927d534a907ba2d72331331
+      internalID: 593346748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_14
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 128
+        width: 36
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.31666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b004d57dd99594b9170cb0c1abf33b
+      internalID: 2041691986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_15
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 128
+        width: 36
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.31666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6bf956ae71d36e40b47666119a7eb82
+      internalID: -611505948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 64
+        width: 58
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2413793, y: 0.3220339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4710706917e46d4695815b433f39cbc
+      internalID: 866735837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_17
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 64
+        width: 53
+        height: 34
+      alignment: 9
+      pivot: {x: 0.26415095, y: 0.5588235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441d6f89271681642926c17a5b6d1158
+      internalID: 1782683033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_18
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 64
+        width: 50
+        height: 35
+      alignment: 9
+      pivot: {x: 0.28, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615aefa34f77e9045b5348ce82e42372
+      internalID: -1262089277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 64
+        width: 50
+        height: 35
+      alignment: 9
+      pivot: {x: 0.28, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5d134c7faaea3469413f6879275a62
+      internalID: -2066859416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_20
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 64
+        width: 42
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48ea9036f526364799f34a784e92c3c
+      internalID: -1054728836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_21
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 64
+        width: 36
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4722222, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08391788b330d204e8e76475cf5e7f8e
+      internalID: -1818791487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_22
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 64
+        width: 33
+        height: 43
+      alignment: 9
+      pivot: {x: 0.3939394, y: 0.44186047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dee18c5574d7346adbf9b94c15aee4
+      internalID: 968293908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_23
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 64
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.42222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0c034375fa27248aaad42bb5c8de14
+      internalID: 1252177741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 35
+        height: 45
+      alignment: 9
+      pivot: {x: 0.37142858, y: 0.42222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58d6671400b28f4c8ba719c8a7189f7
+      internalID: -345939722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 35
+        height: 37
+      alignment: 9
+      pivot: {x: 0.37142858, y: 0.5135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388b35dae8bdede4bbf6b87a9aa3e5ff
+      internalID: 1728835711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_26
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 35
+        height: 37
+      alignment: 9
+      pivot: {x: 0.37142858, y: 0.5135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ee49219110ecb43bfe42572f048700
+      internalID: -156969474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_27
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 37
+        height: 38
+      alignment: 9
+      pivot: {x: 0.35135135, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430a7ed225e06c14da3e2fc302dbbd28
+      internalID: 768080407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_28
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 39
+        height: 36
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4314fa86cab12408db11e8dcd35144
+      internalID: -424064128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_29
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 0
+        width: 34
+        height: 36
+      alignment: 9
+      pivot: {x: 0.3529412, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d140d3557f7ff7448094090b3cf3f20
+      internalID: 320854746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black-marble-golem_30
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 31
+        height: 36
+      alignment: 9
+      pivot: {x: 0.38709676, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bebb25251170d40b840c16079c53ea
+      internalID: -151705801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      black-marble-golem_20: -1054728836
+      black-marble-golem_15: -611505948
+      black-marble-golem_4: -1619625922
+      black-marble-golem_17: 1782683033
+      black-marble-golem_9: 1223483888
+      black-marble-golem_14: 2041691986
+      black-marble-golem_22: 968293908
+      black-marble-golem_8: 1606183604
+      black-marble-golem_10: -1687368296
+      black-marble-golem_21: -1818791487
+      black-marble-golem_0: -1923726097
+      black-marble-golem_18: -1262089277
+      black-marble-golem_29: 320854746
+      black-marble-golem_1: 769807557
+      black-marble-golem_5: 546743513
+      black-marble-golem_3: 588929529
+      black-marble-golem_16: 866735837
+      black-marble-golem_30: -151705801
+      black-marble-golem_28: -424064128
+      black-marble-golem_13: 593346748
+      black-marble-golem_23: 1252177741
+      black-marble-golem_26: -156969474
+      black-marble-golem_11: -1541355973
+      black-marble-golem_12: -928346974
+      black-marble-golem_27: 768080407
+      black-marble-golem_24: -345939722
+      black-marble-golem_2: -1155363824
+      black-marble-golem_6: 669658765
+      black-marble-golem_7: -1408525481
+      black-marble-golem_19: -2066859416
+      black-marble-golem_25: 1728835711
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
