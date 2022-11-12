@@ -23,6 +23,7 @@ public class HellSkipperThrustState : EnemyState {
         base.AnimationTrigger();
 
         // Fire projectile
+        skipper.CastFireball();
     }
 
     public override void Enter()
