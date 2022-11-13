@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e2b24df4cb002c40a381f9f4cf971e1
+guid: 45cbf3ca4aeb8f74bb2a52f7a3d90d42
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,169 +117,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hollow-robes_0
+      name: fireball-summon_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 6
-        width: 15
-        height: 18
+        x: 2
+        y: 2
+        width: 27
+        height: 28
       alignment: 9
-      pivot: {x: 0.53333336, y: 0.5}
+      pivot: {x: 0.5185185, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e82e529c73f2b884ca621b87498ede2e
-      internalID: 1747475385
+      spriteID: d74f53014be8af141988f112d6700fb4
+      internalID: 744815829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hollow-robes_1
+      name: fireball-summon_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 7
-        width: 15
-        height: 17
+        x: 33
+        y: 1
+        width: 29
+        height: 30
       alignment: 9
-      pivot: {x: 0.53333336, y: 0.5}
+      pivot: {x: 0.51724136, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e177794152b205948aadd65c00ea63b9
-      internalID: 1945736739
+      spriteID: 046b7392a31a911498a6002257c5e8b1
+      internalID: -1398484854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hollow-robes_2
+      name: fireball-summon_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 8
-        width: 19
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5263158, y: 0.5}
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c11a31713c2a944ca49cdf1cf6e925b
-      internalID: -1344266187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hollow-robes_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 6
-        width: 15
-        height: 18
-      alignment: 9
-      pivot: {x: 0.53333336, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a11aeb4c520c9841af960b080c9c478
-      internalID: -2017727321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hollow-robes_4
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 6
-        width: 15
-        height: 18
-      alignment: 9
-      pivot: {x: 0.53333336, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 406dc484d6f3a114b8a81375724c6b7e
-      internalID: -945854703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hollow-robes_5
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 7
-        width: 15
-        height: 17
-      alignment: 9
-      pivot: {x: 0.53333336, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4709a687a9645f547a3f807c4f2aa16f
-      internalID: 1097258169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hollow-robes_6
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 8
-        width: 19
-        height: 17
-      alignment: 9
-      pivot: {x: 0.5263158, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54b11603034a4524aa228d225dcde251
-      internalID: 407286078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hollow-robes_7
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 7
-        width: 17
-        height: 18
-      alignment: 9
-      pivot: {x: 0.5294118, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61dae3c60c963c6429a1ceadfd8096ad
-      internalID: 637704219
+      spriteID: 6920eff0ae27b224d87fd6dfe6bee5da
+      internalID: 2027605435
       vertices: []
       indices: 
       edges: []
@@ -295,14 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hollow-robes_2: -1344266187
-      Hollow-robes_5: 1097258169
-      Hollow-robes_1: 1945736739
-      Hollow-robes_3: -2017727321
-      Hollow-robes_0: 1747475385
-      Hollow-robes_4: -945854703
-      Hollow-robes_7: 637704219
-      Hollow-robes_6: 407286078
+      fireball-summon_1: -1398484854
+      fireball-summon_0: 744815829
+      fireball-summon_2: 2027605435
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
