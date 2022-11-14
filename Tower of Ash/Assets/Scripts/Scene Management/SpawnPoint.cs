@@ -21,7 +21,14 @@ public class SpawnPoint : MonoBehaviour
 
         //Prevents players from duping themselves in the spawn room
         if(essentialClean.Length > 1){
-            Destroy(essentialClean[0]);
+            //Destroy(essentialClean[0]);
+            
+            for (int i = 0; i < essentialClean.Length; i++) 
+            {
+                var pos = essentialClean[i].GetComponent<Transform>().position;
+                essentialClean[i].GetComponent<Transform>().position = new Vector2(pos.x+(i*10),0);
+                Debug.Log("I am at the "+i+" array position and my transform is at "+ pos);
+            }   
         }
     }
 }

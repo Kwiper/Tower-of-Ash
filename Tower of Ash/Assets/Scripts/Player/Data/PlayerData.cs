@@ -71,4 +71,8 @@ public class PlayerData : ScriptableObject
     [Header("Tinder")]
     public int tinder = 0;
 
+
+    [Header("Doors")]
+    public List<int> keys;
+    public List<bool> keysCollected;
 }
