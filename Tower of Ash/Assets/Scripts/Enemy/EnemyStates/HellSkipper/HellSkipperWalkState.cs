@@ -8,7 +8,7 @@ public class HellSkipperWalkState : EnemyState {
     bool move;
 
     float timer;
-    float maxTimer = 4f;
+    float maxTimer = 3f;
 
     GameObject player;
 
