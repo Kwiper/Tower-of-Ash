@@ -13,7 +13,59 @@ public class PowerUpPedestal : MonoBehaviour
     const int WallJump = 2;
     const int Fireball = 3;
     const int ChargeAttack = 4;
-    const int DoubleJump = 5;      
+    const int DoubleJump = 5;
+
+    public bool isCollected = false;
+
+    private void Start()
+    {
+            switch(upgrade) 
+            {
+                case Dash:
+                if (playerData.unlockedDash){
+                    isCollected = true;
+ 	                GetComponent<BoxCollider2D>().enabled = false;
+	                GetComponent<SpriteRenderer>().enabled = false;                   
+                }
+                break;
+
+                case WallJump:
+                if (playerData.unlockedWallJump){
+                    isCollected = true;
+ 	                GetComponent<BoxCollider2D>().enabled = false;
+	                GetComponent<SpriteRenderer>().enabled = false;                   
+                }
+                break;
+
+                case Fireball:
+                if (playerData.unlockedFireball){
+                    isCollected = true;
+ 	                GetComponent<BoxCollider2D>().enabled = false;
+	                GetComponent<SpriteRenderer>().enabled = false;                   
+                }                
+                break;
+
+                case ChargeAttack:
+                if (playerData.unlockedChargeAttack){
+                    isCollected = true;
+ 	                GetComponent<BoxCollider2D>().enabled = false;
+	                GetComponent<SpriteRenderer>().enabled = false;                   
+                }                   
+                break;
+
+                case DoubleJump:
+                if (playerData.amountOfJumps == 2){
+                    isCollected = true;
+ 	                GetComponent<BoxCollider2D>().enabled = false;
+	                GetComponent<SpriteRenderer>().enabled = false;                   
+                }                    
+                break;
+
+                default:
+                Debug.Log("No upgrade set you idiot!");
+                break;
+            }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -45,7 +97,7 @@ public class PowerUpPedestal : MonoBehaviour
                 Debug.Log("No upgrade set you idiot!");
                 break;
             }
-
+            isCollected = true;
 	        GetComponent<BoxCollider2D>().enabled = false;
 	        GetComponent<SpriteRenderer>().enabled = false;
         }    
