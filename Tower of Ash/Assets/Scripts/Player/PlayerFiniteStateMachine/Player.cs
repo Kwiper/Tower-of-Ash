@@ -48,6 +48,8 @@ public class Player : MonoBehaviour
     private LayerMask portalLayer;
     [SerializeField]
     public bool stateDebug;
+    public bool isReal = false;
+    //public bool FreezePos;
     #endregion
 
     #region Other variables
@@ -152,6 +154,9 @@ public class Player : MonoBehaviour
         {
             PlayerEntity.Health = PlayerEntity.maxHealth;
             invincible = false;
+            isReal = true;
+            RB.constraints = RigidbodyConstraints2D.FreezePosition;
+            //FreezePos = !FreezePos;
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
 
