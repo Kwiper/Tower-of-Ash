@@ -28,7 +28,7 @@ public class Key : MonoBehaviour
                 //doorKeyObj = playerData.keys[i];
                 doorKey = playerData.keys[i];
                 doorCollected = playerData.keysCollected[i];
-                Debug.Log(doorKey);
+                //Debug.Log(doorKey);
                 if (doorKey == this.keyIdentifier)
                 {
                     inList = true;
