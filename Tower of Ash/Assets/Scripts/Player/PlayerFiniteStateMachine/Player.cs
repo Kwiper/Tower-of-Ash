@@ -48,7 +48,10 @@ public class Player : MonoBehaviour
     private LayerMask portalLayer;
     [SerializeField]
     public bool stateDebug;
+    [SerializeField]
+    public Transform playerTransform;
     public bool isReal = false;
+    public Vector2 spawnPoint = new Vector2(3,5);
     //public bool FreezePos;
     #endregion
 
@@ -307,6 +310,11 @@ public class Player : MonoBehaviour
     {
         PrevScene = CurrentScene;
         CurrentScene = currScene;
+    }
+
+    public void setPosition(){
+        playerTransform.position = spawnPoint;
+        ResetHealCharges();
     }
 
     #endregion
