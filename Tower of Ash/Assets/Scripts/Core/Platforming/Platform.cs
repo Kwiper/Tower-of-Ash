@@ -29,14 +29,20 @@ public class Platform : MonoBehaviour
     //private float starterPosY;
     //private Vector2 midPointPosition;
     private GameObject essentials;
-    public bool PlayerOnSwing = false;
+    //private GameObject player;
+    private Player player;
+    public bool playerOnSwing = false;
+    private bool playerHitHead = false;
     private bool swingAccelerating;
     private float midPoint;
     private int swingState = 0;
     [SerializeField]
     private bool delayStart = false;
     [SerializeField]
-    private float delaySeconds = 0;   
+    private float delaySeconds = 0;
+    private Hazard[] spikes;
+    private float knockbackDelaySeconds = 0.5f;
+    private int tempKnockbackholder;
     // 0 = swinging to the left
     // 1 = swinging to the right
 
@@ -53,7 +59,9 @@ public class Platform : MonoBehaviour
         }
 
         midPoint = (endAngle+startAngle)/2;
-        
+
+
+
         
     }
 
@@ -62,11 +70,83 @@ public class Platform : MonoBehaviour
         var EssentialObjectPossibles = GameObject.FindGameObjectsWithTag("EssentialObjects");
         essentials = EssentialObjectPossibles[0];
 
+        var embersToAdd = GameObject.FindObjectsOfType<LostEmber>();
+        spikes = GetComponentsInChildren<Hazard>();
+        //Debug.Log(spikes.Length);
+        /*
+        for (int i = 0; i < embersToAdd.Length; i++) 
+        {
+            //Debug.Log(embersToAdd[i].gameObject.GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(embersToAdd[i].gameObject.GetComponent<BoxCollider2D>(), gameObject.GetComponent<PolygonCollider2D>(), true);
+            foreach (Hazard spike in spikes){
+                Physics2D.IgnoreCollision(embersToAdd[i].gameObject.GetComponent<BoxCollider2D>(), spike.gameObject.GetComponent<PolygonCollider2D>(), true);
+            }
+        }
+        */
         if(delayStart == true) StartCoroutine(waiter());
                 
     }
 
     void FixedUpdate(){
+        //Prevents wall clipping
+        if(player != null){
+            if(playerOnSwing && player.CheckIfTouchingWall()) {
+                
+                player.transform.parent = essentials.GetComponent<Transform>();
+
+            }
+            else if(playerOnSwing && player.CheckIfTouchingWallBack()) {
+                
+                player.transform.parent = essentials.GetComponent<Transform>();
+
+            }
+            else if(playerOnSwing && player.CheckIfTouchingCeiling() && player.hitHead == false){
+                //Player's transform is set to essential objects
+                player.hitHead = true;
+                player.transform.parent = essentials.GetComponent<Transform>();
+                Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(), GetComponent<PolygonCollider2D>(), true);
+                if (spikes.Length != 0){
+                    foreach (Hazard spike in spikes){
+                        Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(),spike.gameObject.GetComponent<PolygonCollider2D>(),true);
+                    }
+                }
+
+                //player actually takes damage
+                if (!player.invincible)
+                {
+                    Debug.Log("Head Damage");
+                    player.gameObject.GetComponentInParent<Entity>().SetKnockback(-player.FacingDirection);
+                    //Time stopped because knockback is weird without it
+                    player.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
+                    player.gameObject.GetComponentInParent<Entity>().SetDamage(10);
+                    player.isHit = true;
+                
+                }
+                //Coroutine to reset the knockback for the player to the original
+                StartCoroutine(platformReset());
+            }
+            else if(playerOnSwing && player.CheckIfTouchingCeiling() && player.hitHead == true){
+                //Player's transform is set to essential objects
+                Debug.Log("Head hit but no Damage");
+                player.hitHead = true;
+                player.transform.parent = essentials.GetComponent<Transform>();
+                Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(), GetComponent<PolygonCollider2D>(), true);
+                if (spikes.Length != 0){
+                    foreach (Hazard spike in spikes){
+                        Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(),spike.gameObject.GetComponent<PolygonCollider2D>(),true);
+                    }
+                }
+                //Coroutine to reset the knockback for the player to the original
+                StartCoroutine(platformReset());
+            }
+            else if(playerOnSwing && !player.CheckIfTouchingWall() || playerOnSwing && !player.CheckIfTouchingWallBack() || playerOnSwing && !player.CheckIfTouchingCeiling()) {
+                
+                player.transform.parent = transformPlat;
+
+            }
+        
+        }
+
         if (rotationCenter != null && delayStart == false){
             posXPrev = posX;
             posX = rotationCenter.position.x + Mathf.Cos(angleRad)*rotationRadius*arcSizeX;
@@ -122,15 +202,21 @@ public class Platform : MonoBehaviour
                 //if(angularSpeed < (minAngularSpeed*-1))angularSpeed = minAngularSpeed;
             }
         }
-        
+
+
 
     }
+
 
     void OnCollisionEnter2D(Collision2D col){
 
         if(col.gameObject.tag == "Player"){
-            col.transform.parent = transformPlat;
-            PlayerOnSwing = true;
+            if(player == null){
+                player = col.gameObject.GetComponent<Player>();
+            }
+                col.transform.parent = transformPlat;
+                playerOnSwing = true;
+
         }
     }
 
@@ -138,7 +224,7 @@ public class Platform : MonoBehaviour
 
         if(col.gameObject.tag == "Player"){
             col.transform.parent = essentials.GetComponent<Transform>();
-            PlayerOnSwing = false;
+            playerOnSwing = false;
         }
     }
 
@@ -171,5 +257,19 @@ public class Platform : MonoBehaviour
         yield return new WaitForSecondsRealtime(delaySeconds);
         delayStart = false;
 
+    }
+
+    IEnumerator platformReset()
+    {
+
+        yield return new WaitForSecondsRealtime(knockbackDelaySeconds);
+        //player.gameObject.GetComponentInParent<Entity>().knockbackForce = tempKnockbackholder;
+        player.hitHead = false;
+        Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(), GetComponent<PolygonCollider2D>(), false);
+        if (spikes.Length != 0){
+            foreach (Hazard spike in spikes){
+                Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(),spike.gameObject.GetComponent<PolygonCollider2D>(),false);
+            }
+        }        
     }
 }
