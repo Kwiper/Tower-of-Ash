@@ -70,7 +70,7 @@ public class Platform : MonoBehaviour
         var EssentialObjectPossibles = GameObject.FindGameObjectsWithTag("EssentialObjects");
         essentials = EssentialObjectPossibles[0];
 
-        var embersToAdd = GameObject.FindObjectsOfType<LostEmber>();
+        //var embersToAdd = GameObject.FindObjectsOfType<LostEmber>();
         spikes = GetComponentsInChildren<Hazard>();
         //Debug.Log(spikes.Length);
         /*
@@ -215,7 +215,9 @@ public class Platform : MonoBehaviour
                 player = col.gameObject.GetComponent<Player>();
             }
                 col.transform.parent = transformPlat;
+                if(player.CheckIfGrounded()){
                 playerOnSwing = true;
+                }
 
         }
     }
