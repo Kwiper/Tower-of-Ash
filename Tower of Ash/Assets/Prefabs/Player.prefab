@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6238124248561127295}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5391224623849368330
 BoxCollider2D:
@@ -87,7 +87,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6238124248561127295}
-  m_RootOrder: 4
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1837348861905414871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493449758199988239}
+  m_Layer: 0
+  m_Name: CeilingCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493449758199988239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837348861905414871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6238124248561127295}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6238124246651302129
 GameObject:
@@ -121,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6238124248561127295}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6238124246651302142
 BoxCollider2D:
@@ -244,7 +275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6238124248561127295}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6238124248483436295
 GameObject:
@@ -347,6 +378,7 @@ Transform:
   m_Children:
   - {fileID: 6238124248483436294}
   - {fileID: 6238124248530739207}
+  - {fileID: 493449758199988239}
   - {fileID: 6238124247586150367}
   - {fileID: 6238124246651302128}
   - {fileID: 8026415208217373921}
@@ -625,11 +657,15 @@ MonoBehaviour:
   SpriteRenderer: {fileID: 0}
   groundCheck: {fileID: 6238124248483436294}
   wallCheck: {fileID: 6238124248530739207}
+  ceilingCheck: {fileID: 493449758199988239}
   firePoint: {fileID: 6238124247586150367}
   portalLayer:
     serializedVersion: 2
     m_Bits: 128
   stateDebug: 0
+  playerTransform: {fileID: 0}
+  isReal: 0
+  spawnPoint: {x: 3, y: 5}
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
   healthCanCountdown: 1
   isHit: 0

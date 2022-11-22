@@ -54,6 +54,7 @@ public class Key : MonoBehaviour
         {	
 	        GetComponent<BoxCollider2D>().enabled = false;
 	        GetComponent<SpriteRenderer>().enabled = false;
+            isCollected = true;
             for (int i = 0; i < playerData.keys.Count; i++) 
             {
                 doorKey = playerData.keys[i];
