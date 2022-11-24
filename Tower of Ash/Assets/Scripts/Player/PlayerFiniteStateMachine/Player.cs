@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
     public bool isReal = false;
     public bool hitHead = false;
     public Vector2 spawnPoint = new Vector2(3,5);
+    private Vector2 spikeCheckPoint;
     //public bool FreezePos;
     #endregion
 
@@ -324,6 +325,15 @@ public class Player : MonoBehaviour
     }
 
     public void setPosition(){
+        if(spikeCheckPoint != null){
+            playerTransform.position = spikeCheckPoint;
+        }
+    }
+    public void setCheckPointPos(Vector2 newPos){
+        spikeCheckPoint = newPos;
+    }
+
+    public void respawnPosition(){
         playerTransform.position = spawnPoint;
         ResetHealCharges();
     }

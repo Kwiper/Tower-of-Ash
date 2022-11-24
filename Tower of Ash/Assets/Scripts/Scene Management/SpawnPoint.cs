@@ -36,7 +36,7 @@ public class SpawnPoint : MonoBehaviour
                 
                 var pos = essentialClean[i].GetComponent<Transform>().position;
                 essentialClean[i].GetComponent<Transform>().position = new Vector2(0,0);
-                player.setPosition();
+                player.respawnPosition();
                 //If the player is the original, if not destroy it
                 if(player.isReal == false){
                     Destroy(essentialClean[i]);
