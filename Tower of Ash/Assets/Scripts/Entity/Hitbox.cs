@@ -50,6 +50,11 @@ public class Hitbox : MonoBehaviour
             HitObject = true;
 
         }
+
+        if (collision.CompareTag("Spikes"))
+        {
+            HitObject = true;
+        }
         
     }
 
