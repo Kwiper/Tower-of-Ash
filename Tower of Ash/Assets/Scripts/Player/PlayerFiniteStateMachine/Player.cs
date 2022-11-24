@@ -43,12 +43,18 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform wallCheck;
     [SerializeField]
+    private Transform ceilingCheck;
+    [SerializeField]
     private Transform firePoint;
     [SerializeField]
     private LayerMask portalLayer;
     [SerializeField]
     public bool stateDebug;
+    [SerializeField]
+    public Transform playerTransform;
     public bool isReal = false;
+    public bool hitHead = false;
+    public Vector2 spawnPoint = new Vector2(3,5);
     //public bool FreezePos;
     #endregion
 
@@ -219,7 +225,15 @@ public class Player : MonoBehaviour
         return Physics2D.Raycast(wallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
     }
 
-
+    public bool CheckIfTouchingCeiling()
+    {
+        return Physics2D.Raycast(ceilingCheck.position, Vector2.up , playerData.wallCheckDistance, playerData.whatIsGround);
+    }
+    public RaycastHit2D CheckCeilingType()
+    {
+        var hit = Physics2D.Raycast(ceilingCheck.position, Vector2.up , playerData.wallCheckDistance, playerData.whatIsGround);
+        return hit;
+    }
     public void CheckIfShouldFlip(int xInput)
     {
         if(xInput != 0 && xInput != FacingDirection)
@@ -307,6 +321,11 @@ public class Player : MonoBehaviour
     {
         PrevScene = CurrentScene;
         CurrentScene = currScene;
+    }
+
+    public void setPosition(){
+        playerTransform.position = spawnPoint;
+        ResetHealCharges();
     }
 
     #endregion

@@ -21,6 +21,12 @@ public class LostEmber : Enemy
     [SerializeField]
     GameObject EmberProjectile;
 
+    //private Vector3 facingRight = Vector3(0,0,-90);
+    //private Vector3 facingleft = Vector3(0,0,90);
+    //private Vector3 facingUp = Vector3(0,0,0);
+    //private Vector3 facingDown = Vector3(0,0,180);
+
+    private Vector2 direction;    
     public override void Awake()
     {
         base.Awake();
@@ -55,9 +61,32 @@ public class LostEmber : Enemy
     public void FireEmber()
     {
         float randomDirection = Random.Range(-0.5f, 0.5f);
+        //Hard coded these numbers because Quaternions are fucking stupid
+        if(GetComponent<Transform>().rotation.z == 0){
+            direction = Vector2.up;
+        }
+        else if(GetComponent<Transform>().rotation.z == -1){
+            direction = Vector2.down;
+        }
+        else if(GetComponent<Transform>().rotation.z == -0.7071068f){
+            direction = Vector2.right;
+        }
+        else if(GetComponent<Transform>().rotation.z == 0.7071068f){
+            direction = Vector2.left;
+        }
 
         GameObject instance = Instantiate(EmberProjectile, firePoint.transform.position, firePoint.transform.rotation);
-        instance.GetComponent<EmberProjectile>().angle = Vector2.up + new Vector2(randomDirection, 0);
+
+        instance.GetComponent<EmberProjectile>().angle = direction + new Vector2(randomDirection, 0);
+    }
+
+        private void OnDrawGizmos()
+    {
+        //Aggro Radius
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(new Vector2(aggroPoint.position.x,aggroPoint.position.y), aggroRadius);
+
+    
     }
 
 }

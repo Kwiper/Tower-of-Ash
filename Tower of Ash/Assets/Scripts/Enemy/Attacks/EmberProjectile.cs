@@ -35,6 +35,14 @@ public class EmberProjectile : MonoBehaviour
             direction = -1;
         }
 
+        var swingingToAdd = GameObject.FindObjectsOfType<Platform>();
+        for (int i = 0; i < swingingToAdd.Length; i++) 
+        {
+            Physics2D.IgnoreCollision(swingingToAdd[i].gameObject.GetComponent<PolygonCollider2D>(), GetComponent<BoxCollider2D>(), true);
+
+        }
+        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

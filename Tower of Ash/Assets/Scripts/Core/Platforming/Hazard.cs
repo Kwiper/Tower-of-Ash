@@ -10,6 +10,7 @@ public class Hazard : MonoBehaviour
         {
             if (!collider.gameObject.GetComponentInParent<Player>().invincible)
             {
+                Debug.Log("Spike Damage");
                 collider.gameObject.GetComponentInParent<Entity>().SetDamage(10);
                 collider.gameObject.GetComponentInParent<Entity>().SetKnockback(-collider.gameObject.GetComponentInParent<Player>().FacingDirection);
                 collider.gameObject.GetComponentInParent<Player>().isHit = true; ;

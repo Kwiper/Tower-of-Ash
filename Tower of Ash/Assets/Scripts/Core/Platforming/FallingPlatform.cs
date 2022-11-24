@@ -10,20 +10,30 @@ public class FallingPlatform : MonoBehaviour
     private float destroyDelay = 2f;
     private Vector2 originalPos;
     private Transform transform;
+    private Collider2D col;
+    private SpriteRenderer sr;
+    private bool isFalling = false;
+    private bool isVisible = true;
 
     [SerializeField]
     private Rigidbody2D rb;    
 
     private void Start()
     {
-        transform  = gameObject.GetComponent<Transform>();
+        transform  = this.gameObject.GetComponent<Transform>();
+        col = this.gameObject.GetComponent<Collider2D>();
+        sr = this.gameObject.GetComponent<SpriteRenderer>();
         originalPos = new Vector2(transform.position.x,transform.position.y);
     }
 
-    private void onCollisionEnter2D(Collision2D collision)
+
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player"){
+        var player = collision.gameObject.GetComponent<Player>();
+        if(collision.gameObject.tag == "Player" && isFalling == false && player.CheckIfGrounded()){
             StartCoroutine(Fall());
+            isFalling = true;
         }
 
     }
@@ -32,8 +42,13 @@ public class FallingPlatform : MonoBehaviour
     private IEnumerator Fall() 
     {
         yield return new WaitForSeconds(fallDelay);
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        col.enabled = !col.enabled;
+        sr.enabled = !sr.enabled;
         yield return new WaitForSeconds(destroyDelay);
-        //destroy(gameObject,destroyDelay);
+        transform.position = originalPos;
+        isFalling = false;
+        col.enabled = !col.enabled;
+        sr.enabled = !sr.enabled;
+
     }
 }
