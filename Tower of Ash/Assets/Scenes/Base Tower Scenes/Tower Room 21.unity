@@ -521,6 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cda53a831dedbc4bb6d55cf54c90cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpikeCheckpoint: 0
 --- !u!1 &1444989451
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +538,7 @@ GameObject:
   - component: {fileID: 1444989453}
   m_Layer: 6
   m_Name: General Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
