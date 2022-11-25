@@ -622,6 +622,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 49969b7e-e1b6-41d4-8d7b-b3202ec0fc5b
     m_ActionName: Gameplay/Heal[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0cb3e82e-a6cb-4fae-bc35-d0c04ffec918
+    m_ActionName: Gameplay/LookAround[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -659,12 +663,16 @@ MonoBehaviour:
   wallCheck: {fileID: 6238124248530739207}
   ceilingCheck: {fileID: 493449758199988239}
   firePoint: {fileID: 6238124247586150367}
+  cameraPoint: {fileID: 8026415208217373921}
   portalLayer:
     serializedVersion: 2
     m_Bits: 128
   stateDebug: 0
   playerTransform: {fileID: 0}
   isReal: 0
+  hitHead: 0
+  manualCheckPointSection: 0
+  hitSpike: 0
   spawnPoint: {x: 3, y: 5}
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
   healthCanCountdown: 1

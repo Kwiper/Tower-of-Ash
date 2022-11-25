@@ -6,8 +6,11 @@ using UnityEngine.InputSystem;
 public class PlayerInputHandler : MonoBehaviour
 {
     public Vector2 RawMovementInput { get; private set; }
+    public Vector2 RawLookInput { get; private set; }
     public int NormInputX { get; private set; }
     public int NormInputY { get; private set; }
+    public int NormLookInputX { get; private set; }
+    public int NormLookInputY { get; private set; }
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
     public bool DashInput { get; private set; }
@@ -20,7 +23,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
-
+    [SerializeField]
+    private int lookAdjustmentSize = 2;
     private float jumpInputStartTime;
     private float dashInputStartTime;
     private float fireballInputStartTime;
@@ -86,6 +90,14 @@ public class PlayerInputHandler : MonoBehaviour
 
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
+    }
+
+    public void OnLookInput(InputAction.CallbackContext context)
+    {
+        RawLookInput = context.ReadValue<Vector2>();
+
+        NormLookInputX = Mathf.RoundToInt(RawLookInput.x*lookAdjustmentSize);
+        NormLookInputY = Mathf.RoundToInt(RawLookInput.y*lookAdjustmentSize);
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)

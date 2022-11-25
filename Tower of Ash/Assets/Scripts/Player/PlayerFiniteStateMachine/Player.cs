@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform firePoint;
     [SerializeField]
+    private Transform cameraPoint;
+    [SerializeField]
     private LayerMask portalLayer;
     [SerializeField]
     public bool stateDebug;
@@ -57,6 +59,7 @@ public class Player : MonoBehaviour
     public bool manualCheckPointSection = false;
     public bool hitSpike = false;
     public Vector2 spawnPoint = new Vector2(3,5);
+    private Vector2 lookPosDefault;
     private Vector2 spikeCheckPoint;
     //public bool FreezePos;
     #endregion
@@ -120,7 +123,8 @@ public class Player : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
 
         FacingDirection = 1;
-
+        var pos = new Vector2(gameObject.transform.Find("CameraPoint").position.x,gameObject.transform.Find("CameraPoint").position.y);
+        lookPosDefault = pos;
         ResetHealCharges();
 
         StateMachine.Initialize(IdleState);
@@ -129,7 +133,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         CurrentVelocity = RB.velocity;
-
+        SetLookDisplacement();
         //Debug.Log(CheckIfGrounded());
 
         StateMachine.CurrentState.LogicUpdate();
@@ -208,6 +212,13 @@ public class Player : MonoBehaviour
         workspace.Set(CurrentVelocity.x, velocity);
         RB.velocity = workspace;
         CurrentVelocity = workspace;
+    }
+
+    public void SetLookDisplacement()
+    {
+        Debug.Log(InputHandler.NormLookInputX);
+        Debug.Log(InputHandler.NormLookInputY);        
+        cameraPoint.position = new Vector2(gameObject.GetComponent<Transform>().position.x+InputHandler.NormLookInputX, gameObject.GetComponent<Transform>().position.y+InputHandler.NormLookInputY+1);
     }
 
     #endregion
