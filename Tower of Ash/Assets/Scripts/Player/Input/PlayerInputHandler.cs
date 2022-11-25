@@ -40,6 +40,10 @@ public class PlayerInputHandler : MonoBehaviour
         {
             HealInput = true;
         }
+        if (context.canceled)
+        {
+            HealInput = false;
+        }
     }
 
     public void OnChargeAttackInput(InputAction.CallbackContext context)
