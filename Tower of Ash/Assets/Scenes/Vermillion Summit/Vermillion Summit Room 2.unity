@@ -3492,6 +3492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cda53a831dedbc4bb6d55cf54c90cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpikeCheckpoint: 0
 --- !u!483693784 &1042975877
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -5007,7 +5008,7 @@ GameObject:
   - component: {fileID: 1893764871}
   m_Layer: 6
   m_Name: VS 2 Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
