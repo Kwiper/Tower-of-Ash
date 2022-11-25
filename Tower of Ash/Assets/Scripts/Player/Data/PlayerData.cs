@@ -70,6 +70,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Tinder")]
     public int tinder = 0;
+    public List<Vector2> CollectedTinderCacheLocations;
 
 
     [Header("Doors")]
