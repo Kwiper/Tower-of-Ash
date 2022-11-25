@@ -54,6 +54,8 @@ public class Player : MonoBehaviour
     public Transform playerTransform;
     public bool isReal = false;
     public bool hitHead = false;
+    public bool manualCheckPointSection = false;
+    public bool hitSpike = false;
     public Vector2 spawnPoint = new Vector2(3,5);
     private Vector2 spikeCheckPoint;
     //public bool FreezePos;
@@ -166,7 +168,8 @@ public class Player : MonoBehaviour
             //FreezePos = !FreezePos;
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
-
+        //if(!manualCheckPointSection || !hitSpike)StartCoroutine(setCheckPointPosRay());
+        if(!manualCheckPointSection || !manualCheckPointSection && !hitSpike)setCheckPointPosRay();
     }
 
     private void FixedUpdate()
@@ -233,6 +236,11 @@ public class Player : MonoBehaviour
     public RaycastHit2D CheckCeilingType()
     {
         var hit = Physics2D.Raycast(ceilingCheck.position, Vector2.up , playerData.wallCheckDistance, playerData.whatIsGround);
+        return hit;
+    }
+    public RaycastHit2D CheckFloorType()
+    {
+        var hit = Physics2D.Raycast(groundCheck.position, Vector2.down , playerData.wallCheckDistance, playerData.whatIsGround);
         return hit;
     }
     public void CheckIfShouldFlip(int xInput)
@@ -331,6 +339,17 @@ public class Player : MonoBehaviour
     }
     public void setCheckPointPos(Vector2 newPos){
         spikeCheckPoint = newPos;
+    }
+
+    public void setCheckPointPosRay(){
+        //yield return new WaitForSeconds(0.2f);       
+        if(CheckFloorType().collider != null){
+            var floor = CheckFloorType().collider.gameObject;
+            if(CheckIfGrounded() && floor.tag == "Ground" && floor.layer == LayerMask.NameToLayer("Ground") && !invincible)
+            {
+                spikeCheckPoint = new Vector2(playerTransform.position.x,playerTransform.position.y);
+            }
+        }
     }
 
     public void respawnPosition(){

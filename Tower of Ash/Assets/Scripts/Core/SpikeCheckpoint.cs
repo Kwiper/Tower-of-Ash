@@ -6,6 +6,7 @@ public class SpikeCheckpoint : MonoBehaviour
 {
     private Transform spawnPoint;
     public bool playerHasTriggered = false;
+    private Player player;
 
     private void Start()
     {
@@ -17,9 +18,20 @@ public class SpikeCheckpoint : MonoBehaviour
     {
         //var player = collision.gameObject.GetComponent<Player>();
         if(collision.gameObject.tag == "Player"){
-            var player = collision.gameObject.GetComponent<Player>();
+            player = collision.gameObject.GetComponent<Player>();
             player.setCheckPointPos(new Vector2(spawnPoint.position.x,spawnPoint.position.y));
-            playerHasTriggered = true;
+            //playerHasTriggered = true;
+            player.manualCheckPointSection = true;
+        }
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //var player = collision.gameObject.GetComponent<Player>();
+        if(collision.gameObject.tag == "Player"){
+            player.manualCheckPointSection = false;
+            //player.setCheckPointPos(new Vector2(spawnPoint.position.x,spawnPoint.position.y));
+            //playerHasTriggered = true;
 
         }
 
