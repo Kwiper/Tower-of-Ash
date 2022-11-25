@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: fba6ca1c5ccb6f045aa3043011e12b52
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_lunge_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 256
+        width: 59
+        height: 75
+      alignment: 9
+      pivot: {x: 0.62711865, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c301b3b64ef121d4e9539214938ebc8d
+      internalID: 874418535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_1
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 256
+        width: 57
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5964912, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1a1fc9d1553a24497431512aa97e3a
+      internalID: 591663273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 256
+        width: 60
+        height: 70
+      alignment: 9
+      pivot: {x: 0.51666665, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07eac76f66f32fa408465e5bae70ebd1
+      internalID: -990564564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_3
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 256
+        width: 66
+        height: 70
+      alignment: 9
+      pivot: {x: 0.530303, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9239cb5a5f8da46b499e09402dae58
+      internalID: -668370623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_4
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 256
+        width: 68
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5147059, y: 0.5588235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b6d895580d4de42bd327567da60066
+      internalID: 864385208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_5
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 256
+        width: 68
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5735294, y: 0.57575756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a26ca577d92a394db2e56f7adff5a7e
+      internalID: 1125652964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_6
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 256
+        width: 102
+        height: 68
+      alignment: 9
+      pivot: {x: 0.78431374, y: 0.5588235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e73186537f14d4a9ac79ae0f2a66d4
+      internalID: 1480837131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_7
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 256
+        width: 99
+        height: 70
+      alignment: 9
+      pivot: {x: 0.7777778, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8400feaabe5e549bd332eb47e282f5
+      internalID: 593972293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 128
+        width: 96
+        height: 71
+      alignment: 9
+      pivot: {x: 0.7708333, y: 0.53521127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901a5f08e80d2ce418c047b2016edada
+      internalID: 2053405238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_9
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 128
+        width: 51
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5686275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daff6c48bb6bf1e4f9bc565ce8193ff8
+      internalID: 1183388895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_10
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 128
+        width: 49
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25331789bb302645bc810a00f258c13
+      internalID: 1155345682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 106
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7735849, y: 0.59375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499ef4e8b3ae11745ad86d506b02f3df
+      internalID: 182925608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_14
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 128
+        width: 124
+        height: 72
+      alignment: 9
+      pivot: {x: 0.61290324, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5109920eb33555b4092be05c64846402
+      internalID: 1085231564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_15
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 128
+        width: 59
+        height: 71
+      alignment: 9
+      pivot: {x: 0.18644068, y: 0.53521127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a160bbb4823f724ab92912e21d643df
+      internalID: -946173967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_16
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 128
+        width: 43
+        height: 71
+      alignment: 9
+      pivot: {x: 0.23255815, y: 0.53521127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ca276e0db4db748aed23d24e59db70
+      internalID: -656463284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_17
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 128
+        width: 36
+        height: 73
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d21dca5d1de9d42996011dd70a9c74
+      internalID: -105933462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_20
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 58
+        height: 73
+      alignment: 9
+      pivot: {x: 0.55172414, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491dfc6b3605c4241ab7153ac0cbecde
+      internalID: -1505697314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_lunge_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 59
+        height: 73
+      alignment: 9
+      pivot: {x: 0.62711865, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0f2feb840f3ed4694755adeb67c490
+      internalID: 1249254709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss_lunge_5: 1125652964
+      boss_lunge_1: 591663273
+      boss_lunge_16: -656463284
+      boss_lunge_21: 1249254709
+      boss_lunge_14: 1085231564
+      boss_lunge_17: -105933462
+      boss_lunge_2: -990564564
+      boss_lunge_3: -668370623
+      boss_lunge_20: -1505697314
+      boss_lunge_10: 1155345682
+      boss_lunge_12: 798284117
+      boss_lunge_7: 593972293
+      boss_lunge_11: 182925608
+      boss_lunge_4: 864385208
+      boss_lunge_0: 874418535
+      boss_lunge_18: -24212943
+      boss_lunge_15: -946173967
+      boss_lunge_8: 2053405238
+      boss_lunge_9: 1183388895
+      boss_lunge_13: -779496429
+      boss_lunge_19: 1498708458
+      boss_lunge_6: 1480837131
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
