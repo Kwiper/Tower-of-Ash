@@ -9,11 +9,13 @@ public class PowerUpPedestal : MonoBehaviour
     [SerializeField]
     private int upgrade;
 
+ 
     const int Dash = 1;
     const int WallJump = 2;
     const int Fireball = 3;
     const int ChargeAttack = 4;
     const int DoubleJump = 5;
+    const int Healing = 6;
 
     public bool isCollected = false;
 
@@ -21,6 +23,7 @@ public class PowerUpPedestal : MonoBehaviour
     {
             switch(upgrade) 
             {
+
                 case Dash:
                 if (playerData.unlockedDash){
                     isCollected = true;
@@ -60,7 +63,14 @@ public class PowerUpPedestal : MonoBehaviour
 	                GetComponent<SpriteRenderer>().enabled = false;                   
                 }                    
                 break;
-
+                case Healing:
+                if (playerData.unlockedHealing){
+                    isCollected = true;
+ 	                GetComponent<BoxCollider2D>().enabled = false;
+	                GetComponent<SpriteRenderer>().enabled = false;                   
+                }
+                break;
+                
                 default:
                 Debug.Log("No upgrade set you idiot!");
                 break;
@@ -73,6 +83,10 @@ public class PowerUpPedestal : MonoBehaviour
         {	
             switch(upgrade) 
             {
+                case Healing:
+                playerData.unlockedHealing = true;
+                break;
+
                 case Dash:
                 playerData.unlockedDash = true;
                 break;

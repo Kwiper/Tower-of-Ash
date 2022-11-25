@@ -110,7 +110,7 @@ public class PlayerInAirState : PlayerState {
         {
             stateMachine.ChangeState(player.DashState);
         }
-        else if(healInput && playerData.healCharges > 0)
+        else if(healInput && playerData.unlockedHealing == true && playerData.healCharges > 0)
         {
             stateMachine.ChangeState(player.HealState);
         }

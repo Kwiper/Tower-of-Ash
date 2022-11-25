@@ -64,6 +64,7 @@ public class PlayerData : ScriptableObject
     public float iFrameTime = 0.5f;
 
     [Header("Heal State")]
+    public bool unlockedHealing = false;
     public float healAmount = 25f;
     public int healCharges = 3;
     public int maxHealCharges = 3;
