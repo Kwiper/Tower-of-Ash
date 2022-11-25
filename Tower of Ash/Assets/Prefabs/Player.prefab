@@ -622,6 +622,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 49969b7e-e1b6-41d4-8d7b-b3202ec0fc5b
     m_ActionName: Gameplay/Heal[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6238124248561127293}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnCameraInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3a5573ca-38a6-4ff4-99b0-28faae32ac93
+    m_ActionName: Gameplay/Camera[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -665,6 +681,9 @@ MonoBehaviour:
   stateDebug: 0
   playerTransform: {fileID: 0}
   isReal: 0
+  hitHead: 0
+  manualCheckPointSection: 0
+  hitSpike: 0
   spawnPoint: {x: 3, y: 5}
   Fireball: {fileID: 6268879754313118491, guid: f696e0cf1d3cc4d46a0e28bc09c2b157, type: 3}
   healthCanCountdown: 1
