@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 318646608}
   m_Layer: 14
   m_Name: TB 7 Spikes Bottom
-  m_TagString: Untagged
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -523,7 +523,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -576,10 +576,10 @@ Tilemap:
     m_Data: {fileID: 1495168585, guid: 043f73d63f21e2b44b11a041d7424028, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 108973051, guid: 043f73d63f21e2b44b11a041d7424028, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 108973051, guid: 043f73d63f21e2b44b11a041d7424028, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
@@ -4778,7 +4778,7 @@ GameObject:
   - component: {fileID: 1666899443}
   m_Layer: 14
   m_Name: TB 7 Spikes
-  m_TagString: Untagged
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4860,7 +4860,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5041,10 +5041,10 @@ Tilemap:
     m_Data: {fileID: 1916835114, guid: 043f73d63f21e2b44b11a041d7424028, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 1495168585, guid: 043f73d63f21e2b44b11a041d7424028, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -140496970, guid: 043f73d63f21e2b44b11a041d7424028, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -140496970, guid: 043f73d63f21e2b44b11a041d7424028, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -148250461, guid: ee0bed4bcb0a54b428d69af6bdc9a0da, type: 3}
   m_TileMatrixArray:
