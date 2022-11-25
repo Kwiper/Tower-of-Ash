@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerInputHandler : MonoBehaviour
 {
     public Vector2 RawMovementInput { get; private set; }
+
+    public Vector2 RawCameraInput { get; private set; }
+
     public int NormInputX { get; private set; }
     public int NormInputY { get; private set; }
     public bool JumpInput { get; private set; }
@@ -83,6 +86,13 @@ public class PlayerInputHandler : MonoBehaviour
         NormInputX = Mathf.RoundToInt(RawMovementInput.x);
         NormInputY = Mathf.RoundToInt(RawMovementInput.y);
     }
+
+    public void OnCameraInput(InputAction.CallbackContext context)
+    {
+        RawCameraInput = context.ReadValue<Vector2>();
+
+    }
+        
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
