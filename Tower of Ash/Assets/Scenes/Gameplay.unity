@@ -7136,7 +7136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064259, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Size.y
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064259, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Offset.x
@@ -7144,7 +7144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064259, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Offset.y
-      value: 38.5
+      value: 43.513084
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Icon
@@ -8240,7 +8240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -8262,6 +8262,14 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 792922383}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1662202917}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1711187401}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -15928,7 +15936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -15958,6 +15966,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[2]
       value: 
       objectReference: {fileID: 1119880592}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1707027401}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -19114,7 +19126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064259, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Size.y
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064259, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Offset.x
@@ -19122,7 +19134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064259, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Offset.y
-      value: 3.5
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Icon
@@ -22833,6 +22845,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 854430344821610008, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 854430344821610008, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854430344821610008, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 854430344821610008, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 854430344821610009, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2
