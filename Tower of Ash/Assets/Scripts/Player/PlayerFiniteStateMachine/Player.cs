@@ -1,7 +1,8 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -54,6 +55,8 @@ public class Player : MonoBehaviour
     public bool stateDebug;
     [SerializeField]
     public Transform playerTransform;
+    [SerializeField]
+    public CinemachineConfiner2D camConfine;
     public bool isReal = false;
     public bool hitHead = false;
     public bool manualCheckPointSection = false;
@@ -123,6 +126,7 @@ public class Player : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
 
         FacingDirection = 1;
+        camConfine = GameObject.Find("CM vcam1").GetComponent<CinemachineConfiner2D>();
         var pos = new Vector2(gameObject.transform.Find("CameraPoint").position.x,gameObject.transform.Find("CameraPoint").position.y);
         lookPosDefault = pos;
         ResetHealCharges();
@@ -269,6 +273,10 @@ public class Player : MonoBehaviour
             //Debug.Log("Platform detected");
             return hitPlatform;
         }
+    }
+
+    public void setConfiner(Collider2D newWorldBound){
+        camConfine.m_BoundingShape2D = newWorldBound;
     }
 
     public void CheckIfShouldFlip(int xInput)

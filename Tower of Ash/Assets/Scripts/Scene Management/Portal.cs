@@ -8,6 +8,7 @@ public class Portal : MonoBehaviour, IplayerTriggerable
     [SerializeField] int sceneToLoad = -1;
     [SerializeField] DestinationIdentifier destinationPortal;
     [SerializeField] Transform spawnPoint;
+    
 
     GameObject play;
     private void Awake()
@@ -29,6 +30,7 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         yield return SceneManager.LoadSceneAsync(sceneToLoad);
         var destPortal = FindObjectOfType<Portal>();
         var roomPortals = FindObjectsOfType<Portal>();
+        var newWorldBound = GameObject.Find("WorldBoundary");
         for (int i = 0; i < roomPortals.Length; i++) 
         {
             if (roomPortals[i] != this && roomPortals[i].destinationPortal == this.destinationPortal){
@@ -37,9 +39,11 @@ public class Portal : MonoBehaviour, IplayerTriggerable
             }
         }
         var playTransform = play.GetComponent<Transform>();
+        var playa = play.GetComponent<Player>();
+        //playa .setConfiner(newWorldBound.GetComponent<Collider2D>());
 
         playTransform.position = destPortal.spawnPoint.position;
-       
+        //destPortal.setActive(false);
         var essentialClean =  GameObject.FindGameObjectsWithTag("EssentialObjects");
 
         //Prevents players from duping themselves in the spawn room
