@@ -404,7 +404,6 @@ public class Player : MonoBehaviour
     private void firstReloadCamConfine(){
         var colliderBound = GameObject.Find("WorldBoundary");
         newWorldBound = colliderBound.GetComponent<Collider2D>();
-        Debug.Log(newWorldBound);
         setConfiner(newWorldBound);
         firstReload = false;
     }
