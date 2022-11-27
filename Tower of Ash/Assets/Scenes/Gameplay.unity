@@ -1420,7 +1420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -1450,6 +1450,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1662202917}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 403264080}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1513,6 +1517,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Embers Rise Room 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -3608,7 +3616,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -3622,6 +3630,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[2]
       value: 
       objectReference: {fileID: 1698243233}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1881680941}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4186,6 +4198,10 @@ PrefabInstance:
     - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
@@ -4797,6 +4813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -5283,7 +5303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -5317,6 +5337,14 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1247766018}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1707027401}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 974780392}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -5755,7 +5783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -5857,6 +5885,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 643394000}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1197696021}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5920,6 +5952,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -6334,6 +6370,10 @@ PrefabInstance:
     - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
@@ -7175,7 +7215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -7233,6 +7273,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[0]
       value: 
       objectReference: {fileID: 1021236789}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[1]
+      value: 
+      objectReference: {fileID: 989034970}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 881772743}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1197696021}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1944157608}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -7297,6 +7353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Embers Rise Room 9
       objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
 --- !u!4 &403264079 stripped
@@ -7355,7 +7415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -7377,6 +7437,18 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1515795818}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1247766018}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 974780392}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1021675935}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7589,6 +7661,10 @@ PrefabInstance:
     - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
@@ -8056,6 +8132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -8519,6 +8599,10 @@ PrefabInstance:
     - target: {fileID: 3608115441963751293, guid: 33e6005b41cb7cc428fb27ac59947604, type: 3}
       propertyPath: m_Name
       value: Boss Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3608115441963751293, guid: 33e6005b41cb7cc428fb27ac59947604, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33e6005b41cb7cc428fb27ac59947604, type: 3}
@@ -10303,6 +10387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -11918,520 +12006,380 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 635880985}
     m_ColliderPaths:
-    - - X: -9999900
-        Y: -140000041
-      - X: -9999900
-        Y: -129999959
-      - X: -9999959
-        Y: -129999900
-      - X: -30000041
-        Y: -129999900
-      - X: -30000100
-        Y: -129999959
-      - X: -30000100
-        Y: -140000041
-      - X: -30000041
-        Y: -140000100
-      - X: -9999959
-        Y: -140000100
-    - - X: 100
-        Y: -600000041
-      - X: 100
-        Y: -589999959
-      - X: 41
-        Y: -589999900
-      - X: -40000041
-        Y: -589999900
-      - X: -40000100
-        Y: -589999959
-      - X: -40000100
-        Y: -600000041
-      - X: -40000041
-        Y: -600000100
-      - X: 41
-        Y: -600000100
-    - - X: 30000100
-        Y: -1150000041
-      - X: 30000100
-        Y: -1140000100
-      - X: 40000041
-        Y: -1140000100
-      - X: 40000100
-        Y: -1140000041
-      - X: 40000100
-        Y: -1130000100
-      - X: 50000041
-        Y: -1130000100
-      - X: 50000100
-        Y: -1130000041
-      - X: 50000100
-        Y: -1089999959
-      - X: 50000041
-        Y: -1089999900
-      - X: 40000100
-        Y: -1089999900
-      - X: 40000100
-        Y: -1079999959
-      - X: 40000041
-        Y: -1079999900
-      - X: 10000100
-        Y: -1079999900
-      - X: 10000100
-        Y: -1069999959
-      - X: 10000041
-        Y: -1069999900
-      - X: 100
-        Y: -1069999900
-      - X: 100
-        Y: -1040000100
-      - X: 10000041
-        Y: -1040000100
-      - X: 10000100
-        Y: -1040000041
-      - X: 10000100
-        Y: -1030000100
-      - X: 29999900
-        Y: -1030000100
-      - X: 29999900
-        Y: -1040000041
-      - X: 29999959
-        Y: -1040000100
-      - X: 50000041
-        Y: -1040000100
-      - X: 50000100
-        Y: -1040000041
-      - X: 50000100
-        Y: -1029999959
-      - X: 50000041
-        Y: -1029999900
-      - X: 30000100
-        Y: -1029999900
-      - X: 30000100
-        Y: -1019999959
-      - X: 30000041
-        Y: -1019999900
-      - X: 9999959
-        Y: -1019999900
-      - X: 9999900
-        Y: -1019999959
-      - X: 9999900
-        Y: -1029999900
-      - X: -41
-        Y: -1029999900
-      - X: -100
-        Y: -1029999959
-      - X: -100
-        Y: -1039999900
-      - X: -10000041
-        Y: -1039999900
-      - X: -10000100
-        Y: -1039999959
-      - X: -10000100
-        Y: -1080000041
-      - X: -10000041
-        Y: -1080000100
-      - X: -100
-        Y: -1080000100
-      - X: -100
-        Y: -1090000041
-      - X: -41
-        Y: -1090000100
-      - X: 39999900
-        Y: -1090000100
-      - X: 39999900
-        Y: -1129999900
-      - X: 29999959
-        Y: -1129999900
-      - X: 29999900
-        Y: -1129999959
-      - X: 29999900
-        Y: -1139999900
-      - X: 10000100
-        Y: -1139999900
-      - X: 10000100
-        Y: -1129999959
-      - X: 10000041
-        Y: -1129999900
-      - X: -10000041
-        Y: -1129999900
-      - X: -10000100
-        Y: -1129999959
-      - X: -10000100
-        Y: -1140000041
-      - X: -10000041
-        Y: -1140000100
-      - X: 9999900
-        Y: -1140000100
-      - X: 9999900
-        Y: -1150000041
-      - X: 9999959
-        Y: -1150000100
-      - X: 30000041
-        Y: -1150000100
-    - - X: 130000100
-        Y: -1150000041
-      - X: 130000100
-        Y: -1140000100
-      - X: 140000041
-        Y: -1140000100
-      - X: 140000100
-        Y: -1140000041
-      - X: 140000100
-        Y: -1130000100
-      - X: 150000041
-        Y: -1130000100
-      - X: 150000100
-        Y: -1130000041
-      - X: 150000100
-        Y: -1039999959
-      - X: 150000041
-        Y: -1039999900
-      - X: 140000100
-        Y: -1039999900
-      - X: 140000100
-        Y: -1029999959
-      - X: 140000041
-        Y: -1029999900
-      - X: 130000100
-        Y: -1029999900
-      - X: 130000100
-        Y: -1019999959
-      - X: 130000041
-        Y: -1019999900
-      - X: 99999959
-        Y: -1019999900
-      - X: 99999900
-        Y: -1019999959
-      - X: 99999900
-        Y: -1029999900
-      - X: 89999959
-        Y: -1029999900
-      - X: 89999900
-        Y: -1029999959
-      - X: 89999900
-        Y: -1039999900
-      - X: 79999959
-        Y: -1039999900
-      - X: 79999900
-        Y: -1039999959
-      - X: 79999900
-        Y: -1130000041
-      - X: 79999959
-        Y: -1130000100
-      - X: 89999900
-        Y: -1130000100
-      - X: 89999900
-        Y: -1140000041
-      - X: 89999959
-        Y: -1140000100
-      - X: 99999900
-        Y: -1140000100
-      - X: 99999900
-        Y: -1150000041
-      - X: 99999959
-        Y: -1150000100
-      - X: 130000041
-        Y: -1150000100
-    - - X: 220000100
-        Y: -1150000041
-      - X: 220000100
-        Y: -1140000100
-      - X: 230000041
-        Y: -1140000100
-      - X: 230000100
-        Y: -1140000041
-      - X: 230000100
-        Y: -1130000100
-      - X: 240000041
-        Y: -1130000100
-      - X: 240000100
-        Y: -1130000041
-      - X: 240000100
-        Y: -1089999959
-      - X: 240000041
-        Y: -1089999900
-      - X: 230000100
-        Y: -1089999900
-      - X: 230000100
-        Y: -1079999959
-      - X: 230000041
-        Y: -1079999900
-      - X: 200000100
-        Y: -1079999900
-      - X: 200000100
-        Y: -1069999959
-      - X: 200000041
-        Y: -1069999900
-      - X: 190000100
-        Y: -1069999900
-      - X: 190000100
-        Y: -1040000100
-      - X: 200000041
-        Y: -1040000100
-      - X: 200000100
-        Y: -1040000041
-      - X: 200000100
-        Y: -1030000100
-      - X: 219999900
-        Y: -1030000100
-      - X: 219999900
-        Y: -1040000041
-      - X: 219999959
-        Y: -1040000100
-      - X: 240000041
-        Y: -1040000100
-      - X: 240000100
-        Y: -1040000041
-      - X: 240000100
-        Y: -1029999959
-      - X: 240000041
-        Y: -1029999900
-      - X: 220000100
-        Y: -1029999900
-      - X: 220000100
-        Y: -1019999959
-      - X: 220000041
-        Y: -1019999900
-      - X: 199999959
-        Y: -1019999900
-      - X: 199999900
-        Y: -1019999959
-      - X: 199999900
-        Y: -1029999900
-      - X: 189999959
-        Y: -1029999900
-      - X: 189999900
-        Y: -1029999959
-      - X: 189999900
-        Y: -1039999900
-      - X: 179999959
-        Y: -1039999900
-      - X: 179999900
-        Y: -1039999959
-      - X: 179999900
-        Y: -1080000041
-      - X: 179999959
-        Y: -1080000100
-      - X: 189999900
-        Y: -1080000100
-      - X: 189999900
-        Y: -1090000041
-      - X: 189999959
-        Y: -1090000100
-      - X: 229999900
-        Y: -1090000100
-      - X: 229999900
-        Y: -1129999900
-      - X: 219999959
-        Y: -1129999900
-      - X: 219999900
-        Y: -1129999959
-      - X: 219999900
-        Y: -1139999900
-      - X: 200000100
-        Y: -1139999900
-      - X: 200000100
-        Y: -1129999959
-      - X: 200000041
-        Y: -1129999900
-      - X: 179999959
-        Y: -1129999900
-      - X: 179999900
-        Y: -1129999959
-      - X: 179999900
-        Y: -1140000041
-      - X: 179999959
-        Y: -1140000100
-      - X: 199999900
-        Y: -1140000100
-      - X: 199999900
-        Y: -1150000041
-      - X: 199999959
-        Y: -1150000100
-      - X: 220000041
-        Y: -1150000100
-    - - X: 110000100
-        Y: -1139999900
-      - X: 110000100
-        Y: -1129999959
-      - X: 110000041
-        Y: -1129999900
-      - X: 100000100
-        Y: -1129999900
-      - X: 100000100
-        Y: -1119999959
-      - X: 100000041
-        Y: -1119999900
-      - X: 90000100
-        Y: -1119999900
-      - X: 90000100
-        Y: -1050000100
-      - X: 100000041
-        Y: -1050000100
-      - X: 100000100
-        Y: -1050000041
-      - X: 100000100
-        Y: -1040000100
-      - X: 110000041
-        Y: -1040000100
-      - X: 110000100
-        Y: -1040000041
-      - X: 110000100
-        Y: -1030000100
-      - X: 119999900
-        Y: -1030000100
-      - X: 119999900
-        Y: -1040000041
-      - X: 119999959
-        Y: -1040000100
-      - X: 129999900
-        Y: -1040000100
-      - X: 129999900
-        Y: -1050000041
-      - X: 129999959
-        Y: -1050000100
-      - X: 139999900
-        Y: -1050000100
-      - X: 139999900
-        Y: -1119999900
-      - X: 129999959
-        Y: -1119999900
-      - X: 129999900
-        Y: -1119999959
-      - X: 129999900
-        Y: -1129999900
-      - X: 119999959
-        Y: -1129999900
-      - X: 119999900
-        Y: -1129999959
-      - X: 119999900
-        Y: -1139999900
+    - - X: -10000000
+        Y: -130000000
+      - X: -30000000
+        Y: -130000000
+      - X: -30000000
+        Y: -140000000
+      - X: -10000000
+        Y: -140000000
+    - - X: 0
+        Y: -590000000
+      - X: -40000000
+        Y: -590000000
+      - X: -40000000
+        Y: -600000000
+      - X: 0
+        Y: -600000000
+    - - X: 30000000
+        Y: -1020000000
+      - X: 10000000
+        Y: -1020000000
+      - X: 10000000
+        Y: -1030000000
+      - X: 30000000
+        Y: -1030000000
+    - - X: 220000000
+        Y: -1020000000
+      - X: 200000000
+        Y: -1020000000
+      - X: 200000000
+        Y: -1030000000
+      - X: 220000000
+        Y: -1030000000
+    - - X: 130000000
+        Y: -1140000000
+      - X: 140000000
+        Y: -1140000000
+      - X: 140000000
+        Y: -1130000000
+      - X: 150000000
+        Y: -1130000000
+      - X: 150000000
+        Y: -1040000000
+      - X: 140000000
+        Y: -1040000000
+      - X: 140000000
+        Y: -1030000000
+      - X: 130000000
+        Y: -1030000000
+      - X: 130000000
+        Y: -1020000000
+      - X: 100000000
+        Y: -1020000000
+      - X: 100000000
+        Y: -1030000000
+      - X: 90000000
+        Y: -1030000000
+      - X: 90000000
+        Y: -1040000000
+      - X: 80000000
+        Y: -1040000000
+      - X: 80000000
+        Y: -1130000000
+      - X: 90000000
+        Y: -1130000000
+      - X: 90000000
+        Y: -1140000000
+      - X: 100000000
+        Y: -1140000000
+      - X: 100000000
+        Y: -1150000000
+      - X: 130000000
+        Y: -1150000000
+    - - X: 110000000
+        Y: -1140000000
+      - X: 110000000
+        Y: -1130000000
+      - X: 100000000
+        Y: -1130000000
+      - X: 100000000
+        Y: -1120000000
+      - X: 90000000
+        Y: -1120000000
+      - X: 90000000
+        Y: -1050000000
+      - X: 100000000
+        Y: -1050000000
+      - X: 100000000
+        Y: -1040000000
+      - X: 110000000
+        Y: -1040000000
+      - X: 110000000
+        Y: -1030000000
+      - X: 120000000
+        Y: -1030000000
+      - X: 120000000
+        Y: -1040000000
+      - X: 130000000
+        Y: -1040000000
+      - X: 130000000
+        Y: -1050000000
+      - X: 140000000
+        Y: -1050000000
+      - X: 140000000
+        Y: -1120000000
+      - X: 130000000
+        Y: -1120000000
+      - X: 130000000
+        Y: -1130000000
+      - X: 120000000
+        Y: -1130000000
+      - X: 120000000
+        Y: -1140000000
+    - - X: 240000000
+        Y: -1030000000
+      - X: 220000000
+        Y: -1030000000
+      - X: 220000000
+        Y: -1040000000
+      - X: 240000000
+        Y: -1040000000
+    - - X: 200000000
+        Y: -1030000000
+      - X: 190000000
+        Y: -1030000000
+      - X: 190000000
+        Y: -1040000000
+      - X: 200000000
+        Y: -1040000000
+    - - X: 50000000
+        Y: -1030000000
+      - X: 30000000
+        Y: -1030000000
+      - X: 30000000
+        Y: -1040000000
+      - X: 50000000
+        Y: -1040000000
+    - - X: 10000000
+        Y: -1030000000
+      - X: 0
+        Y: -1030000000
+      - X: 0
+        Y: -1040000000
+      - X: 10000000
+        Y: -1040000000
+    - - X: 40000000
+        Y: -1080000000
+      - X: 10000000
+        Y: -1080000000
+      - X: 10000000
+        Y: -1070000000
+      - X: 0
+        Y: -1070000000
+      - X: 0
+        Y: -1040000000
+      - X: -10000000
+        Y: -1040000000
+      - X: -10000000
+        Y: -1080000000
+      - X: 0
+        Y: -1080000000
+      - X: 0
+        Y: -1090000000
+      - X: 40000000
+        Y: -1090000000
+    - - X: 230000000
+        Y: -1080000000
+      - X: 200000000
+        Y: -1080000000
+      - X: 200000000
+        Y: -1070000000
+      - X: 190000000
+        Y: -1070000000
+      - X: 190000000
+        Y: -1040000000
+      - X: 180000000
+        Y: -1040000000
+      - X: 180000000
+        Y: -1080000000
+      - X: 190000000
+        Y: -1080000000
+      - X: 190000000
+        Y: -1090000000
+      - X: 230000000
+        Y: -1090000000
+    - - X: 240000000
+        Y: -1090000000
+      - X: 230000000
+        Y: -1090000000
+      - X: 230000000
+        Y: -1130000000
+      - X: 240000000
+        Y: -1130000000
+    - - X: 50000000
+        Y: -1090000000
+      - X: 40000000
+        Y: -1090000000
+      - X: 40000000
+        Y: -1130000000
+      - X: 50000000
+        Y: -1130000000
+    - - X: 10000000
+        Y: -1130000000
+      - X: -10000000
+        Y: -1130000000
+      - X: -10000000
+        Y: -1140000000
+      - X: 10000000
+        Y: -1140000000
+    - - X: 40000000
+        Y: -1130000000
+      - X: 30000000
+        Y: -1130000000
+      - X: 30000000
+        Y: -1140000000
+      - X: 40000000
+        Y: -1140000000
+    - - X: 200000000
+        Y: -1130000000
+      - X: 180000000
+        Y: -1130000000
+      - X: 180000000
+        Y: -1140000000
+      - X: 200000000
+        Y: -1140000000
+    - - X: 230000000
+        Y: -1130000000
+      - X: 220000000
+        Y: -1130000000
+      - X: 220000000
+        Y: -1140000000
+      - X: 230000000
+        Y: -1140000000
+    - - X: 30000000
+        Y: -1140000000
+      - X: 10000000
+        Y: -1140000000
+      - X: 10000000
+        Y: -1150000000
+      - X: 30000000
+        Y: -1150000000
+    - - X: 220000000
+        Y: -1140000000
+      - X: 200000000
+        Y: -1140000000
+      - X: 200000000
+        Y: -1150000000
+      - X: 220000000
+        Y: -1150000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -1.0000252, y: -14.00001}
-      - {x: -1.0000252, y: -12.99999}
-      - {x: -3.00001, y: -13.000026}
-      - {x: -2.9999747, y: -14.00001}
-    - - {x: -0.0000252, y: -60.000015}
-      - {x: -0.0000252, y: -58.99999}
-      - {x: -4.00001, y: -59.000027}
-      - {x: -3.9999747, y: -60.000015}
-    - - {x: 2.999981, y: -103.000015}
-      - {x: 2.9999747, y: -101.999985}
-      - {x: 0.99999, y: -102.00003}
-      - {x: 1.0000193, y: -103.000015}
-    - - {x: 12.999974, y: -115.000015}
-      - {x: 13.000039, y: -114.000015}
-      - {x: 14.00001, y: -113.99998}
-      - {x: 14.00004, y: -113.000015}
-      - {x: 15.00001, y: -112.99998}
-      - {x: 14.999974, y: -103.999985}
-      - {x: 14.00001, y: -103.99996}
-      - {x: 13.999974, y: -102.999985}
-      - {x: 13.00001, y: -102.99996}
-      - {x: 12.999974, y: -101.999985}
-      - {x: 9.99999, y: -102.00003}
-      - {x: 9.999961, y: -102.999985}
-      - {x: 8.99999, y: -103.00003}
-      - {x: 8.999961, y: -103.999985}
-      - {x: 7.9999905, y: -104.00003}
-      - {x: 8.000026, y: -113.000015}
-      - {x: 8.99999, y: -113.00004}
-      - {x: 9.000026, y: -114.000015}
-      - {x: 9.99999, y: -114.00004}
-      - {x: 10.000026, y: -115.000015}
-    - - {x: 21.99998, y: -103.000015}
-      - {x: 21.999975, y: -101.999985}
-      - {x: 19.99999, y: -102.00003}
-      - {x: 20.00002, y: -103.000015}
-    - - {x: 18.99999, y: -103.999985}
-      - {x: 20.00001, y: -103.99998}
-      - {x: 19.99998, y: -102.999985}
-      - {x: 18.99999, y: -103.00003}
-    - - {x: -0.00001, y: -103.999985}
-      - {x: 1.00001, y: -103.99998}
-      - {x: 0.9999807, y: -102.999985}
-      - {x: -0.00001, y: -103.00003}
-    - - {x: 2.999996, y: -103.999985}
-      - {x: 5.00001, y: -103.99998}
-      - {x: 4.9999747, y: -102.999985}
-      - {x: 2.99999, y: -103.00002}
-    - - {x: 21.999996, y: -103.999985}
-      - {x: 24.00001, y: -103.99998}
-      - {x: 23.999975, y: -102.999985}
-      - {x: 21.99999, y: -103.00002}
-    - - {x: 11.99999, y: -113.99996}
-      - {x: 11.00001, y: -113.99996}
-      - {x: 10.999974, y: -112.999985}
-      - {x: 10.00001, y: -112.99996}
-      - {x: 9.999974, y: -111.999985}
-      - {x: 9.00001, y: -111.99996}
-      - {x: 9.000039, y: -105.000015}
-      - {x: 10.00001, y: -104.99998}
-      - {x: 10.000039, y: -104.000015}
-      - {x: 11.00001, y: -103.99998}
-      - {x: 11.000039, y: -103.000015}
-      - {x: 11.99999, y: -103.00004}
-      - {x: 12.000026, y: -104.000015}
-      - {x: 12.99999, y: -104.00004}
-      - {x: 13.000026, y: -105.000015}
-      - {x: 13.99999, y: -105.00004}
-      - {x: 13.99996, y: -111.999985}
-      - {x: 12.99999, y: -112.00003}
-      - {x: 12.999961, y: -112.999985}
-      - {x: 11.99999, y: -113.00003}
-    - - {x: 22.99998, y: -109.000015}
-      - {x: 22.999975, y: -107.999985}
-      - {x: 20.00001, y: -107.99996}
-      - {x: 19.999975, y: -106.999985}
-      - {x: 19.00001, y: -106.99996}
-      - {x: 18.99998, y: -103.999985}
-      - {x: 17.99999, y: -104.00003}
-      - {x: 18.000027, y: -108.000015}
-      - {x: 18.99999, y: -108.00004}
-      - {x: 19.000027, y: -109.000015}
-    - - {x: 3.999981, y: -109.000015}
-      - {x: 3.9999747, y: -107.999985}
-      - {x: 1.00001, y: -107.99996}
-      - {x: 0.9999748, y: -106.999985}
-      - {x: 0.00001, y: -106.99996}
-      - {x: -0.0000193, y: -103.999985}
-      - {x: -1.00001, y: -104.00003}
-      - {x: -0.9999748, y: -108.000015}
-      - {x: -0.00001, y: -108.00004}
-      - {x: 0.0000252, y: -109.000015}
-    - - {x: 22.99999, y: -112.99998}
-      - {x: 24.00001, y: -112.99998}
-      - {x: 23.999975, y: -108.999985}
-      - {x: 22.99999, y: -109.00003}
-    - - {x: 3.99999, y: -112.99998}
-      - {x: 5.00001, y: -112.99998}
-      - {x: 4.9999747, y: -108.999985}
-      - {x: 3.99999, y: -109.00003}
-    - - {x: 0.9999807, y: -114.000015}
-      - {x: 0.9999748, y: -112.999985}
-      - {x: -1.00001, y: -113.00003}
-      - {x: -0.9999748, y: -114.000015}
-    - - {x: 2.99999, y: -113.99998}
-      - {x: 4.00001, y: -113.99998}
-      - {x: 3.999981, y: -112.999985}
-      - {x: 2.99999, y: -113.00003}
-    - - {x: 19.99998, y: -114.000015}
-      - {x: 19.999975, y: -112.999985}
-      - {x: 17.99999, y: -113.00003}
-      - {x: 18.000027, y: -114.000015}
-    - - {x: 21.99999, y: -113.99998}
-      - {x: 23.00001, y: -113.99998}
-      - {x: 22.99998, y: -112.999985}
-      - {x: 21.99999, y: -113.00003}
-    - - {x: 2.9999747, y: -115.000015}
-      - {x: 2.999981, y: -113.999985}
-      - {x: 0.99999, y: -114.00003}
-      - {x: 1.0000252, y: -115.000015}
-    - - {x: 21.999975, y: -115.000015}
-      - {x: 21.99998, y: -113.999985}
-      - {x: 19.99999, y: -114.00003}
-      - {x: 20.000027, y: -115.000015}
+    - - {x: -1.0000293, y: -14}
+      - {x: -1.0000293, y: -13}
+      - {x: -3, y: -13.00003}
+      - {x: -2.999971, y: -14}
+    - - {x: -0.000029300001, y: -60}
+      - {x: -0.000029300001, y: -59}
+      - {x: -4, y: -59.000034}
+      - {x: -3.999971, y: -60}
+    - - {x: 21.999971, y: -103}
+      - {x: 21.999971, y: -102}
+      - {x: 20, y: -102.00003}
+      - {x: 20.000029, y: -103}
+    - - {x: 12.99997, y: -115}
+      - {x: 13.00003, y: -114}
+      - {x: 14, y: -113.99998}
+      - {x: 14.000029, y: -113}
+      - {x: 15, y: -112.99998}
+      - {x: 14.999971, y: -104}
+      - {x: 14, y: -103.99997}
+      - {x: 13.999971, y: -103}
+      - {x: 13, y: -102.99997}
+      - {x: 12.99997, y: -102}
+      - {x: 10, y: -102.00003}
+      - {x: 9.99997, y: -103}
+      - {x: 9, y: -103.00003}
+      - {x: 8.99997, y: -104}
+      - {x: 8, y: -104.00003}
+      - {x: 8.00003, y: -113}
+      - {x: 9, y: -113.00003}
+      - {x: 9.00003, y: -114}
+      - {x: 10, y: -114.00003}
+      - {x: 10.00003, y: -115}
+    - - {x: 2.999971, y: -103}
+      - {x: 2.999971, y: -102}
+      - {x: 1, y: -102.00003}
+      - {x: 1.0000293, y: -103}
+    - - {x: 12, y: -113.99998}
+      - {x: 11, y: -113.99998}
+      - {x: 10.99997, y: -113}
+      - {x: 10, y: -112.99998}
+      - {x: 9.99997, y: -112}
+      - {x: 9, y: -111.99998}
+      - {x: 9.00003, y: -105}
+      - {x: 10, y: -104.99997}
+      - {x: 10.00003, y: -104}
+      - {x: 11, y: -103.99997}
+      - {x: 11.00003, y: -103}
+      - {x: 12, y: -103.00003}
+      - {x: 12.00003, y: -104}
+      - {x: 13, y: -104.00003}
+      - {x: 13.00003, y: -105}
+      - {x: 14, y: -105.00003}
+      - {x: 13.999971, y: -112}
+      - {x: 13, y: -112.00003}
+      - {x: 12.99997, y: -113}
+      - {x: 12, y: -113.00003}
+    - - {x: 0.99997073, y: -104}
+      - {x: 0.99997073, y: -103}
+      - {x: 0, y: -103.00003}
+      - {x: 0.000029300001, y: -104}
+    - - {x: 4.999971, y: -104}
+      - {x: 4.999971, y: -103}
+      - {x: 3, y: -103.00003}
+      - {x: 3.0000293, y: -104}
+    - - {x: 19.999971, y: -104}
+      - {x: 19.999971, y: -103}
+      - {x: 19, y: -103.00003}
+      - {x: 19.000029, y: -104}
+    - - {x: 23.999971, y: -104}
+      - {x: 23.999971, y: -103}
+      - {x: 22, y: -103.00003}
+      - {x: 22.000029, y: -104}
+    - - {x: 3.999971, y: -109}
+      - {x: 3.999971, y: -108}
+      - {x: 1, y: -107.99998}
+      - {x: 0.99997073, y: -107}
+      - {x: 0, y: -106.99997}
+      - {x: -0.000029300001, y: -104}
+      - {x: -1, y: -104.00003}
+      - {x: -0.99997073, y: -108}
+      - {x: 0, y: -108.00003}
+      - {x: 0.000029300001, y: -109}
+    - - {x: 22.999971, y: -109}
+      - {x: 22.999971, y: -108}
+      - {x: 20, y: -107.99998}
+      - {x: 19.999971, y: -107}
+      - {x: 19, y: -106.99997}
+      - {x: 18.999971, y: -104}
+      - {x: 18, y: -104.00003}
+      - {x: 18.000029, y: -108}
+      - {x: 19, y: -108.00003}
+      - {x: 19.000029, y: -109}
+    - - {x: 23.999971, y: -113}
+      - {x: 23.999971, y: -109}
+      - {x: 23, y: -109.00003}
+      - {x: 23.000029, y: -113}
+    - - {x: 4.999971, y: -113}
+      - {x: 4.999971, y: -109}
+      - {x: 4, y: -109.00003}
+      - {x: 4.000029, y: -113}
+    - - {x: 22.999971, y: -114}
+      - {x: 22.999971, y: -113}
+      - {x: 22, y: -113.00003}
+      - {x: 22.000029, y: -114}
+    - - {x: 19.999971, y: -114}
+      - {x: 19.999971, y: -113}
+      - {x: 18, y: -113.00003}
+      - {x: 18.000029, y: -114}
+    - - {x: 3.999971, y: -114}
+      - {x: 3.999971, y: -113}
+      - {x: 3, y: -113.00003}
+      - {x: 3.0000293, y: -114}
+    - - {x: 0.99997073, y: -114}
+      - {x: 0.99997073, y: -113}
+      - {x: -1, y: -113.00003}
+      - {x: -0.99997073, y: -114}
+    - - {x: 2.999971, y: -115}
+      - {x: 2.999971, y: -114}
+      - {x: 1, y: -114.00003}
+      - {x: 1.0000293, y: -115}
+    - - {x: 21.999971, y: -115}
+      - {x: 21.999971, y: -114}
+      - {x: 20, y: -114.00003}
+      - {x: 20.000029, y: -115}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &635880984
@@ -13947,6 +13895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (ERR 5) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -15303,7 +15255,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -15313,6 +15265,18 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1293984543}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 989034970}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 643394000}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 2074913904}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -15376,6 +15340,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -15533,7 +15501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -15555,6 +15523,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1756244273}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1881680941}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16140,6 +16112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (VS 7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -16379,7 +16355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -16416,7 +16392,15 @@ PrefabInstance:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[4]
       value: 
-      objectReference: {fileID: 1711187401}
+      objectReference: {fileID: 1662202917}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1992406211}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 1707027401}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -17402,7 +17386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -17480,6 +17464,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 1881680941}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 497163932}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1118793470}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 1992406211}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[7]
+      value: 
+      objectReference: {fileID: 1119880592}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -18579,7 +18579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -18613,6 +18613,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 1515795818}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 422745104}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1881680941}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 1119880592}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[7]
+      value: 
+      objectReference: {fileID: 337874734}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -19087,6 +19103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Embers Rise Room 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
 --- !u!4 &989034969 stripped
@@ -19552,7 +19572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -19610,6 +19630,14 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 403264080}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 989034970}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1021675935}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -19674,6 +19702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Embers Rise Room 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
 --- !u!4 &1021236788 stripped
@@ -19705,7 +19737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -19739,6 +19771,14 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1756244273}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 422745104}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1515795818}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -20517,6 +20557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -21128,7 +21172,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -21142,6 +21186,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[2]
       value: 
       objectReference: {fileID: 1021675935}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1247766018}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -21322,6 +21370,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -21712,7 +21764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -21730,6 +21782,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1712237819}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1711187401}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1707027401}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1992406211}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 974780392}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -22772,6 +22840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -22988,7 +23060,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -22998,6 +23070,18 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 403264080}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 989034970}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 643394000}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 350460528}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -23061,6 +23145,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -23173,7 +23261,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -23246,6 +23334,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -23865,7 +23957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -23903,6 +23995,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 974780392}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1712237819}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 422745104}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1092121845}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1515795818}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -25050,6 +25158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Delay Spawner (VS 7) (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -25730,7 +25842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -25764,6 +25876,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1873936937}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 394050389}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -26287,7 +26403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -26337,6 +26453,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 989034970}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1293984543}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -26400,6 +26520,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Embers Rise Room 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -27197,7 +27321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -27267,6 +27391,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1293984543}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1707027401}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -27330,6 +27458,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Embers Rise Room 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -27472,6 +27604,10 @@ PrefabInstance:
     - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_Name
       value: Delay Spawner (VS 6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
@@ -27993,7 +28129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -28038,7 +28174,15 @@ PrefabInstance:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[4]
       value: 
-      objectReference: {fileID: 1201385227}
+      objectReference: {fileID: 1197696021}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 732402103}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 732402103}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -28102,6 +28246,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -28480,7 +28628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -28506,6 +28654,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 974780392}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1247766018}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1992406211}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 1021675935}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[7]
+      value: 
+      objectReference: {fileID: 1756244273}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -28961,7 +29125,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -28971,6 +29135,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1873936937}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 890321826}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -29561,7 +29729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -29635,6 +29803,14 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[4]
       value: 
       objectReference: {fileID: 1378947743}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1119880592}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 989034970}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -29699,6 +29875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Embers Rise Room 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
 --- !u!4 &1601160574 stripped
@@ -29719,7 +29899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -29745,6 +29925,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[2]
       value: 
       objectReference: {fileID: 1515795818}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 1881680941}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -30457,7 +30641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -30515,6 +30699,18 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 881772743}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 468546460}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 792922383}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 989034970}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -30910,7 +31106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -30928,6 +31124,14 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 732402103}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1197696021}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1944157608}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -30992,6 +31196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Embers Rise Room 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
 --- !u!1001 &1692777285
@@ -31028,6 +31236,10 @@ PrefabInstance:
     - target: {fileID: 2547543328873382337, guid: a55d0988f55943443855a17f2f9df25c, type: 3}
       propertyPath: m_Name
       value: Spike Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547543328873382337, guid: a55d0988f55943443855a17f2f9df25c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2547543328873382343, guid: a55d0988f55943443855a17f2f9df25c, type: 3}
       propertyPath: m_RootOrder
@@ -31367,7 +31579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -31405,6 +31617,14 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 1992406211}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1247766018}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1707027401}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -32032,6 +32252,10 @@ PrefabInstance:
     - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_Name
       value: Delay Spawner (VS 6) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
@@ -33724,7 +33948,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -33741,15 +33965,31 @@ PrefabInstance:
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[3]
       value: 
-      objectReference: {fileID: 890321826}
+      objectReference: {fileID: 1997564309}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[4]
       value: 
-      objectReference: {fileID: 1997564309}
+      objectReference: {fileID: 989034970}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.data[5]
       value: 
-      objectReference: {fileID: 989034970}
+      objectReference: {fileID: 1021236789}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 1378947743}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[7]
+      value: 
+      objectReference: {fileID: 468546460}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[8]
+      value: 
+      objectReference: {fileID: 1119880592}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[9]
+      value: 
+      objectReference: {fileID: 1119880592}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -33813,6 +34053,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Embers Rise Room 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -34188,7 +34432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -34222,6 +34466,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[2]
       value: 
       objectReference: {fileID: 1992406211}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 974780392}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1118793470}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1997564309}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 1756244273}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -35489,7 +35749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -35515,6 +35775,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 643394000}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1293984543}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 403264080}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 2074913904}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[7]
+      value: 
+      objectReference: {fileID: 350460528}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -35578,6 +35854,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -36084,7 +36364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -36110,6 +36390,22 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1881680941}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1515795818}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 890321826}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 1119880592}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 1712237819}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -37230,7 +37526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: enemySpawners.Array.data[0]
@@ -37312,6 +37608,10 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 643394000}
+    - target: {fileID: 7020648244100064256, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: connectedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 732402103}
     - target: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -37375,6 +37675,10 @@ PrefabInstance:
     - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
       propertyPath: m_Name
       value: Vermillion Summit Room 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020648244100064261, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -38243,6 +38547,10 @@ PrefabInstance:
     - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_Name
       value: Delay Spawner (ERR 5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599738290936146665, guid: 57123b7925323424097ac99f906b8302, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2599738290936146670, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: m_RootOrder
