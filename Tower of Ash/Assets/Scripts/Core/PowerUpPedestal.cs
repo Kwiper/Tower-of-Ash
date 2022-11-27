@@ -9,6 +9,8 @@ public class PowerUpPedestal : MonoBehaviour
     [SerializeField]
     private int upgrade;
 
+    [SerializeField]
+    GameObject text;
  
     const int Dash = 1;
     const int WallJump = 2;
@@ -112,8 +114,11 @@ public class PowerUpPedestal : MonoBehaviour
                 break;
             }
             isCollected = true;
-	        GetComponent<BoxCollider2D>().enabled = false;
+            text.SetActive(true);
+            GetComponent<BoxCollider2D>().enabled = false;
 	        GetComponent<SpriteRenderer>().enabled = false;
+            
+
         }    
     }
 }
