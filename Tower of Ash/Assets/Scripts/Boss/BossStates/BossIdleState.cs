@@ -59,14 +59,6 @@ public class BossIdleState : EnemyState
 
         if(timer <= 0)
         {
-            boss.StateMachine.ChangeState(boss.BulletHellCharge);
-            //boss.StateMachine.ChangeState(boss.PillarState);
-            //boss.StateMachine.ChangeState(boss.FireballState);
-        }
-
-        /*
-        if(timer <= 0)
-        {
             // HP range 75% - 100%            
             if(boss.EnemyEntity.Health > (boss.EnemyEntity.maxHealth * 0.75)) 
             {
@@ -258,7 +250,6 @@ public class BossIdleState : EnemyState
                 }
             }
         }
-        */
     }
 
     public override void PhysicsUpdate()

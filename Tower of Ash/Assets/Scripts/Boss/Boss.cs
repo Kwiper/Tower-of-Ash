@@ -142,7 +142,7 @@ public class Boss : Enemy
     public void CastFallPillar()
     {
         float distance = 2.5f;
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 3; i++)
         {
             GameObject p1 = Instantiate(FallPillars[i], new Vector2(this.transform.position.x + distance, -3f), this.transform.rotation);
             GameObject p2 = Instantiate(FallPillars[i], new Vector2(this.transform.position.x - distance, -3f), this.transform.rotation);
