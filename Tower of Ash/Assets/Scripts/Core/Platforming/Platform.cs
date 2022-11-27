@@ -41,7 +41,7 @@ public class Platform : MonoBehaviour
     [SerializeField]
     private float delaySeconds = 0;
     private Hazard[] spikes;
-    private float knockbackDelaySeconds = 0.5f;
+    private float fallThroughDelaySeconds = 0.5f;
     private int tempKnockbackholder;
     // 0 = swinging to the left
     // 1 = swinging to the right
@@ -104,6 +104,8 @@ public class Platform : MonoBehaviour
                 //Player's transform is set to essential objects
                 player.hitHead = true;
                 player.transform.parent = essentials.GetComponent<Transform>();
+
+                //Player falls through so as not to clip
                 Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(), GetComponent<PolygonCollider2D>(), true);
                 if (spikes.Length != 0){
                     foreach (Hazard spike in spikes){
@@ -264,8 +266,8 @@ public class Platform : MonoBehaviour
     IEnumerator platformReset()
     {
 
-        yield return new WaitForSecondsRealtime(knockbackDelaySeconds);
-        //player.gameObject.GetComponentInParent<Entity>().knockbackForce = tempKnockbackholder;
+        yield return new WaitForSecondsRealtime(fallThroughDelaySeconds);
+        
         player.hitHead = false;
         Physics2D.IgnoreCollision(player.gameObject.GetComponentInParent<BoxCollider2D>(), GetComponent<PolygonCollider2D>(), false);
         if (spikes.Length != 0){

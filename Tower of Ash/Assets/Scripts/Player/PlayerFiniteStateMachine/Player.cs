@@ -372,20 +372,19 @@ public class Player : MonoBehaviour
         PrevScene = CurrentScene;
         CurrentScene = currScene;
     }
-
+    //Reseting the position of the player
     public void setPosition(){
         if(spikeCheckPoint != null){
             playerTransform.position = spikeCheckPoint;
             RB.velocity = new Vector2(0,0);
         }
     }
+    //The manual setting the checkpoint position
     public void setCheckPointPos(Vector2 newPos){
         spikeCheckPoint = newPos;
     }
-
-    public void setCheckPointPosRay(){
-        //yield return new WaitForSeconds(0.2f);
-        //Debug.Log("The player's spike check point is " + spikeCheckPoint);   
+    //Raycast setting checkpoint
+    public void setCheckPointPosRay(){ 
         if(CheckFloorType().collider != null){
             var floor = CheckFloorType().collider.gameObject;
             if(CheckIfGrounded() && floor.tag == "Ground" && !invincible)
@@ -394,13 +393,13 @@ public class Player : MonoBehaviour
             }
         }
     }
-
+    //Used for respawning on death, please someone fix the check point
     public void respawnPosition(){
         playerTransform.position = spawnPoint;
         firstReload = true;
         ResetHealCharges();
     }
-
+    //Used to reset the boundary of the camera on reload
     private void firstReloadCamConfine(){
         var colliderBound = GameObject.Find("WorldBoundary");
         newWorldBound = colliderBound.GetComponent<Collider2D>();
