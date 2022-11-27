@@ -19,7 +19,6 @@ public class SceneDetails : MonoBehaviour
         Play =  GameObject.FindGameObjectsWithTag("Player")[0];
         Player = Play.GetComponent<Player>();
     }
-    
 
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.tag == "Player"){
@@ -29,11 +28,8 @@ public class SceneDetails : MonoBehaviour
                 foreach (var enemy in enemySpawners) 
                 {
                     //Prevents double spawnning or enemy respawning
-                    if (enemy.isDead != true && enemy.isSpawned != true)
-                    {
-                        enemy.SpawnEnemy();
-                        enemy.isSpawned = true;
-                    }
+                    StartCoroutine(Spawn(enemy));
+
                 }            
             Player.SetCurrentScene(this);
 
@@ -45,12 +41,7 @@ public class SceneDetails : MonoBehaviour
                 {
                     foreach (var enemy in scene.enemySpawners) 
                     {   
-                        //Prevents double spawnning or enemy respawning
-                        if (enemy.isDead != true && enemy.isSpawned != true)
-                        {
-                            enemy.SpawnEnemy();
-                            enemy.isSpawned = true;
-                        }
+                        StartCoroutine(Spawn(enemy));
                     }
                 }       
             }
@@ -78,7 +69,15 @@ public class SceneDetails : MonoBehaviour
     }
 
    
-
+    public IEnumerator Spawn(EnemySpawner enemy){
+        yield return new WaitForSeconds(0.4f);
+        //Prevents double spawnning or enemy respawning
+        if (enemy.isDead != true && enemy.isSpawned != true)
+            {
+                enemy.SpawnEnemy();
+                enemy.isSpawned = true;
+            }
+    }
 
     public void LoadScene(){
             if(!IsLoaded){

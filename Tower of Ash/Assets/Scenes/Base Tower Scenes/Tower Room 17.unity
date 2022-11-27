@@ -6315,6 +6315,7 @@ GameObject:
   - component: {fileID: 572683119}
   - component: {fileID: 572683118}
   - component: {fileID: 572683117}
+  - component: {fileID: 572683123}
   m_Layer: 10
   m_Name: Spawnroom Platform 1
   m_TagString: Ground
@@ -6401,7 +6402,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
@@ -6672,6 +6673,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!66 &572683123
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572683115}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 572683120}
+    m_ColliderPaths:
+    - - X: 630000000
+        Y: 613750016
+      - X: 630000000
+        Y: 620000000
+      - X: 570000000
+        Y: 620000000
+      - X: 570000000
+        Y: 613750016
+      - X: 571249984
+        Y: 612499968
+      - X: 628750016
+        Y: 612499968
+    - - X: 490000000
+        Y: 603750016
+      - X: 490000000
+        Y: 610000000
+      - X: 430000000
+        Y: 610000000
+      - X: 430000000
+        Y: 603750016
+      - X: 431249984
+        Y: 602499968
+      - X: 488750016
+        Y: 602499968
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 62.87499, y: 61.249996}
+      - {x: 63, y: 61.375015}
+      - {x: 62.99997, y: 62}
+      - {x: 57, y: 61.99997}
+      - {x: 57.000008, y: 61.374996}
+      - {x: 57.12501, y: 61.249996}
+    - - {x: 48.874992, y: 60.249996}
+      - {x: 49, y: 60.375015}
+      - {x: 48.999973, y: 61}
+      - {x: 43, y: 60.99997}
+      - {x: 43.000008, y: 60.374996}
+      - {x: 43.125008, y: 60.249996}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!1 &1865107504
 GameObject:
   m_ObjectHideFlags: 0
