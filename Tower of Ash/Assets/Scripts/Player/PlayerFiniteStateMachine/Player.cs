@@ -346,6 +346,7 @@ public class Player : MonoBehaviour
     public void setPosition(){
         if(spikeCheckPoint != null){
             playerTransform.position = spikeCheckPoint;
+            RB.velocity = new Vector2(0,0);
         }
     }
     public void setCheckPointPos(Vector2 newPos){
@@ -356,7 +357,7 @@ public class Player : MonoBehaviour
         //yield return new WaitForSeconds(0.2f);       
         if(CheckFloorType().collider != null){
             var floor = CheckFloorType().collider.gameObject;
-            if(CheckIfGrounded() && floor.tag == "Ground" && floor.layer == LayerMask.NameToLayer("Ground") && !invincible)
+            if(CheckIfGrounded() && floor.tag == "Ground" && !invincible)
             {
                 spikeCheckPoint = new Vector2(playerTransform.position.x,playerTransform.position.y);
             }
