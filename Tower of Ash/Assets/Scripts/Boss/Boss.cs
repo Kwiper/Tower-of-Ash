@@ -35,6 +35,10 @@ public class Boss : Enemy
     public Transform bulletHellPoint;
     public Transform fireballPoint;
     public GameObject Fireball;
+    public GameObject Pillar;
+
+    public GameObject Bullets;
+    public GameObject[] FallPillars;
 
     public bool canBulletHell = true;
 
@@ -97,7 +101,54 @@ public class Boss : Enemy
 
     public void CastFireball()
     {
-        Instantiate(Fireball, fireballPoint.transform.position, fireballPoint.transform.rotation);
+        GameObject instance = Instantiate(Fireball, fireballPoint.transform.position, fireballPoint.transform.rotation);
+        instance.GetComponent<BossFireball>().direction = new Vector2(FacingDirection, 0);
+    }
+
+    public void FireBulletHell(float additionalAngle)
+    {
+        float angleStep = 45f;
+
+        float angle = 0f + additionalAngle;
+
+        for(int i = 0; i < 8; i++)
+        {
+            float projectileDirX = bulletHellPoint.transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180);
+            float projectileDirY = bulletHellPoint.transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180);
+
+            Vector2 projectileVector = new Vector2(projectileDirX, projectileDirY);
+            Vector2 projectileMoveDirection = (projectileVector - new Vector2(bulletHellPoint.position.x,bulletHellPoint.position.y)).normalized;
+
+            GameObject instance = Instantiate(Bullets, bulletHellPoint.position, bulletHellPoint.rotation);
+            instance.GetComponent<BossBulletHellProjectile>().direction = projectileMoveDirection;
+
+            angle += angleStep;
+        }
+    }
+
+    public void CastPillar()
+    {
+        float distance = 3f;
+
+        for(int i = 0;i < 10; i++)
+        {
+            GameObject p1 = Instantiate(Pillar, new Vector2(this.transform.position.x + distance, -3f),this.transform.rotation);
+            GameObject p2 = Instantiate(Pillar, new Vector2(this.transform.position.x - distance, -3f), this.transform.rotation);
+
+            distance += 3f;
+        }
+    }
+
+    public void CastFallPillar()
+    {
+        float distance = 2.5f;
+        for(int i = 0; i < 4; i++)
+        {
+            GameObject p1 = Instantiate(FallPillars[i], new Vector2(this.transform.position.x + distance, -3f), this.transform.rotation);
+            GameObject p2 = Instantiate(FallPillars[i], new Vector2(this.transform.position.x - distance, -3f), this.transform.rotation);
+
+            distance += 2.5f;
+        }
     }
 
     private void OnDrawGizmos()

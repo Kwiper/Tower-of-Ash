@@ -52,19 +52,22 @@ public class FirePillar : MonoBehaviour
     {
         if (collision.CompareTag(tagName))
         {
-            target = collision.gameObject.GetComponent<Entity>();
+            if (!collision.gameObject.GetComponentInParent<Player>().invincible)
+            {
 
-            target.SetDamage(combatData.projectileDamage);
+                target = collision.gameObject.GetComponentInParent<Entity>();
+                target.SetDamage(combatData.projectileDamage);
 
-            target.SetKnockback(-player.FacingDirection);
+                target.SetKnockback(-player.FacingDirection);
 
-            player = collision.gameObject.GetComponentInParent<Player>();
-            player.StateMachine.ChangeState(player.HitState);
-            player.isHit = true;
+                player = collision.gameObject.GetComponentInParent<Player>();
+                player.StateMachine.ChangeState(player.HitState);
+                player.isHit = true;
 
-            collision.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
+                collision.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
+                Destroy(gameObject);
+            }
         }
-
     }
 
     public void AnimationTrigger()
