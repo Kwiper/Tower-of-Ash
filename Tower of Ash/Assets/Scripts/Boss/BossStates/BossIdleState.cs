@@ -61,6 +61,7 @@ public class BossIdleState : EnemyState
         {
             boss.StateMachine.ChangeState(boss.BulletHellCharge);
             //boss.StateMachine.ChangeState(boss.PillarState);
+            //boss.StateMachine.ChangeState(boss.FireballState);
         }
 
         /*

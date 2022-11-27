@@ -2,47 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossFireball : MonoBehaviour
+public class BossPillar : MonoBehaviour
 {
+    Player player;
     [SerializeField]
     private string tagName;
-
-    private Entity target;
-
-    private Player player;
 
     [SerializeField]
     private CombatData combatData;
 
-    private Rigidbody2D rb;
+    private Entity target;
 
-    public Vector2 direction;
+    [SerializeField]
+    Transform groundCheck;
+    [SerializeField]
+    LayerMask groundLayer;
 
-    int knockbackDir;
-
-    GameObject boss;
+    [SerializeField]
+    Transform wallCheck;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-
-        rb.velocity = direction * combatData.projectileSpeed;
-
-        if(direction.x >= 0)
+        player = FindObjectOfType<Player>();
+        if (!GroundCheck() || WallCheck())
         {
-            knockbackDir = 1;
+            Destroy(gameObject);
         }
-        else
+
+        if(transform.position.x > 15 || transform.position.x < -15)
         {
-            knockbackDir = -1;
+            Destroy(gameObject);
         }
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    bool GroundCheck()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+    }
+
+    bool WallCheck()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, 0.5f, groundLayer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,20 +63,19 @@ public class BossFireball : MonoBehaviour
                 target = collision.gameObject.GetComponentInParent<Entity>();
                 target.SetDamage(combatData.projectileDamage);
 
-                target.SetKnockback(knockbackDir);
+                target.SetKnockback(-player.FacingDirection);
 
                 player = collision.gameObject.GetComponentInParent<Player>();
                 player.StateMachine.ChangeState(player.HitState);
                 player.isHit = true;
 
                 collision.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
-
         }
     }
 
-    private void OnBecameInvisible()
+    public void AnimationTrigger()
     {
         Destroy(gameObject);
     }

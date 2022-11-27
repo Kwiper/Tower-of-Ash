@@ -25,6 +25,8 @@ public class BossPillarState : EnemyState {
     public override void Enter()
     {
         base.Enter();
+        boss.CastPillar();
+
     }
 
     public override void Exit()

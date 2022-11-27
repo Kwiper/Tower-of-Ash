@@ -10,6 +10,8 @@ public class BossBulletHellState : EnemyState
     private float bulletHellTimer;
     private float bulletHellMaxTimer = 8f;
 
+    float additionalAngle = 0f;
+
     public BossBulletHellState(Boss enemy, EnemyStateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
         this.boss = enemy;
@@ -26,12 +28,17 @@ public class BossBulletHellState : EnemyState
     {
         base.AnimationTrigger();
         //Fire
+        boss.FireBulletHell(additionalAngle);
+
+        additionalAngle += 11.25f;
     }
 
     public override void Enter()
     {
         base.Enter();
         bulletHellTimer = bulletHellMaxTimer;
+
+        additionalAngle = 0f;
     }
 
     public override void Exit()

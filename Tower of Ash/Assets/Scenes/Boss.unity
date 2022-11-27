@@ -678,7 +678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009510716126094113, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3614773359453304199, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1305,4 +1305,10 @@ MonoBehaviour:
   bulletHellPoint: {fileID: 640779443}
   fireballPoint: {fileID: 719813215}
   Fireball: {fileID: 8501841074460721272, guid: 5576bd2234c81c34d8ff60e9a31aa0a2, type: 3}
+  Pillar: {fileID: 1610487120407484215, guid: b587e43ee3f888045bd6cb211c0c1f8e, type: 3}
+  Bullets: {fileID: 2052959220012300346, guid: 787653d8d46410146a24a9b289da8320, type: 3}
+  FallPillars:
+  - {fileID: 7965337345261818209, guid: fcdd83ae43dfd4145aa90918c8bbb9a0, type: 3}
+  - {fileID: 1861503307046471866, guid: 8f6ef7197ba66df4885f9adf855b005e, type: 3}
+  - {fileID: 461897021900328508, guid: de4473ed6301e6e4fa2d41b84d75bb7d, type: 3}
   canBulletHell: 1

@@ -31,7 +31,7 @@ public class BossFallState : EnemyState {
                 canFall = true;
                 break;
             case 1:
-                Debug.Log("Pillars!");
+                boss.CastFallPillar();
                 break;
         }
 

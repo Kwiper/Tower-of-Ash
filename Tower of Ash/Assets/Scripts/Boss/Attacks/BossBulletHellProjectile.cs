@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossFireball : MonoBehaviour
+public class BossBulletHellProjectile : MonoBehaviour
 {
     [SerializeField]
     private string tagName;
@@ -20,16 +20,14 @@ public class BossFireball : MonoBehaviour
 
     int knockbackDir;
 
-    GameObject boss;
-
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        rb.velocity = direction * combatData.projectileSpeed;
+        rb.velocity = direction * 15;
 
-        if(direction.x >= 0)
+        if (direction.x >= 0)
         {
             knockbackDir = 1;
         }
@@ -64,7 +62,6 @@ public class BossFireball : MonoBehaviour
                 collision.gameObject.GetComponentInParent<TimeStop>().StopTime(0.05f, 10, 0.2f);
             }
             Destroy(gameObject);
-
         }
     }
 
@@ -72,5 +69,4 @@ public class BossFireball : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }
