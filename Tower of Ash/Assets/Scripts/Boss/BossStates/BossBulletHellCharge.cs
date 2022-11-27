@@ -9,11 +9,26 @@ public class BossBulletHellCharge : EnemyState
     private bool canMove;
 
     private float chargeTimer;
-    private float chargeMaxTimer = 3f;
+    private float chargeMaxTimer = 1.5f;
+
+    Vector2 ballPosition;
+    bool setBallPosition;
 
     public BossBulletHellCharge(Boss enemy, EnemyStateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
         this.boss = enemy;
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        base.AnimationFinishTrigger();
+        boss.StateMachine.ChangeState(boss.BulletHellState);
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        setBallPosition = true;
     }
 
     public override void Enter()
@@ -22,6 +37,9 @@ public class BossBulletHellCharge : EnemyState
 
         chargeTimer = chargeMaxTimer;
         canMove = false;
+        setBallPosition = false;
+
+        ballPosition = new Vector2(boss.transform.position.x + (0.8f * -boss.FacingDirection),boss.transform.position.y + 4.2f);
 
         boss.canBulletHell = false;
     }
@@ -32,6 +50,9 @@ public class BossBulletHellCharge : EnemyState
 
     }
 
+    // Increase Y by 4.2
+    // Increase X by 0.8 * -FacingDirection 
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
@@ -40,14 +61,14 @@ public class BossBulletHellCharge : EnemyState
 
         chargeTimer -= Time.deltaTime;
 
-        if(chargeTimer <= 2)
+        if(chargeTimer <= 0)
         {
             canMove = true;
         }
 
-        if(chargeTimer <= 0)
+        if(setBallPosition && !canMove)
         {
-            boss.StateMachine.ChangeState(boss.BulletHellState);
+            boss.transform.position = Vector3.MoveTowards(boss.transform.position, ballPosition,100);
         }
 
         if (canMove)

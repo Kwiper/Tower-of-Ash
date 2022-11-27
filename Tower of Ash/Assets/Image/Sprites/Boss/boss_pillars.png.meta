@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +115,385 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss_pillars_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 160
+        width: 59
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6101695, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16337f5dc2f8ba469979a9b375c3b0e
+      internalID: 106490802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 160
+        width: 57
+        height: 75
+      alignment: 9
+      pivot: {x: 0.61403507, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36dbe0d38d2cdf24785e615d6cbb8821
+      internalID: 646712578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 160
+        width: 52
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5769231, y: 0.5135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42528339a1d43674f980757d166c1f92
+      internalID: 1052174132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_3
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 160
+        width: 55
+        height: 74
+      alignment: 9
+      pivot: {x: 0.58181816, y: 0.5135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71210d0309222b49b767ae82bb1eadf
+      internalID: -62478198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_4
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 160
+        width: 55
+        height: 71
+      alignment: 9
+      pivot: {x: 0.56363636, y: 0.53521127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9790ff0f7c8420458898dd5cfb484fd
+      internalID: -1124190560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_5
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 160
+        width: 54
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.5507246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adcc8aea0d00f64f874770a44dde23e
+      internalID: 1207570459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_6
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 160
+        width: 52
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5576923, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2776ff06a475a9c499a6b27d60dbbf75
+      internalID: 498713539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_7
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 160
+        width: 52
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5769231, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afa765959f623941b0805f8aee82d1a
+      internalID: 374635814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 80
+        width: 52
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5769231, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d61ebeeac22dff4fbd249f9af3a8f47
+      internalID: 1350413061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 80
+        width: 55
+        height: 72
+      alignment: 9
+      pivot: {x: 0.58181816, y: 0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd313024e78d8694e8dff63971738188
+      internalID: -1524457844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 80
+        width: 55
+        height: 75
+      alignment: 9
+      pivot: {x: 0.56363636, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4a40ac8f8d74a43b653c267cffbc23
+      internalID: 1058420970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_15
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 80
+        width: 62
+        height: 79
+      alignment: 9
+      pivot: {x: 0.48387095, y: 0.48101267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410b58b3b14bb8849974360bbc51a2d3
+      internalID: 784075721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_16
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 80
+        width: 56
+        height: 75
+      alignment: 9
+      pivot: {x: 0.51785713, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d909fc3ffeda104ba520cf757f42945
+      internalID: 430631325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_17
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 80
+        width: 54
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecb2597f88545b41b274090187bf012
+      internalID: -417714904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_18
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 80
+        width: 52
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5769231, y: 0.5135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f0e550ae733f84fb3639522943ef1d
+      internalID: 1467861516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_19
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 80
+        width: 55
+        height: 73
+      alignment: 9
+      pivot: {x: 0.58181816, y: 0.5205479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7a40960b0c8cd4c8cb8eef1d47ffdb
+      internalID: -83513692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_20
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 55
+        height: 69
+      alignment: 9
+      pivot: {x: 0.56363636, y: 0.5507246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2318def8709e1459a046470d3f7a33
+      internalID: 454403778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pillars_21
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 59
+        height: 70
+      alignment: 9
+      pivot: {x: 0.59322035, y: 0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b73bc2522102eb469ddf0a5c0286877
+      internalID: 613283850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +504,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boss_pillars_10: -106016876
+      boss_pillars_16: 430631325
+      boss_pillars_0: 106490802
+      boss_pillars_1: 646712578
+      boss_pillars_6: 498713539
+      boss_pillars_15: 784075721
+      boss_pillars_5: 1207570459
+      boss_pillars_8: -1764583799
+      boss_pillars_2: 1052174132
+      boss_pillars_13: 1058420970
+      boss_pillars_14: 1574362754
+      boss_pillars_17: -417714904
+      boss_pillars_4: -1124190560
+      boss_pillars_19: -83513692
+      boss_pillars_18: 1467861516
+      boss_pillars_21: 613283850
+      boss_pillars_3: -62478198
+      boss_pillars_11: -1524457844
+      boss_pillars_9: 1350413061
+      boss_pillars_12: 1850222674
+      boss_pillars_20: 454403778
+      boss_pillars_7: 374635814
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

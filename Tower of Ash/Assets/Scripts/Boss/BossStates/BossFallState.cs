@@ -6,8 +6,7 @@ public class BossFallState : EnemyState {
 
     Boss boss;
 
-    private float bossTimer;
-    private float bossMaxTimer = 5f;
+    int bossTriggerCounter;
 
     bool canFall;
 
@@ -19,17 +18,33 @@ public class BossFallState : EnemyState {
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
+        boss.StateMachine.ChangeState(boss.IdleState);
     }
 
     public override void AnimationTrigger()
     {
         base.AnimationTrigger();
+
+        switch (bossTriggerCounter)
+        {
+            case 0:
+                canFall = true;
+                break;
+            case 1:
+                Debug.Log("Pillars!");
+                break;
+        }
+
+        bossTriggerCounter += 1;
     }
 
     public override void Enter()
     {
         base.Enter();
-        bossTimer = bossMaxTimer;
+
+        canFall = false;
+
+        bossTriggerCounter = 0;
     }
 
     public override void Exit()
@@ -40,31 +55,17 @@ public class BossFallState : EnemyState {
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        bossTimer -= Time.deltaTime;
 
-        if(bossTimer > 4.5f)
+        if(!canFall)
         {
             boss.transform.position = Vector3.MoveTowards(boss.transform.position, boss.bulletHellPoint.position, Time.deltaTime * 30);
-        }
-        else if(bossTimer <= 4.5f)
-        {
-            canFall = true;
         }
 
         if(canFall && !boss.CheckIfTouchingGround())
         {
-            boss.SetVelocityY(-60);
+            boss.SetVelocityY(-70);
         }
 
-        if(canFall && boss.CheckIfTouchingGround())
-        {
-            //Pillars
-        }
-
-        if(bossTimer <= 0)
-        {
-            boss.StateMachine.ChangeState(boss.IdleState);
-        }
     }
 
     public override void PhysicsUpdate()

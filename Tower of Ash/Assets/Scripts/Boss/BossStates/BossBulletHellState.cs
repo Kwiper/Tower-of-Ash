@@ -18,11 +18,14 @@ public class BossBulletHellState : EnemyState
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
+        boss.StateMachine.ChangeState(boss.FallState);
+
     }
 
     public override void AnimationTrigger()
     {
         base.AnimationTrigger();
+        //Fire
     }
 
     public override void Enter()
@@ -42,12 +45,6 @@ public class BossBulletHellState : EnemyState
         boss.SetVelocityX(0);
         boss.SetVelocityY(0);
         boss.transform.position = Vector3.MoveTowards(boss.transform.position, boss.bulletHellPoint.position, Time.deltaTime * 30);
-
-        bulletHellTimer -= Time.deltaTime;
-        if (bulletHellTimer <= 0)
-        {
-            boss.StateMachine.ChangeState(boss.FallState);
-        }
 
     }
 

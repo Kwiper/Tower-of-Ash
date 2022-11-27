@@ -57,7 +57,13 @@ public class BossIdleState : EnemyState
         boss.CheckIfShouldFlip();
         timer -= Time.deltaTime;
 
+        if(timer <= 0)
+        {
+            boss.StateMachine.ChangeState(boss.BulletHellCharge);
+            //boss.StateMachine.ChangeState(boss.PillarState);
+        }
 
+        /*
         if(timer <= 0)
         {
             // HP range 75% - 100%            
@@ -251,6 +257,7 @@ public class BossIdleState : EnemyState
                 }
             }
         }
+        */
     }
 
     public override void PhysicsUpdate()
