@@ -135,6 +135,12 @@ public class Player : MonoBehaviour
         CurrentVelocity = RB.velocity;
         SetLookDisplacement();
         //Debug.Log(CheckIfGrounded());
+        if(InputHandler.chargeHeld){
+            SpriteRenderer.color = Color.gray;
+        }
+        else{
+            SpriteRenderer.color = Color.white;
+        }
 
         StateMachine.CurrentState.LogicUpdate();
 
@@ -216,8 +222,8 @@ public class Player : MonoBehaviour
 
     public void SetLookDisplacement()
     {
-        Debug.Log(InputHandler.NormLookInputX);
-        Debug.Log(InputHandler.NormLookInputY);        
+        //Debug.Log(InputHandler.NormLookInputX);
+        //Debug.Log(InputHandler.NormLookInputY);        
         cameraPoint.position = new Vector2(gameObject.GetComponent<Transform>().position.x+InputHandler.NormLookInputX, gameObject.GetComponent<Transform>().position.y+InputHandler.NormLookInputY+1);
     }
 
@@ -251,9 +257,20 @@ public class Player : MonoBehaviour
     }
     public RaycastHit2D CheckFloorType()
     {
-        var hit = Physics2D.Raycast(groundCheck.position, Vector2.down , playerData.wallCheckDistance, playerData.whatIsGround);
-        return hit;
+        var hitGround = Physics2D.Raycast(groundCheck.position, Vector2.down , playerData.wallCheckDistance, playerData.whatIsGround);
+
+
+        var hitPlatform = Physics2D.Raycast(groundCheck.position, Vector2.down , playerData.wallCheckDistance, playerData.whatIsPlatform);
+        //Debug.Log("Platform distance is "+ hitPlatform.distance + " Ground distance is "+ hitGround.distance);
+        if(hitGround.distance > hitPlatform.distance){
+            return hitGround;
+        }
+        else{
+            //Debug.Log("Platform detected");
+            return hitPlatform;
+        }
     }
+
     public void CheckIfShouldFlip(int xInput)
     {
         if(xInput != 0 && xInput != FacingDirection)
@@ -354,7 +371,8 @@ public class Player : MonoBehaviour
     }
 
     public void setCheckPointPosRay(){
-        //yield return new WaitForSeconds(0.2f);       
+        //yield return new WaitForSeconds(0.2f);
+        //Debug.Log("The player's spike check point is " + spikeCheckPoint);   
         if(CheckFloorType().collider != null){
             var floor = CheckFloorType().collider.gameObject;
             if(CheckIfGrounded() && floor.tag == "Ground" && !invincible)

@@ -29,7 +29,7 @@ public class PlayerInputHandler : MonoBehaviour
     private float dashInputStartTime;
     private float fireballInputStartTime;
 
-    private bool chargeHeld = false;
+    public bool chargeHeld = false;
 
     private void Update()
     {
