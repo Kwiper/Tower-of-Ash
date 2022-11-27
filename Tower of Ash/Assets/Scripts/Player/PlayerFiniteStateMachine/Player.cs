@@ -56,14 +56,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     public Transform playerTransform;
     [SerializeField]
-    public CinemachineConfiner2D camConfine;
+    public CinemachineConfiner camConfine;
     public bool isReal = false;
     public bool hitHead = false;
     public bool manualCheckPointSection = false;
     public bool hitSpike = false;
+    public bool firstReload = false;
     public Vector2 spawnPoint = new Vector2(3,5);
     private Vector2 lookPosDefault;
     private Vector2 spikeCheckPoint;
+    private Collider2D newWorldBound;
     //public bool FreezePos;
     #endregion
 
@@ -126,7 +128,10 @@ public class Player : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
 
         FacingDirection = 1;
-        camConfine = GameObject.Find("CM vcam1").GetComponent<CinemachineConfiner2D>();
+        var camConfined = GameObject.Find("CM vcam1");
+        camConfine = camConfined.GetComponent<CinemachineConfiner>();
+        //var camConfine = GameObject.Find("CM vcam1").GetComponent<CinemachineConfiner2D>();
+        //Debug.Log(camConfined);
         var pos = new Vector2(gameObject.transform.Find("CameraPoint").position.x,gameObject.transform.Find("CameraPoint").position.y);
         lookPosDefault = pos;
         ResetHealCharges();
@@ -136,9 +141,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if(firstReload)firstReloadCamConfine();
         CurrentVelocity = RB.velocity;
         SetLookDisplacement();
-        //Debug.Log(CheckIfGrounded());
         if(InputHandler.chargeHeld){
             SpriteRenderer.color = Color.gray;
         }
@@ -392,7 +397,16 @@ public class Player : MonoBehaviour
 
     public void respawnPosition(){
         playerTransform.position = spawnPoint;
+        firstReload = true;
         ResetHealCharges();
+    }
+
+    private void firstReloadCamConfine(){
+        var colliderBound = GameObject.Find("WorldBoundary");
+        newWorldBound = colliderBound.GetComponent<Collider2D>();
+        Debug.Log(newWorldBound);
+        setConfiner(newWorldBound);
+        firstReload = false;
     }
 
     #endregion

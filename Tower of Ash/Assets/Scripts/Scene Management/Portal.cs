@@ -8,7 +8,8 @@ public class Portal : MonoBehaviour, IplayerTriggerable
     [SerializeField] int sceneToLoad = -1;
     [SerializeField] DestinationIdentifier destinationPortal;
     [SerializeField] Transform spawnPoint;
-    
+    GameObject newWorldBound;
+    private bool isTeleporting = false;
 
     GameObject play;
     private void Awake()
@@ -25,12 +26,15 @@ public class Portal : MonoBehaviour, IplayerTriggerable
     
     IEnumerator SwitchScene()
     {
+        if(isTeleporting == false){
+            isTeleporting = true;
         DontDestroyOnLoad(gameObject);
 
         yield return SceneManager.LoadSceneAsync(sceneToLoad);
         var destPortal = FindObjectOfType<Portal>();
         var roomPortals = FindObjectsOfType<Portal>();
-        var newWorldBound = GameObject.Find("WorldBoundary");
+        newWorldBound = GameObject.Find("WorldBoundary");
+        //Debug.Log(newWorldBound);
         for (int i = 0; i < roomPortals.Length; i++) 
         {
             if (roomPortals[i] != this && roomPortals[i].destinationPortal == this.destinationPortal){
@@ -40,11 +44,11 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         }
         var playTransform = play.GetComponent<Transform>();
         var playa = play.GetComponent<Player>();
-        //playa .setConfiner(newWorldBound.GetComponent<Collider2D>());
+        playa.setConfiner(newWorldBound.GetComponent<Collider2D>());
 
         playTransform.position = destPortal.spawnPoint.position;
         //destPortal.setActive(false);
-        var essentialClean =  GameObject.FindGameObjectsWithTag("EssentialObjects");
+        var essentialClean = GameObject.FindGameObjectsWithTag("EssentialObjects");
 
         //Prevents players from duping themselves in the spawn room
         if(essentialClean.Length > 1){
@@ -52,6 +56,7 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         }
 
         Destroy(gameObject);
+        }
     }
 
     public enum DestinationIdentifier{A,B,C,D,E}

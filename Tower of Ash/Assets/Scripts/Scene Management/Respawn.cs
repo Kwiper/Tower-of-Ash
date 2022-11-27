@@ -12,7 +12,7 @@ public class Respawn : MonoBehaviour
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
 
-        playerData.healCharges = playerData.maxHealCharges;
+        //playerData.healCharges = playerData.maxHealCharges;
     }
 
 }
