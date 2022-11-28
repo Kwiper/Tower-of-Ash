@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
     public bool manualCheckPointSection = false;
     public bool hitSpike = false;
     public bool firstReload = false;
-    public Vector2 spawnPoint = new Vector2(3,5);
+    public Vector2 spawnPoint = new Vector2(-2,-58);
     private Vector2 lookPosDefault;
     private Vector2 spikeCheckPoint;
     private Collider2D newWorldBound;
@@ -395,9 +395,9 @@ public class Player : MonoBehaviour
             }
         }
     }
-    //Used for respawning on death, please someone fix the check point
+    //Used for respawning on death
     public void respawnPosition(){
-        playerTransform.position = spawnPoint;
+        this.GetComponent<Transform>().position = spawnPoint;
         firstReload = true;
         ResetHealCharges();
     }
