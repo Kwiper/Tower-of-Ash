@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 13040097}
   - component: {fileID: 13040099}
   - component: {fileID: 13040098}
+  - component: {fileID: 13040100}
   m_Layer: 5
   m_Name: DashText
   m_TagString: Untagged
@@ -503,6 +504,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13040096}
   m_CullTransparentMesh: 1
+--- !u!114 &13040100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13040096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6da68db2350ae46a1df5bd5315bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &19741947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2137,6 +2150,7 @@ GameObject:
   - component: {fileID: 100577222}
   - component: {fileID: 100577224}
   - component: {fileID: 100577223}
+  - component: {fileID: 100577225}
   m_Layer: 5
   m_Name: HealText
   m_TagString: Untagged
@@ -2261,6 +2275,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100577221}
   m_CullTransparentMesh: 1
+--- !u!114 &100577225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100577221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6da68db2350ae46a1df5bd5315bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &102733977 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 231224887895971403, guid: 8028e52fc2cc91a4a85bb11e4e52e5c9, type: 3}
@@ -2492,7 +2518,7 @@ GameObject:
   - component: {fileID: 115958574}
   - component: {fileID: 115958573}
   m_Layer: 31
-  m_Name: World Boundary
+  m_Name: WorldBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11569,6 +11595,7 @@ GameObject:
   - component: {fileID: 467913671}
   - component: {fileID: 467913673}
   - component: {fileID: 467913672}
+  - component: {fileID: 467913674}
   m_Layer: 5
   m_Name: FireballText
   m_TagString: Untagged
@@ -11693,6 +11720,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467913670}
   m_CullTransparentMesh: 1
+--- !u!114 &467913674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467913670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6da68db2350ae46a1df5bd5315bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &468044454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25540,7 +25579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041341479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0200002, y: -54, z: -10}
+  m_LocalPosition: {x: -2, y: -54, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29661,11 +29700,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 854430344821610009, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854430344821610009, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -53.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854430344821610013, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: invincible
@@ -29683,6 +29722,10 @@ PrefabInstance:
       propertyPath: spikesLayer.m_Bits
       value: 16384
       objectReference: {fileID: 0}
+    - target: {fileID: 6722131709098947414, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6722131709722287501, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_XDamping
       value: 0
@@ -29693,11 +29736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6722131709953429421, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6722131709953429421, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -52.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6722131710705246436, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_RootOrder
@@ -29705,11 +29748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6722131710705246436, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.09
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6722131710705246436, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.99
+      value: -58
       objectReference: {fileID: 0}
     - target: {fileID: 6722131710705246436, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31076,6 +31119,7 @@ GameObject:
   - component: {fileID: 1289094382}
   - component: {fileID: 1289094384}
   - component: {fileID: 1289094383}
+  - component: {fileID: 1289094385}
   m_Layer: 5
   m_Name: ChargeText
   m_TagString: Untagged
@@ -31200,6 +31244,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289094381}
   m_CullTransparentMesh: 1
+--- !u!114 &1289094385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289094381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6da68db2350ae46a1df5bd5315bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1290497144
 GameObject:
   m_ObjectHideFlags: 0
@@ -32817,6 +32873,7 @@ GameObject:
   - component: {fileID: 1339306595}
   - component: {fileID: 1339306597}
   - component: {fileID: 1339306596}
+  - component: {fileID: 1339306598}
   m_Layer: 5
   m_Name: DoubleJumpText
   m_TagString: Untagged
@@ -32941,6 +32998,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339306594}
   m_CullTransparentMesh: 1
+--- !u!114 &1339306598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339306594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6da68db2350ae46a1df5bd5315bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1346277605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7020648244100064258, guid: 2de5f2a36f2581b4c8c793080ea8c478, type: 3}
@@ -34542,7 +34611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431972079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.09, y: -3.99, z: 0}
+  m_LocalPosition: {x: -2, y: -58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43259,6 +43328,7 @@ GameObject:
   - component: {fileID: 1852805486}
   - component: {fileID: 1852805488}
   - component: {fileID: 1852805487}
+  - component: {fileID: 1852805489}
   m_Layer: 5
   m_Name: WallJumpText
   m_TagString: Untagged
@@ -43383,6 +43453,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852805485}
   m_CullTransparentMesh: 1
+--- !u!114 &1852805489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852805485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6da68db2350ae46a1df5bd5315bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1853713962
 GameObject:
   m_ObjectHideFlags: 0
