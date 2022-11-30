@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour {
     Material defaultMat;
 
     bool flashWhite;
-    float flashTimer = 0.3f;
+    float flashTimer = 0.2f;
 
     #endregion
 
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour {
         if (EnemyEntity.InKnockback) 
         {
             flashWhite = true;
-            flashTimer = 0.3f;
+            flashTimer = 0.2f;
         }
 
         if (flashWhite)

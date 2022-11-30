@@ -41,7 +41,6 @@ public class EmberProjectile : MonoBehaviour
             Physics2D.IgnoreCollision(swingingToAdd[i].gameObject.GetComponent<PolygonCollider2D>(), GetComponent<BoxCollider2D>(), true);
 
         }
-        
 
     }
 
