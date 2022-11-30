@@ -354,6 +354,8 @@ MonoBehaviour:
   EnemyEntity: {fileID: 4744790822584047704}
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
   tinderReward: 5
+  whiteMat: {fileID: 2100000, guid: f9f4b35fea0503646a69073166fefac2, type: 2}
+  defaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   ledgeCheck: {fileID: 2076605829880756826}
   wallCheck: {fileID: 2595483392420551502}
   aggroPoint: {fileID: 8438551721515737577}
@@ -362,7 +364,7 @@ MonoBehaviour:
     m_Bits: 256
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 17984
   aggroRange: 2
   Rock: {fileID: 2469029213873907765, guid: 846cc663a94ff0444bc6ab1ed7eeb815, type: 3}
   throwPoint: {fileID: 9221832496710646251}
@@ -380,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 25
   Health: 0
-  knockbackForce: 0
+  knockbackForce: 5
 --- !u!1 &9127341968826132196
 GameObject:
   m_ObjectHideFlags: 0

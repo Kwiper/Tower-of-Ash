@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour {
     #region Components
     public Rigidbody2D RB { get; protected set; }
     public Animator Anim { get; protected set; }
+    public SpriteRenderer Renderer { get; protected set; }
     public Entity EnemyEntity;
     #endregion
 
@@ -28,6 +29,15 @@ public class Enemy : MonoBehaviour {
 
     public PlayerData playerData;
     public int tinderReward;
+
+    [SerializeField]
+    Material whiteMat;
+
+    [SerializeField]
+    Material defaultMat;
+
+    bool flashWhite;
+    float flashTimer = 0.3f;
 
     #endregion
 
@@ -46,6 +56,7 @@ public class Enemy : MonoBehaviour {
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         EnemyEntity = GetComponent<Entity>();
+        Renderer = GetComponent<SpriteRenderer>();
         FacingDirection = 1;
 
     }
@@ -55,11 +66,28 @@ public class Enemy : MonoBehaviour {
     {
         CurrentVelocity = RB.velocity;
 
-        /*if (EnemyEntity.InKnockback) 
+        if (EnemyEntity.InKnockback) 
         {
-            SetVelocityX(EnemyEntity.Knockback);
+            flashWhite = true;
+            flashTimer = 0.3f;
         }
-        */
+
+        if (flashWhite)
+        {
+            flashTimer -= Time.deltaTime;
+            Renderer.material = whiteMat;
+
+            if(flashTimer <= 0)
+            {
+                flashWhite = false;
+            }
+        }
+        else
+        {
+            Renderer.material = defaultMat;
+        }
+
+
 
         //StateMachine.CurrentState.LogicUpdate(); //Re-add this when states are added to this enemy
 
