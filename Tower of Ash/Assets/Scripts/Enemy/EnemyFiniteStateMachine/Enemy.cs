@@ -44,11 +44,13 @@ public class Enemy : MonoBehaviour {
 
     bool flashWhite;
     float flashTimer = 0.2f;
+    float deathTimer = 1f;
 
     #endregion
 
     #region Particles
     [SerializeField] GameObject hitParticleContainer;
+    [SerializeField] GameObject deathParticleContainer;
     bool triggerParticles;
     #endregion
 
@@ -87,7 +89,7 @@ public class Enemy : MonoBehaviour {
             if(triggerParticles){
                 // Trigger particles
                 GameObject hitParticle = Instantiate(hitParticleContainer, transform);
-                hitParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x, transform.position.y, transform.position.z);
+                hitParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 hitParticle.GetComponent<ParticleSystem>().Play();
                 Destroy(hitParticle, 1f);
                 triggerParticles = false;
@@ -116,8 +118,27 @@ public class Enemy : MonoBehaviour {
 
         if(EnemyEntity.Health <= 0)
         {
-            SpawnTinder();
-            Destroy(gameObject);
+            //disable knockback
+
+            if(deathTimer == 1f){
+                SpawnTinder();
+
+                //disable renderer and collider
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+                //trigger particle
+                GameObject deathParticle = Instantiate(deathParticleContainer, transform);
+                deathParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                deathParticle.GetComponent<ParticleSystem>().Play();
+                Destroy(deathParticle, 2f);
+            }
+
+            if(deathTimer <= 0f) {
+                Destroy(gameObject);
+            }
+            else deathTimer -= Time.deltaTime;
+            
         }
 
     }

@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
             if(triggerParticles){
                 // Trigger particles
                 GameObject hitParticle = Instantiate(hitParticleContainer, transform);
-                hitParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x, transform.position.y, transform.position.z);
+                hitParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 hitParticle.GetComponent<ParticleSystem>().Play();
                 Destroy(hitParticle, 1f);
                 triggerParticles = false;
