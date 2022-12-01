@@ -31,6 +31,12 @@ public class Enemy : MonoBehaviour {
     public int tinderReward;
 
     [SerializeField]
+    List<GameObject> tinderList;
+
+    [SerializeField]
+    GameObject[] tinderObjects;
+
+    [SerializeField]
     Material whiteMat;
 
     [SerializeField]
@@ -58,6 +64,8 @@ public class Enemy : MonoBehaviour {
         EnemyEntity = GetComponent<Entity>();
         Renderer = GetComponent<SpriteRenderer>();
         FacingDirection = 1;
+
+        CreateTinderList();
 
     }
 
@@ -93,7 +101,7 @@ public class Enemy : MonoBehaviour {
 
         if(EnemyEntity.Health <= 0)
         {
-            playerData.tinder += tinderReward;
+            SpawnTinder();
             Destroy(gameObject);
         }
 
@@ -178,5 +186,39 @@ public class Enemy : MonoBehaviour {
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
     #endregion
+
+    void CreateTinderList()
+    {
+        int tens = tinderReward / 10;
+        for (int i = 0; i < tens; i++)
+        {
+            tinderList.Add(tinderObjects[2]);
+        }
+
+        int fives = (tinderReward % 10) / 5;
+        for (int i = 0; i < fives; i++)
+        {
+            tinderList.Add(tinderObjects[1]);
+        }
+
+        int ones = (tinderReward % 10) % 5;
+        for (int i = 0; i < ones; i++)
+        {
+            tinderList.Add(tinderObjects[0]);
+        }
+    }
+
+    void SpawnTinder()
+    {
+        for (int i = 0; i < tinderList.Count; i++)
+        {
+            Vector2 randomVel = new Vector2(Random.Range(-1f, 1f), 1).normalized;
+
+            GameObject instance = Instantiate(tinderList[i], transform.position, transform.rotation);
+            instance.GetComponent<Rigidbody2D>().velocity = randomVel * 10;
+
+        }
+    }
+
 
 }
