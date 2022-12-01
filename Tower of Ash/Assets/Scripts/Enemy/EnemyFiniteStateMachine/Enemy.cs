@@ -78,6 +78,8 @@ public class Enemy : MonoBehaviour {
         {
             flashWhite = true;
             flashTimer = 0.2f;
+
+            // Trigger particles
         }
 
         if (flashWhite)
