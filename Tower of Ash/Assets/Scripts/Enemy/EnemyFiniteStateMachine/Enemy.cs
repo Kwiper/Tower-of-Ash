@@ -43,8 +43,13 @@ public class Enemy : MonoBehaviour {
     Material defaultMat;
 
     bool flashWhite;
+    bool triggerParticles;
     float flashTimer = 0.2f;
 
+    #endregion
+
+    #region Particles
+    [SerializeField] GameObject hitParticleContainer;
     #endregion
 
     #region Unity Callback Functions
@@ -79,7 +84,14 @@ public class Enemy : MonoBehaviour {
             flashWhite = true;
             flashTimer = 0.2f;
 
-            // Trigger particles
+            if(triggerParticles){
+                // Trigger particles
+                GameObject hitParticle = Instantiate(hitParticleContainer, transform);
+                hitParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x, transform.position.y, transform.position.z);
+                hitParticle.GetComponent<ParticleSystem>().Play();
+                Destroy(hitParticle, 1f);
+                triggerParticles = false;
+            }
         }
 
         if (flashWhite)
@@ -95,6 +107,7 @@ public class Enemy : MonoBehaviour {
         else
         {
             Renderer.material = defaultMat;
+            triggerParticles = true; //reset particle trigger
         }
 
 
