@@ -43,13 +43,13 @@ public class Enemy : MonoBehaviour {
     Material defaultMat;
 
     bool flashWhite;
-    bool triggerParticles;
     float flashTimer = 0.2f;
 
     #endregion
 
     #region Particles
     [SerializeField] GameObject hitParticleContainer;
+    bool triggerParticles;
     #endregion
 
     #region Unity Callback Functions
