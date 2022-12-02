@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour {
     #region Components
     public Rigidbody2D RB { get; protected set; }
     public Animator Anim { get; protected set; }
+    public SpriteRenderer Renderer { get; protected set; }
     public Entity EnemyEntity;
     #endregion
 
@@ -29,6 +30,28 @@ public class Enemy : MonoBehaviour {
     public PlayerData playerData;
     public int tinderReward;
 
+    [SerializeField]
+    List<GameObject> tinderList;
+
+    [SerializeField]
+    GameObject[] tinderObjects;
+
+    [SerializeField]
+    Material whiteMat;
+
+    [SerializeField]
+    Material defaultMat;
+
+    bool flashWhite;
+    float flashTimer = 0.2f;
+    float deathTimer = 1f;
+
+    #endregion
+
+    #region Particles
+    [SerializeField] GameObject hitParticleContainer;
+    [SerializeField] GameObject deathParticleContainer;
+    bool triggerParticles;
     #endregion
 
     #region Unity Callback Functions
@@ -46,7 +69,10 @@ public class Enemy : MonoBehaviour {
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         EnemyEntity = GetComponent<Entity>();
+        Renderer = GetComponent<SpriteRenderer>();
         FacingDirection = 1;
+
+        CreateTinderList();
 
     }
 
@@ -55,18 +81,64 @@ public class Enemy : MonoBehaviour {
     {
         CurrentVelocity = RB.velocity;
 
-        /*if (EnemyEntity.InKnockback) 
+        if (EnemyEntity.InKnockback) 
         {
-            SetVelocityX(EnemyEntity.Knockback);
+            flashWhite = true;
+            flashTimer = 0.2f;
+
+            if(triggerParticles){
+                // Trigger particles
+                GameObject hitParticle = Instantiate(hitParticleContainer, transform);
+                hitParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                hitParticle.GetComponent<ParticleSystem>().Play();
+                Destroy(hitParticle, 1f);
+                triggerParticles = false;
+            }
         }
-        */
+
+        if (flashWhite)
+        {
+            flashTimer -= Time.deltaTime;
+            Renderer.material = whiteMat;
+
+            if(flashTimer <= 0)
+            {
+                flashWhite = false;
+            }
+        }
+        else
+        {
+            Renderer.material = defaultMat;
+            triggerParticles = true; //reset particle trigger
+        }
+
+
 
         //StateMachine.CurrentState.LogicUpdate(); //Re-add this when states are added to this enemy
 
         if(EnemyEntity.Health <= 0)
         {
-            playerData.tinder += tinderReward;
-            Destroy(gameObject);
+            //disable knockback
+
+            if(deathTimer == 1f){
+                SpawnTinder();
+
+                //disable renderer and collider
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+                //trigger particle
+                GameObject deathParticle = Instantiate(deathParticleContainer, transform);
+                deathParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                deathParticle.GetComponent<ParticleSystem>().Play();
+                Destroy(deathParticle, 2f);
+            }
+
+            if(deathTimer <= 0f) {
+                Destroy(gameObject);
+            }
+            else deathTimer -= Time.deltaTime;
+            
         }
 
     }
@@ -150,5 +222,39 @@ public class Enemy : MonoBehaviour {
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
     #endregion
+
+    void CreateTinderList()
+    {
+        int tens = tinderReward / 10;
+        for (int i = 0; i < tens; i++)
+        {
+            tinderList.Add(tinderObjects[2]);
+        }
+
+        int fives = (tinderReward % 10) / 5;
+        for (int i = 0; i < fives; i++)
+        {
+            tinderList.Add(tinderObjects[1]);
+        }
+
+        int ones = (tinderReward % 10) % 5;
+        for (int i = 0; i < ones; i++)
+        {
+            tinderList.Add(tinderObjects[0]);
+        }
+    }
+
+    void SpawnTinder()
+    {
+        for (int i = 0; i < tinderList.Count; i++)
+        {
+            Vector2 randomVel = new Vector2(Random.Range(-1f, 1f), 1).normalized;
+
+            GameObject instance = Instantiate(tinderList[i], transform.position, transform.rotation);
+            instance.GetComponent<Rigidbody2D>().velocity = randomVel * 10;
+
+        }
+    }
+
 
 }

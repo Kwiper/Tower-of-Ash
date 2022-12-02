@@ -92,6 +92,10 @@ public class Player : MonoBehaviour
     public SceneDetails PrevScene { get; private set;}
     #endregion
 
+    #region Particles
+    [SerializeField] GameObject hitParticleContainer;
+    bool triggerParticles;
+    #endregion
 
     #region Unity Callback Functions
     private void Awake()
@@ -160,7 +164,17 @@ public class Player : MonoBehaviour
         if (PlayerEntity.InKnockback)
         {
             SetVelocityX(PlayerEntity.Knockback);
+
+            if(triggerParticles){
+                // Trigger particles
+                GameObject hitParticle = Instantiate(hitParticleContainer, transform);
+                hitParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                hitParticle.GetComponent<ParticleSystem>().Play();
+                Destroy(hitParticle, 1f);
+                triggerParticles = false;
+            }
         }
+        else triggerParticles = true;
 
         if (isHit)
         {

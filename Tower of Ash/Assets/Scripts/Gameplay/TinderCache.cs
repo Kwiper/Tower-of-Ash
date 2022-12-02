@@ -10,8 +10,31 @@ public class TinderCache : MonoBehaviour
     private int tinderReward = 50;
     //private bool isCollected = false;
 
+    [SerializeField]
+    Sprite[] sprites;
+
+    SpriteRenderer renderer;
+
+    int timesHit = 0;
+
+    [SerializeField]
+    List<GameObject> tinderList;
+
+    [SerializeField]
+    GameObject[] tinderObjects;
+
+    private void Start()
+    {
+        renderer = GetComponent<SpriteRenderer>();
+        renderer.sprite = sprites[0];
+
+        CreateTinderList();
+    }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        /*
         if (other.CompareTag("Player"))
         {	
 	        playerData.tinder = playerData.tinder + tinderReward;
@@ -19,7 +42,63 @@ public class TinderCache : MonoBehaviour
             playerData.CollectedTinderCacheLocations.Add(pos);
 	        GetComponent<BoxCollider2D>().enabled = false;
 	        GetComponent<SpriteRenderer>().enabled = false;
-        }    
+        }
+        */
+
+        if (other.CompareTag("Hitbox"))
+        {
+            timesHit += 1;
+
+            if(timesHit > 3)
+            {
+                //Explode into tinder
+                SpawnTinder();
+                var pos = new Vector2(gameObject.GetComponent<Transform>().position.x, gameObject.GetComponent<Transform>().position.y);
+                playerData.CollectedTinderCacheLocations.Add(pos);
+                GetComponent<BoxCollider2D>().enabled = false;
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
+        }
+
+    }
+
+    private void Update()
+    {
+        if(timesHit <= 3)
+            renderer.sprite = sprites[timesHit];
+    }
+
+    void CreateTinderList()
+    {
+        int tens = tinderReward / 10;
+        for (int i = 0;i < tens; i++)
+        {
+            tinderList.Add(tinderObjects[2]);
+        }
+
+        int fives = (tinderReward % 10) / 5;
+        for(int i = 0; i < fives; i++)
+        {
+            tinderList.Add(tinderObjects[1]);
+        }
+
+        int ones = (tinderReward % 10) % 5;
+        for(int i = 0; i < ones; i++)
+        {
+            tinderList.Add(tinderObjects[0]);
+        }
+    }
+
+    void SpawnTinder()
+    {
+        for(int i = 0; i < tinderList.Count; i++)
+        {
+            Vector2 randomVel = new Vector2(Random.Range(-1f, 1f), 1).normalized;
+
+            GameObject instance = Instantiate(tinderList[i], transform.position, transform.rotation);
+            instance.GetComponent<Rigidbody2D>().velocity = randomVel * 10;
+
+        }
     }
 
     public void setTinderReward(int tinderRewardVal){

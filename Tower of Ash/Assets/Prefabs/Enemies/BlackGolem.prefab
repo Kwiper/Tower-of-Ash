@@ -347,6 +347,15 @@ MonoBehaviour:
   EnemyEntity: {fileID: 2311836733429714571}
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
   tinderReward: 20
+  tinderList: []
+  tinderObjects:
+  - {fileID: 6387578469321961627, guid: 1692eb7c3bd8acc4582f3c48c58fa20e, type: 3}
+  - {fileID: 7604189765151603691, guid: 861c6126f26612a419f77bcad20eaefe, type: 3}
+  - {fileID: 3590801506654203102, guid: 29d70f0acfb98924b8191a8df1574c7c, type: 3}
+  whiteMat: {fileID: 2100000, guid: f9f4b35fea0503646a69073166fefac2, type: 2}
+  defaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  hitParticleContainer: {fileID: 211793005303880901, guid: 5063217c14055cf4e9b4a1fd847eb5c9, type: 3}
+  deathParticleContainer: {fileID: 211793005303880901, guid: ae83cee101d738c4b8f75374db5302c1, type: 3}
   wallCheck: {fileID: 6537618802829215449}
   ledgeCheck: {fileID: 3782290455052270214}
   chargePoint: {fileID: 5626284875465296616}
@@ -358,7 +367,7 @@ MonoBehaviour:
     m_Bits: 256
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1600
+    m_Bits: 17984
   aggroPoint: {fileID: 4989530514771209631}
   aggroRadius: 8
   FirePillar: {fileID: 2783928077990468877, guid: fa3ac7152c941de4189eab68d692d50f, type: 3}

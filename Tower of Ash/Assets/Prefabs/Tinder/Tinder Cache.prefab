@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1207007360010098829}
   - component: {fileID: 1207007360010098828}
-  - component: {fileID: 1207007360010098827}
   - component: {fileID: 1207007360010098830}
+  - component: {fileID: 2974283143889224664}
   m_Layer: 0
   m_Name: Tinder Cache
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207007360010098826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: -0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 779936bd099a0ec4c80642e525647f9a, type: 3}
+  m_Sprite: {fileID: -95575579, guid: b682d9638f44af348bf93dc4cb7f2622, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,32 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1207007360010098827
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207007360010098826}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3, y: 1.57}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.3055058, y: 1.6106396}
-  m_EdgeRadius: 0
 --- !u!114 &1207007360010098830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +100,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
   tinderReward: 50
+  sprites:
+  - {fileID: -95575579, guid: b682d9638f44af348bf93dc4cb7f2622, type: 3}
+  - {fileID: -1437455710, guid: b682d9638f44af348bf93dc4cb7f2622, type: 3}
+  - {fileID: -1045070282, guid: b682d9638f44af348bf93dc4cb7f2622, type: 3}
+  - {fileID: 607306243, guid: b682d9638f44af348bf93dc4cb7f2622, type: 3}
+  tinderList: []
+  tinderObjects:
+  - {fileID: 6387578469321961627, guid: 1692eb7c3bd8acc4582f3c48c58fa20e, type: 3}
+  - {fileID: 7604189765151603691, guid: 861c6126f26612a419f77bcad20eaefe, type: 3}
+  - {fileID: 3590801506654203102, guid: 29d70f0acfb98924b8191a8df1574c7c, type: 3}
+--- !u!61 &2974283143889224664
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207007360010098826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2}
+  m_EdgeRadius: 0

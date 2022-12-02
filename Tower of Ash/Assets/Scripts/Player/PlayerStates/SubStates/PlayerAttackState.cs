@@ -28,7 +28,6 @@ public class PlayerAttackState : PlayerAbilityState {
     public override void AnimationTrigger()
     {
         base.AnimationTrigger();
-        stepForward = !stepForward;
     }
 
     public override void DoChecks()
