@@ -13,7 +13,6 @@ public class PlayerState
     protected bool isExitingState;
 
 
-
     protected float startTime;
 
     private string animBoolName;
@@ -64,8 +63,6 @@ public class PlayerState
     }
 
     public virtual void AnimationTrigger() { }
-
-    public virtual void ParticleTrigger() { }
 
     public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
 
