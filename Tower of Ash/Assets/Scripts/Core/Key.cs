@@ -8,7 +8,13 @@ public class Key : MonoBehaviour
     private PlayerData playerData;
     public bool isCollected = false;
     [SerializeField]
-    public int keyIdentifier = 0;   
+    public int keyIdentifier = 0;
+
+    [SerializeField]
+    Sprite[] sprites;
+
+    SpriteRenderer sRenderer;
+
     private int doorKey;
     private bool doorCollected;
     private bool inList = false;
@@ -17,6 +23,8 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sRenderer = GetComponent<SpriteRenderer>();
+
         if (playerData.keys.Count == 0){
             playerData.keys.Add(this.keyIdentifier);
             playerData.keysCollected.Add(this.isCollected);
@@ -48,12 +56,22 @@ public class Key : MonoBehaviour
       
     }
 
+    private void Update()
+    {
+        if (isCollected)
+        {
+            sRenderer.sprite = sprites[1];
+        }
+        else
+        {
+            sRenderer.sprite = sprites[0];
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Hitbox"))
         {	
-	        GetComponent<BoxCollider2D>().enabled = false;
-	        GetComponent<SpriteRenderer>().enabled = false;
             isCollected = true;
             for (int i = 0; i < playerData.keys.Count; i++) 
             {

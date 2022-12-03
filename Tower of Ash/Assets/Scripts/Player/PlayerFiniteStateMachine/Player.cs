@@ -331,6 +331,8 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 
+    private void ParticleTrigger() => StateMachine.CurrentState.ParticleTrigger();
+
     private void Flip()
     {
         FacingDirection *= -1;
