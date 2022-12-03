@@ -363,6 +363,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ResetHealth()
+    {
+        PlayerEntity.Health = PlayerEntity.maxHealth;
+    }
+
     public void ResetHealCharges()
     {
         playerData.healCharges = playerData.maxHealCharges;
