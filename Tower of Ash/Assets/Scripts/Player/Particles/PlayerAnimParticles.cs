@@ -15,11 +15,20 @@ public class PlayerAnimParticles : MonoBehaviour
     #endregion
 
     #region Attack Particles
+    [SerializeField] GameObject attack1ParticleContainer;
+    [SerializeField] GameObject attack2ParticleContainer;
+    [SerializeField] GameObject attack3ParticleContainer;
+
+    [SerializeField] GameObject upAttackParticleContainer;
+    [SerializeField] GameObject sideAirParticleContainer;
+    [SerializeField] GameObject downAirParticleContainer;
+
     [SerializeField] GameObject chargeAttackParticleContainer;
     [SerializeField] GameObject airChargeAttackParticleContainer;
     #endregion
 
     #region Misc Particles
+    [SerializeField] GameObject fireballAnimParticleContainer;
     [SerializeField] GameObject healParticleContainer;
     #endregion
 
@@ -97,5 +106,60 @@ public class PlayerAnimParticles : MonoBehaviour
         jcaParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         jcaParticle.GetComponent<ParticleSystem>().Play();
         Destroy(jcaParticle, 1f);
+    }
+
+    public virtual void triggerAttack1Particle(){
+        GameObject a1Particle = Instantiate(attack1ParticleContainer, transform);
+        if(player.FacingDirection == 1) a1Particle.transform.position = new Vector3(transform.position.x+2.5f, transform.position.y, transform.position.z);
+        else a1Particle.transform.position = new Vector3(transform.position.x-2.5f, transform.position.y, transform.position.z);
+        a1Particle.GetComponent<ParticleSystem>().Play();
+        Destroy(a1Particle, 1f);
+    }
+
+    public virtual void triggerAttack2Particle(){
+        GameObject a2Particle = Instantiate(attack2ParticleContainer, transform);
+        if(player.FacingDirection == 1) a2Particle.transform.position = new Vector3(transform.position.x+2.5f, transform.position.y, transform.position.z);
+        else a2Particle.transform.position = new Vector3(transform.position.x-2.5f, transform.position.y, transform.position.z);
+        a2Particle.GetComponent<ParticleSystem>().Play();
+        Destroy(a2Particle, 1f);
+    }
+
+    public virtual void triggerAttack3Particle(){
+        GameObject a3Particle = Instantiate(attack3ParticleContainer, transform);
+        if(player.FacingDirection == 1) a3Particle.transform.position = new Vector3(transform.position.x+2f, transform.position.y, transform.position.z);
+        else a3Particle.transform.position = new Vector3(transform.position.x-2f, transform.position.y, transform.position.z);
+        a3Particle.GetComponent<ParticleSystem>().Play();
+        Destroy(a3Particle, 1f);
+    }
+
+    public virtual void triggerUpAttackParticle(){
+        GameObject uaParticle = Instantiate(upAttackParticleContainer, transform);
+        uaParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        uaParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(uaParticle, 1f);
+    }
+
+    public virtual void triggerSideAirParticle(){
+        GameObject saParticle = Instantiate(sideAirParticleContainer, transform);
+        if(player.FacingDirection == 1) saParticle.transform.position = new Vector3(transform.position.x+2.5f, transform.position.y, transform.position.z);
+        else saParticle.transform.position = new Vector3(transform.position.x-2.5f, transform.position.y, transform.position.z);
+        saParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(saParticle, 1f);
+    }
+
+    public virtual void triggerDownAirParticle(){
+        GameObject daParticle = Instantiate(downAirParticleContainer, transform);
+        if(player.FacingDirection == 1) daParticle.transform.position = new Vector3(transform.position.x+.5f, transform.position.y, transform.position.z);
+        else daParticle.transform.position = new Vector3(transform.position.x-.5f, transform.position.y, transform.position.z);
+        daParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(daParticle, 1f);
+    }
+
+    public virtual void triggerFireballAnimParticle(){
+        GameObject faParticle = Instantiate(fireballAnimParticleContainer, transform);
+        if(player.FacingDirection == 1) faParticle.transform.position = new Vector3(transform.position.x+0.5f, transform.position.y, transform.position.z);
+        else faParticle.transform.position = new Vector3(transform.position.x-0.5f, transform.position.y, transform.position.z);
+        faParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(faParticle, 1f);
     }
 }
