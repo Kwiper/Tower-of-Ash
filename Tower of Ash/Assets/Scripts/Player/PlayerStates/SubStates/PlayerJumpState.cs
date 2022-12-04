@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerJumpState : PlayerAbilityState {
-
+    
     private int amountOfJumpsLeft;
+
     public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
         amountOfJumpsLeft = playerData.amountOfJumps;
@@ -16,6 +17,12 @@ public class PlayerJumpState : PlayerAbilityState {
         player.InputHandler.UseJumpInput();
 
         player.SetVelocityY(playerData.jumpVelocity);
+
+        GameObject jParticle = MonoBehaviour.Instantiate(player.jumpParticleContainer, player.transform);
+        jParticle.transform.position = new Vector3(player.transform.position.x, player.GetComponent<BoxCollider2D>().bounds.min.y+.1f, player.transform.position.z);
+        jParticle.GetComponent<ParticleSystem>().Play();
+        MonoBehaviour.Destroy(jParticle, 1f);
+
         isAbilityDone = true;
 
         amountOfJumpsLeft--;

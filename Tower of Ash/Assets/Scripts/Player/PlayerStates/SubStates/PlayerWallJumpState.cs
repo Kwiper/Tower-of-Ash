@@ -19,6 +19,11 @@ public class PlayerWallJumpState : PlayerAbilityState {
         player.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, wallJumpDirection);
         player.CheckIfShouldFlip(wallJumpDirection);
 
+        GameObject jParticle = MonoBehaviour.Instantiate(player.jumpParticleContainer, player.transform);
+        jParticle.transform.position = new Vector3(player.transform.position.x, player.transform.position.y-.5f, player.transform.position.z);
+        jParticle.GetComponent<ParticleSystem>().Play();
+        MonoBehaviour.Destroy(jParticle, 1f);
+
         player.JumpState.DecreaseAmountOfJumpsLeft();
     }
 
