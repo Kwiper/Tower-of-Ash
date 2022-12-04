@@ -624,9 +624,37 @@ MonoBehaviour:
     m_ActionId: 49969b7e-e1b6-41d4-8d7b-b3202ec0fc5b
     m_ActionName: Gameplay/Heal[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6238124248561127293}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnLookInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0cb3e82e-a6cb-4fae-bc35-d0c04ffec918
     m_ActionName: Gameplay/LookAround[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6238124248561127293}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnInteractInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 289c885e-dcf9-490f-b868-20f77abecf70
+    m_ActionName: Gameplay/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -760,5 +788,5 @@ MonoBehaviour:
   downAirParticleContainer: {fileID: 4687617796673544654, guid: b395a84eb84342449a0ab7124487287b, type: 3}
   chargeAttackParticleContainer: {fileID: 4687617796673544654, guid: 4390e94c2f1b498469185d1f68d8a40c, type: 3}
   airChargeAttackParticleContainer: {fileID: 4687617796673544654, guid: f5433d5c90dfb6741a14f5f54353f832, type: 3}
-  fireballAnimParticleContainer: {fileID: 0}
+  fireballAnimParticleContainer: {fileID: 4687617796673544654, guid: 47dac032967bbd74d84f9da794cb9a3a, type: 3}
   healParticleContainer: {fileID: 4687617796673544654, guid: 0ef0a0dcf073d8242b95d9308b71a1e3, type: 3}
