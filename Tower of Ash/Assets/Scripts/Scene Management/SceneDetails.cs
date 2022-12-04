@@ -8,7 +8,7 @@ public class SceneDetails : MonoBehaviour
     [SerializeField] List<SceneDetails> connectedScenes;
     [SerializeField] List<EnemySpawner> enemySpawners;
     public bool IsLoaded = false;
-
+    Component[] enemySpawners2;
 
     //GameObject Play;
     
@@ -18,6 +18,14 @@ public class SceneDetails : MonoBehaviour
     {
         Play =  GameObject.FindGameObjectsWithTag("Player")[0];
         Player = Play.GetComponent<Player>();
+        enemySpawners2 = GetComponentsInChildren(typeof(EnemySpawner));
+        Debug.Log($"Entered {gameObject.name} and it has {enemySpawners2.Length} enemies in it!");
+        foreach (EnemySpawner enemy in enemySpawners2) 
+        {
+            //Adds enemySpawners to EnemySpawners list
+            enemySpawners.Add(enemy);
+
+        }            
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
