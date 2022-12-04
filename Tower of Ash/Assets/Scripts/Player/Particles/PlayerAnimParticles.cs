@@ -7,15 +7,19 @@ public class PlayerAnimParticles : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Player player;
 
-    #region Particles
+    #region Movement Particles
     [SerializeField] GameObject moveStartParticleContainer;
     [SerializeField] GameObject moveParticleContainer;
     [SerializeField] GameObject wallSlideParticleContainer;
+    [SerializeField] GameObject dashParticleContainer;
+    #endregion
+
+    #region Attack Particles
     #endregion
 
     #region Misc
     private bool moveStartTriggered = false;
-    private bool jumpUpTriggered = false;
+    private bool dashTriggered = false;
     #endregion
 
     // Start is called before the first frame update
@@ -28,7 +32,7 @@ public class PlayerAnimParticles : MonoBehaviour
     void Update()
     {
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("MoveStart")) moveStartTriggered = false;
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("JumpUp1")) jumpUpTriggered = false;
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Dash")) dashTriggered = false;
     }
 
     public virtual void triggerMoveStartParticle(){
@@ -55,5 +59,16 @@ public class PlayerAnimParticles : MonoBehaviour
         else wsParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x+.1f, GetComponent<BoxCollider2D>().bounds.max.y, transform.position.z);
         wsParticle.GetComponent<ParticleSystem>().Play();
         Destroy(wsParticle, 1f);
+    }
+
+    public virtual void triggerDashParticle(){
+        if(!dashTriggered){
+            GameObject dashParticle = Instantiate(dashParticleContainer, transform);
+            dashParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            dashParticle.GetComponent<ParticleSystem>().Play();
+            Destroy(dashParticle, 1f);
+
+            dashTriggered = true;
+        }
     }
 }
