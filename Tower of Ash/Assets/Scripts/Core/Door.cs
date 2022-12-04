@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Door : MonoBehaviour
 {
@@ -10,17 +11,21 @@ public class Door : MonoBehaviour
     private int keyIdentifier = 0;
     private bool isOpen = false;
     private Key doorKey;
+    private Tilemap Tilemapper;
+    //TMRenderer.color = Color.gray;
 
     // Start is called before the first frame update
     void Start()
     {
+        Tilemapper = GetComponent<Tilemap>();
         for (int i = 0; i < playerData.keys.Count; i++) 
         {
             //doorKey = doorKeyObj.GetComponent<Key>();
             if (playerData.keys[i] == keyIdentifier && playerData.keysCollected[i] == true)
             {	
-	            GetComponent<BoxCollider2D>().enabled = false;
-	            GetComponent<SpriteRenderer>().enabled = false;
+	            GetComponent<CompositeCollider2D>().enabled = false;
+                Tilemapper.color = Color.gray;
+
                 isOpen = true;
             } 
         }        
@@ -34,8 +39,8 @@ public class Door : MonoBehaviour
             {
                 if (playerData.keys[i] == keyIdentifier && playerData.keysCollected[i] == true)
                 {	
-	                GetComponent<BoxCollider2D>().enabled = false;
-	                GetComponent<SpriteRenderer>().enabled = false;
+	                GetComponent<CompositeCollider2D>().enabled = false;
+                    Tilemapper.color = Color.gray;                    
                     isOpen = true;
                 } 
             }

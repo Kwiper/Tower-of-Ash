@@ -42,7 +42,7 @@ public class Key : MonoBehaviour
                     inList = true;
                     if(doorCollected == true){
 	                    GetComponent<BoxCollider2D>().enabled = false;
-	                    GetComponent<SpriteRenderer>().enabled = false;
+	                    sRenderer.sprite = sprites[1];
                         isCollected = true;
                     }
                 }
