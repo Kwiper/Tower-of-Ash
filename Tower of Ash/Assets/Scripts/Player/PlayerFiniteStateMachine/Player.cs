@@ -333,6 +333,7 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 
+
     private void Flip()
     {
         FacingDirection *= -1;
@@ -361,6 +362,11 @@ public class Player : MonoBehaviour
         {
             PlayerEntity.Health = PlayerEntity.maxHealth;
         }
+    }
+
+    public void ResetHealth()
+    {
+        PlayerEntity.Health = PlayerEntity.maxHealth;
     }
 
     public void ResetHealCharges()
