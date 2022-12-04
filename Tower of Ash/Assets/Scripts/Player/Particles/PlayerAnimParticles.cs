@@ -17,6 +17,10 @@ public class PlayerAnimParticles : MonoBehaviour
     #region Attack Particles
     #endregion
 
+    #region Misc Particles
+    [SerializeField] GameObject healParticleContainer;
+    #endregion
+
     #region Misc
     private bool moveStartTriggered = false;
     private bool dashTriggered = false;
@@ -70,5 +74,12 @@ public class PlayerAnimParticles : MonoBehaviour
 
             dashTriggered = true;
         }
+    }
+
+    public virtual void triggerHealParticle(){
+        GameObject healParticle = Instantiate(healParticleContainer, transform);
+        healParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        healParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(healParticle, 1f);
     }
 }
