@@ -93,7 +93,9 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Particles
-    [SerializeField] GameObject hitParticleContainer;
+    [SerializeField] public GameObject hitParticleContainer;
+    [SerializeField] public GameObject jumpParticleContainer;
+    [SerializeField] public GameObject wallJumpParticleContainer;
     bool triggerParticles;
     #endregion
 

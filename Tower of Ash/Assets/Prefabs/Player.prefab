@@ -684,7 +684,9 @@ MonoBehaviour:
   healthCanCountdown: 1
   isHit: 0
   invincible: 0
-  hitParticleContainer: {fileID: 0}
+  hitParticleContainer: {fileID: 211793005303880901, guid: cf26afccd0320e146892eb301c1d896d, type: 3}
+  jumpParticleContainer: {fileID: 4687617796673544654, guid: f628b7bcae5702a4db5331b9bcbb7fae, type: 3}
+  wallJumpParticleContainer: {fileID: 4687617796673544654, guid: 2ec716ff76e64034cabdb51c1082b98d, type: 3}
 --- !u!95 &6238124248561127292
 Animator:
   serializedVersion: 4
@@ -745,5 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6238124248561127292}
+  player: {fileID: 6238124248561127291}
   moveStartParticleContainer: {fileID: 4687617796673544654, guid: d7dd75511768ba64c9e84358f8bf8330, type: 3}
   moveParticleContainer: {fileID: 4687617796673544654, guid: b94170c9b127ba348bb07f4be2ec86bb, type: 3}
+  wallSlideParticleContainer: {fileID: 4687617796673544654, guid: 0b861f0f32944c34f9de578b55c2f52f, type: 3}

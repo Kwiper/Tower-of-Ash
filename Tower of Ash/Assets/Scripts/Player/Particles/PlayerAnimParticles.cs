@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerAnimParticles : MonoBehaviour
 {
-    public Animator animator;
+    [SerializeField] Animator animator;
+    [SerializeField] Player player;
 
     #region Particles
     [SerializeField] GameObject moveStartParticleContainer;
     [SerializeField] GameObject moveParticleContainer;
+    [SerializeField] GameObject wallSlideParticleContainer;
     #endregion
 
     #region Misc
     private bool moveStartTriggered = false;
+    private bool jumpUpTriggered = false;
     #endregion
 
     // Start is called before the first frame update
@@ -25,6 +28,7 @@ public class PlayerAnimParticles : MonoBehaviour
     void Update()
     {
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("MoveStart")) moveStartTriggered = false;
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("JumpUp1")) jumpUpTriggered = false;
     }
 
     public virtual void triggerMoveStartParticle(){
@@ -43,5 +47,13 @@ public class PlayerAnimParticles : MonoBehaviour
         moveParticle.transform.position = new Vector3(transform.position.x, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
         moveParticle.GetComponent<ParticleSystem>().Play();
         Destroy(moveParticle, 1f);
+    }
+
+    public virtual void triggerWallSlideParticle(){
+        GameObject wsParticle = Instantiate(wallSlideParticleContainer, transform);
+        if(player.FacingDirection == 1) wsParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x-.1f, GetComponent<BoxCollider2D>().bounds.max.y, transform.position.z);
+        else wsParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x+.1f, GetComponent<BoxCollider2D>().bounds.max.y, transform.position.z);
+        wsParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(wsParticle, 1f);
     }
 }
