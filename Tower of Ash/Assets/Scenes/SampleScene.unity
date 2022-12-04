@@ -1816,6 +1816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 44779818829442767, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: airChargeAttackParticleContainer
+      value: 
+      objectReference: {fileID: 4687617796673544654, guid: f5433d5c90dfb6741a14f5f54353f832, type: 3}
     - target: {fileID: 854430344821610007, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_LinearDrag
       value: 0.5

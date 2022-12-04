@@ -15,6 +15,8 @@ public class PlayerAnimParticles : MonoBehaviour
     #endregion
 
     #region Attack Particles
+    [SerializeField] GameObject chargeAttackParticleContainer;
+    [SerializeField] GameObject airChargeAttackParticleContainer;
     #endregion
 
     #region Misc Particles
@@ -81,5 +83,19 @@ public class PlayerAnimParticles : MonoBehaviour
         healParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         healParticle.GetComponent<ParticleSystem>().Play();
         Destroy(healParticle, 1f);
+    }
+
+    public virtual void triggerChargeAttackParticle(){
+        GameObject caParticle = Instantiate(chargeAttackParticleContainer, transform);
+        caParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        caParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(caParticle, 1f);
+    }
+
+    public virtual void triggerAirChargeAttackParticle(){
+        GameObject jcaParticle = Instantiate(airChargeAttackParticleContainer, transform);
+        jcaParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        jcaParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(jcaParticle, 1f);
     }
 }
