@@ -14,7 +14,9 @@ public class MapCollider : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            data.ids.Add(id);
+            if (!data.ids.Contains(id)) {
+                data.ids.Add(id);
+            }
         }
     }
 }
