@@ -15,6 +15,7 @@ public class BossAnimParticles : MonoBehaviour
     #region Attack Particles
     [SerializeField] GameObject attackParticleContainer;
     [SerializeField] GameObject jumpAttackParticleContainer;
+    [SerializeField] GameObject pillarCrushParticleContainer;
 
     [SerializeField] GameObject fireballStabParticleContainer;
     [SerializeField] GameObject fireballLaunchParticleContainer;
@@ -22,6 +23,7 @@ public class BossAnimParticles : MonoBehaviour
     [SerializeField] GameObject lungeChargeParticleContainer;
     [SerializeField] GameObject lungeParticleContainer;
 
+    [SerializeField] GameObject bulletHellChargeParticleContainer;
     [SerializeField] GameObject bulletHellBurstParticleContainer;
     [SerializeField] GameObject bulletHellFallParticleContainer;
     #endregion
@@ -37,10 +39,12 @@ public class BossAnimParticles : MonoBehaviour
     {
         
     }
-
+    
+    //movement
     public virtual void triggerMoveParticle(){
         GameObject moveParticle = Instantiate(moveParticleContainer, transform);
-        moveParticle.transform.position = new Vector3(transform.position.x, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
+        if(boss.FacingDirection == 1) moveParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
+        else moveParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
         moveParticle.GetComponent<ParticleSystem>().Play();
         Destroy(moveParticle, 1f);
     }
@@ -50,5 +54,79 @@ public class BossAnimParticles : MonoBehaviour
         jumpParticle.transform.position = new Vector3(transform.position.x, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
         jumpParticle.GetComponent<ParticleSystem>().Play();
         Destroy(jumpParticle, 1f);
+    }
+
+    //attacks
+    public virtual void triggerAttackParticle(){
+        GameObject atkParticle = Instantiate(attackParticleContainer, transform);
+        atkParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        atkParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(atkParticle, 1f);
+    }
+
+    public virtual void triggerJumpAttackParticle(){
+        GameObject jatkParticle = Instantiate(jumpAttackParticleContainer, transform);
+        jatkParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        jatkParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(jatkParticle, 1f);
+    }
+
+    public virtual void triggerPillarCrushParticle(){
+        GameObject pcParticle = Instantiate(pillarCrushParticleContainer, transform);
+        pcParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        pcParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(pcParticle, 1f);
+    }
+
+    //fireball anim
+    public virtual void triggerFireballStabParticle(){
+        GameObject fsParticle = Instantiate(fireballStabParticleContainer, transform);
+        fsParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        fsParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(fsParticle, 1f);
+    }
+
+    public virtual void triggerFireballLaunchParticle(){
+        GameObject flParticle = Instantiate(fireballLaunchParticleContainer, transform);
+        flParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        flParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(flParticle, 1f);
+    }
+
+    //lunge anim
+    public virtual void triggerLungeChargeParticle(){
+        GameObject lcParticle = Instantiate(lungeChargeParticleContainer, transform);
+        lcParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        lcParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(lcParticle, 1f);
+    }
+
+    public virtual void triggerLungeParticle(){
+        GameObject lParticle = Instantiate(lungeParticleContainer, transform);
+        lParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        lParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(lParticle, 1f);
+    }
+
+    //final phase
+    public virtual void triggerBulletHellChargeParticle(){
+        GameObject bhcParticle = Instantiate(bulletHellChargeParticleContainer, transform);
+        bhcParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        bhcParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(bhcParticle, 1f);
+    }
+
+    public virtual void triggerBulletHellBurstParticle(){
+        GameObject bhbParticle = Instantiate(bulletHellBurstParticleContainer, transform);
+        bhbParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        bhbParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(bhbParticle, 1f);
+    }
+
+    public virtual void triggerBulletHellFallParticle(){
+        GameObject bhfParticle = Instantiate(bulletHellFallParticleContainer, transform);
+        bhfParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        bhfParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(bhfParticle, 1f);
     }
 }

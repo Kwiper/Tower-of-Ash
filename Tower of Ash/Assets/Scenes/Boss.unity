@@ -886,7 +886,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -910,7 +910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808370832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.091125, y: 3.995748, z: -10}
+  m_LocalPosition: {x: -10.655822, y: -0.9392841, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1021,6 +1021,7 @@ GameObject:
   - component: {fileID: 2099904394}
   - component: {fileID: 2099904393}
   - component: {fileID: 2099904400}
+  - component: {fileID: 2099904401}
   m_Layer: 9
   m_Name: Boss
   m_TagString: Enemy
@@ -1198,8 +1199,12 @@ MonoBehaviour:
   EnemyEntity: {fileID: 2099904393}
   playerData: {fileID: 0}
   tinderReward: 0
+  tinderList: []
+  tinderObjects: []
   whiteMat: {fileID: 2100000, guid: f9f4b35fea0503646a69073166fefac2, type: 2}
   defaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  hitParticleContainer: {fileID: 0}
+  deathParticleContainer: {fileID: 0}
   AggroPoint: {fileID: 1885970499}
   playerLayer:
     serializedVersion: 2
@@ -1221,6 +1226,30 @@ MonoBehaviour:
   - {fileID: 1861503307046471866, guid: 8f6ef7197ba66df4885f9adf855b005e, type: 3}
   - {fileID: 461897021900328508, guid: de4473ed6301e6e4fa2d41b84d75bb7d, type: 3}
   canBulletHell: 1
+--- !u!114 &2099904401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099904392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb570a8aefdd6949947838e4f4a3e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2099904394}
+  boss: {fileID: 2099904400}
+  moveParticleContainer: {fileID: 4687617796673544654, guid: 6bde886acff337d45a617a45d1e684d9, type: 3}
+  jumpParticleContainer: {fileID: 4687617796673544654, guid: a529b59f09da5ad47972bf6bacb47c7d, type: 3}
+  attackParticleContainer: {fileID: 0}
+  jumpAttackParticleContainer: {fileID: 0}
+  fireballStabParticleContainer: {fileID: 0}
+  fireballLaunchParticleContainer: {fileID: 0}
+  lungeChargeParticleContainer: {fileID: 0}
+  lungeParticleContainer: {fileID: 0}
+  bulletHellBurstParticleContainer: {fileID: 0}
+  bulletHellFallParticleContainer: {fileID: 0}
 --- !u!1 &2143990395
 GameObject:
   m_ObjectHideFlags: 0
