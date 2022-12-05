@@ -46,7 +46,7 @@ public class PassThrough : MonoBehaviour
  
         for (int i = 0; i < batsToAdd.Length; i++) 
         {
-            Debug.Log($" {batsToAdd[i].gameObject.name} is now ignoring Platforms");
+            //Debug.Log($" {batsToAdd[i].gameObject.name} is now ignoring Platforms");
             Physics2D.IgnoreCollision(batsToAdd[i].GetComponent<BoxCollider2D>(), GetComponent<CompositeCollider2D>(), true);
         }
         letBats = true;

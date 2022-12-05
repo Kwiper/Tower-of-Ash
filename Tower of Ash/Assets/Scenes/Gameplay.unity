@@ -32341,6 +32341,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: 854430344821610011, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: lookAdjustmentSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 854430344821610013, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: lookSpeed
+      value: 27.5
+      objectReference: {fileID: 0}
     - target: {fileID: 854430344821610013, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: invincible
       value: 0
@@ -56765,7 +56773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2258909398225011695, guid: cd8b0321dab9072479957ae34828857a, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 2258909398225011695, guid: cd8b0321dab9072479957ae34828857a, type: 3}
       propertyPath: m_AnchorMax.x
