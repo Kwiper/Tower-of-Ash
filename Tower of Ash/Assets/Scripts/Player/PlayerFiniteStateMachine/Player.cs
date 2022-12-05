@@ -65,7 +65,15 @@ public class Player : MonoBehaviour
     public bool hitSpike = false;
     public bool firstReload = false;
     public Vector2 spawnPoint = new Vector2(-2,-58);
+    private Vector2 displaceVector;
+    private Vector2 prevDisplaceVector = new Vector2(0,0);
+    private int lookPosState = 0;
+    //0 is inactive
+    //1 is returning to 0
+    //2 is going to 1 again
     private Vector2 lookPosDefault;
+    private float xLookDisplace = 0;
+    private float yLookDisplace = 0;
     private Vector2 spikeCheckPoint;
     private Collider2D newWorldBound;
     //public bool FreezePos;
@@ -74,6 +82,7 @@ public class Player : MonoBehaviour
     #region Other variables
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
+    public float lookDisplacement = 0f;
     private Vector2 workspace;
 
 
@@ -252,9 +261,82 @@ public class Player : MonoBehaviour
 
     public void SetLookDisplacement()
     {
+        displaceVector = new Vector2(InputHandler.NormLookInputX,InputHandler.NormLookInputY);
+        //Debug.Log("Look displacement is equal to "+lookDisplacement);
+
+        if(lookDisplacement < 1f && displaceVector != new Vector2(0,0) && lookPosState == 0){
+            lookDisplacement = lookDisplacement+0.025f;
+            //Looking Left
+            if(displaceVector != prevDisplaceVector){
+                Debug.Log("displaceVector is "+displaceVector.x+","+displaceVector.y);
+                Debug.Log("prevdisplaceVector is "+prevDisplaceVector.x+","+prevDisplaceVector.y);
+                lookDisplacement = 0f;
+                Debug.Log("Decreasing Look displacement to "+lookDisplacement);
+            }
+            prevDisplaceVector = displaceVector;
+            xLookDisplace = (InputHandler.NormLookInputX*lookDisplacement);
+            yLookDisplace = (InputHandler.NormLookInputY*lookDisplacement);
+        }
+        //Caps Look displacement at 1f
+        else if(lookDisplacement >= 1f && displaceVector != new Vector2(0,0) && displaceVector == prevDisplaceVector && lookPosState == 0){
+            lookDisplacement = 1f;
+            xLookDisplace = (InputHandler.NormLookInputX*lookDisplacement);
+            yLookDisplace = (InputHandler.NormLookInputY*lookDisplacement);
+        }
+        //Adjusts look displacement to not jump to new coords
+        else if(lookDisplacement >= 1f && displaceVector != new Vector2(0,0) && displaceVector != prevDisplaceVector && lookPosState == 0){
+            //lookDisplacement = lookDisplacement/2;
+            lookDisplacement = lookDisplacement-0.05f;
+            //lookDisplacement = 0f;
+            lookPosState = 1;
+            xLookDisplace = (InputHandler.NormLookInputX*lookDisplacement);
+            yLookDisplace = (InputHandler.NormLookInputY*lookDisplacement);
+            prevDisplaceVector = displaceVector;
+        }
+        else if(lookDisplacement >= 1f && displaceVector != new Vector2(0,0) && lookPosState != 0){
+            //Return to 0
+            if(lookPosState == 1){
+            lookDisplacement = lookDisplacement-0.05f;
+            }
+            //Returned to 0, reset to 0 incase went over 0, change state to moving towards new position
+            else if(lookDisplacement <= 0f && lookPosState == 1){
+                lookDisplacement = 0f;
+                lookPosState = 2;
+            }
+            //Moving towards 1 again
+            else if(lookPosState == 2){
+                lookDisplacement = lookDisplacement+0.025f;
+            }
+            //Moved towards one, change state back to inactive
+            else if(lookDisplacement >= 1f && lookPosState == 2){
+                lookDisplacement = 1f;
+                lookPosState = 0;                
+            }
+            xLookDisplace = (prevDisplaceVector.x*lookDisplacement);
+            yLookDisplace = (prevDisplaceVector.y*lookDisplacement);
+        }
+
+        else if(lookDisplacement > 0f && displaceVector == new Vector2(0,0)){
+            lookDisplacement = lookDisplacement-0.05f;
+            lookPosState = 0;
+            xLookDisplace = (prevDisplaceVector.x*lookDisplacement);
+            yLookDisplace = (prevDisplaceVector.y*lookDisplacement);
+        }
+        else if(lookDisplacement < 0f && displaceVector == new Vector2(0,0)){
+            lookDisplacement = 0f;
+            lookPosState = 0;
+            xLookDisplace = (prevDisplaceVector.x*lookDisplacement);
+            yLookDisplace = (prevDisplaceVector.y*lookDisplacement);
+        }
+
+        //var lookInputX = InputHandler.NormLookInputX;
+        //var lookInputY = InputHandler.NormLookInputY;
+        //xLookDisplace = (InputHandler.NormLookInputX*lookDisplacement);
+        //yLookDisplace = (InputHandler.NormLookInputY*lookDisplacement);
         //Debug.Log(InputHandler.NormLookInputX);
-        //Debug.Log(InputHandler.NormLookInputY);        
-        cameraPoint.position = new Vector2(gameObject.GetComponent<Transform>().position.x+InputHandler.NormLookInputX, gameObject.GetComponent<Transform>().position.y+InputHandler.NormLookInputY+1);
+        //Debug.Log(InputHandler.NormLookInputY);
+        //InputHandler.NormLookInputX
+        cameraPoint.position = new Vector2(gameObject.GetComponent<Transform>().position.x+xLookDisplace, gameObject.GetComponent<Transform>().position.y+yLookDisplace);
     }
 
     #endregion
