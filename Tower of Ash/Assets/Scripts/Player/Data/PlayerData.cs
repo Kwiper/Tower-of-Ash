@@ -77,4 +77,7 @@ public class PlayerData : ScriptableObject
     [Header("Doors")]
     public List<int> keys;
     public List<bool> keysCollected;
+
+    [Header("Map")]
+    public List<int> ids;
 }
