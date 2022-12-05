@@ -59,11 +59,7 @@ public class BossIdleState : EnemyState
 
         if(timer <= 0)
         {
-            // Temp state changes
-            boss.StateMachine.ChangeState(boss.WalkState);
 
-
-            /*
             // HP range 75% - 100%            
             if(boss.EnemyEntity.Health > (boss.EnemyEntity.maxHealth * 0.75)) 
             {
@@ -253,7 +249,7 @@ public class BossIdleState : EnemyState
                         boss.StateMachine.ChangeState(boss.LungeState); // Lunge
                     }
                 }
-            }*/
+            }
         }
     }
 
