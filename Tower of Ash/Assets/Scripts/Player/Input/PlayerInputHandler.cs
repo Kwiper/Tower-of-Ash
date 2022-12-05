@@ -20,6 +20,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool HealInput { get; private set; }
 
     public bool InteractInput { get; private set; }
+    public bool MapInput { get; private set; }
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -36,6 +37,18 @@ public class PlayerInputHandler : MonoBehaviour
         CheckJumpInputHoldTime();
         CheckDashInputHoldTime();
         CheckFireballInputHoldTime();
+    }
+
+    public void OnMapInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            MapInput = true;
+        }
+        if (context.canceled)
+        {
+            MapInput = false;
+        }
     }
 
     public void OnInteractInput(InputAction.CallbackContext context)
@@ -146,6 +159,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void UseHealInput() => HealInput = false;
     public void UseInteractInput() => InteractInput = false;
+    public void UseMapInput() => MapInput = false;
     private void CheckJumpInputHoldTime() // Jump buffer
     {
         if(Time.time >= jumpInputStartTime + inputHoldTime)
