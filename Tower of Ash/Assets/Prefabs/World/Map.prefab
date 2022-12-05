@@ -1452,6 +1452,7 @@ GameObject:
   - component: {fileID: 2258909398225011680}
   - component: {fileID: 2258909398225011681}
   - component: {fileID: 2258909398225011682}
+  - component: {fileID: 3314383890733800457}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -1542,6 +1543,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3314383890733800457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258909398225011683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce41095ce4841604989102bd86afe62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  children:
+  - {fileID: 2258909398874701469}
+  - {fileID: 2258909398391950044}
 --- !u!1 &2258909398295484900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,7 +2024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2258909398391950043
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2557,7 +2573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2258909398874701468
 RectTransform:
   m_ObjectHideFlags: 0
