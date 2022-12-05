@@ -420,6 +420,11 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    //Changing player's spawn point after hitting a certain position
+    public void setSpawnPosition(Vector2 resetSpawnPoint){ 
+        this.spawnPoint = resetSpawnPoint;
+    }
     //Used for respawning on death
     public void respawnPosition(){
         this.GetComponent<Transform>().position = spawnPoint;
