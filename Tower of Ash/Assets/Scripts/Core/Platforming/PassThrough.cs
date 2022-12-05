@@ -23,7 +23,7 @@ public class PassThrough : MonoBehaviour
     private void Update(){
 
         if(!letBats){
-
+            StartCoroutine(WaitForBatSpawn());
         }
         //Detects if player is on platform and is trying to leave by going down
         var playerControl = player.GetComponent<Player>();
@@ -41,11 +41,12 @@ public class PassThrough : MonoBehaviour
     }
 
     private IEnumerator WaitForBatSpawn(){
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0f);
         var batsToAdd = GameObject.FindObjectsOfType<FireBat>();
  
         for (int i = 0; i < batsToAdd.Length; i++) 
         {
+            Debug.Log($" {batsToAdd[i].gameObject.name} is now ignoring Platforms");
             Physics2D.IgnoreCollision(batsToAdd[i].GetComponent<BoxCollider2D>(), GetComponent<CompositeCollider2D>(), true);
         }
         letBats = true;

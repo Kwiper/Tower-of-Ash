@@ -26,6 +26,10 @@ public class Enemy : MonoBehaviour {
     public Vector2 CurrentVelocity { get; protected set; }
     public int FacingDirection { get; protected set; }
     protected Vector2 workspace;
+    [SerializeField]
+    private bool doesNotMove = false;
+    [SerializeField]
+    private bool isMoving = false;   
 
     public PlayerData playerData;
     public int tinderReward;
@@ -71,7 +75,7 @@ public class Enemy : MonoBehaviour {
         EnemyEntity = GetComponent<Entity>();
         Renderer = GetComponent<SpriteRenderer>();
         FacingDirection = 1;
-
+        RB.constraints = RigidbodyConstraints2D.FreezePosition;
         CreateTinderList();
 
     }
@@ -79,6 +83,12 @@ public class Enemy : MonoBehaviour {
     // Update is called once per frame
     public virtual void Update()
     {
+        if(doesNotMove == false && isMoving == false){
+            //Freeze rotation, toggles the z-constraint boolean but removes the x and y constraint boolean
+            RB.constraints = RigidbodyConstraints2D.FreezeRotation;
+            isMoving = true;
+        }
+
         CurrentVelocity = RB.velocity;
 
         if (EnemyEntity.InKnockback) 

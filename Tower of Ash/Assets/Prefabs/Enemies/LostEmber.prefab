@@ -187,6 +187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combatData: {fileID: 0}
   EnemyEntity: {fileID: 657788391534403816}
+  doesNotMove: 1
+  isMoving: 0
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
   tinderReward: 15
   tinderList: []

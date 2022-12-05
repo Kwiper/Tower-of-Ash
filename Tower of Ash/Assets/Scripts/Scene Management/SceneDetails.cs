@@ -78,7 +78,7 @@ public class SceneDetails : MonoBehaviour
 
    
     public IEnumerator Spawn(EnemySpawner enemy){
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0f);
         //Prevents double spawnning or enemy respawning
         if (enemy.isDead != true && enemy.isSpawned != true)
             {
