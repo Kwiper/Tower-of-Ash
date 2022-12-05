@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
         if(firstReload)firstReloadCamConfine();
         CurrentVelocity = RB.velocity;
         SetLookDisplacement();
-        if(InputHandler.chargeHeld){
+        if(InputHandler.chargeHeld && playerData.unlockedChargeAttack){
             SpriteRenderer.color = Color.gray;
         }
         else{
