@@ -16,6 +16,9 @@ public class BossAnimParticles : MonoBehaviour
     [SerializeField] GameObject attackParticleContainer;
     [SerializeField] GameObject jumpAttackParticleContainer;
 
+    [SerializeField] GameObject fireballStabParticleContainer;
+    [SerializeField] GameObject fireballLaunchParticleContainer;
+
     [SerializeField] GameObject lungeChargeParticleContainer;
     [SerializeField] GameObject lungeParticleContainer;
 
