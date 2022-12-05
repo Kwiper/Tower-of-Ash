@@ -7,6 +7,7 @@ public class PassThrough : MonoBehaviour
     private new CompositeCollider2D collider;
     private bool playerOnPlatform;
     private GameObject player;
+    private bool letBats = false;
 
     private void Start(){
         //Finds collider for platform and finds player script on player gameobject
@@ -14,17 +15,16 @@ public class PassThrough : MonoBehaviour
         var playerPossibles = GameObject.FindGameObjectsWithTag("Player");
         player = playerPossibles[0];
         
-        var batsToAdd = GameObject.FindObjectsOfType<FireBat>();
- 
-        for (int i = 0; i < batsToAdd.Length; i++) 
-        {
-            Physics2D.IgnoreCollision(batsToAdd[i].GetComponent<BoxCollider2D>(), GetComponent<CompositeCollider2D>(), true);
-        }
+
 
     }
 
 
     private void Update(){
+
+        if(!letBats){
+
+        }
         //Detects if player is on platform and is trying to leave by going down
         var playerControl = player.GetComponent<Player>();
 
@@ -39,6 +39,18 @@ public class PassThrough : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<CompositeCollider2D>(), false);
     }
+
+    private IEnumerator WaitForBatSpawn(){
+        yield return new WaitForSeconds(1.5f);
+        var batsToAdd = GameObject.FindObjectsOfType<FireBat>();
+ 
+        for (int i = 0; i < batsToAdd.Length; i++) 
+        {
+            Physics2D.IgnoreCollision(batsToAdd[i].GetComponent<BoxCollider2D>(), GetComponent<CompositeCollider2D>(), true);
+        }
+        letBats = true;
+    }
+
     //Determines if player is standing on correct platform
     private void SetPlayerOnPlatform(Collision2D other, bool value){
 
