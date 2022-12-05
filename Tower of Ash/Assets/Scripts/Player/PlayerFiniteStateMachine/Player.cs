@@ -152,12 +152,15 @@ public class Player : MonoBehaviour
         if(firstReload)firstReloadCamConfine();
         CurrentVelocity = RB.velocity;
         SetLookDisplacement();
-        if(InputHandler.chargeHeld && playerData.unlockedChargeAttack){
-            SpriteRenderer.color = Color.gray;
+
+        // Charge attack indicator
+        if(InputHandler.chargeHeld && playerData.unlockedChargeAttack){ 
+            SpriteRenderer.color = Color.gray; // Herman trigger particles here
         }
         else{
             SpriteRenderer.color = Color.white;
         }
+        // End
 
         StateMachine.CurrentState.LogicUpdate();
 
