@@ -17,6 +17,9 @@ public class MapCollider : MonoBehaviour
             if (!data.ids.Contains(id)) {
                 data.ids.Add(id);
             }
+
+            data.positionId = id;
+
         }
     }
 }

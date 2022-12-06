@@ -80,4 +80,6 @@ public class PlayerData : ScriptableObject
 
     [Header("Map")]
     public List<int> ids;
+    public int positionId;
+
 }
