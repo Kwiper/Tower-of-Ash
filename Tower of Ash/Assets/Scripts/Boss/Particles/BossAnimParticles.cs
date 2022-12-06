@@ -61,14 +61,16 @@ public class BossAnimParticles : MonoBehaviour
     //attacks
     public virtual void triggerAttackParticle(){
         GameObject atkParticle = Instantiate(attackParticleContainer, transform);
-        atkParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        if(boss.FacingDirection == 1) atkParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x+3f, transform.position.y-1f, transform.position.z);
+        else atkParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x-3f, transform.position.y-1f, transform.position.z);
         atkParticle.GetComponent<ParticleSystem>().Play();
         Destroy(atkParticle, 1f);
     }
 
     public virtual void triggerJumpAttackParticle(){
         GameObject jatkParticle = Instantiate(jumpAttackParticleContainer, transform);
-        jatkParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        if(boss.FacingDirection == 1) jatkParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x+4f, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
+        else jatkParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x-4f, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
         jatkParticle.GetComponent<ParticleSystem>().Play();
         Destroy(jatkParticle, 1f);
     }
@@ -93,14 +95,16 @@ public class BossAnimParticles : MonoBehaviour
     //fireball anim
     public virtual void triggerFireballStabParticle(){
         GameObject fsParticle = Instantiate(fireballStabParticleContainer, transform);
-        fsParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        if(boss.FacingDirection == 1) fsParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x-1.5f, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
+        else fsParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x+1.5f, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
         fsParticle.GetComponent<ParticleSystem>().Play();
         Destroy(fsParticle, 1f);
     }
 
     public virtual void triggerFireballLaunchParticle(){
         GameObject flParticle = Instantiate(fireballLaunchParticleContainer, transform);
-        flParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        if(boss.FacingDirection == 1) flParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x+2f, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
+        else flParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x-2f, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
         flParticle.GetComponent<ParticleSystem>().Play();
         Destroy(flParticle, 1f);
     }
@@ -108,7 +112,8 @@ public class BossAnimParticles : MonoBehaviour
     //lunge anim
     public virtual void triggerLungeChargeParticle(){
         GameObject lcParticle = Instantiate(lungeChargeParticleContainer, transform);
-        lcParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        if(boss.FacingDirection == 1) lcParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.max.x+0.75f, transform.position.y-0.5f, transform.position.z);
+        else lcParticle.transform.position = new Vector3(GetComponent<BoxCollider2D>().bounds.min.x-0.75f, transform.position.y-0.5f, transform.position.z);
         lcParticle.GetComponent<ParticleSystem>().Play();
         Destroy(lcParticle, 1f);
     }

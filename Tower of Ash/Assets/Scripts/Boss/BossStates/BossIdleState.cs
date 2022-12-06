@@ -58,22 +58,7 @@ public class BossIdleState : EnemyState
         timer -= Time.deltaTime;
 
         if(timer <= 0)
-        {   
-            // FOR HERMAN
-            // UNCOMMENT THESE WHEN YOU WANT TO TEST A STATE
-
-            //boss.StateMachine.ChangeState(boss.WalkState); // Walk state
-            //boss.StateMachine.ChangeState(boss.AttackState); // Attack state
-            //boss.StateMachine.ChangeState(boss.LungeState); // Lunge state
-            boss.StateMachine.ChangeState(boss.FireballState); // Fireball state
-            //boss.StateMachine.ChangeState(boss.JumpAttackState); // Jump Attack state
-            //boss.StateMachine.ChangeState(boss.PillarState); // Pillar state
-            //boss.StateMachine.ChangeState(boss.BulletHellCharge); // Bullet hell state
-
-            // END
-
-            /* Re-enable this when you're done 
-             
+        {     
             // HP range 75% - 100%            
             if(boss.EnemyEntity.Health > (boss.EnemyEntity.maxHealth * 0.75)) 
             {
@@ -263,7 +248,7 @@ public class BossIdleState : EnemyState
                         boss.StateMachine.ChangeState(boss.LungeState); // Lunge
                     }
                 }
-            }*/
+            }
         }
     }
 
