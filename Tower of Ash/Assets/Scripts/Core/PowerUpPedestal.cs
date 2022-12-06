@@ -12,6 +12,8 @@ public class PowerUpPedestal : MonoBehaviour
     [SerializeField]
     GameObject text;
  
+    [SerializeField]
+    Sprite[] sprites;
     const int Dash = 1;
     const int WallJump = 2;
     const int Fireball = 3;
@@ -21,56 +23,77 @@ public class PowerUpPedestal : MonoBehaviour
 
     public bool isCollected = false;
 
+    SpriteRenderer sRenderer;
+
     private void Start()
     {
+            sRenderer = GetComponent<SpriteRenderer>();
             switch(upgrade) 
             {
 
                 case Dash:
                 if (playerData.unlockedDash){
                     isCollected = true;
- 	                GetComponent<BoxCollider2D>().enabled = false;
+ 	                GetComponent<CircleCollider2D>().enabled = false;
 	                GetComponent<SpriteRenderer>().enabled = false;                   
                 }
+                else{
+                   sRenderer.sprite = sprites[0]; 
+                }          
                 break;
 
                 case WallJump:
                 if (playerData.unlockedWallJump){
                     isCollected = true;
- 	                GetComponent<BoxCollider2D>().enabled = false;
+ 	                GetComponent<CircleCollider2D>().enabled = false;
 	                GetComponent<SpriteRenderer>().enabled = false;                   
                 }
+                else{
+                   sRenderer.sprite = sprites[5]; 
+                }          
                 break;
 
                 case Fireball:
                 if (playerData.unlockedFireball){
                     isCollected = true;
- 	                GetComponent<BoxCollider2D>().enabled = false;
+ 	                GetComponent<CircleCollider2D>().enabled = false;
 	                GetComponent<SpriteRenderer>().enabled = false;                   
-                }                
+                }
+                else{
+                   sRenderer.sprite = sprites[1]; 
+                }          
                 break;
 
                 case ChargeAttack:
                 if (playerData.unlockedChargeAttack){
                     isCollected = true;
- 	                GetComponent<BoxCollider2D>().enabled = false;
+ 	                GetComponent<CircleCollider2D>().enabled = false;
 	                GetComponent<SpriteRenderer>().enabled = false;                   
-                }                   
+                }
+                else{
+                   sRenderer.sprite = sprites[4]; 
+                }                             
                 break;
 
                 case DoubleJump:
                 if (playerData.amountOfJumps == 2){
                     isCollected = true;
- 	                GetComponent<BoxCollider2D>().enabled = false;
+ 	                GetComponent<CircleCollider2D>().enabled = false;
 	                GetComponent<SpriteRenderer>().enabled = false;                   
-                }                    
+                }
+                else{
+                   sRenderer.sprite = sprites[3]; 
+                }                              
                 break;
                 case Healing:
                 if (playerData.unlockedHealing){
                     isCollected = true;
- 	                GetComponent<BoxCollider2D>().enabled = false;
+ 	                GetComponent<CircleCollider2D>().enabled = false;
 	                GetComponent<SpriteRenderer>().enabled = false;                   
                 }
+                else{
+                   sRenderer.sprite = sprites[2]; 
+                }          
                 break;
                 
                 default:
@@ -115,7 +138,7 @@ public class PowerUpPedestal : MonoBehaviour
             }
             isCollected = true;
             text.SetActive(true);
-            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
 	        GetComponent<SpriteRenderer>().enabled = false;
             
 

@@ -6143,6 +6143,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 860177183}
     m_Modifications:
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 13040096}
     - target: {fileID: 1664851421153338252, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_Name
       value: Power Up Pedestal (DASH)
@@ -10817,6 +10821,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 860177183}
     m_Modifications:
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1852805485}
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: upgrade
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1664851421153338252, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_Name
       value: Power Up Pedestal (WALL JUMP)
@@ -12502,6 +12514,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 860177183}
     m_Modifications:
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 100577221}
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: upgrade
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1664851421153338252, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_Name
       value: Power Up Pedestal (HEALING)
@@ -12569,6 +12589,10 @@ PrefabInstance:
     - target: {fileID: 1664851421153338259, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561067428345789500, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
@@ -35138,17 +35162,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1664851421153338259, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
   m_PrefabInstance: {fileID: 1512509631}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1304057712 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
-  m_PrefabInstance: {fileID: 1512509631}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a13514c2f392f9f498577296ff28fe4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1305339731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40612,6 +40625,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 860177183}
     m_Modifications:
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1289094381}
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: upgrade
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098005237975929807, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: m_Name
+      value: Orb (CHARGE ATTACK)
+      objectReference: {fileID: 0}
     - target: {fileID: 1664851421153338252, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_Name
       value: Power Up Pedestal (CHARGE ATTACK)
@@ -40670,6 +40695,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+--- !u!114 &1512509632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+  m_PrefabInstance: {fileID: 1512509631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13514c2f392f9f498577296ff28fe4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1515795817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47541,6 +47577,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 860177183}
     m_Modifications:
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 467913670}
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: upgrade
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1664851421153338252, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_Name
       value: Power Up Pedestal (FIREBALL)
@@ -49633,6 +49677,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 860177183}
     m_Modifications:
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1339306594}
+    - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
+      propertyPath: upgrade
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1664851421153338252, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_Name
       value: Power Up Pedestal (DOUBLE JUMP)
@@ -56911,7 +56963,7 @@ PrefabInstance:
     - target: {fileID: 2599738290936146671, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: pedastalDelayer
       value: 
-      objectReference: {fileID: 1304057712}
+      objectReference: {fileID: 1512509632}
     - target: {fileID: 2599738290936146671, guid: 57123b7925323424097ac99f906b8302, type: 3}
       propertyPath: enemySpawners.Array.size
       value: 5
