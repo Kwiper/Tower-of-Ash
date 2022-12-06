@@ -23,10 +23,17 @@ public class TinderCache : MonoBehaviour
     [SerializeField]
     GameObject[] tinderObjects;
 
+    [SerializeField] GameObject tinderParticleContainer;
+    GameObject tParticle;
+
     private void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
         renderer.sprite = sprites[0];
+
+        tParticle = Instantiate(tinderParticleContainer, transform);
+        tParticle.transform.position = new Vector3(transform.position.x, GetComponent<BoxCollider2D>().bounds.min.y+.1f, transform.position.z);
+        tParticle.GetComponent<ParticleSystem>().Play();
 
         CreateTinderList();
     }
@@ -57,6 +64,8 @@ public class TinderCache : MonoBehaviour
                 playerData.CollectedTinderCacheLocations.Add(pos);
                 GetComponent<BoxCollider2D>().enabled = false;
                 GetComponent<SpriteRenderer>().enabled = false;
+
+                Destroy(tParticle, .1f);
             }
         }
 

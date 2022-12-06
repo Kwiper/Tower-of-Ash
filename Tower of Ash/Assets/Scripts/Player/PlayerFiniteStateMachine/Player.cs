@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
 
     #region Particles
     [SerializeField] public GameObject hitParticleContainer;
+    [SerializeField] public GameObject chargeParticleContainer;
     [SerializeField] public GameObject jumpParticleContainer;
     [SerializeField] public GameObject wallJumpParticleContainer;
     bool triggerParticles;
@@ -154,6 +155,12 @@ public class Player : MonoBehaviour
         SetLookDisplacement();
         if(InputHandler.chargeHeld){
             SpriteRenderer.color = Color.gray;
+
+            // Trigger particles
+            GameObject cParticle = Instantiate(chargeParticleContainer, transform);
+            cParticle.transform.position = new Vector3(transform.position.x, transform.position.y-.2f, transform.position.z);
+            cParticle.GetComponent<ParticleSystem>().Play();
+            Destroy(cParticle, 0.25f);
         }
         else{
             SpriteRenderer.color = Color.white;
