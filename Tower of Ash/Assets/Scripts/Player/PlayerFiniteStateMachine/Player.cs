@@ -316,7 +316,7 @@ public class Player : MonoBehaviour
 
     public void CheckIfShouldFlip(int xInput)
     {
-        if(xInput != 0 && xInput != FacingDirection)
+        if(xInput != 0 && xInput != FacingDirection && !PauseMenu.GameIsPaused)
         {
             Flip();
         }

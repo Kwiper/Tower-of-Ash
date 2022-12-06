@@ -42,44 +42,47 @@ public class PlayerGroundedState : PlayerState {
     {
         base.LogicUpdate();
 
-        player.Anim.SetBool("isGrounded", true);
+        if (!PauseMenu.GameIsPaused)
+        {
+            player.Anim.SetBool("isGrounded", true);
 
-        xInput = player.InputHandler.NormInputX;
-        JumpInput = player.InputHandler.JumpInput;
-        dashInput = player.InputHandler.DashInput;
-        fireballInput = player.InputHandler.FireballInput;
-        chargeAttackInput = player.InputHandler.ChargeAttackInput;
-        healInput = player.InputHandler.HealInput;
+            xInput = player.InputHandler.NormInputX;
+            JumpInput = player.InputHandler.JumpInput;
+            dashInput = player.InputHandler.DashInput;
+            fireballInput = player.InputHandler.FireballInput;
+            chargeAttackInput = player.InputHandler.ChargeAttackInput;
+            healInput = player.InputHandler.HealInput;
 
-        if (chargeAttackInput && playerData.unlockedChargeAttack == true)
-        {
-            stateMachine.ChangeState(player.ChargeAttackState);
-        }
-        else if (fireballInput && playerData.unlockedFireball == true && player.FireballState.CheckIfCanFireball())
-        {
-            stateMachine.ChangeState(player.FireballState);
-        }
-        else if (player.InputHandler.AttackInput)
-        {
-            stateMachine.ChangeState(player.AttackState);
-        }
-        else if (JumpInput && player.JumpState.CanJump())
-        {
-            stateMachine.ChangeState(player.JumpState);
-        } 
-        else if (!isGrounded)
-        {
-            player.InAirState.StartCoyoteTime();
-            stateMachine.ChangeState(player.InAirState);
-        }
-        else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
-        {
-            stateMachine.ChangeState(player.DashState);
-        }
-        else if (healInput && playerData.unlockedHealing == true && playerData.healCharges > 0)
-        {
-            stateMachine.ChangeState(player.HealState);
-            player.healthCanCountdown = false;
+            if (chargeAttackInput && playerData.unlockedChargeAttack == true)
+            {
+                stateMachine.ChangeState(player.ChargeAttackState);
+            }
+            else if (fireballInput && playerData.unlockedFireball == true && player.FireballState.CheckIfCanFireball())
+            {
+                stateMachine.ChangeState(player.FireballState);
+            }
+            else if (player.InputHandler.AttackInput)
+            {
+                stateMachine.ChangeState(player.AttackState);
+            }
+            else if (JumpInput && player.JumpState.CanJump())
+            {
+                stateMachine.ChangeState(player.JumpState);
+            }
+            else if (!isGrounded)
+            {
+                player.InAirState.StartCoyoteTime();
+                stateMachine.ChangeState(player.InAirState);
+            }
+            else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
+            {
+                stateMachine.ChangeState(player.DashState);
+            }
+            else if (healInput && playerData.unlockedHealing == true && playerData.healCharges > 0)
+            {
+                stateMachine.ChangeState(player.HealState);
+                player.healthCanCountdown = false;
+            }
         }
     }
 

@@ -62,69 +62,72 @@ public class PlayerInAirState : PlayerState {
     {
         base.LogicUpdate();
 
-        CheckCoyoteTime();
-        CheckWallJumpCoyoteTime();
+        if(!PauseMenu.GameIsPaused){
+            CheckCoyoteTime();
+            CheckWallJumpCoyoteTime();
 
-        xInput = player.InputHandler.NormInputX;
-        jumpInput = player.InputHandler.JumpInput;
-        jumpInputStop = player.InputHandler.JumpInputStop;
-        dashInput = player.InputHandler.DashInput;
-        fireballInput = player.InputHandler.FireballInput;
-        chargeAttackInput = player.InputHandler.ChargeAttackInput;
-        healInput = player.InputHandler.HealInput;
+            xInput = player.InputHandler.NormInputX;
+            jumpInput = player.InputHandler.JumpInput;
+            jumpInputStop = player.InputHandler.JumpInputStop;
+            dashInput = player.InputHandler.DashInput;
+            fireballInput = player.InputHandler.FireballInput;
+            chargeAttackInput = player.InputHandler.ChargeAttackInput;
+            healInput = player.InputHandler.HealInput;
 
-        CheckJumpMultiplier();
+            CheckJumpMultiplier();
 
-        if (chargeAttackInput && playerData.unlockedChargeAttack == true)
-        {
-            stateMachine.ChangeState(player.ChargeAttackState);
-        }
-        else if (fireballInput && playerData.unlockedFireball && player.FireballState.CheckIfCanFireball())
-        {
-            stateMachine.ChangeState(player.FireballState);
-        }
-        else if (player.InputHandler.AttackInput)
-        {
-            stateMachine.ChangeState(player.AttackState);
-        }
-        else if (isGrounded && player.CurrentVelocity.y < 0.01f)
-        {
-            stateMachine.ChangeState(player.LandState);
-        }
-        else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime))
-        {
-            StopWallJumpCoyoteTime();
-            isTouchingWall = player.CheckIfTouchingWall();
-            player.WallJumpState.DetermineWallJumpDetection(isTouchingWall);
-            stateMachine.ChangeState(player.WallJumpState);
-        }
-        else if (jumpInput && player.JumpState.CanJump())
-        {
-            stateMachine.ChangeState(player.JumpState);
-        }
-        else if (isTouchingWall && xInput == player.FacingDirection && player.CurrentVelocity.y <= 0)
-        {
-            stateMachine.ChangeState(player.WallSlideState);
-        }
-        else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
-        {
-            stateMachine.ChangeState(player.DashState);
-        }
-        else if(healInput && playerData.unlockedHealing == true && playerData.healCharges > 0)
-        {
-            stateMachine.ChangeState(player.HealState);
-            player.healthCanCountdown = false;
-        }
-        else
-        {
-            player.CheckIfShouldFlip(xInput);
-            player.SetVelocityX(playerData.movementVelocity * xInput);
+            if (chargeAttackInput && playerData.unlockedChargeAttack == true)
+            {
+                stateMachine.ChangeState(player.ChargeAttackState);
+            }
+            else if (fireballInput && playerData.unlockedFireball && player.FireballState.CheckIfCanFireball())
+            {
+                stateMachine.ChangeState(player.FireballState);
+            }
+            else if (player.InputHandler.AttackInput)
+            {
+                stateMachine.ChangeState(player.AttackState);
+            }
+            else if (isGrounded && player.CurrentVelocity.y < 0.01f)
+            {
+                stateMachine.ChangeState(player.LandState);
+            }
+            else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime))
+            {
+                StopWallJumpCoyoteTime();
+                isTouchingWall = player.CheckIfTouchingWall();
+                player.WallJumpState.DetermineWallJumpDetection(isTouchingWall);
+                stateMachine.ChangeState(player.WallJumpState);
+            }
+            else if (jumpInput && player.JumpState.CanJump())
+            {
+                stateMachine.ChangeState(player.JumpState);
+            }
+            else if (isTouchingWall && xInput == player.FacingDirection && player.CurrentVelocity.y <= 0)
+            {
+                stateMachine.ChangeState(player.WallSlideState);
+            }
+            else if (dashInput && playerData.unlockedDash == true && player.DashState.CheckIfCanDash())
+            {
+                stateMachine.ChangeState(player.DashState);
+            }
+            else if (healInput && playerData.unlockedHealing == true && playerData.healCharges > 0)
+            {
+                stateMachine.ChangeState(player.HealState);
+                player.healthCanCountdown = false;
+            }
+            else
+            {
+                player.CheckIfShouldFlip(xInput);
 
-            player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
-            player.Anim.SetFloat("xVelocity", Mathf.Abs(player.CurrentVelocity.x)); 
-        }
+                player.SetVelocityX(playerData.movementVelocity * xInput);
 
-        player.Anim.SetBool("isGrounded", false);
+                player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
+                player.Anim.SetFloat("xVelocity", Mathf.Abs(player.CurrentVelocity.x));
+            }
+
+            player.Anim.SetBool("isGrounded", false);
+        }
     }
 
     private void CheckJumpMultiplier()
