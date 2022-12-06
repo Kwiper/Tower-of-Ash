@@ -17,11 +17,6 @@ public class MapManager : MonoBehaviour
 
     private void Update()
     {
-<<<<<<< Updated upstream
-        //Debug.Log(player.InputHandler.MapInput);
-
-=======
->>>>>>> Stashed changes
         if (player.InputHandler.MapInput)
         {
             
