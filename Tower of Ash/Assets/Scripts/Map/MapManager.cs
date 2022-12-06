@@ -17,8 +17,6 @@ public class MapManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(player.InputHandler.MapInput);
-
         if (player.InputHandler.MapInput)
         {
             
