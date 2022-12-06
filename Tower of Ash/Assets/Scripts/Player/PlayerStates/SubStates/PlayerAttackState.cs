@@ -13,8 +13,6 @@ public class PlayerAttackState : PlayerAbilityState {
 
     private Hitbox hitbox;
 
-    private bool stepForward;
-
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -41,8 +39,6 @@ public class PlayerAttackState : PlayerAbilityState {
         hitbox = player.gameObject.GetComponentInChildren<Hitbox>(true);
 
         player.InputHandler.UseAttackInput();
-
-        stepForward = false;
 
         yInput = player.InputHandler.NormInputY;
         player.Anim.SetInteger("yInput", yInput); 

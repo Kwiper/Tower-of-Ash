@@ -65,6 +65,9 @@ public class Player : MonoBehaviour
     public bool hitSpike = false;
     public bool firstReload = false;
     public Vector2 spawnPoint = new Vector2(-2,-58);
+    private Vector2 displaceVector;
+    private float step;
+    private float lookSpeed = 27.5f;
     private Vector2 lookPosDefault;
     private Vector2 spikeCheckPoint;
     private Collider2D newWorldBound;
@@ -150,11 +153,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        step = lookSpeed * Time.deltaTime;
+
         if(firstReload)firstReloadCamConfine();
         CurrentVelocity = RB.velocity;
         SetLookDisplacement();
-        if(InputHandler.chargeHeld){
-            SpriteRenderer.color = Color.gray;
+        if(InputHandler.chargeHeld && playerData.unlockedChargeAttack){
+            //SpriteRenderer.color = Color.gray;
 
             // Trigger particles
             GameObject cParticle = Instantiate(chargeParticleContainer, transform);
@@ -256,9 +261,9 @@ public class Player : MonoBehaviour
 
     public void SetLookDisplacement()
     {
-        //Debug.Log(InputHandler.NormLookInputX);
-        //Debug.Log(InputHandler.NormLookInputY);        
-        cameraPoint.position = new Vector2(gameObject.GetComponent<Transform>().position.x+InputHandler.NormLookInputX, gameObject.GetComponent<Transform>().position.y+InputHandler.NormLookInputY+1);
+        displaceVector = new Vector2(InputHandler.NormLookInputX + gameObject.GetComponent<Transform>().position.x, InputHandler.NormLookInputY + gameObject.GetComponent<Transform>().position.y + 1);
+
+        cameraPoint.position = Vector2.MoveTowards(cameraPoint.position, displaceVector, step);
     }
 
     #endregion
@@ -436,6 +441,10 @@ public class Player : MonoBehaviour
         newWorldBound = colliderBound.GetComponent<Collider2D>();
         setConfiner(newWorldBound);
         firstReload = false;
+    }
+    public void setSpawnPosition(Vector2 resetSpawnPoint)
+    {
+        this.spawnPoint = resetSpawnPoint;
     }
 
     #endregion
