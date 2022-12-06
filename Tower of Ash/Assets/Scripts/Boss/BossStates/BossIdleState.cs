@@ -65,7 +65,7 @@ public class BossIdleState : EnemyState
             //boss.StateMachine.ChangeState(boss.WalkState); // Walk state
             //boss.StateMachine.ChangeState(boss.AttackState); // Attack state
             //boss.StateMachine.ChangeState(boss.LungeState); // Lunge state
-            //boss.StateMachine.ChangeState(boss.FireballState); // Fireball state
+            boss.StateMachine.ChangeState(boss.FireballState); // Fireball state
             //boss.StateMachine.ChangeState(boss.JumpAttackState); // Jump Attack state
             //boss.StateMachine.ChangeState(boss.PillarState); // Pillar state
             //boss.StateMachine.ChangeState(boss.BulletHellCharge); // Bullet hell state

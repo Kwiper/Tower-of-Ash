@@ -15,6 +15,8 @@ public class BossAnimParticles : MonoBehaviour
     #region Attack Particles
     [SerializeField] GameObject attackParticleContainer;
     [SerializeField] GameObject jumpAttackParticleContainer;
+
+    [SerializeField] GameObject pillarChargeParticleContainer;
     [SerializeField] GameObject pillarCrushParticleContainer;
 
     [SerializeField] GameObject fireballStabParticleContainer;
@@ -71,9 +73,19 @@ public class BossAnimParticles : MonoBehaviour
         Destroy(jatkParticle, 1f);
     }
 
+    //pillar anim
+    public virtual void triggerPillarChargeParticle(){
+        GameObject pchParticle = Instantiate(pillarChargeParticleContainer, transform);
+        if(boss.FacingDirection == 1) pchParticle.transform.position = new Vector3(transform.position.x-.8f, transform.position.y+1.7f, transform.position.z);
+        else pchParticle.transform.position = new Vector3(transform.position.x+.8f, transform.position.y+1.7f, transform.position.z);
+        pchParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(pchParticle, 1f);
+    }
+
     public virtual void triggerPillarCrushParticle(){
         GameObject pcParticle = Instantiate(pillarCrushParticleContainer, transform);
-        pcParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        if(boss.FacingDirection == 1) pcParticle.transform.position = new Vector3(transform.position.x-.8f, transform.position.y+1.5f, transform.position.z);
+        else pcParticle.transform.position = new Vector3(transform.position.x+.8f, transform.position.y+1.5f, transform.position.z);
         pcParticle.GetComponent<ParticleSystem>().Play();
         Destroy(pcParticle, 1f);
     }
@@ -113,7 +125,7 @@ public class BossAnimParticles : MonoBehaviour
         GameObject bhcParticle = Instantiate(bulletHellChargeParticleContainer, transform);
         bhcParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         bhcParticle.GetComponent<ParticleSystem>().Play();
-        Destroy(bhcParticle, 1f);
+        Destroy(bhcParticle, 2.5f);
     }
 
     public virtual void triggerBulletHellBurstParticle(){
@@ -125,7 +137,7 @@ public class BossAnimParticles : MonoBehaviour
 
     public virtual void triggerBulletHellFallParticle(){
         GameObject bhfParticle = Instantiate(bulletHellFallParticleContainer, transform);
-        bhfParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        bhfParticle.transform.position = new Vector3(transform.position.x, transform.position.y-1f, transform.position.z);
         bhfParticle.GetComponent<ParticleSystem>().Play();
         Destroy(bhfParticle, 1f);
     }
