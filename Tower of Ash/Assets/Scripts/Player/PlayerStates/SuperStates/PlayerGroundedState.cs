@@ -79,6 +79,7 @@ public class PlayerGroundedState : PlayerState {
         else if (healInput && playerData.unlockedHealing == true && playerData.healCharges > 0)
         {
             stateMachine.ChangeState(player.HealState);
+            player.healthCanCountdown = false;
         }
     }
 

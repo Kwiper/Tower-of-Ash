@@ -27,6 +27,7 @@ public class PlayerHealState : PlayerAbilityState {
 
     public override void Exit()
     {
+        player.healthCanCountdown = true;
         base.Exit();
     }
 
