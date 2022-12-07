@@ -47,7 +47,7 @@ MonoBehaviour:
   pogoVelocity: 17.5
   timeReduction: 0.8333333
   iFrameTime: 0.75
-  unlockedHealing: 0
+  unlockedHealing: 1
   healAmount: 50
   healCharges: 3
   maxHealCharges: 3
@@ -58,3 +58,6 @@ MonoBehaviour:
   unlockedMap: 0
   ids: 
   positionId: 1
+  movementTutorial: 0
+  combatTutorial: 0
+  lookTutorial: 0

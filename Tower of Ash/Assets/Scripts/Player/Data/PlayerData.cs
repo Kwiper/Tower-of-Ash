@@ -83,4 +83,9 @@ public class PlayerData : ScriptableObject
     public List<int> ids;
     public int positionId;
 
+    [Header("Tutorials")]
+    public bool movementTutorial = false;
+    public bool combatTutorial = false;
+    public bool lookTutorial = false;
+
 }
