@@ -8,6 +8,9 @@ public class CombatTutorial : MonoBehaviour
     [SerializeField]
     GameObject combatText;
 
+    [SerializeField]
+    GameObject directionalText;
+
     Player player;
 
     [SerializeField]
@@ -15,9 +18,14 @@ public class CombatTutorial : MonoBehaviour
 
     bool inTutorial = false;
 
+    bool tut1 = true;
+    bool tut2 = false;
+
     bool pressedInput = false;
 
     float alpha = 1f;
+
+    float timer = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -34,30 +42,60 @@ public class CombatTutorial : MonoBehaviour
     {
         if (inTutorial)
         {
-            combatText.SetActive(true);
             TextMeshProUGUI combatTextColor = combatText.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI directionalTextColor = directionalText.GetComponent<TextMeshProUGUI>();
 
-            if (combatTextColor.color.a < 1f && !pressedInput)
-                alpha += Time.deltaTime;
-
-            combatTextColor.color = new Color(1f, 1f, 1f, alpha);
-
-            if (player.InputHandler.AttackInput && alpha >= 1f)
+            if (tut1)
             {
-                pressedInput = true;
+
+                combatText.SetActive(true);   
+
+                if (combatTextColor.color.a < 1f && !pressedInput)
+                    alpha += Time.deltaTime;
+
+                combatTextColor.color = new Color(1f, 1f, 1f, alpha);
+
+                if (player.InputHandler.AttackInput && alpha >= 1f)
+                {
+                    pressedInput = true;
+                }
+
+                if (pressedInput)
+                {
+                    alpha -= Time.deltaTime;
+
+                    if (alpha <= 0)
+                    {
+                        tut1 = false;
+                        combatText.SetActive(false);
+                        playerData.combatTutorial = true;
+                        tut2 = true;
+                    }
+                }
             }
 
-            if (pressedInput)
+            if (tut2)
             {
-                alpha -= Time.deltaTime;
+                timer -= Time.deltaTime;
 
-                if (alpha <= 0)
+                directionalText.SetActive(true);
+                if (directionalTextColor.color.a < 1f && timer > 0)
+                    alpha += Time.deltaTime;
+
+                directionalTextColor.color = new Color(1f, 1f, 1f, alpha);
+
+                if(timer <= 0)
                 {
-                    inTutorial = false;
-                    combatText.SetActive(false);
-                    inTutorial = false;
-                    playerData.combatTutorial = true;
+                    alpha -= Time.deltaTime;
                 }
+
+                if(alpha <= 0)
+                {
+                    tut2 = false;
+                    directionalText.SetActive(false);
+                    inTutorial = false;
+                }
+
             }
         }
     }

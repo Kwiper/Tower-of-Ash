@@ -19560,6 +19560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatText: {fileID: 1397957011}
+  directionalText: {fileID: 1053863057}
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
 --- !u!114 &633419561 stripped
 MonoBehaviour:
@@ -26295,6 +26296,7 @@ GameObject:
   - component: {fileID: 797922595}
   - component: {fileID: 797922597}
   - component: {fileID: 797922596}
+  - component: {fileID: 797922598}
   m_Layer: 5
   m_Name: LookAround
   m_TagString: Untagged
@@ -26319,7 +26321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797922596
@@ -26342,7 +26344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Arrow keys to look around
+  m_text: Arrow Keys to look around
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bc694575a890904fada913aa9c125fd, type: 2}
   m_sharedMaterial: {fileID: 7234442976854642167, guid: 9bc694575a890904fada913aa9c125fd, type: 2}
@@ -26419,6 +26421,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797922594}
   m_CullTransparentMesh: 1
+--- !u!114 &797922598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797922594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26175576c34c7df4486204be3e835f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardText: Arrow Keys to look around
+  controllerText: Right Joystick to look around
 --- !u!1001 &799497745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29687,6 +29703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatText: {fileID: 1397957011}
+  directionalText: {fileID: 1053863057}
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
 --- !u!1 &984353098
 GameObject:
@@ -31770,6 +31787,156 @@ Transform:
   m_Father: {fileID: 555833317}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1053863057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053863058}
+  - component: {fileID: 1053863061}
+  - component: {fileID: 1053863060}
+  - component: {fileID: 1053863059}
+  m_Layer: 5
+  m_Name: DirectionalCombat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1053863058
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053863057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1585264960}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1053863059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053863057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26175576c34c7df4486204be3e835f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardText: Use WASD to direct your attack
+  controllerText: Use the Left Joystick to direct your attack
+--- !u!114 &1053863060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053863057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Use WASD to direct your attack
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9bc694575a890904fada913aa9c125fd, type: 2}
+  m_sharedMaterial: {fileID: 7234442976854642167, guid: 9bc694575a890904fada913aa9c125fd, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1053863061
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053863057}
+  m_CullTransparentMesh: 1
 --- !u!1 &1054252302
 GameObject:
   m_ObjectHideFlags: 0
@@ -32147,6 +32314,7 @@ GameObject:
   - component: {fileID: 1074916780}
   - component: {fileID: 1074916782}
   - component: {fileID: 1074916781}
+  - component: {fileID: 1074916783}
   m_Layer: 5
   m_Name: Movement
   m_TagString: Untagged
@@ -32171,7 +32339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074916781
@@ -32271,6 +32439,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074916779}
   m_CullTransparentMesh: 1
+--- !u!114 &1074916783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074916779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26175576c34c7df4486204be3e835f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardText: WASD to move
+  controllerText: Left Joystick to move
 --- !u!114 &1080840268 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8346879388750266523, guid: 8c798cffbcacb164dbf16b2eb4d77cae, type: 3}
@@ -41969,6 +42151,7 @@ GameObject:
   - component: {fileID: 1397957012}
   - component: {fileID: 1397957014}
   - component: {fileID: 1397957013}
+  - component: {fileID: 1397957015}
   m_Layer: 5
   m_Name: Combat
   m_TagString: Untagged
@@ -41993,7 +42176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1397957013
@@ -42093,6 +42276,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397957011}
   m_CullTransparentMesh: 1
+--- !u!114 &1397957015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397957011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26175576c34c7df4486204be3e835f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardText: Press K to attack
+  controllerText: Press X to attack
 --- !u!1001 &1401511839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45410,6 +45607,7 @@ GameObject:
   - component: {fileID: 1516481789}
   - component: {fileID: 1516481791}
   - component: {fileID: 1516481790}
+  - component: {fileID: 1516481792}
   m_Layer: 5
   m_Name: Jumping
   m_TagString: Untagged
@@ -45434,7 +45632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516481790
@@ -45457,7 +45655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press J to Jump
+  m_text: Press J to ump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bc694575a890904fada913aa9c125fd, type: 2}
   m_sharedMaterial: {fileID: 7234442976854642167, guid: 9bc694575a890904fada913aa9c125fd, type: 2}
@@ -45534,6 +45732,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516481788}
   m_CullTransparentMesh: 1
+--- !u!114 &1516481792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516481788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26175576c34c7df4486204be3e835f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardText: Press J to jump
+  controllerText: Press A to jump
 --- !u!4 &1517438804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2150771012902756856, guid: 8a09a417ce846c849b33b62bd12cdb63, type: 3}
@@ -47561,6 +47773,7 @@ RectTransform:
   - {fileID: 1516481789}
   - {fileID: 797922595}
   - {fileID: 1397957012}
+  - {fileID: 1053863058}
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55102,6 +55315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatText: {fileID: 1397957011}
+  directionalText: {fileID: 1053863057}
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
 --- !u!1 &1881972770
 GameObject:
