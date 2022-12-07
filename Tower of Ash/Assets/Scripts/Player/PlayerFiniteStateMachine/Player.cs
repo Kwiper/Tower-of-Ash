@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public PlayerChargeAttackState ChargeAttackState { get; private set; }
     public PlayerHitState HitState { get; private set; }
     public PlayerHealState HealState { get; private set; }
+    public PlayerDeathState DeathState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -136,6 +137,7 @@ public class Player : MonoBehaviour
     public AudioClip cape4;
 
     public AudioClip hit;
+    public AudioClip death;
 
     #endregion
 
@@ -165,6 +167,8 @@ public class Player : MonoBehaviour
         HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
 
         HealState = new PlayerHealState(this, StateMachine, playerData, "heal");
+
+        DeathState = new PlayerDeathState(this, StateMachine, playerData, "death");
     }
 
     private void Start()
@@ -250,15 +254,11 @@ public class Player : MonoBehaviour
         }
 
 
-        // When HP reaches 0, load upgrade scene
-        if (PlayerEntity.Health <= 0)
+        // When HP reaches 0 from timer, switch to death state.
+        if (PlayerEntity.Health <= 0 && StateMachine.CurrentState != HitState)
         {
-            PlayerEntity.Health = PlayerEntity.maxHealth;
-            invincible = false;
-            isReal = true;
             RB.constraints = RigidbodyConstraints2D.FreezePosition;
-            //FreezePos = !FreezePos;
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
+            StateMachine.ChangeState(DeathState);
         }
         //if(!manualCheckPointSection || !hitSpike)StartCoroutine(setCheckPointPosRay());
         if(!manualCheckPointSection || !manualCheckPointSection && !hitSpike)setCheckPointPosRay();
@@ -438,6 +438,16 @@ public class Player : MonoBehaviour
     public void ResetHealCharges()
     {
         playerData.healCharges = playerData.maxHealCharges;
+    }
+
+    public void ResetDeathState()
+    {
+        PlayerEntity.Health = PlayerEntity.maxHealth;
+        invincible = false;
+        isReal = true;
+        //FreezePos = !FreezePos;
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        
     }
 
     IEnumerator Invincibility()

@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: c8bb45017baf3724088f17140c91d470
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kindling_death_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456f212c815f3c445963bdbb76dc2244
+      internalID: 1141063682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 64
+        width: 18
+        height: 33
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.4848485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7d182256d7a5046bf5de241c4c9810
+      internalID: -968695534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 64
+        width: 17
+        height: 37
+      alignment: 9
+      pivot: {x: 0.47058824, y: 0.43243244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e998a32cc66649b48a22707c0323a53d
+      internalID: -1311243918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 64
+        width: 18
+        height: 30
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311d0d25f6306914083b723df1009f85
+      internalID: 2090041927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 64
+        width: 20
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.61538464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17109993e535834468aacdf84f214bd6
+      internalID: -1984098951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 64
+        width: 20
+        height: 23
+      alignment: 9
+      pivot: {x: 0.4, y: 0.6956522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f54a27d40aeca245a001890aeb80962
+      internalID: -1845460412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 64
+        width: 25
+        height: 15
+      alignment: 9
+      pivot: {x: 0.12, y: 1.0666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2153ddf4426d6f4ea63eb09626e4cf1
+      internalID: 1648334071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 64
+        width: 26
+        height: 14
+      alignment: 9
+      pivot: {x: 0.115384616, y: 1.1428572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73131f4b053e3b4497c7895c5ccccc6
+      internalID: 650276012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 26
+        height: 11
+      alignment: 9
+      pivot: {x: 0.115384616, y: 1.4545455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e12cfa01265fe64c80c297e468b02d3
+      internalID: -913352963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 26
+        height: 10
+      alignment: 9
+      pivot: {x: 0.115384616, y: 1.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c3a95d49db19e4c95adea34a96097c
+      internalID: -98315605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 27
+        height: 8
+      alignment: 9
+      pivot: {x: 0.11111111, y: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abefc0e25029cb240a00545080479a4a
+      internalID: 1760836263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 27
+        height: 7
+      alignment: 9
+      pivot: {x: 0.11111111, y: 2.2857144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52a0b802bbe52d4da6c31dce8112b7a
+      internalID: -548105285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_12
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 0
+        width: 36
+        height: 10
+      alignment: 9
+      pivot: {x: 0.2777778, y: 1.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1293b57a6b69c74295665e8e8d45c4a
+      internalID: 1367284386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_13
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 40
+        height: 10
+      alignment: 9
+      pivot: {x: 0.2, y: 1.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad3d931e9bd99e46a43155fa0d4c75e
+      internalID: -330739849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kindling_death_14
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 0
+        width: 14
+        height: 11
+      alignment: 9
+      pivot: {x: 0.21428572, y: 1.4545455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f91222e51e9fb4990cdb6eeb40626d
+      internalID: 1048794483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Kindling_death_14: 1997652260
+      Kindling_death_11: -548105285
+      Kindling_death_9: -98315605
+      Kindling_death_6: 1648334071
+      Kindling_death_5: -1845460412
+      Kindling_death_13: -330739849
+      Kindling_death_10: 1760836263
+      Kindling_death_2: -1311243918
+      Kindling_death_12: 1367284386
+      Kindling_death_4: -1984098951
+      Kindling_death_3: 2090041927
+      Kindling_death_0: 1141063682
+      Kindling_death_8: -913352963
+      Kindling_death_1: -968695534
+      Kindling_death_7: 650276012
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
