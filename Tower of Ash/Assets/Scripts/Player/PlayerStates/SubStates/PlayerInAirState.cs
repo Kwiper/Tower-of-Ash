@@ -92,7 +92,7 @@ public class PlayerInAirState : PlayerState {
             {
                 stateMachine.ChangeState(player.LandState);
             }
-            else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime))
+            else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && playerData.unlockedWallJump)
             {
                 StopWallJumpCoyoteTime();
                 isTouchingWall = player.CheckIfTouchingWall();
