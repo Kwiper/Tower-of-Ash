@@ -69,4 +69,10 @@ public class SmallGolemWalkState : EnemyState {
 
 
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        golem.AudioSource.PlayOneShot(golem.walk);
+    }
 }

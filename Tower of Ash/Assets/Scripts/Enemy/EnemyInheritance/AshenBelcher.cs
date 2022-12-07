@@ -11,6 +11,8 @@ public class AshenBelcher : Enemy {
     public AshenBelcherBelch BelchState { get; private set; }
     public AshenBelcherFlee FleeState { get; private set; }
 
+    public AudioClip belch;
+
     [SerializeField]
     private Transform ledgeCheck;
 

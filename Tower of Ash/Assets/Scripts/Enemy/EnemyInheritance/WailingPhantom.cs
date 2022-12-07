@@ -9,6 +9,8 @@ public class WailingPhantom : Enemy
     public WailingPhantomChargeState ChargeState { get; private set; }
     public WailingPhantomAttackState AttackState { get; private set; }
 
+    public AudioClip dash;
+
     public Transform aggroPoint;
     [SerializeField]
     private float aggroRadius;

@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 8928038052576246417}
   - component: {fileID: 2311836733429714571}
   - component: {fileID: 1069321269099531411}
+  - component: {fileID: 3797290558119033797}
   m_Layer: 9
   m_Name: BlackGolem
   m_TagString: Enemy
@@ -345,6 +346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combatData: {fileID: 0}
   EnemyEntity: {fileID: 2311836733429714571}
+  doesNotMove: 0
+  isMoving: 0
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
   tinderReward: 20
   tinderList: []
@@ -356,6 +359,10 @@ MonoBehaviour:
   defaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   hitParticleContainer: {fileID: 211793005303880901, guid: 5063217c14055cf4e9b4a1fd847eb5c9, type: 3}
   deathParticleContainer: {fileID: 211793005303880901, guid: ae83cee101d738c4b8f75374db5302c1, type: 3}
+  hit: {fileID: 8300000, guid: 0c4c40a3f73878e41a7668fec1cf7a86, type: 3}
+  death: {fileID: 8300000, guid: dbd81ce1da4f54b438d72596a4dcd655, type: 3}
+  step: {fileID: 8300000, guid: e9a4cc1653d37944ba05fadc7d2c3b96, type: 3}
+  slam: {fileID: 8300000, guid: 1a945d10689c4d04c844c4099dcc8161, type: 3}
   wallCheck: {fileID: 6537618802829215449}
   ledgeCheck: {fileID: 3782290455052270214}
   chargePoint: {fileID: 5626284875465296616}
@@ -371,3 +378,108 @@ MonoBehaviour:
   aggroPoint: {fileID: 4989530514771209631}
   aggroRadius: 8
   FirePillar: {fileID: 2783928077990468877, guid: fa3ac7152c941de4189eab68d692d50f, type: 3}
+--- !u!82 &3797290558119033797
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982197177295671748}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.93821144
+      value: 1.0031227
+      inSlope: -0.027402233
+      outSlope: -0.027402233
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.20267226
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

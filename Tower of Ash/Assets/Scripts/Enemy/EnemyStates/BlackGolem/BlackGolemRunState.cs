@@ -31,4 +31,10 @@ public class BlackGolemRunState : EnemyState
 
 
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        golem.AudioSource.PlayOneShot(golem.step);
+    }
 }

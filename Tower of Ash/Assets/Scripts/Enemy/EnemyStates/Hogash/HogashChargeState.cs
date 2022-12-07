@@ -35,4 +35,10 @@ public class HogashChargeState : EnemyState {
             hog.SetVelocityX(hog.EnemyEntity.Knockback);
         }
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        hog.AudioSource.PlayOneShot(hog.snarl);
+    }
 }

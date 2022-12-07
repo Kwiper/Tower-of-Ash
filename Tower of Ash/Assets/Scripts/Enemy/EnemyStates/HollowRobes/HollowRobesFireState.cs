@@ -50,4 +50,10 @@ public class HollowRobesFireState : EnemyState {
             robes.SetVelocityX(robes.EnemyEntity.Knockback);
         }
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        robes.AudioSource.PlayOneShot(robes.magicCircle,0.5f);
+    }
 }

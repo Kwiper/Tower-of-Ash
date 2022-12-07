@@ -7,6 +7,8 @@ public class FireBat : Enemy {
     public FireBatIdleState IdleState { get; private set; }
     public FireBatAggroState AggroState { get; private set; }
 
+    public AudioClip squeak;
+
     public Transform aggroPoint;
     [SerializeField]
     private float aggroRadius;

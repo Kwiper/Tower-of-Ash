@@ -24,6 +24,7 @@ public class HellSkipperThrustState : EnemyState {
 
         // Fire projectile
         skipper.CastFireball();
+        skipper.AudioSource.PlayOneShot(skipper.fireball,0.5f);
     }
 
     public override void Enter()

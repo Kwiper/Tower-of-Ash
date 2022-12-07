@@ -18,6 +18,7 @@ public class FireBatAggroState : EnemyState {
     {
         base.Enter();
         player = FindObjectOfType<Player>().gameObject;
+        bat.AudioSource.PlayOneShot(bat.squeak);
     }
 
     public override void Exit()

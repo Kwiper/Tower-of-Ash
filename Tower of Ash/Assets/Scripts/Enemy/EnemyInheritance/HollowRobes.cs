@@ -8,6 +8,9 @@ public class HollowRobes : Enemy
     public HollowRobesFloatState FloatState { get; private set; }
     public HollowRobesFireState FireState { get; private set; }
 
+    public AudioClip magicCircle;
+    public AudioClip fireball;
+
     [SerializeField]
     Transform aggroPoint;
 
@@ -77,6 +80,8 @@ public class HollowRobes : Enemy
     {
         float angleX = 0.5f;
         float angleY = -0.5f;
+
+        AudioSource.PlayOneShot(fireball);
 
         for(int i = 0; i < 3; i++)
         {

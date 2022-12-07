@@ -9,6 +9,9 @@ public class BurntVine : Enemy
     public BurntVineSpitState SpitState { get; private set; }
     public BurntVineSwipeState SwipeState { get; private set; }
 
+    public AudioClip swipe;
+    public AudioClip spit;
+
     [SerializeField]
     LayerMask playerLayer;
 

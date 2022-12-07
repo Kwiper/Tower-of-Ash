@@ -29,4 +29,10 @@ public class BurntVineSpitState : EnemyState
     {
         base.LogicUpdate();
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        vine.AudioSource.PlayOneShot(vine.spit);
+    }
 }

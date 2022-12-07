@@ -8,6 +8,8 @@ public class SatansEye : Enemy
     public SatansEyeFlyState FlyState { get; private set; }
     public SatansEyeFireState FireState { get; private set; }
 
+    public AudioClip fireball;
+
     public Transform aggroPoint;
     [SerializeField]
     private float aggroRadius;
@@ -63,6 +65,7 @@ public class SatansEye : Enemy
 
     public void Fire()
     {
+        AudioSource.PlayOneShot(fireball);
         GameObject instance = Instantiate(EyeProjectile, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
         instance.GetComponent<EyeProjectile>().direction = FacingDirection;
     }

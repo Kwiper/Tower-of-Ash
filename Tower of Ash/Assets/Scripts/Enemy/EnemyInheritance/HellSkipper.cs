@@ -10,6 +10,9 @@ public class HellSkipper : Enemy
     public HellSkipperJumpState JumpState { get; private set; }
     public HellSkipperDownState DownState { get; private set; }
 
+    public AudioClip dash;
+    public AudioClip fireball;
+
     [SerializeField]
     private Transform ledgeCheck;
 

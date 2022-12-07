@@ -11,6 +11,9 @@ public class BlackGolem : Enemy {
     public BlackGolemChargeState ChargeState { get; private set; }
     public BlackGolemRunState RunState { get; private set; }
 
+    public AudioClip step;
+    public AudioClip slam;
+
     [SerializeField]
     Transform wallCheck;
     [SerializeField]

@@ -135,6 +135,8 @@ public class Player : MonoBehaviour
     public AudioClip cape3;
     public AudioClip cape4;
 
+    public AudioClip hit;
+
     #endregion
 
     #region Unity Callback Functions
@@ -225,6 +227,7 @@ public class Player : MonoBehaviour
                 hitParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 hitParticle.GetComponent<ParticleSystem>().Play();
                 Destroy(hitParticle, 1f);
+                AudioSource.PlayOneShot(hit);
                 triggerParticles = false;
             }
         }

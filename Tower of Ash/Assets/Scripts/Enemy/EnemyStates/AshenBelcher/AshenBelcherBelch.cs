@@ -40,4 +40,10 @@ public class AshenBelcherBelch : EnemyState {
         belcher.SetVelocityX(0);
 
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        belcher.AudioSource.PlayOneShot(belcher.belch);
+    }
 }

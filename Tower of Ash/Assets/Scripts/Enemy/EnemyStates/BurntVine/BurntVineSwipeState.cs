@@ -17,4 +17,10 @@ public class BurntVineSwipeState : EnemyState
 
         vine.StateMachine.ChangeState(vine.IdleState);
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        vine.AudioSource.PlayOneShot(vine.swipe);
+    }
 }

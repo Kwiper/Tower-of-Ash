@@ -42,4 +42,10 @@ public class BlackGolemSlamState : EnemyState {
 
         golem.SetVelocityX(0);
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        golem.AudioSource.PlayOneShot(golem.slam);
+    }
 }

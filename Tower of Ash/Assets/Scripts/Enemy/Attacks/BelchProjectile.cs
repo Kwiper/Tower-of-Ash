@@ -20,10 +20,14 @@ public class BelchProjectile : MonoBehaviour
 
     public int direction;
 
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip splat;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        audioSource = GetComponent<AudioSource>();
         rb.velocity = combatData.projectileSpeed * angle;
 
     }
@@ -49,6 +53,7 @@ public class BelchProjectile : MonoBehaviour
 
         if (collision.gameObject.layer == 6 || collision.gameObject.layer == 10)
         {
+            audioSource.PlayOneShot(splat);
             Destroy(gameObject);
         }
 

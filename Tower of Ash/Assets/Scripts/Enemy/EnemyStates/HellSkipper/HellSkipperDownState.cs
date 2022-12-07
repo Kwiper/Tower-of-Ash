@@ -30,6 +30,7 @@ public class HellSkipperDownState : EnemyState {
     public override void Enter()
     {
         base.Enter();
+        skipper.AudioSource.PlayOneShot(skipper.dash);
         isThrusting = true;
     }
 

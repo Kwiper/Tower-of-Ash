@@ -21,9 +21,14 @@ public class FirePillar : MonoBehaviour
     [SerializeField]
     Transform wallCheck;
 
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip fire;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = FindObjectOfType<Player>();
         if (!GroundCheck() || WallCheck())
         {
@@ -68,6 +73,11 @@ public class FirePillar : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    public void SoundTrigger()
+    {
+        audioSource.PlayOneShot(fire);
     }
 
     public void AnimationTrigger()

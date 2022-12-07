@@ -18,11 +18,15 @@ public class AshProjectile : MonoBehaviour
 
     public int direction;
 
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip splat;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        audioSource = GetComponent<AudioSource>();
         rb.velocity = new Vector2(combatData.projectileSpeed * direction,0);
         
     }
@@ -54,6 +58,7 @@ public class AshProjectile : MonoBehaviour
 
         if (collision.gameObject.layer == 6 || collision.gameObject.layer == 10)
         {
+            audioSource.PlayOneShot(splat);
             Destroy(gameObject);
         }
 

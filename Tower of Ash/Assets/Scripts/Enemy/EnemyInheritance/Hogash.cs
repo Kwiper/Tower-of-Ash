@@ -10,6 +10,7 @@ public class Hogash : Enemy
     public HogashChargeState ChargeState { get; private set; }
     public HogashStop StopState { get; private set; }
 
+    public AudioClip snarl;
 
     [SerializeField]
     private Transform ledgeCheck;

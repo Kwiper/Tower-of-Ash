@@ -7,6 +7,8 @@ public class LostEmber : Enemy
     public LostEmberIdleState IdleState { get; private set; }
     public LostEmberFireState FireState { get; private set; }
 
+    public AudioClip splat;
+
     [SerializeField]
     Transform aggroPoint;
     [SerializeField]
@@ -78,6 +80,8 @@ public class LostEmber : Enemy
         GameObject instance = Instantiate(EmberProjectile, firePoint.transform.position, firePoint.transform.rotation);
 
         instance.GetComponent<EmberProjectile>().angle = direction + new Vector2(randomDirection, 0);
+
+        AudioSource.PlayOneShot(splat);
     }
 
         private void OnDrawGizmos()

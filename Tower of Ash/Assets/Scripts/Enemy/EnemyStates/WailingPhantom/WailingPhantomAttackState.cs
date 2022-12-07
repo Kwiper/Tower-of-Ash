@@ -18,6 +18,7 @@ public class WailingPhantomAttackState : EnemyState {
     {
         base.Enter();
         attackDone = false;
+        phantom.AudioSource.PlayOneShot(phantom.dash);
         phantom.SetVelocity(30, direction);
     }
 

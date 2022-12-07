@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour {
     public Animator Anim { get; protected set; }
     public SpriteRenderer Renderer { get; protected set; }
     public Entity EnemyEntity;
+    public AudioSource AudioSource { get; protected set; }
+
     #endregion
 
     #region Other variables
@@ -58,6 +60,12 @@ public class Enemy : MonoBehaviour {
     bool triggerParticles;
     #endregion
 
+    #region Sound Effects
+    public AudioClip hit;
+    public AudioClip death;
+
+    #endregion
+
     #region Unity Callback Functions
 
     public virtual void Awake()
@@ -74,6 +82,8 @@ public class Enemy : MonoBehaviour {
         Anim = GetComponent<Animator>();
         EnemyEntity = GetComponent<Entity>();
         Renderer = GetComponent<SpriteRenderer>();
+        AudioSource = GetComponent<AudioSource>();
+
         FacingDirection = 1;
         RB.constraints = RigidbodyConstraints2D.FreezePosition;
         CreateTinderList();
@@ -102,6 +112,7 @@ public class Enemy : MonoBehaviour {
                 hitParticle.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 hitParticle.GetComponent<ParticleSystem>().Play();
                 Destroy(hitParticle, 1f);
+                AudioSource.PlayOneShot(hit);
                 triggerParticles = false;
             }
         }
@@ -132,7 +143,7 @@ public class Enemy : MonoBehaviour {
 
             if(deathTimer == 1f){
                 SpawnTinder();
-
+                AudioSource.PlayOneShot(death);
                 //disable renderer and collider
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -225,6 +236,8 @@ public class Enemy : MonoBehaviour {
     protected virtual void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
 
     protected virtual void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
+
+    protected virtual void SoundEffectTrigger() => StateMachine.CurrentState.SoundEffectTrigger();
 
     public void Flip()
     {

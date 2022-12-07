@@ -8,6 +8,9 @@ public class SmallGolem : Enemy
     public SmallGolemWalkState WalkState { get; private set; }
     public SmallGolemThrowState ThrowState { get; private set; }
 
+    public AudioClip walk;
+    public AudioClip throwRock;
+
     [SerializeField]
     private Transform ledgeCheck;
 
@@ -77,6 +80,7 @@ public class SmallGolem : Enemy
 
     public void ThrowRock()
     {
+        AudioSource.PlayOneShot(throwRock);
         GameObject instance = Instantiate(Rock, throwPoint.transform.position, throwPoint.transform.rotation) as GameObject;
         instance.GetComponent<Rock>().angle = new Vector2(1 * FacingDirection, 3);
     }

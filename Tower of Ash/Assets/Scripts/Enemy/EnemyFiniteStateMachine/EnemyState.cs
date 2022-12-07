@@ -58,4 +58,6 @@ public class EnemyState : MonoBehaviour
     public virtual void AnimationTrigger() { }
 
     public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
+
+    public virtual void SoundEffectTrigger() { }
 }

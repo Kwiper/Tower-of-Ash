@@ -186,6 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combatData: {fileID: 0}
   EnemyEntity: {fileID: 1440060010264135036}
+  doesNotMove: 0
+  isMoving: 0
   playerData: {fileID: 11400000, guid: 50ce2506a06aa3041a39f4071b2848e3, type: 2}
   tinderReward: 10
   tinderList: []
@@ -197,6 +199,9 @@ MonoBehaviour:
   defaultMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   hitParticleContainer: {fileID: 211793005303880901, guid: 5063217c14055cf4e9b4a1fd847eb5c9, type: 3}
   deathParticleContainer: {fileID: 211793005303880901, guid: ae83cee101d738c4b8f75374db5302c1, type: 3}
+  hit: {fileID: 8300000, guid: 0c4c40a3f73878e41a7668fec1cf7a86, type: 3}
+  death: {fileID: 8300000, guid: dbd81ce1da4f54b438d72596a4dcd655, type: 3}
+  dash: {fileID: 8300000, guid: 8760178b42846cf4a844b890c26e6b27, type: 3}
   aggroPoint: {fileID: 621195109722142590}
   aggroRadius: 12
   playerRadius: 4
