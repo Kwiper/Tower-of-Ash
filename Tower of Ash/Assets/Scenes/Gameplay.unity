@@ -1757,13 +1757,14 @@ GameObject:
   - component: {fileID: 42053914}
   - component: {fileID: 42053916}
   - component: {fileID: 42053915}
+  - component: {fileID: 42053917}
   m_Layer: 5
   m_Name: DoubleJumpMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &42053914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1828,6 +1829,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42053913}
   m_CullTransparentMesh: 1
+--- !u!114 &42053917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42053913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f34e472a8b91eb4b91a073eb31ffaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexts:
+  - {fileID: 1941220415}
+  - {fileID: 1480818555}
+  controllerTexts:
+  - {fileID: 379221242}
+  - {fileID: 1642255457}
 --- !u!1 &42775653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,6 +3354,7 @@ GameObject:
   - component: {fileID: 89474414}
   - component: {fileID: 89474416}
   - component: {fileID: 89474415}
+  - component: {fileID: 89474417}
   m_Layer: 5
   m_Name: FireballMenu
   m_TagString: Untagged
@@ -3406,6 +3426,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89474413}
   m_CullTransparentMesh: 1
+--- !u!114 &89474417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89474413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f34e472a8b91eb4b91a073eb31ffaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexts:
+  - {fileID: 1702663534}
+  - {fileID: 1265419608}
+  controllerTexts:
+  - {fileID: 1894376943}
+  - {fileID: 395098278}
 --- !u!1001 &92256543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6238,6 +6276,7 @@ GameObject:
   - component: {fileID: 196696760}
   - component: {fileID: 196696762}
   - component: {fileID: 196696761}
+  - component: {fileID: 196696763}
   m_Layer: 5
   m_Name: WallJumpMenu
   m_TagString: Untagged
@@ -6309,6 +6348,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196696759}
   m_CullTransparentMesh: 1
+--- !u!114 &196696763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196696759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f34e472a8b91eb4b91a073eb31ffaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexts:
+  - {fileID: 1939063444}
+  - {fileID: 660825250}
+  controllerTexts:
+  - {fileID: 1440656226}
+  - {fileID: 2142467165}
 --- !u!1 &197385253
 GameObject:
   m_ObjectHideFlags: 0
@@ -6738,7 +6795,7 @@ PrefabInstance:
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 13040096}
+      objectReference: {fileID: 815444852}
     - target: {fileID: 1664851421153338252, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: m_Name
       value: Power Up Pedestal (DASH)
@@ -6746,7 +6803,7 @@ PrefabInstance:
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 13040096}
+      objectReference: {fileID: 815444852}
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 1
@@ -11687,7 +11744,7 @@ PrefabInstance:
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1852805485}
+      objectReference: {fileID: 196696759}
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 2
@@ -11699,7 +11756,7 @@ PrefabInstance:
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1852805485}
+      objectReference: {fileID: 196696759}
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 2
@@ -13789,7 +13846,7 @@ PrefabInstance:
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 100577221}
+      objectReference: {fileID: 2052663902}
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 6
@@ -13801,7 +13858,7 @@ PrefabInstance:
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 100577221}
+      objectReference: {fileID: 2052663902}
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 6
@@ -26160,6 +26217,7 @@ GameObject:
   - component: {fileID: 815444853}
   - component: {fileID: 815444855}
   - component: {fileID: 815444854}
+  - component: {fileID: 815444856}
   m_Layer: 5
   m_Name: DashMenu
   m_TagString: Untagged
@@ -26231,6 +26289,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815444852}
   m_CullTransparentMesh: 1
+--- !u!114 &815444856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815444852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f34e472a8b91eb4b91a073eb31ffaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexts:
+  - {fileID: 1665853161}
+  - {fileID: 1603485207}
+  controllerTexts:
+  - {fileID: 185980912}
+  - {fileID: 1725148726}
 --- !u!1 &832599901
 GameObject:
   m_ObjectHideFlags: 0
@@ -44523,7 +44599,7 @@ PrefabInstance:
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1289094381}
+      objectReference: {fileID: 1691582238}
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 4
@@ -44539,7 +44615,7 @@ PrefabInstance:
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1289094381}
+      objectReference: {fileID: 1691582238}
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 4
@@ -49115,6 +49191,7 @@ GameObject:
   - component: {fileID: 1691582239}
   - component: {fileID: 1691582241}
   - component: {fileID: 1691582240}
+  - component: {fileID: 1691582242}
   m_Layer: 5
   m_Name: ChargeMenu
   m_TagString: Untagged
@@ -49186,6 +49263,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691582238}
   m_CullTransparentMesh: 1
+--- !u!114 &1691582242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691582238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f34e472a8b91eb4b91a073eb31ffaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexts:
+  - {fileID: 1157478963}
+  - {fileID: 1323662763}
+  controllerTexts:
+  - {fileID: 543902269}
+  - {fileID: 1819965654}
 --- !u!1001 &1692777285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52502,7 +52597,7 @@ PrefabInstance:
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 467913670}
+      objectReference: {fileID: 89474413}
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 3
@@ -52514,7 +52609,7 @@ PrefabInstance:
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 467913670}
+      objectReference: {fileID: 89474413}
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 3
@@ -54875,7 +54970,7 @@ PrefabInstance:
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1339306594}
+      objectReference: {fileID: 42053913}
     - target: {fileID: 980688236169196144, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 5
@@ -54887,7 +54982,7 @@ PrefabInstance:
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1339306594}
+      objectReference: {fileID: 42053913}
     - target: {fileID: 1664851421153338253, guid: 7b940d8f3c44a57419a6f92ebf3c1703, type: 3}
       propertyPath: upgrade
       value: 5
@@ -59967,6 +60062,7 @@ GameObject:
   - component: {fileID: 2052663903}
   - component: {fileID: 2052663905}
   - component: {fileID: 2052663904}
+  - component: {fileID: 2052663906}
   m_Layer: 5
   m_Name: HealMenu
   m_TagString: Untagged
@@ -60038,6 +60134,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052663902}
   m_CullTransparentMesh: 1
+--- !u!114 &2052663906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052663902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f34e472a8b91eb4b91a073eb31ffaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyboardTexts:
+  - {fileID: 2006467184}
+  - {fileID: 550458944}
+  controllerTexts:
+  - {fileID: 1931699578}
+  - {fileID: 1125725362}
 --- !u!1001 &2058161445
 PrefabInstance:
   m_ObjectHideFlags: 0
