@@ -671,6 +671,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6dd40442-872e-4ead-8fb4-e2d32b66b866
     m_ActionName: Gameplay/Map[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6238124248561127293}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnPauseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 114cc56a-1f40-42b1-aa7a-6e0934672ce5
+    m_ActionName: Gameplay/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -689,7 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputHoldTime: 0.15
-  lookAdjustmentSize: 2
+  lookAdjustmentSize: 4
   chargeHeld: 0
 --- !u!114 &6238124248561127291
 MonoBehaviour:
@@ -729,6 +745,7 @@ MonoBehaviour:
   isHit: 0
   invincible: 0
   hitParticleContainer: {fileID: 211793005303880901, guid: cf26afccd0320e146892eb301c1d896d, type: 3}
+  chargeParticleContainer: {fileID: 4687617796673544654, guid: d91ec6c811d1e8643827aa8e90bf8768, type: 3}
   jumpParticleContainer: {fileID: 4687617796673544654, guid: f628b7bcae5702a4db5331b9bcbb7fae, type: 3}
   wallJumpParticleContainer: {fileID: 4687617796673544654, guid: 2ec716ff76e64034cabdb51c1082b98d, type: 3}
 --- !u!95 &6238124248561127292

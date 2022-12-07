@@ -17,23 +17,26 @@ public class MapManager : MonoBehaviour
 
     private void Update()
     {
-        if (player.InputHandler.MapInput)
+        if (!PauseMenu.GameIsPaused)
         {
-            
-            foreach(GameObject child in children)
+            if (player.InputHandler.MapInput)
             {
-                child.SetActive(true);
+
+                foreach (GameObject child in children)
+                {
+                    child.SetActive(true);
+                }
+
             }
-            
-        }
-        else
-        {
-            
-            foreach(GameObject child in children)
+            else
             {
-                child.SetActive(false);
+
+                foreach (GameObject child in children)
+                {
+                    child.SetActive(false);
+                }
+
             }
-            
         }
     }
 

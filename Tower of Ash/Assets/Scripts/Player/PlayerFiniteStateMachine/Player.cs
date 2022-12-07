@@ -66,13 +66,9 @@ public class Player : MonoBehaviour
     public bool firstReload = false;
     public Vector2 spawnPoint = new Vector2(-2,-58);
     private Vector2 displaceVector;
-
-    private Vector2 lookPosDefault;
-    [SerializeField]
-    private float lookSpeed = 5f;
     private float step;
-    private float xLookDisplace = 0;
-    private float yLookDisplace = 0;
+    private float lookSpeed = 27.5f;
+    private Vector2 lookPosDefault;
     private Vector2 spikeCheckPoint;
     private Collider2D newWorldBound;
     //public bool FreezePos;
@@ -81,7 +77,6 @@ public class Player : MonoBehaviour
     #region Other variables
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
-    public float lookDisplacement = 0f;
     private Vector2 workspace;
 
 
@@ -102,6 +97,7 @@ public class Player : MonoBehaviour
 
     #region Particles
     [SerializeField] public GameObject hitParticleContainer;
+    [SerializeField] public GameObject chargeParticleContainer;
     [SerializeField] public GameObject jumpParticleContainer;
     [SerializeField] public GameObject wallJumpParticleContainer;
     bool triggerParticles;
@@ -157,19 +153,23 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        step = lookSpeed*Time.deltaTime;
+        step = lookSpeed * Time.deltaTime;
+
         if(firstReload)firstReloadCamConfine();
         CurrentVelocity = RB.velocity;
         SetLookDisplacement();
+        if(InputHandler.chargeHeld && playerData.unlockedChargeAttack){
+            //SpriteRenderer.color = Color.gray;
 
-        // Charge attack indicator
-        if(InputHandler.chargeHeld && playerData.unlockedChargeAttack){ 
-            SpriteRenderer.color = Color.gray; // Herman trigger particles here
+            // Trigger particles
+            GameObject cParticle = Instantiate(chargeParticleContainer, transform);
+            cParticle.transform.position = new Vector3(transform.position.x, transform.position.y-.2f, transform.position.z);
+            cParticle.GetComponent<ParticleSystem>().Play();
+            Destroy(cParticle, 0.25f);
         }
         else{
             SpriteRenderer.color = Color.white;
         }
-        // End
 
         StateMachine.CurrentState.LogicUpdate();
 
@@ -261,10 +261,9 @@ public class Player : MonoBehaviour
 
     public void SetLookDisplacement()
     {
-        displaceVector = new Vector2(InputHandler.NormLookInputX+gameObject.GetComponent<Transform>().position.x,InputHandler.NormLookInputY+gameObject.GetComponent<Transform>().position.y+1);
+        displaceVector = new Vector2(InputHandler.NormLookInputX + gameObject.GetComponent<Transform>().position.x, InputHandler.NormLookInputY + gameObject.GetComponent<Transform>().position.y + 1);
 
         cameraPoint.position = Vector2.MoveTowards(cameraPoint.position, displaceVector, step);
-
     }
 
     #endregion
@@ -317,7 +316,7 @@ public class Player : MonoBehaviour
 
     public void CheckIfShouldFlip(int xInput)
     {
-        if(xInput != 0 && xInput != FacingDirection)
+        if(xInput != 0 && xInput != FacingDirection && !PauseMenu.GameIsPaused)
         {
             Flip();
         }
@@ -430,11 +429,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-    //Changing player's spawn point after hitting a certain position
-    public void setSpawnPosition(Vector2 resetSpawnPoint){ 
-        this.spawnPoint = resetSpawnPoint;
-    }
     //Used for respawning on death
     public void respawnPosition(){
         this.GetComponent<Transform>().position = spawnPoint;
@@ -447,6 +441,10 @@ public class Player : MonoBehaviour
         newWorldBound = colliderBound.GetComponent<Collider2D>();
         setConfiner(newWorldBound);
         firstReload = false;
+    }
+    public void setSpawnPosition(Vector2 resetSpawnPoint)
+    {
+        this.spawnPoint = resetSpawnPoint;
     }
 
     #endregion
