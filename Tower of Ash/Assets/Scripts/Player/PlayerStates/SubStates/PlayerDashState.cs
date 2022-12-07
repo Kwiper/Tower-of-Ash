@@ -21,6 +21,8 @@ public class PlayerDashState : PlayerAbilityState {
 
         dashDirection = Vector2.right * player.FacingDirection;
         startTime = Time.time;
+
+        player.AudioSource.PlayOneShot(player.dash, 0.5f);
     }
 
     public override void Exit()

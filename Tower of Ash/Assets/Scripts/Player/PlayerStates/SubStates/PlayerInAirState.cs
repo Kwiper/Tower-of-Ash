@@ -24,6 +24,8 @@ public class PlayerInAirState : PlayerState {
     private bool isJumping;
     private float startWallJumpCoyoteTime;
 
+    bool hasPlayedCapeSound;
+
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -51,11 +53,13 @@ public class PlayerInAirState : PlayerState {
         player.AttackState.ResetAttackCounter();
         player.Anim.SetInteger("attackCounter", 0);
         player.FireballState.ResetCanFireball();
+        hasPlayedCapeSound = false;
     }
 
     public override void Exit()
     {
         base.Exit();
+        hasPlayedCapeSound = false;
     }
 
     public override void LogicUpdate()
@@ -179,4 +183,33 @@ public class PlayerInAirState : PlayerState {
     public void StopWallJumpCoyoteTime() => wallJumpCoyoteTime = false;
 
     public void SetIsJumping() => isJumping = true;
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        if (!hasPlayedCapeSound)
+        {
+            int rng = Random.Range(0, 4);
+            switch (rng)
+            {
+                default:
+
+                    break;
+                case 0:
+                    player.AudioSource.PlayOneShot(player.cape1);
+                    break;
+                case 1:
+                    player.AudioSource.PlayOneShot(player.cape2);
+                    break;
+                case 2:
+                    player.AudioSource.PlayOneShot(player.cape3);
+                    break;
+                case 3:
+                    player.AudioSource.PlayOneShot(player.cape4);
+                    break;
+            }
+
+            hasPlayedCapeSound = true;
+        }
+    }
 }

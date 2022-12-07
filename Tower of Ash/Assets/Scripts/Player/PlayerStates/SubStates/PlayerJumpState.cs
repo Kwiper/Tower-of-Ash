@@ -23,6 +23,36 @@ public class PlayerJumpState : PlayerAbilityState {
         jParticle.GetComponent<ParticleSystem>().Play();
         MonoBehaviour.Destroy(jParticle, 1f);
 
+        if (player.CheckIfGrounded())
+        {
+            player.AudioSource.PlayOneShot(player.jump);
+        }
+        else
+        {
+            player.AudioSource.PlayOneShot(player.airJump);
+        }
+
+        int rng = Random.Range(0, 4);
+        switch (rng)
+        {
+            default:
+
+                break;
+            case 0:
+                player.AudioSource.PlayOneShot(player.cape1);
+                break;
+            case 1:
+                player.AudioSource.PlayOneShot(player.cape2);
+                break;
+            case 2:
+                player.AudioSource.PlayOneShot(player.cape3);
+                break;
+            case 3:
+                player.AudioSource.PlayOneShot(player.cape4);
+                break;
+        }
+
+
         isAbilityDone = true;
 
         amountOfJumpsLeft--;

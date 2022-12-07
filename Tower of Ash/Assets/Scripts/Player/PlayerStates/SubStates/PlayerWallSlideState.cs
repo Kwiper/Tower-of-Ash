@@ -7,6 +7,25 @@ public class PlayerWallSlideState : PlayerTouchingWallState {
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        player.AudioSource.PlayOneShot(player.touchWall);
+        player.AudioSource.clip = player.wallSlide;
+        player.AudioSource.loop = true;
+        player.AudioSource.Play();
+
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        player.AudioSource.clip = null;
+        player.AudioSource.Stop();
+        player.AudioSource.loop = false;
+
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
@@ -14,7 +33,5 @@ public class PlayerWallSlideState : PlayerTouchingWallState {
         {
             player.SetVelocityY(-playerData.wallSlideVelocity);
         }
-
-
     }
 }

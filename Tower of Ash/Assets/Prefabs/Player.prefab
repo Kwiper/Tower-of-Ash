@@ -746,10 +746,31 @@ MonoBehaviour:
   healthCanCountdown: 1
   isHit: 0
   invincible: 0
+  playedChargeSound: 0
   hitParticleContainer: {fileID: 211793005303880901, guid: cf26afccd0320e146892eb301c1d896d, type: 3}
   chargeParticleContainer: {fileID: 4687617796673544654, guid: d91ec6c811d1e8643827aa8e90bf8768, type: 3}
   jumpParticleContainer: {fileID: 4687617796673544654, guid: f628b7bcae5702a4db5331b9bcbb7fae, type: 3}
   wallJumpParticleContainer: {fileID: 4687617796673544654, guid: 2ec716ff76e64034cabdb51c1082b98d, type: 3}
+  sword1: {fileID: 8300000, guid: 298ad1cfd0f4001459a78f8a8043edc5, type: 3}
+  sword2: {fileID: 8300000, guid: 3fba493a2f610764098ff4db5792cb9b, type: 3}
+  sword3: {fileID: 8300000, guid: 2e7ee7839f53acf43a531f37438c184b, type: 3}
+  swordBig: {fileID: 8300000, guid: 9b72c2ea727d6444ca87c6c0e8397a54, type: 3}
+  dash: {fileID: 8300000, guid: 2d8be819c6c0c2749b0c07c74e4c8240, type: 3}
+  footstep1: {fileID: 8300000, guid: e925d1ca95ba328409b88a3d5ee35653, type: 3}
+  footstep2: {fileID: 8300000, guid: 2c2672c9e471321478822fcdeaf34c5c, type: 3}
+  footstep3: {fileID: 8300000, guid: 9079f6033a6b32a46ac19490f306ee2a, type: 3}
+  footstep4: {fileID: 8300000, guid: 3bdaa0a066b2ed84c933f13b64a17514, type: 3}
+  jump: {fileID: 8300000, guid: 2f1cd816aeac1f74baba92cf2e71331e, type: 3}
+  airJump: {fileID: 8300000, guid: 680b804473b7e334187d73a84cae7137, type: 3}
+  wallSlide: {fileID: 8300000, guid: 02050815f02e2ee4f86819b2969a9746, type: 3}
+  touchWall: {fileID: 8300000, guid: 91294ff8d100bfc4d839ef8566a78bbe, type: 3}
+  chargeAttack: {fileID: 8300000, guid: 7e646c519ffdd3345a3affb3fb8608ae, type: 3}
+  fireball: {fileID: 8300000, guid: 42f3f4f3baa353845a6b38031217d9c5, type: 3}
+  heal: {fileID: 8300000, guid: 35fe8ae14d8c0b24c95936f95be8b128, type: 3}
+  cape1: {fileID: 8300000, guid: b4c5d2e8aef250d40be06ce17c265f69, type: 3}
+  cape2: {fileID: 8300000, guid: 13ab2fe3b8d486e45b005b6c772c89bb, type: 3}
+  cape3: {fileID: 8300000, guid: 9def574e33c44a548a0faf0907f6cc59, type: 3}
+  cape4: {fileID: 8300000, guid: 82041ab4e1958dd4587a46bf7fd8907e, type: 3}
 --- !u!95 &6238124248561127292
 Animator:
   serializedVersion: 4

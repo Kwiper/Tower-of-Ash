@@ -36,4 +36,10 @@ public class PlayerHealState : PlayerAbilityState {
         base.LogicUpdate();
         player.SetVelocityX(0);
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        player.AudioSource.PlayOneShot(player.heal);
+    }
 }
