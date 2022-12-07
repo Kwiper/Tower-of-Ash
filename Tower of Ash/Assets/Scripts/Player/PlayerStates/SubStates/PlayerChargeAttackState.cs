@@ -34,13 +34,13 @@ public class PlayerChargeAttackState : PlayerAbilityState
         base.Enter();       
         player.InputHandler.UseChargeAttackInput();
         launch = false;
-        
-
+        player.BoostAttack();
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.ResetAttack();
     }
 
     public override void LogicUpdate()

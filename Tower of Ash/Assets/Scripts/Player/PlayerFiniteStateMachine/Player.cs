@@ -376,6 +376,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void BoostAttack()
+    {
+        combatData.damage *= 2;
+    }
+
+    public void ResetAttack()
+    {
+        combatData.damage /= 2;
+    }
+
     public void ResetHealth()
     {
         PlayerEntity.Health = PlayerEntity.maxHealth;
