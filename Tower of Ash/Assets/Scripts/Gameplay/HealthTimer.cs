@@ -24,6 +24,9 @@ public class HealthTimer : MonoBehaviour
     [SerializeField]
     PlayerData playerData;
 
+    [SerializeField]
+    GameObject flaskImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +42,16 @@ public class HealthTimer : MonoBehaviour
 
         tinderText.text = "x " + playerData.tinder;
         flaskText.text = "x " + playerData.healCharges;
+
+        if (!playerData.unlockedHealing)
+        {
+            flaskImage.SetActive(false);
+            flaskText.gameObject.SetActive(false);
+        }
+        else
+        {
+            flaskImage.SetActive(true);
+            flaskText.gameObject.SetActive(true);
+        }
     }
 }
