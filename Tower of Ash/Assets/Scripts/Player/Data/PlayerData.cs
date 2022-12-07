@@ -79,6 +79,7 @@ public class PlayerData : ScriptableObject
     public List<bool> keysCollected;
 
     [Header("Map")]
+    public bool unlockedMap = false;
     public List<int> ids;
     public int positionId;
 

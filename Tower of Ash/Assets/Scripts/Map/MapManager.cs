@@ -6,6 +6,8 @@ public class MapManager : MonoBehaviour
 {
 
     Player player;
+    [SerializeField]
+    PlayerData playerData;
 
     [SerializeField]
     GameObject[] children;
@@ -19,7 +21,7 @@ public class MapManager : MonoBehaviour
     {
         if (!PauseMenu.GameIsPaused)
         {
-            if (player.InputHandler.MapInput)
+            if (player.InputHandler.MapInput && playerData.unlockedMap)
             {
 
                 foreach (GameObject child in children)

@@ -20,6 +20,7 @@ public class PowerUpPedestal : MonoBehaviour
     const int ChargeAttack = 4;
     const int DoubleJump = 5;
     const int Healing = 6;
+    const int Map = 7;
 
     public bool isCollected = false;
 
@@ -95,6 +96,15 @@ public class PowerUpPedestal : MonoBehaviour
                    sRenderer.sprite = sprites[2]; 
                 }          
                 break;
+
+                case Map:
+                if (playerData.unlockedMap)
+                {
+                    isCollected = true;
+                    GetComponent<CircleCollider2D>().enabled = false;
+                    GetComponent<SpriteRenderer>().enabled = false;
+                }
+                break;
                 
                 default:
                 Debug.Log("No upgrade set you idiot!");
@@ -130,6 +140,10 @@ public class PowerUpPedestal : MonoBehaviour
 
                 case DoubleJump:
                 playerData.amountOfJumps = 2;
+                break;
+
+                case Map:
+                playerData.unlockedMap = true;
                 break;
 
                 default:
