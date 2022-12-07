@@ -66,6 +66,8 @@ public class PlayerState
 
     public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
 
+    public virtual void SoundEffectTrigger() { }
+
     public string getAnimBoolName(){
         return animBoolName;
     }

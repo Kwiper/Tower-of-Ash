@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Entity PlayerEntity { get; private set; }
     public SpriteRenderer SpriteRenderer;
+    public AudioSource AudioSource { get; private set; }
     #endregion
 
     #region Check Transforms
@@ -88,6 +89,8 @@ public class Player : MonoBehaviour
 
     public bool invincible = false;
 
+    public bool playedChargeSound = false;
+
     #endregion
 
     #region Scene Detail Variables
@@ -101,6 +104,37 @@ public class Player : MonoBehaviour
     [SerializeField] public GameObject jumpParticleContainer;
     [SerializeField] public GameObject wallJumpParticleContainer;
     bool triggerParticles;
+    #endregion
+
+    #region Sound Effects
+
+    public AudioClip sword1;
+    public AudioClip sword2;
+    public AudioClip sword3;
+    public AudioClip swordBig;
+    public AudioClip dash;
+
+    public AudioClip footstep1;
+    public AudioClip footstep2;
+    public AudioClip footstep3;
+    public AudioClip footstep4;
+
+    public AudioClip jump;
+    public AudioClip airJump;
+
+    public AudioClip wallSlide;
+    public AudioClip touchWall;
+
+    public AudioClip chargeAttack;
+
+    public AudioClip fireball;
+
+    public AudioClip heal;
+    public AudioClip cape1;
+    public AudioClip cape2;
+    public AudioClip cape3;
+    public AudioClip cape4;
+
     #endregion
 
     #region Unity Callback Functions
@@ -138,6 +172,7 @@ public class Player : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         PlayerEntity = GetComponent<Entity>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        AudioSource = GetComponent<AudioSource>();
 
         FacingDirection = 1;
         var camConfined = GameObject.Find("CM vcam1");
@@ -160,6 +195,11 @@ public class Player : MonoBehaviour
         SetLookDisplacement();
         if(InputHandler.chargeHeld && playerData.unlockedChargeAttack){
             //SpriteRenderer.color = Color.gray;
+            if (!playedChargeSound)
+            {
+                AudioSource.PlayOneShot(chargeAttack, 0.5f);
+                playedChargeSound = true;
+            }
 
             // Trigger particles
             GameObject cParticle = Instantiate(chargeParticleContainer, transform);
@@ -168,7 +208,7 @@ public class Player : MonoBehaviour
             Destroy(cParticle, 0.25f);
         }
         else{
-            SpriteRenderer.color = Color.white;
+            playedChargeSound = false;
         }
 
         StateMachine.CurrentState.LogicUpdate();
@@ -345,6 +385,7 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 
+    private void SoundEffectTrigger() => StateMachine.CurrentState.SoundEffectTrigger();
 
     private void Flip()
     {

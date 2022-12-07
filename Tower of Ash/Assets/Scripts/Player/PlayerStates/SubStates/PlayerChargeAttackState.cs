@@ -61,4 +61,10 @@ public class PlayerChargeAttackState : PlayerAbilityState
     {
         base.PhysicsUpdate();
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        player.AudioSource.PlayOneShot(player.swordBig);
+    }
 }

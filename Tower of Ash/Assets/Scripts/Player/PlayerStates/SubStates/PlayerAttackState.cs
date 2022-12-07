@@ -84,5 +84,30 @@ public class PlayerAttackState : PlayerAbilityState {
 
     public void ResetAttackCounter() => attackCounter = 0;
 
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
 
+        int rng = Random.Range(0, 3);
+
+        switch (rng)
+        {
+            case 0:
+                player.AudioSource.PlayOneShot(player.sword1);
+                break;
+
+            case 1:
+                player.AudioSource.PlayOneShot(player.sword2);
+                break;
+
+            case 2:
+                player.AudioSource.PlayOneShot(player.sword3);
+                break;
+
+            default:
+                Debug.Log("No sound effect loaded");
+                break;
+        }
+
+    }
 }

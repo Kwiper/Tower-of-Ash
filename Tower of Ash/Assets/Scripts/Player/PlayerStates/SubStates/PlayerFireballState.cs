@@ -74,4 +74,10 @@ public class PlayerFireballState : PlayerAbilityState {
         isAbilityDone = true;
         lastFireballTime = Time.time;
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        player.AudioSource.PlayOneShot(player.fireball);
+    }
 }

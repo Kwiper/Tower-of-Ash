@@ -42,4 +42,37 @@ public class PlayerMoveState : PlayerGroundedState {
     {
         base.PhysicsUpdate();
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        int rng = Random.Range(0, 4);
+
+        switch (rng)
+        {
+            default:
+                Debug.Log("no sound effect loaded");
+                break;
+            case 0:
+                player.AudioSource.PlayOneShot(player.footstep1);
+                player.AudioSource.PlayOneShot(player.cape1,0.3f);
+                break;
+
+            case 1:
+                player.AudioSource.PlayOneShot(player.footstep2);
+                player.AudioSource.PlayOneShot(player.cape2,0.3f);
+                break;
+
+            case 2:
+                player.AudioSource.PlayOneShot(player.footstep3);
+                player.AudioSource.PlayOneShot(player.cape3,0.3f);
+                break;
+
+            case 3:
+                player.AudioSource.PlayOneShot(player.footstep4);
+                player.AudioSource.PlayOneShot(player.cape4,0.3f);
+                break;
+        }
+
+    }
 }
