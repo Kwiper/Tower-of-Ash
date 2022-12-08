@@ -11218,6 +11218,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaSounds:
   - {fileID: 1422204490}
+  - {fileID: 1005097728}
+  - {fileID: 1193534222}
+  - {fileID: 768414298}
+  - {fileID: 1199313160}
   soundsToDisable:
   - {fileID: 1790969999}
 --- !u!1 &353381731
@@ -15217,6 +15221,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaSounds:
   - {fileID: 1790969999}
+  - {fileID: 1005097728}
+  - {fileID: 1193534222}
+  - {fileID: 768414298}
+  - {fileID: 1199313160}
+  - {fileID: 1422204490}
   soundsToDisable: []
 --- !u!4 &458909857 stripped
 Transform:
@@ -60303,6 +60312,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaSounds:
   - {fileID: 1199313160}
+  - {fileID: 1005097728}
+  - {fileID: 1193534222}
+  - {fileID: 768414298}
   soundsToDisable:
   - {fileID: 1422204490}
   - {fileID: 1790969999}
