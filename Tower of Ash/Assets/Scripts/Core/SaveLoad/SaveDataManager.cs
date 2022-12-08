@@ -29,6 +29,8 @@ public class SaveDataManager
 
     public int tinder;
 
+    public float timeReduction;
+
     public float[][] tinderCacheLoc;
 
     #endregion
@@ -63,6 +65,8 @@ public class SaveDataManager
         unlockedDS = playerData.unlockedDash;
         unlockedCA = playerData.unlockedChargeAttack;
         unlockedHE = playerData.unlockedHealing;
+
+        timeReduction = playerData.timeReduction;
 
         tinder = playerData.tinder;
 

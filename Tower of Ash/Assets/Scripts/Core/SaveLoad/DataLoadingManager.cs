@@ -122,6 +122,8 @@ public class DataLoadingManager : MonoBehaviour
             //PlayerData
 
 
+            playerData.timeReduction = data.timeReduction;
+
             playerData.unlockedDoubleJump = data.unlockedDJ;
             playerData.amountOfJumps = data.numberofJumps;
 
