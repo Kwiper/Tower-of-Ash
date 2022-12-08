@@ -14,6 +14,7 @@ public class Boss : Enemy
     public BossBulletHellState BulletHellState { get; private set; }
     public BossBulletHellCharge BulletHellCharge { get; private set; }
     public BossFallState FallState { get; private set; }
+    public BossRegalState RegalState { get; private set; }
 
     public AudioClip slam;
     public AudioClip fireball;
@@ -32,6 +33,7 @@ public class Boss : Enemy
     [SerializeField]
     private Transform BoundaryPoint;
     public LayerMask groundLayer;
+    public LayerMask boundaryLayer;
 
     [SerializeField]
     private Transform groundCheck;
@@ -65,6 +67,7 @@ public class Boss : Enemy
         BulletHellState = new BossBulletHellState(this, StateMachine, "bulletHell");
         FallState = new BossFallState(this, StateMachine, "fall");
         BulletHellCharge = new BossBulletHellCharge(this, StateMachine, "bulletHellCharge");
+        RegalState = new BossRegalState(this, StateMachine, "regal");
 
     }
 
@@ -79,7 +82,7 @@ public class Boss : Enemy
     {
         base.Start();
         FacingDirection = -1;
-        StateMachine.Initialize(IdleState);
+        StateMachine.Initialize(RegalState);
     }
 
     public override void Update()
@@ -106,7 +109,7 @@ public class Boss : Enemy
 
     public bool CheckIfBoundaryDetected()
     {
-        return Physics2D.OverlapCircle(BoundaryPoint.position, 0.5f, groundLayer);
+        return Physics2D.OverlapCircle(BoundaryPoint.position, 0.5f, boundaryLayer);
     }
 
     public void CastFireball()

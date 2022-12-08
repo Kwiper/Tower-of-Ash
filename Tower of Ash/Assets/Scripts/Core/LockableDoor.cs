@@ -12,8 +12,11 @@ public class LockableDoor : MonoBehaviour
     [SerializeField]
     private TilemapCollider2D tileCollide;
 
-    private void start(){
+    private BoxCollider2D boxCollider;
+
+    private void Start(){
         Tilemapper = GetComponent<Tilemap>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
 
@@ -24,9 +27,14 @@ public class LockableDoor : MonoBehaviour
 
             hasTriggered = true;
 	        tileCollide.enabled = true;
-            Tilemapper.color = Color.white;
+            Tilemapper.color = new Color(1,1,1,1);
+            boxCollider.enabled = false;
+        }
 
-
+        if (!hasTriggered)
+        {
+            tileCollide.enabled = false;
+            Tilemapper.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
 
     }

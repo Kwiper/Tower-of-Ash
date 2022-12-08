@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e6b1756ced02c48ba2b671f408a46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 750
   Health: 0
   knockbackForce: 0
 --- !u!114 &516619588269175085
@@ -314,6 +314,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  boundaryLayer:
+    serializedVersion: 2
+    m_Bits: 2097152
   groundCheck: {fileID: 516619587478274775}
   AggroRadius: 5
   ProjectileRadius: 10
