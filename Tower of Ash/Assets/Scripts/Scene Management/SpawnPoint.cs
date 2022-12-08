@@ -12,7 +12,7 @@ public class SpawnPoint : MonoBehaviour
     private Player player;
     private Transform[] transforms;
 
-    private void Awake()
+    private void Start()
     {
         play = GameObject.FindGameObjectsWithTag("EssentialObjects")[0];
         transforms = play.GetComponentsInChildren<Transform>();
