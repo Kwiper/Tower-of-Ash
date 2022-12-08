@@ -80,7 +80,7 @@ public class LostEmber : Enemy
         
         GameObject instance = Instantiate(EmberProjectile, firePoint.transform.position, firePoint.transform.rotation);
 
-        instance.GetComponent<EmberProjectile>().angle = direction + new Vector2(randomDirection, 0);
+        instance.GetComponent<EmberProjectile>().angle = direction + new Vector2(randomDirection, 1);
 
         AudioSource.PlayOneShot(splat);
     }
