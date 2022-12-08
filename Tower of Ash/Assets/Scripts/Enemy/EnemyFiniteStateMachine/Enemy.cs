@@ -140,7 +140,10 @@ public class Enemy : MonoBehaviour {
         if(EnemyEntity.Health <= 0)
         {
             //disable knockback
+            SetVelocityX(0);
+            SetVelocityY(0);
             RB.constraints = RigidbodyConstraints2D.FreezePosition;
+            
 
             if (deathTimer == 1f){
                 SpawnTinder();
@@ -274,8 +277,10 @@ public class Enemy : MonoBehaviour {
         {
             Vector2 randomVel = new Vector2(Random.Range(-1f, 1f), 1).normalized;
 
-            GameObject instance = Instantiate(tinderList[i], transform.position, transform.rotation);
-            instance.GetComponent<Rigidbody2D>().velocity = randomVel;
+            GameObject instance = Instantiate(tinderList[i], new Vector3(transform.position.x,transform.position.y,0), transform.rotation);
+            instance.GetComponent<Rigidbody2D>().velocity = 0.5f * randomVel;
+
+            Debug.Log(instance.transform.position);
 
         }
     }

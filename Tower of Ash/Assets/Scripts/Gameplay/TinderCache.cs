@@ -105,7 +105,7 @@ public class TinderCache : MonoBehaviour
             Vector2 randomVel = new Vector2(Random.Range(-1f, 1f), 1).normalized;
 
             GameObject instance = Instantiate(tinderList[i], transform.position, transform.rotation);
-            instance.GetComponent<Rigidbody2D>().velocity = randomVel;
+            //instance.GetComponent<Rigidbody2D>().velocity = randomVel;
 
         }
     }

@@ -19,19 +19,32 @@ public class Tinder : MonoBehaviour
 
     Player player;
 
+    Rigidbody2D rb;
+
     AudioSource audioSource;
     public AudioClip collection;
+
+    float timer = 0.1f;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<Player>();
         audioSource = FindObjectOfType<AudioSource>();
+        timer = 0.1f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
+
+        if(timer <= 0)
+        {
+            rb.velocity = new Vector2(0,0);
+        }
+
 
         if (CheckIfPlayerInRange())
         {
@@ -42,6 +55,7 @@ public class Tinder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Player"))
         {
             playerData.tinder += tinderReward;
