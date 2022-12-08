@@ -64,6 +64,7 @@ public class LostEmber : Enemy
     {
         float randomDirection = Random.Range(-0.5f, 0.5f);
         //Hard coded these numbers because Quaternions are fucking stupid
+        
         if(GetComponent<Transform>().rotation.z == 0){
             direction = Vector2.up;
         }
@@ -76,7 +77,7 @@ public class LostEmber : Enemy
         else if(GetComponent<Transform>().rotation.z == 0.7071068f){
             direction = Vector2.left;
         }
-
+        
         GameObject instance = Instantiate(EmberProjectile, firePoint.transform.position, firePoint.transform.rotation);
 
         instance.GetComponent<EmberProjectile>().angle = direction + new Vector2(randomDirection, 0);

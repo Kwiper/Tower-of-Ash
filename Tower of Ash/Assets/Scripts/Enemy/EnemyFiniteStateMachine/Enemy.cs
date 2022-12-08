@@ -140,8 +140,9 @@ public class Enemy : MonoBehaviour {
         if(EnemyEntity.Health <= 0)
         {
             //disable knockback
+            RB.constraints = RigidbodyConstraints2D.FreezePosition;
 
-            if(deathTimer == 1f){
+            if (deathTimer == 1f){
                 SpawnTinder();
                 AudioSource.PlayOneShot(death);
                 //disable renderer and collider

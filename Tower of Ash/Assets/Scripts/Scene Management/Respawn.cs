@@ -22,7 +22,7 @@ public class Respawn : MonoBehaviour
 
     public void RespawnScene()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
         ascendSelected = false;
         playerData.healCharges = playerData.maxHealCharges;
     }

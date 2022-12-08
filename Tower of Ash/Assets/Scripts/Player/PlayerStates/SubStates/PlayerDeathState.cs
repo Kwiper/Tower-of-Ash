@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeathState : PlayerState {
     public PlayerDeathState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
@@ -12,7 +13,6 @@ public class PlayerDeathState : PlayerState {
     {
         base.AnimationFinishTrigger();
         player.ResetDeathState();
-        //SaveSystem.SavePlayer(playerData,combatData,upgradeData);
         stateMachine.ChangeState(player.IdleState);
     }
 
