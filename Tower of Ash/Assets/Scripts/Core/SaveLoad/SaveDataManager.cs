@@ -46,7 +46,7 @@ public class SaveDataManager
     #endregion 
 
 
-    public SaveDataManager (Player player, PlayerData playerData, CombatData combatData, UpgradeData upgradeData){
+    public SaveDataManager (PlayerData playerData, CombatData combatData, UpgradeData upgradeData){
         //Player Data
         unlockedDJ = playerData.unlockedDoubleJump;
         numberofJumps = playerData.amountOfJumps;
@@ -85,8 +85,8 @@ public class SaveDataManager
 
         //Values stored on Player
         
-        spawnPoint[0] = player.spawnPoint.x;
-        spawnPoint[1] = player.spawnPoint.x;
+        spawnPoint[0] = playerData.spawnPoint.x;
+        spawnPoint[1] = playerData.spawnPoint.y;
 
         //Values stored on Upgrade Screen
         swordUpgradeCount = upgradeData.swordUpgradeCount;

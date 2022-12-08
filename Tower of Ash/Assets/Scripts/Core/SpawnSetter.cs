@@ -6,6 +6,8 @@ public class SpawnSetter : MonoBehaviour
 {
     [SerializeField]
     private Vector2 spawnPoint;
+    [SerializeField]
+    private PlayerData playerData;
     private Player player;
     private bool hasTriggered = false;
     [SerializeField]
@@ -21,6 +23,9 @@ public class SpawnSetter : MonoBehaviour
             player = collision.gameObject.GetComponent<Player>();
 
             player.setSpawnPosition(spawnPoint);
+            //Added due to loading reasons
+            playerData.spawnPoint = spawnPoint;
+            
             hasTriggered = true;
         }
 

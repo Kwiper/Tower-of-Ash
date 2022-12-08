@@ -12,6 +12,7 @@ public class PlayerDeathState : PlayerState {
     {
         base.AnimationFinishTrigger();
         player.ResetDeathState();
+        //SaveSystem.SavePlayer(playerData,combatData,upgradeData);
         stateMachine.ChangeState(player.IdleState);
     }
 

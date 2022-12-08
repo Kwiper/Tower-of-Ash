@@ -88,4 +88,7 @@ public class PlayerData : ScriptableObject
     public bool combatTutorial = false;
     public bool lookTutorial = false;
 
+    [Header("Respawn")]
+    public Vector2 spawnPoint = new Vector2(-2,-58);
+
 }
