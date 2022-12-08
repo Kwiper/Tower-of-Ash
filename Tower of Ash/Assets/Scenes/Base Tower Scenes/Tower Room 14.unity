@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 730415329}
   - component: {fileID: 730415328}
   - component: {fileID: 730415327}
+  - component: {fileID: 730415333}
   m_Layer: 10
   m_Name: Spawnroom Platform 1
   m_TagString: Untagged
@@ -576,7 +577,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
@@ -787,6 +788,60 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!66 &730415333
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730415325}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 730415330}
+    m_ColliderPaths:
+    - - X: 1130000000
+        Y: 133750000
+      - X: 1130000000
+        Y: 140000000
+      - X: 1100000000
+        Y: 140000000
+      - X: 1100000000
+        Y: 132500000
+      - X: 1128749952
+        Y: 132500000
+    - - X: 1200000000
+        Y: 140000000
+      - X: 1170000000
+        Y: 140000000
+      - X: 1170000000
+        Y: 133750000
+      - X: 1171250048
+        Y: 132500000
+      - X: 1200000000
+        Y: 132500000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 119.99998, y: 13.25}
+      - {x: 119.99998, y: 14}
+      - {x: 117, y: 13.999971}
+      - {x: 117.000015, y: 13.374992}
+      - {x: 117.125015, y: 13.25}
+    - - {x: 112.874985, y: 13.25}
+      - {x: 113, y: 13.375011}
+      - {x: 112.99998, y: 14}
+      - {x: 110, y: 13.999971}
+      - {x: 110.00003, y: 13.25}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!1 &1356133889
 GameObject:
   m_ObjectHideFlags: 0
