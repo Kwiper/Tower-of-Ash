@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadNewGame()
     {
-        yield return SceneManager.LoadSceneAsync("Gameplay");
+        yield return SceneManager.LoadSceneAsync("OpeningCutscene");
     }
 
     public void Resume()

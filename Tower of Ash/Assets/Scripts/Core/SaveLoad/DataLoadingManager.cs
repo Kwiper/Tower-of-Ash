@@ -94,12 +94,14 @@ public class DataLoadingManager : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (player.InputHandler.LoadInput)
         {
             player.InputHandler.UseLoadInput();
             Debug.Log("Load input is being used");
             loadGame();
         }
+        */
     }
 
     public void loadGame(){
