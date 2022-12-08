@@ -749,6 +749,9 @@ MonoBehaviour:
   portalLayer:
     serializedVersion: 2
     m_Bits: 128
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
   stateDebug: 0
   playerTransform: {fileID: 0}
   camConfine: {fileID: 0}
