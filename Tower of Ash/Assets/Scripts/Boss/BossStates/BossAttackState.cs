@@ -20,8 +20,7 @@ public class BossAttackState : EnemyState {
     {
         base.AnimationTrigger();
 
-        // Place shockwave
-        Debug.Log("Shockwave");
+        boss.AudioSource.PlayOneShot(boss.slam);
     }
 
     public override void Enter()
@@ -33,5 +32,11 @@ public class BossAttackState : EnemyState {
     public override void Exit()
     {
         base.Exit();
+    }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        boss.AudioSource.PlayOneShot(boss.swing);
     }
 }

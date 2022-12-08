@@ -16,6 +16,9 @@ public class UpgradeSword : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI tinderText;
 
+    [SerializeField]
+    UISoundHandler soundHandler;
+
     private void Update()
     {
         if (upgradeData.swordUpgradeCount < upgradeData.swordMaxUpgrades)
@@ -40,9 +43,14 @@ public class UpgradeSword : MonoBehaviour
         {
             if (playerTinder >= tinderCost)
             {
+                soundHandler.PlayMenuConfirmSound();
                 playerData.tinder -= tinderCost;
                 playerCombatData.damageMultiplier *= upgradeData.swordUpgradeMultiplier;
                 upgradeData.swordUpgradeCount += 1;
+            }
+            else
+            {
+                soundHandler.PlayMenuIncorrectSound();
             }
         }
     }

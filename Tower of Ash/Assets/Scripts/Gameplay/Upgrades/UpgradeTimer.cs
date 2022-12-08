@@ -14,6 +14,8 @@ public class UpgradeTimer : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI tinderText;
 
+    [SerializeField]
+    UISoundHandler soundHandler;
     void Update()
     {
         if (upgradeData.flameUpgradeCount < upgradeData.flameMaxUpgrades)
@@ -38,9 +40,14 @@ public class UpgradeTimer : MonoBehaviour
         {
             if (playerTinder >= tinderCost)
             {
+                soundHandler.PlayMenuConfirmSound();
                 playerData.tinder -= tinderCost;
                 playerData.timeReduction *= upgradeData.flameTimeMultiplier;
                 upgradeData.flameUpgradeCount += 1;
+            }
+            else
+            {
+                soundHandler.PlayMenuIncorrectSound();
             }
         }
     }

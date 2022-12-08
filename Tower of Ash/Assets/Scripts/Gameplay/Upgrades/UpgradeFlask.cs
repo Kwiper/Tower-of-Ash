@@ -13,6 +13,8 @@ public class UpgradeFlask : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI tinderText;
 
+    [SerializeField]
+    UISoundHandler soundHandler;
     void Update()
     {
         if (upgradeData.flaskUpgradeCount < upgradeData.flaskMaxUpgrades)
@@ -37,9 +39,14 @@ public class UpgradeFlask : MonoBehaviour
         {
             if (playerTinder >= tinderCost)
             {
+                soundHandler.PlayMenuConfirmSound();
                 playerData.tinder -= tinderCost;
                 playerData.maxHealCharges += 1;
                 upgradeData.flaskUpgradeCount += 1;
+            }
+            else
+            {
+                soundHandler.PlayMenuIncorrectSound();
             }
         }
     }

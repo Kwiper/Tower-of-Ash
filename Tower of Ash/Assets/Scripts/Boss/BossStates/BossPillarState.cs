@@ -43,4 +43,10 @@ public class BossPillarState : EnemyState {
     {
         base.PhysicsUpdate();
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        boss.AudioSource.PlayOneShot(boss.pillars);
+    }
 }

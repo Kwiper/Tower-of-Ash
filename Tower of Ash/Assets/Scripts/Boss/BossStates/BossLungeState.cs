@@ -60,4 +60,17 @@ public class BossLungeState : EnemyState {
         }
 
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        if (!isLunging)
+        {
+            boss.AudioSource.PlayOneShot(boss.charge);
+        }
+        if (isLunging)
+        {
+            boss.AudioSource.PlayOneShot(boss.dash);
+        }
+    }
 }

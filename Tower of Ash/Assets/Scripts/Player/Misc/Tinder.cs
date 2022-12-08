@@ -19,10 +19,14 @@ public class Tinder : MonoBehaviour
 
     Player player;
 
+    AudioSource audioSource;
+    public AudioClip collection;
+
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
+        audioSource = FindObjectOfType<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +45,7 @@ public class Tinder : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerData.tinder += tinderReward;
+            audioSource.PlayOneShot(collection);
             Destroy(gameObject);
         }
     }
