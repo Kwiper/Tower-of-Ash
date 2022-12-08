@@ -21,7 +21,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool InteractInput { get; private set; }
     public bool MapInput { get; private set; }
     public bool PauseInput { get; private set; }
-
+    public bool LoadInput { get; private set; }
     [SerializeField]
     private float inputHoldTime = 0.2f;
     [SerializeField]
@@ -172,6 +172,7 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseInteractInput() => InteractInput = false;
     public void UseMapInput() => MapInput = false;
     public void UsePauseInput() => PauseInput = false;
+    public void UseLoadInput() => LoadInput = false;
     private void CheckJumpInputHoldTime() // Jump buffer
     {
         if(Time.time >= jumpInputStartTime + inputHoldTime)

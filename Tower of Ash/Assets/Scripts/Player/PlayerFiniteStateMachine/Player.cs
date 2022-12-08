@@ -258,6 +258,7 @@ public class Player : MonoBehaviour
         if (PlayerEntity.Health <= 0 && StateMachine.CurrentState != HitState)
         {
             RB.constraints = RigidbodyConstraints2D.FreezePosition;
+            saveGame();
             StateMachine.ChangeState(DeathState);
         }
         //if(!manualCheckPointSection || !hitSpike)StartCoroutine(setCheckPointPosRay());
@@ -512,7 +513,7 @@ public class Player : MonoBehaviour
     }
 
     private void saveGame(){
-        SaveSystem.SavePlayer(this,playerData,combatData,upgradeData);
+        SaveSystem.SavePlayer(playerData,combatData,upgradeData);
     }
 
     #endregion
