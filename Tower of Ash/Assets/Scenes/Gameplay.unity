@@ -37358,6 +37358,10 @@ PrefabInstance:
       propertyPath: spikesLayer.m_Bits
       value: 16384
       objectReference: {fileID: 0}
+    - target: {fileID: 5623514000621726150, guid: d786fc917a773e346a1bd234142456ed, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 115958573}
     - target: {fileID: 6722131709722287501, guid: d786fc917a773e346a1bd234142456ed, type: 3}
       propertyPath: m_XDamping
       value: 0
@@ -56860,28 +56864,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894376943}
   m_CullTransparentMesh: 1
---- !u!1 &1894862296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6722131709953429420, guid: d786fc917a773e346a1bd234142456ed, type: 3}
-  m_PrefabInstance: {fileID: 1222337795}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1894862299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894862296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ConfineMode: 0
-  m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 115958573}
-  m_ConfineScreenEdges: 0
-  m_Damping: 0
 --- !u!1 &1895218671
 GameObject:
   m_ObjectHideFlags: 0
