@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//using System.Serializable;
+[System.Serializable]
 public class SaveDataManager
 {
     #region Player Data Variables
@@ -60,13 +61,13 @@ public class SaveDataManager
         healingFlaskMax = playerData.maxHealCharges;
         for (int i = 0; i < playerData.keysCollected.Count; i++) 
         {
-            keysCollected[i] =  playerData.keysCollected[i];
+            //keysCollected[i] =  playerData.keysCollected[i];
         }
         
         mapUnlocked = playerData.unlockedMap;
         for (int i = 0; i < playerData.ids.Count; i++) 
         {
-            mapId[i] =  playerData.ids[i];
+            //mapId[i] =  playerData.ids[i];
         }        
 
 
@@ -78,15 +79,15 @@ public class SaveDataManager
         for (int i = 0; i < playerData.CollectedTinderCacheLocations.Count; i++) 
         {
 
-            tinderCacheLoc[i] =  new float[] {playerData.CollectedTinderCacheLocations[i].x , playerData.CollectedTinderCacheLocations[i].y};
+            //tinderCacheLoc[i] =  new float[] {playerData.CollectedTinderCacheLocations[i].x , playerData.CollectedTinderCacheLocations[i].y};
 
         }      
 
 
         //Values stored on Player
         
-        spawnPoint[0] = playerData.spawnPoint.x;
-        spawnPoint[1] = playerData.spawnPoint.y;
+        //spawnPoint[0] = playerData.spawnPoint.x;
+        //spawnPoint[1] = playerData.spawnPoint.y;
 
         //Values stored on Upgrade Screen
         swordUpgradeCount = upgradeData.swordUpgradeCount;
