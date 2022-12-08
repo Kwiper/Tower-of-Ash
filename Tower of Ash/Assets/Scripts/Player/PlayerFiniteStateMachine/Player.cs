@@ -255,7 +255,7 @@ public class Player : MonoBehaviour
 
 
         // When HP reaches 0 from timer, switch to death state.
-        if (PlayerEntity.Health <= 0 && StateMachine.CurrentState != HitState)
+        if (PlayerEntity.Health <= 0 && StateMachine.CurrentState != DeathState)
         {
             RB.constraints = RigidbodyConstraints2D.FreezePosition;
             saveGame();

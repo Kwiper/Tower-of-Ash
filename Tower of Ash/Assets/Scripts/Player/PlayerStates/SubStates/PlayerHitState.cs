@@ -16,21 +16,16 @@ public class PlayerHitState : PlayerState
     {
         base.AnimationFinishTrigger();
 
-        if (player.PlayerEntity.Health > 0)
+
+        if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
-            if (isGrounded && player.CurrentVelocity.y < 0.01f)
-            {
-                stateMachine.ChangeState(player.IdleState);
-            }
-            else
-            {
-                stateMachine.ChangeState(player.InAirState);
-            }
+            stateMachine.ChangeState(player.IdleState);
         }
-        else if(player.PlayerEntity.Health <= 0)
+        else
         {
-            stateMachine.ChangeState(player.DeathState);
+            stateMachine.ChangeState(player.InAirState);
         }
+
     }
 
     public override void DoChecks()
