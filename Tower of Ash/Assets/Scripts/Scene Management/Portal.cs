@@ -2,19 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.InputSystem;
 
 public class Portal : MonoBehaviour
 {
     [SerializeField] int sceneToLoad = -1;
     [SerializeField] DestinationIdentifier destinationPortal;
     [SerializeField] Transform spawnPoint;
+    [SerializeField] LayerMask playerLayer;
+    [SerializeField] float range;
+    [SerializeField] Transform rangePoint;
+
+    [SerializeField]
+    TextMeshPro text;
+
+    [SerializeField]
+    bool CanBeInteractedWith;
+
+    Animator anim;
+
     GameObject newWorldBound;
     private bool isTeleporting = false;
 
     GameObject play;
+    Player player;
     private void Awake()
     {
         play =  GameObject.FindGameObjectsWithTag("Player")[0];
+        
+    }
+
+    private void Start()
+    {
+        player = FindObjectOfType<Player>();
+        anim = GetComponent<Animator>();
+        anim.SetBool("open", false);
     }
     public void OnPlayerTriggered(Player play)
     {
@@ -26,10 +49,40 @@ public class Portal : MonoBehaviour
 
     private void Update()
     {
-        
+        if (CheckIfPlayerInRange() && CanBeInteractedWith)
+        {
+            text.gameObject.SetActive(true);
+
+            if (player.InputHandler.InteractInput && player.CheckIfGrounded())
+            {
+                player.InputHandler.UseInteractInput();
+                anim.SetBool("open", true);
+            }
+        }
+        else
+        {
+            text.gameObject.SetActive(false);
+        }
+
+        if (player.gameObject.GetComponent<PlayerInput>().currentControlScheme == "Keyboard")
+        {
+            text.text = "Press E to interact";
+        }
+        else if (player.gameObject.GetComponent<PlayerInput>().currentControlScheme == "Gamepad")
+        {
+            text.text = "Press B to interact";
+        }
     }
 
+    public void AnimationTrigger()
+    {
+        OnPlayerTriggered(player);
+    }
 
+    private bool CheckIfPlayerInRange()
+    {
+        return Physics2D.OverlapCircle(rangePoint.position, range, playerLayer);
+    }
 
     IEnumerator SwitchScene()
     {
@@ -50,8 +103,8 @@ public class Portal : MonoBehaviour
             }
         }
         var playTransform = play.GetComponent<Transform>();
-        var playa = play.GetComponent<Player>();
-        playa.setConfiner(newWorldBound.GetComponent<Collider2D>());
+        
+        player.setConfiner(newWorldBound.GetComponent<Collider2D>());
 
         playTransform.position = destPortal.spawnPoint.position;
         //destPortal.setActive(false);
