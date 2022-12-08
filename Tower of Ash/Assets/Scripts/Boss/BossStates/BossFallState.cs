@@ -72,4 +72,10 @@ public class BossFallState : EnemyState {
     {
         base.PhysicsUpdate();
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        boss.AudioSource.PlayOneShot(boss.fall);
+    }
 }

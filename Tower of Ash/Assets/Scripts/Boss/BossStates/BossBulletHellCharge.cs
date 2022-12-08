@@ -81,4 +81,10 @@ public class BossBulletHellCharge : EnemyState
     {
         base.PhysicsUpdate();
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        boss.AudioSource.PlayOneShot(boss.bulletHell);
+    }
 }

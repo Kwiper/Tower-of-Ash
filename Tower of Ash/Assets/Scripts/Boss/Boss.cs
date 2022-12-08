@@ -15,6 +15,16 @@ public class Boss : Enemy
     public BossBulletHellCharge BulletHellCharge { get; private set; }
     public BossFallState FallState { get; private set; }
 
+    public AudioClip slam;
+    public AudioClip fireball;
+    public AudioClip dash;
+    public AudioClip charge;
+    public AudioClip swing;
+    public AudioClip scrape;
+    public AudioClip pillars;
+    public AudioClip bulletHell;
+    public AudioClip fall;
+
     [SerializeField]
     private Transform AggroPoint;
     public LayerMask playerLayer;
@@ -103,6 +113,7 @@ public class Boss : Enemy
     {
         GameObject instance = Instantiate(Fireball, fireballPoint.transform.position, fireballPoint.transform.rotation);
         instance.GetComponent<BossFireball>().direction = new Vector2(FacingDirection, 0);
+        AudioSource.PlayOneShot(scrape);
     }
 
     public void FireBulletHell(float additionalAngle)
@@ -124,6 +135,7 @@ public class Boss : Enemy
 
             angle += angleStep;
         }
+        AudioSource.PlayOneShot(fireball);
     }
 
     public void CastPillar()

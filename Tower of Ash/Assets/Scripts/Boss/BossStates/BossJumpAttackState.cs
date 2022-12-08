@@ -60,4 +60,10 @@ public class BossJumpAttackState : EnemyState {
             // Trigger shockwave
         }
     }
+
+    public override void SoundEffectTrigger()
+    {
+        base.SoundEffectTrigger();
+        boss.AudioSource.PlayOneShot(boss.slam);
+    }
 }
