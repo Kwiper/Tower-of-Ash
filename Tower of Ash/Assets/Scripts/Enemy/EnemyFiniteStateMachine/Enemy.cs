@@ -274,7 +274,7 @@ public class Enemy : MonoBehaviour {
             Vector2 randomVel = new Vector2(Random.Range(-1f, 1f), 1).normalized;
 
             GameObject instance = Instantiate(tinderList[i], transform.position, transform.rotation);
-            instance.GetComponent<Rigidbody2D>().velocity = randomVel * 10;
+            instance.GetComponent<Rigidbody2D>().velocity = randomVel;
 
         }
     }

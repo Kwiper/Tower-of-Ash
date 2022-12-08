@@ -51,6 +51,7 @@ public class PauseMenu : MonoBehaviour
     {
         // Return to main menu\
         player.saveGame();
+        StartCoroutine(ChangeScene());
     }
 
     IEnumerator ChangeScene()
