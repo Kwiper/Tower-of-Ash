@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossEventManager : MonoBehaviour
 {
@@ -36,8 +37,12 @@ public class BossEventManager : MonoBehaviour
     [SerializeField]
     GameObject whiteOverlay;
 
+    [SerializeField]
+    Portal portal;
+
     private void Start()
     {
+        portal.enabled = false;
         boss = FindObjectOfType<Boss>();
         player = FindObjectOfType<Player>();
         bossFight = false;
@@ -100,10 +105,15 @@ public class BossEventManager : MonoBehaviour
             if(bossFightEndedTimer <= 0)
             {
                 //Transition to cutscene scene.
-                Debug.Log("Boss fight ended");
+                StartCoroutine(LoadEnding());
             }
         }
 
+    }
+
+    IEnumerator LoadEnding()
+    {
+        yield return SceneManager.LoadSceneAsync("EndingScene");
     }
 
 }

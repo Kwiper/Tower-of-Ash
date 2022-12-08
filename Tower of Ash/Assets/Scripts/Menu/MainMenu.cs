@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     private void Start()
     {
+        Destroy(GameObject.Find("EssentialObjects"));
     }
 
     IEnumerator LoadGameScene()
