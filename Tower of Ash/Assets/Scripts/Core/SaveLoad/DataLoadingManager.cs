@@ -16,7 +16,9 @@ public class DataLoadingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<Player>();
+
+        StartCoroutine(waiter());
+
 
         /*
         SaveDataManager data = SaveSystem.LoadPlayer();
@@ -81,6 +83,15 @@ public class DataLoadingManager : MonoBehaviour
 
     }
 
+
+    IEnumerator waiter()
+    {
+
+        yield return new WaitForSecondsRealtime(1.5f);
+        player = FindObjectOfType<Player>();
+
+    }
+
     private void Update()
     {
         if (player.InputHandler.LoadInput)
@@ -97,7 +108,9 @@ public class DataLoadingManager : MonoBehaviour
         if(data != null){
 
             player.spawnPoint = new Vector2(data.spawnPoint[0],data.spawnPoint[1]);
+            //player.spawnPoint = new Vector2(1,1);
             playerData.spawnPoint = new Vector2(data.spawnPoint[0],data.spawnPoint[1]);
+            //playerData.spawnPoint = new Vector2(1,1);
 
             upgradeData.swordUpgradeCount = data.swordUpgradeCount;
             upgradeData.flameUpgradeCount = data.flameUpgradeCount;
@@ -120,16 +133,18 @@ public class DataLoadingManager : MonoBehaviour
             playerData.unlockedHealing = data.unlockedHE;
             playerData.maxHealCharges = data.healingFlaskMax;
 
-            for (int i = 0; i < playerData.keysCollected.Count; i++) 
-            {
-                playerData.keysCollected[i] = data.keysCollected[i];
-            }
-
             playerData.unlockedMap = data.mapUnlocked;
 
             playerData.movementTutorial = data.tutorialMove;
             playerData.combatTutorial = data.tutorialCombat;
             playerData.lookTutorial = data.tutorialLook;
+
+            for (int i = 0; i < playerData.keysCollected.Count; i++) 
+            {
+                playerData.keysCollected[i] = data.keysCollected[i];
+            }
+
+
             
             for (int i = 0; i < data.tinderCacheLoc.Length; i++){
 

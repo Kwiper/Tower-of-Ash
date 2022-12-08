@@ -42,22 +42,23 @@ MonoBehaviour:
   unlockedFireball: 1
   fireballCooldown: 0.5
   fireballTime: 0.1
-  unlockedChargeAttack: 1
+  unlockedChargeAttack: 0
   chargeVelocity: 15
   pogoVelocity: 17.5
   timeReduction: 0.8333333
   iFrameTime: 0.75
-  unlockedHealing: 1
+  unlockedHealing: 0
   healAmount: 50
   healCharges: 3
   maxHealCharges: 3
-  tinder: 0
+  tinder: 10
   CollectedTinderCacheLocations: []
   keys: 01000000030000000b000000040000001000000005000000060000000c000000080000000d000000090000000f0000000e00000002000000070000000a00000011000000
-  keysCollected: 0000000000000000000000000000000000
+  keysCollected: 0000000001000000000000000000000000
   unlockedMap: 0
-  ids: 
+  ids: 0100000002000000040000000b0000000a000000
   positionId: 1
   movementTutorial: 0
   combatTutorial: 0
   lookTutorial: 0
+  spawnPoint: {x: -2, y: -11}
