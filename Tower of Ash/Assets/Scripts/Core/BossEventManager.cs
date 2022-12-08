@@ -113,7 +113,7 @@ public class BossEventManager : MonoBehaviour
 
     IEnumerator LoadEnding()
     {
-        yield return SceneManager.LoadSceneAsync("EndingScene");
+        yield return SceneManager.LoadSceneAsync("EndingCutscene");
     }
 
 }
