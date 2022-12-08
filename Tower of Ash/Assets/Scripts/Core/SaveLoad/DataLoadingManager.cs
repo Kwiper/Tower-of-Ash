@@ -89,7 +89,7 @@ public class DataLoadingManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1.5f);
         player = FindObjectOfType<Player>();
-
+        LoadedTinderCacheLocations = new List<Vector2>();
     }
 
     private void Update()
@@ -139,6 +139,8 @@ public class DataLoadingManager : MonoBehaviour
             playerData.combatTutorial = data.tutorialCombat;
             playerData.lookTutorial = data.tutorialLook;
 
+            playerData.tinder = data.tinder;
+
             for (int i = 0; i < playerData.keysCollected.Count; i++) 
             {
                 playerData.keysCollected[i] = data.keysCollected[i];
@@ -147,21 +149,25 @@ public class DataLoadingManager : MonoBehaviour
 
             
             for (int i = 0; i < data.tinderCacheLoc.Length; i++){
-
-                LoadedTinderCacheLocations.Add(new Vector2(data.tinderCacheLoc[i][0],data.tinderCacheLoc[i][1]));
-
+                //Debug.Log("Array size is "+data.tinderCacheLoc[i].Length);
+                if(data.tinderCacheLoc[i] != null){
+                    Debug.Log(data.tinderCacheLoc[i][0] + ","+data.tinderCacheLoc[i][1]);
+                    Vector2 test = new Vector2(data.tinderCacheLoc[i][0],data.tinderCacheLoc[i][1]);
+                    Debug.Log("This is test "+test);
+                    LoadedTinderCacheLocations.Add(test);
+                    //LoadedTinderCacheLocations.Add(new Vector2(data.tinderCacheLoc[i][0],data.tinderCacheLoc[i][1]));
+                    Debug.Log("I go after");
+                }
+                else{
+                    break;
+                }
             }
 
             foreach(Vector2 cacheLoc in LoadedTinderCacheLocations){
-                for(int i = 0; i < playerData.CollectedTinderCacheLocations.Count; i++){
-                    if(cacheLoc == playerData.CollectedTinderCacheLocations[i]){
-                        break;
-                    }
-                    //If last value in array and still not equal to anything add to discovered
-                    else if(cacheLoc != playerData.CollectedTinderCacheLocations[playerData.CollectedTinderCacheLocations.Count-1] && i == playerData.CollectedTinderCacheLocations.Count -1){
-                        playerData.CollectedTinderCacheLocations.Add(cacheLoc);
-                    }
-                }
+
+                    playerData.CollectedTinderCacheLocations.Add(cacheLoc);
+
+
             }
 
         }

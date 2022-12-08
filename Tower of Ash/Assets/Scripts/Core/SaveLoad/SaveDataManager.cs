@@ -27,6 +27,8 @@ public class SaveDataManager
     public bool tutorialCombat;
     public bool tutorialLook;
 
+    public int tinder;
+
     public float[][] tinderCacheLoc;
 
     #endregion
@@ -46,9 +48,13 @@ public class SaveDataManager
   
     #endregion 
 
-
     public SaveDataManager (PlayerData playerData, CombatData combatData, UpgradeData upgradeData){
         //Player Data
+        keysCollected = new bool[playerData.keysCollected.Count];
+        mapId = new int[playerData.ids.Count];
+        spawnPoint = new float[2];
+        tinderCacheLoc = new float[29][];
+
         unlockedDJ = playerData.unlockedDoubleJump;
         numberofJumps = playerData.amountOfJumps;
 
@@ -58,16 +64,19 @@ public class SaveDataManager
         unlockedCA = playerData.unlockedChargeAttack;
         unlockedHE = playerData.unlockedHealing;
 
+        tinder = playerData.tinder;
+
         healingFlaskMax = playerData.maxHealCharges;
         for (int i = 0; i < playerData.keysCollected.Count; i++) 
         {
-            //keysCollected[i] =  playerData.keysCollected[i];
+            
+            keysCollected[i] =  playerData.keysCollected[i];
         }
         
         mapUnlocked = playerData.unlockedMap;
         for (int i = 0; i < playerData.ids.Count; i++) 
         {
-            //mapId[i] =  playerData.ids[i];
+            mapId[i] =  playerData.ids[i];
         }        
 
 
@@ -75,19 +84,20 @@ public class SaveDataManager
         tutorialCombat = playerData.combatTutorial;
         tutorialLook = playerData.lookTutorial;
 
-    
-        for (int i = 0; i < playerData.CollectedTinderCacheLocations.Count; i++) 
-        {
-
-            //tinderCacheLoc[i] =  new float[] {playerData.CollectedTinderCacheLocations[i].x , playerData.CollectedTinderCacheLocations[i].y};
-
-        }      
+        if (playerData.CollectedTinderCacheLocations.Count != 0){
+            for (int i = 0; i < playerData.CollectedTinderCacheLocations.Count; i++) 
+            {
+                tinderCacheLoc[i] =  new float[] {playerData.CollectedTinderCacheLocations[i].x , playerData.CollectedTinderCacheLocations[i].y};
+                Debug.Log(tinderCacheLoc.Length);
+                Debug.Log(tinderCacheLoc[0].Length);
+            }
+        }
 
 
         //Values stored on Player
         
-        //spawnPoint[0] = playerData.spawnPoint.x;
-        //spawnPoint[1] = playerData.spawnPoint.y;
+        spawnPoint[0] = playerData.spawnPoint.x;
+        spawnPoint[1] = playerData.spawnPoint.y;
 
         //Values stored on Upgrade Screen
         swordUpgradeCount = upgradeData.swordUpgradeCount;

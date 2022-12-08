@@ -27,11 +27,11 @@ MonoBehaviour:
     m_Bits: 1024
   wallCheckDistance: 0.6
   wallSlideVelocity: 3
-  unlockedWallJump: 1
+  unlockedWallJump: 0
   wallJumpVelocity: 22
   wallJumpTime: 0.2
   wallJumpAngle: {x: 1, y: 2}
-  unlockedDash: 1
+  unlockedDash: 0
   dashCooldown: 0.3
   dashTime: 0.15
   dashVelocity: 30
@@ -39,7 +39,7 @@ MonoBehaviour:
   dashEndYMultiplier: 0.2
   distBetweenAfterImages: 0.5
   attackCooldown: 0.3
-  unlockedFireball: 1
+  unlockedFireball: 0
   fireballCooldown: 0.5
   fireballTime: 0.1
   unlockedChargeAttack: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   healAmount: 50
   healCharges: 3
   maxHealCharges: 3
-  tinder: 10
+  tinder: 20
   CollectedTinderCacheLocations: []
   keys: 01000000030000000b000000040000001000000005000000060000000c000000080000000d000000090000000f0000000e00000002000000070000000a00000011000000
   keysCollected: 0000000001000000000000000000000000
@@ -61,4 +61,4 @@ MonoBehaviour:
   movementTutorial: 0
   combatTutorial: 0
   lookTutorial: 0
-  spawnPoint: {x: -2, y: -11}
+  spawnPoint: {x: -2, y: -58}

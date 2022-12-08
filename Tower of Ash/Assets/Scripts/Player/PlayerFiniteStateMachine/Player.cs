@@ -259,6 +259,7 @@ public class Player : MonoBehaviour
         {
             RB.constraints = RigidbodyConstraints2D.FreezePosition;
             saveGame();
+            healthCanCountdown = false;
             StateMachine.ChangeState(DeathState);
         }
         //if(!manualCheckPointSection || !hitSpike)StartCoroutine(setCheckPointPosRay());
@@ -512,7 +513,7 @@ public class Player : MonoBehaviour
         this.spawnPoint = resetSpawnPoint;
     }
 
-    private void saveGame(){
+    public void saveGame(){
         SaveSystem.SavePlayer(playerData,combatData,upgradeData);
     }
 

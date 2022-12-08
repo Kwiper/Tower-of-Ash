@@ -48,12 +48,14 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        // Return to main menu
+        // Return to main menu\
+        player.saveGame();
     }
 
     public void Quit()
     {
         // Quit game
+        player.saveGame();
     }
 
 }

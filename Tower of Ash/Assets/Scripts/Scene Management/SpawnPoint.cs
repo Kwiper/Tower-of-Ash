@@ -41,6 +41,7 @@ public class SpawnPoint : MonoBehaviour
                 if(player.isReal == false){
                     Destroy(essentialClean[i]);
                 }
+                player.healthCanCountdown = true;
             }   
         }
     }
