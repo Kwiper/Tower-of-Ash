@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataLoadingManager : MonoBehaviour
 {
-    [SerializeField]
+    
     private Player player;    
     [SerializeField]
     private PlayerData playerData;
@@ -16,6 +16,8 @@ public class DataLoadingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<Player>();
+
         /*
         SaveDataManager data = SaveSystem.LoadPlayer();
 
@@ -79,7 +81,15 @@ public class DataLoadingManager : MonoBehaviour
 
     }
 
-
+    private void Update()
+    {
+        if (player.InputHandler.LoadInput)
+        {
+            player.InputHandler.UseLoadInput();
+            Debug.Log("Load input is being used");
+            loadGame();
+        }
+    }
 
     public void loadGame(){
         SaveDataManager data = SaveSystem.LoadPlayer();

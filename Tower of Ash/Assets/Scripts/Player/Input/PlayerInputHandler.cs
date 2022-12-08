@@ -22,6 +22,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool MapInput { get; private set; }
     public bool PauseInput { get; private set; }
     public bool LoadInput { get; private set; }
+
     [SerializeField]
     private float inputHoldTime = 0.2f;
     [SerializeField]
@@ -38,6 +39,19 @@ public class PlayerInputHandler : MonoBehaviour
         CheckDashInputHoldTime();
         CheckFireballInputHoldTime();
     }
+
+    public void OnLoadInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            LoadInput = true;
+        }
+        if (context.canceled)
+        {
+            LoadInput = false;
+        }
+    }
+
     public void OnPauseInput(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -173,6 +187,7 @@ public class PlayerInputHandler : MonoBehaviour
     public void UseMapInput() => MapInput = false;
     public void UsePauseInput() => PauseInput = false;
     public void UseLoadInput() => LoadInput = false;
+
     private void CheckJumpInputHoldTime() // Jump buffer
     {
         if(Time.time >= jumpInputStartTime + inputHoldTime)
