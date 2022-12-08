@@ -54,8 +54,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-        // Quit game
         player.saveGame();
+        Application.Quit();
     }
 
 }
