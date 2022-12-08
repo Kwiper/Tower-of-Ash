@@ -511,5 +511,9 @@ public class Player : MonoBehaviour
         this.spawnPoint = resetSpawnPoint;
     }
 
+    private void saveGame(){
+        SaveSystem.SavePlayer(this,playerData,combatData,upgradeData);
+    }
+
     #endregion
 }
