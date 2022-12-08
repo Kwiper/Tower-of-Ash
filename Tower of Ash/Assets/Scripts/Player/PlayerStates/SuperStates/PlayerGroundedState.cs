@@ -57,9 +57,10 @@ public class PlayerGroundedState : PlayerState {
             {
                 stateMachine.ChangeState(player.ChargeAttackState);
             }
-            else if (fireballInput && playerData.unlockedFireball == true && player.FireballState.CheckIfCanFireball())
+            else if (fireballInput && playerData.unlockedFireball == true && player.FireballState.CheckIfCanFireball() && playerData.tinder >= 5)
             {
                 stateMachine.ChangeState(player.FireballState);
+                playerData.tinder -= 5;
             }
             else if (player.InputHandler.AttackInput)
             {

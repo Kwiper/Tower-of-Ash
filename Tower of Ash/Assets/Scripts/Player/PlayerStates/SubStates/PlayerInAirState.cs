@@ -84,9 +84,10 @@ public class PlayerInAirState : PlayerState {
             {
                 stateMachine.ChangeState(player.ChargeAttackState);
             }
-            else if (fireballInput && playerData.unlockedFireball && player.FireballState.CheckIfCanFireball())
+            else if (fireballInput && playerData.unlockedFireball && player.FireballState.CheckIfCanFireball() && playerData.tinder >= 5)
             {
                 stateMachine.ChangeState(player.FireballState);
+                playerData.tinder -= 5;
             }
             else if (player.InputHandler.AttackInput)
             {
