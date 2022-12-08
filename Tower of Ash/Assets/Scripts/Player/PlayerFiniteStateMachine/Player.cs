@@ -56,6 +56,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private LayerMask portalLayer;
     [SerializeField]
+    LayerMask enemyLayer;
+    [SerializeField]
     public bool stateDebug;
     [SerializeField]
     public Transform playerTransform;
@@ -339,6 +341,12 @@ public class Player : MonoBehaviour
         var hit = Physics2D.Raycast(ceilingCheck.position, Vector2.up , playerData.wallCheckDistance, playerData.whatIsGround);
         return hit;
     }
+
+    public bool CheckIfEnemyIsInRange()
+    {
+        return Physics2D.OverlapCircle(transform.position,10f,enemyLayer);
+    }
+
     public RaycastHit2D CheckFloorType()
     {
         var hitGround = Physics2D.Raycast(groundCheck.position, Vector2.down , playerData.wallCheckDistance, playerData.whatIsGround);
