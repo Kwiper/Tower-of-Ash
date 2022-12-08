@@ -271,7 +271,6 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
-        OnMoveOver();
     }
     #endregion
 
@@ -373,21 +372,6 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
-    }
-
-    public void OnMoveOver()
-    {
-
-       var collider = Physics2D.OverlapCircle(transform.position - new Vector3(0,0),0.2f, portalLayer);
-       if(collider != null){
-            var triggerable = collider.GetComponent<IplayerTriggerable>();
-
-       
-            if(triggerable != null)
-            {
-                triggerable.OnPlayerTriggered(this);
-            }
-       }
     }
     
     #endregion

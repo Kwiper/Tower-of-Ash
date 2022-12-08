@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Portal : MonoBehaviour, IplayerTriggerable
+public class Portal : MonoBehaviour
 {
     [SerializeField] int sceneToLoad = -1;
     [SerializeField] DestinationIdentifier destinationPortal;
@@ -23,7 +23,14 @@ public class Portal : MonoBehaviour, IplayerTriggerable
         //Debug.Log("Player entered portal");
         StartCoroutine(SwitchScene());
     }
-    
+
+    private void Update()
+    {
+        
+    }
+
+
+
     IEnumerator SwitchScene()
     {
         if(isTeleporting == false){
