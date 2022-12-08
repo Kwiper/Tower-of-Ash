@@ -16,6 +16,7 @@ public class DataLoadingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         SaveDataManager data = SaveSystem.LoadPlayer();
 
         if(data != null){
@@ -74,7 +75,7 @@ public class DataLoadingManager : MonoBehaviour
             }
 
         }
-
+    */
 
     }
 
