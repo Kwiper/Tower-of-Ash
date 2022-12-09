@@ -56,10 +56,9 @@ public class Tinder : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.CompareTag("Player"))
+        if (collision.name == ("Player"))
         {
             playerData.tinder += tinderReward;
-            audioSource.PlayOneShot(collection);
             Destroy(gameObject);
         }
     }
