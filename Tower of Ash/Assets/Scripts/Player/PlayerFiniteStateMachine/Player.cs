@@ -146,6 +146,7 @@ public class Player : MonoBehaviour
     #region Unity Callback Functions
     private void Awake()
     {
+        playerTransform.position = playerData.spawnPoint;
         StateMachine = new PlayerStateMachine();
 
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
@@ -171,6 +172,7 @@ public class Player : MonoBehaviour
         HealState = new PlayerHealState(this, StateMachine, playerData, "heal");
 
         DeathState = new PlayerDeathState(this, StateMachine, playerData, "death");
+        
     }
 
     private void Start()
