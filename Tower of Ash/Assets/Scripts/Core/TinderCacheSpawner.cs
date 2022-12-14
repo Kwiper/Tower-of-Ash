@@ -12,11 +12,14 @@ public class TinderCacheSpawner : MonoBehaviour
 
         tinderCaches = GetComponentsInChildren<TinderCache>();
             foreach (TinderCache tinderCache in tinderCaches){
-                var positionCheck = new Vector2(tinderCache.gameObject.GetComponent<Transform>().position.x,tinderCache.gameObject.GetComponent<Transform>().position.y);
-                foreach (Vector2 collectedTinderCachePos in playerData.CollectedTinderCacheLocations){
-                    if(positionCheck == collectedTinderCachePos){
-                        tinderCache.gameObject.SetActive(false);
-                        break;
+                var IDCheck = tinderCache.ID;
+                if(playerData.CollectedTinderCacheID.Count != 0){
+                    foreach (int collectedTinderCacheID in playerData.CollectedTinderCacheID){
+
+                        if(IDCheck == collectedTinderCacheID){
+                            tinderCache.gameObject.SetActive(false);
+                            break;
+                        }
                     }
                 }
             }

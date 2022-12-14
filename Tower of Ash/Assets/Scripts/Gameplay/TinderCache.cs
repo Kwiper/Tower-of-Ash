@@ -8,6 +8,8 @@ public class TinderCache : MonoBehaviour
     private PlayerData playerData;
     [SerializeField]
     private int tinderReward = 50;
+    [SerializeField]
+    public int ID = 0;
     //private bool isCollected = false;
 
     [SerializeField]
@@ -60,8 +62,7 @@ public class TinderCache : MonoBehaviour
             {
                 //Explode into tinder
                 SpawnTinder();
-                var pos = new Vector2(gameObject.GetComponent<Transform>().position.x, gameObject.GetComponent<Transform>().position.y);
-                playerData.CollectedTinderCacheLocations.Add(pos);
+                playerData.CollectedTinderCacheID.Add(ID);
                 GetComponent<BoxCollider2D>().enabled = false;
                 GetComponent<SpriteRenderer>().enabled = false;
 
