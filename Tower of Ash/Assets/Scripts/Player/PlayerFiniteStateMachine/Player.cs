@@ -489,7 +489,7 @@ public class Player : MonoBehaviour
     }
     //Used for respawning on death
     public void respawnPosition(){
-        this.GetComponent<Transform>().position = spawnPoint;
+        this.GetComponent<Transform>().position = playerData.spawnPoint;
         firstReload = true;
         ResetHealCharges();
     }
