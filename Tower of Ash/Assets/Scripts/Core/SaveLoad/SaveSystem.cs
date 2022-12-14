@@ -33,4 +33,17 @@ public static class SaveSystem {
             return null;
         }
     }
+
+
+    public static bool CheckForSave(){
+        string path = Application.persistentDataPath + "/player.smd";  
+        if(File.Exists(path)){
+            Debug.Log("Save file found in "+ path + " . Delete data here to test saving if needed");
+            return true;  
+        }
+        else{
+            Debug.LogError("Save file not found in "+ path + " . Lmao can't have shit in Detroit.");
+            return false;
+        }
+    }
 }

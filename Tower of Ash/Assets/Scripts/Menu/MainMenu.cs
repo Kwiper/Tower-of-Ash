@@ -19,10 +19,22 @@ public class MainMenu : MonoBehaviour
     public GameObject Credits;
     [SerializeField]
     public GameObject mainMenu;
+    [SerializeField]
+    public GameObject continueButton;
     private void Start()
     {
         Destroy(GameObject.Find("EssentialObjects"));
+
+        if (continueButton != null){
+            if(SaveSystem.CheckForSave() == true){
+                continueButton.SetActive(true);
+            }
+            else{
+                continueButton.SetActive(false);
+            }
+        }
     }
+
 
     IEnumerator LoadGameScene()
     {
