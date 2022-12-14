@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    [SerializeField]
     private DataLoadingManager loader;
+    private LoadHelper loaderHelper;
     [SerializeField]
     private PlayerData playerData;
     [SerializeField]
@@ -24,7 +26,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         Destroy(GameObject.Find("EssentialObjects"));
-
+        loaderHelper = FindObjectOfType<LoadHelper>();
         if (continueButton != null){
             if(SaveSystem.CheckForSave() == true){
                 continueButton.SetActive(true);
@@ -36,18 +38,7 @@ public class MainMenu : MonoBehaviour
     }
 
 
-    IEnumerator LoadGameScene()
-    {
-        //if(isTeleporting == false){
-            //isTeleporting = true;
-        DontDestroyOnLoad(gameObject);
 
-        yield return SceneManager.LoadSceneAsync("Gameplay");
-        loader = FindObjectOfType<DataLoadingManager>();
-        loader.loadGame();
-        Destroy(gameObject);
-        //}
-    }
 
     IEnumerator LoadNewGame()
     {
@@ -74,8 +65,11 @@ public class MainMenu : MonoBehaviour
 
     public void Continue()
     {
-        StartCoroutine(LoadGameScene());
+        //StartCoroutine(LoadGameScene());
         //player.saveGame();
+
+        loader.loadGame();
+        loaderHelper.LoadGame();
     }
 
     public void Begin()
@@ -123,12 +117,14 @@ public class MainMenu : MonoBehaviour
             playerData.tinder = 0;
             playerData.timeReduction = basicData.timeReduction;
 
+            playerData.spawnPoint = new Vector2(-2,-58);
+
             for (int i = 0; i < playerData.keysCollected.Count; i++) 
             {
                 playerData.keysCollected[i] = false;
             }
 
-            playerData.CollectedTinderCacheLocations.Clear();
+            playerData.CollectedTinderCacheID.Clear();
             playerData.ids.Clear();
             
 

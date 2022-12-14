@@ -12,76 +12,9 @@ public class DataLoadingManager : MonoBehaviour
     private CombatData combatData;
     [SerializeField]
     private UpgradeData upgradeData;
+
     private List<Vector2> LoadedTinderCacheLocations;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-        StartCoroutine(waiter());
-
-
-        /*
-        SaveDataManager data = SaveSystem.LoadPlayer();
-
-        if(data != null){
-
-            player.spawnPoint = new Vector2(data.spawnPoint[0],data.spawnPoint[1]);
-
-
-            upgradeData.swordUpgradeCount = data.swordUpgradeCount;
-            upgradeData.flameUpgradeCount = data.flameUpgradeCount;
-            upgradeData.flaskUpgradeCount = data.flameUpgradeCount;
-
-            combatData.damageMultiplier = data.damageMultiplier;
-
-
-            //PlayerData
-
-
-            playerData.unlockedDoubleJump = data.unlockedDJ;
-            playerData.amountOfJumps = data.numberofJumps;
-
-            playerData.unlockedFireball = data.unlockedFB;    
-            playerData.unlockedWallJump = data.unlockedWJ;
-            playerData.unlockedDash = data.unlockedDS;
-            playerData.unlockedChargeAttack = data.unlockedCA;
-
-            playerData.unlockedHealing = data.unlockedHE;
-            playerData.maxHealCharges = data.healingFlaskMax;
-
-            for (int i = 0; i < playerData.keysCollected.Count; i++) 
-            {
-                playerData.keysCollected[i] = data.keysCollected[i];
-            }
-
-            playerData.unlockedMap = data.mapUnlocked;
-
-            playerData.movementTutorial = data.tutorialMove;
-            playerData.combatTutorial = data.tutorialCombat;
-            playerData.lookTutorial = data.tutorialLook;
-
-            for (int i = 0; i < data.tinderCacheLoc.Length; i++){
-
-                LoadedTinderCacheLocations.Add(new Vector2(data.tinderCacheLoc[i][0],data.tinderCacheLoc[i][1]));
-
-            }
-
-            foreach(Vector2 cacheLoc in LoadedTinderCacheLocations){
-                for(int i = 0; i < playerData.CollectedTinderCacheLocations.Count; i++){
-                    if(cacheLoc == playerData.CollectedTinderCacheLocations[i]){
-                        break;
-                    }
-                    //If last value in array and still not equal to anything add to discovered
-                    else if(cacheLoc != playerData.CollectedTinderCacheLocations[playerData.CollectedTinderCacheLocations.Count-1] && i == playerData.CollectedTinderCacheLocations.Count -1){
-                        playerData.CollectedTinderCacheLocations.Add(cacheLoc);
-                    }
-                }
-            }
-
-        }
-    */
-
-    }
+    private Vector2 test;
 
 
     IEnumerator waiter()
@@ -109,7 +42,7 @@ public class DataLoadingManager : MonoBehaviour
 
         if(data != null){
 
-            player.spawnPoint = new Vector2(data.spawnPoint[0],data.spawnPoint[1]);
+            //player.spawnPoint = new Vector2(data.spawnPoint[0],data.spawnPoint[1]);
             //player.spawnPoint = new Vector2(1,1);
             playerData.spawnPoint = new Vector2(data.spawnPoint[0],data.spawnPoint[1]);
             //playerData.spawnPoint = new Vector2(1,1);
@@ -150,29 +83,16 @@ public class DataLoadingManager : MonoBehaviour
                 playerData.keysCollected[i] = data.keysCollected[i];
             }
 
+            for (int i = 0; i < data.tinderCacheID.Length; i++){
+
+                    Debug.Log("This is test "+data.tinderCacheID);
+                    playerData.CollectedTinderCacheID.Add(data.tinderCacheID[i]);
+
+                    Debug.Log("I go after");
+            }
+
 
             
-            for (int i = 0; i < data.tinderCacheLoc.Length; i++){
-                //Debug.Log("Array size is "+data.tinderCacheLoc[i].Length);
-                if(data.tinderCacheLoc[i] != null){
-                    Debug.Log(data.tinderCacheLoc[i][0] + ","+data.tinderCacheLoc[i][1]);
-                    Vector2 test = new Vector2(data.tinderCacheLoc[i][0],data.tinderCacheLoc[i][1]);
-                    Debug.Log("This is test "+test);
-                    LoadedTinderCacheLocations.Add(test);
-                    //LoadedTinderCacheLocations.Add(new Vector2(data.tinderCacheLoc[i][0],data.tinderCacheLoc[i][1]));
-                    Debug.Log("I go after");
-                }
-                else{
-                    break;
-                }
-            }
-
-            foreach(Vector2 cacheLoc in LoadedTinderCacheLocations){
-
-                    playerData.CollectedTinderCacheLocations.Add(cacheLoc);
-
-
-            }
 
         }
 

@@ -31,8 +31,7 @@ public class SaveDataManager
 
     public float timeReduction;
 
-    public float[][] tinderCacheLoc;
-
+    public int[] tinderCacheID;
     #endregion
 
     #region Player Values
@@ -55,7 +54,8 @@ public class SaveDataManager
         keysCollected = new bool[playerData.keysCollected.Count];
         mapId = new int[playerData.ids.Count];
         spawnPoint = new float[2];
-        tinderCacheLoc = new float[29][];
+
+        tinderCacheID = new int[playerData.CollectedTinderCacheID.Count];
 
         unlockedDJ = playerData.unlockedDoubleJump;
         numberofJumps = playerData.amountOfJumps;
@@ -88,15 +88,12 @@ public class SaveDataManager
         tutorialCombat = playerData.combatTutorial;
         tutorialLook = playerData.lookTutorial;
 
-        if (playerData.CollectedTinderCacheLocations.Count != 0){
-            for (int i = 0; i < playerData.CollectedTinderCacheLocations.Count; i++) 
+        if (playerData.CollectedTinderCacheID.Count != 0){
+            for (int i = 0; i < playerData.CollectedTinderCacheID.Count; i++) 
             {
-                tinderCacheLoc[i] =  new float[] {playerData.CollectedTinderCacheLocations[i].x , playerData.CollectedTinderCacheLocations[i].y};
-                Debug.Log(tinderCacheLoc.Length);
-                Debug.Log(tinderCacheLoc[0].Length);
+                tinderCacheID[i] = playerData.CollectedTinderCacheID[i];
             }
         }
-
 
         //Values stored on Player
         
